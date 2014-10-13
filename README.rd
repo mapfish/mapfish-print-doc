@@ -1,0 +1,1 @@
+The project contains the documentation for mapfish-print
