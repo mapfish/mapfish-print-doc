@@ -7,6 +7,7 @@ org.mapfish.print.config.access
 org.mapfish.print.http
 org.mapfish.print.map
 org.mapfish.print.map.geotools
+org.mapfish.print.map.geotools.function
 org.mapfish.print.map.geotools.grid
 org.mapfish.print.map.image
 org.mapfish.print.map.image.wms
