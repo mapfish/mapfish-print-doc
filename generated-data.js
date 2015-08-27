@@ -1,23 +1,14 @@
 docs.mapLayers = [{
-    "title": "record/ Wms Layer/title",
-    "desc": "record/ Wms Layer/desc",
-    "summaryDesc": "record/ Wms Layer/summaryDesc",
+    "title": "record/ Tiled Wms Layer/title",
+    "desc": "record/ Tiled Wms Layer/desc",
+    "summaryDesc": "record/ Tiled Wms Layer/summaryDesc",
     "details": [
         
     ],
     "input": [
         {
-            "title": "imageFormat",
-            "desc": "record/ Wms Layer/input/imageFormat/desc",
-            "required": true,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.parser.HasDefaultValue()"
-            ]
-        },
-        {
             "title": "styles",
-            "desc": "record/ Wms Layer/input/styles/desc",
+            "desc": "record/ Tiled Wms Layer/input/styles/desc",
             "required": true,
             "translateTitle": false,
             "annotations": [
@@ -26,7 +17,7 @@ docs.mapLayers = [{
         },
         {
             "title": "baseURL",
-            "desc": "record/ Wms Layer/input/baseURL/desc",
+            "desc": "record/ Tiled Wms Layer/input/baseURL/desc",
             "required": false,
             "translateTitle": false,
             "annotations": [
@@ -35,34 +26,7 @@ docs.mapLayers = [{
         },
         {
             "title": "name",
-            "desc": "record/ Wms Layer/input/name/desc",
-            "required": true,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.parser.HasDefaultValue()"
-            ]
-        },
-        {
-            "title": "useNativeAngle",
-            "desc": "record/ Wms Layer/input/useNativeAngle/desc",
-            "required": true,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.parser.HasDefaultValue()"
-            ]
-        },
-        {
-            "title": "customParams",
-            "desc": "record/ Wms Layer/input/customParams/desc",
-            "required": true,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.parser.HasDefaultValue()"
-            ]
-        },
-        {
-            "title": "serverType",
-            "desc": "record/ Wms Layer/input/serverType/desc",
+            "desc": "record/ Tiled Wms Layer/input/name/desc",
             "required": true,
             "translateTitle": false,
             "annotations": [
@@ -71,7 +35,25 @@ docs.mapLayers = [{
         },
         {
             "title": "version",
-            "desc": "record/ Wms Layer/input/version/desc",
+            "desc": "record/ Tiled Wms Layer/input/version/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        },
+        {
+            "title": "serverType",
+            "desc": "record/ Tiled Wms Layer/input/serverType/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        },
+        {
+            "title": "customParams",
+            "desc": "record/ Tiled Wms Layer/input/customParams/desc",
             "required": true,
             "translateTitle": false,
             "annotations": [
@@ -80,7 +62,7 @@ docs.mapLayers = [{
         },
         {
             "title": "mergeableParams",
-            "desc": "record/ Wms Layer/input/mergeableParams/desc",
+            "desc": "record/ Tiled Wms Layer/input/mergeableParams/desc",
             "required": true,
             "translateTitle": false,
             "annotations": [
@@ -89,16 +71,7 @@ docs.mapLayers = [{
         },
         {
             "title": "opacity",
-            "desc": "record/ Wms Layer/input/opacity/desc",
-            "required": true,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.parser.HasDefaultValue()"
-            ]
-        },
-        {
-            "title": "rasterStyle",
-            "desc": "record/ Wms Layer/input/rasterStyle/desc",
+            "desc": "record/ Tiled Wms Layer/input/opacity/desc",
             "required": true,
             "translateTitle": false,
             "annotations": [
@@ -107,173 +80,16 @@ docs.mapLayers = [{
         },
         {
             "title": "layers",
-            "desc": "record/ Wms Layer/input/layers/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        }
-    ],
-    "output": [
-        
-    ],
-    "translateTitle": true
-},
-{
-    "title": "record/ Gml Layer/title",
-    "desc": "record/ Gml Layer/desc",
-    "summaryDesc": "record/ Gml Layer/summaryDesc",
-    "details": [
-        {
-            "title": "Parser",
-            "desc": "record/ Gml Layer/detail/Parser/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        }
-    ],
-    "input": [
-        {
-            "title": "name",
-            "desc": "record/ Gml Layer/input/name/desc",
-            "required": true,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.parser.HasDefaultValue()"
-            ]
-        },
-        {
-            "title": "url",
-            "desc": "record/ Gml Layer/input/url/desc",
+            "desc": "record/ Tiled Wms Layer/input/layers/desc",
             "required": false,
             "translateTitle": false,
             "annotations": [
                 
             ]
         },
-        {
-            "title": "style",
-            "desc": "record/ Gml Layer/input/style/desc",
-            "required": true,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.parser.HasDefaultValue()"
-            ]
-        },
-        {
-            "title": "renderAsSvg",
-            "desc": "record/ Gml Layer/input/renderAsSvg/desc",
-            "required": true,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.parser.HasDefaultValue()"
-            ]
-        },
-        {
-            "title": "opacity",
-            "desc": "record/ Gml Layer/input/opacity/desc",
-            "required": true,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.parser.HasDefaultValue()"
-            ]
-        }
-    ],
-    "output": [
-        
-    ],
-    "translateTitle": true
-},
-{
-    "title": "record/ Feature Layer/title",
-    "desc": "record/ Feature Layer/desc",
-    "summaryDesc": "record/ Feature Layer/summaryDesc",
-    "details": [
-        {
-            "title": "Parser",
-            "desc": "record/ Feature Layer/detail/Parser/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        }
-    ],
-    "input": [
-        {
-            "title": "style",
-            "desc": "record/ Feature Layer/input/style/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "name",
-            "desc": "record/ Feature Layer/input/name/desc",
-            "required": true,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.parser.HasDefaultValue()"
-            ]
-        },
-        {
-            "title": "defaultStyle",
-            "desc": "record/ Feature Layer/input/defaultStyle/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "opacity",
-            "desc": "record/ Feature Layer/input/opacity/desc",
-            "required": true,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.parser.HasDefaultValue()"
-            ]
-        },
-        {
-            "title": "features",
-            "desc": "record/ Feature Layer/input/features/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "renderAsSvg",
-            "desc": "record/ Feature Layer/input/renderAsSvg/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        }
-    ],
-    "output": [
-        
-    ],
-    "translateTitle": true
-},
-{
-    "title": "record/ Osm Layer/title",
-    "desc": "record/ Osm Layer/desc",
-    "summaryDesc": "record/ Osm Layer/summaryDesc",
-    "details": [
-        
-    ],
-    "input": [
         {
             "title": "imageFormat",
-            "desc": "record/ Osm Layer/input/imageFormat/desc",
+            "desc": "record/ Tiled Wms Layer/input/imageFormat/desc",
             "required": true,
             "translateTitle": false,
             "annotations": [
@@ -281,44 +97,8 @@ docs.mapLayers = [{
             ]
         },
         {
-            "title": "name",
-            "desc": "record/ Osm Layer/input/name/desc",
-            "required": true,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.parser.HasDefaultValue()"
-            ]
-        },
-        {
-            "title": "dpi",
-            "desc": "record/ Osm Layer/input/dpi/desc",
-            "required": true,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.parser.HasDefaultValue()"
-            ]
-        },
-        {
-            "title": "maxExtent",
-            "desc": "record/ Osm Layer/input/maxExtent/desc",
-            "required": true,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.parser.HasDefaultValue()"
-            ]
-        },
-        {
-            "title": "baseURL",
-            "desc": "record/ Osm Layer/input/baseURL/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "resolutions",
-            "desc": "record/ Osm Layer/input/resolutions/desc",
+            "title": "useNativeAngle",
+            "desc": "record/ Tiled Wms Layer/input/useNativeAngle/desc",
             "required": true,
             "translateTitle": false,
             "annotations": [
@@ -327,16 +107,16 @@ docs.mapLayers = [{
         },
         {
             "title": "tileSize",
-            "desc": "record/ Osm Layer/input/tileSize/desc",
-            "required": true,
+            "desc": "record/ Tiled Wms Layer/input/tileSize/desc",
+            "required": false,
             "translateTitle": false,
             "annotations": [
-                "@org.mapfish.print.parser.HasDefaultValue()"
+                
             ]
         },
         {
-            "title": "opacity",
-            "desc": "record/ Osm Layer/input/opacity/desc",
+            "title": "imageFormat",
+            "desc": "record/ Tiled Wms Layer/input/imageFormat/desc",
             "required": true,
             "translateTitle": false,
             "annotations": [
@@ -345,7 +125,7 @@ docs.mapLayers = [{
         },
         {
             "title": "rasterStyle",
-            "desc": "record/ Osm Layer/input/rasterStyle/desc",
+            "desc": "record/ Tiled Wms Layer/input/rasterStyle/desc",
             "required": true,
             "translateTitle": false,
             "annotations": [
@@ -353,79 +133,12 @@ docs.mapLayers = [{
             ]
         },
         {
-            "title": "resolutionTolerance",
-            "desc": "record/ Osm Layer/input/resolutionTolerance/desc",
+            "title": "failOnError",
+            "desc": "record/ Tiled Wms Layer/input/failOnError/desc",
             "required": true,
             "translateTitle": false,
             "annotations": [
                 "@org.mapfish.print.parser.HasDefaultValue()"
-            ]
-        }
-    ],
-    "output": [
-        
-    ],
-    "translateTitle": true
-},
-{
-    "title": "record/ Geo Json Layer/title",
-    "desc": "record/ Geo Json Layer/desc",
-    "summaryDesc": "record/ Geo Json Layer/summaryDesc",
-    "details": [
-        {
-            "title": "Parser",
-            "desc": "record/ Geo Json Layer/detail/Parser/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        }
-    ],
-    "input": [
-        {
-            "title": "name",
-            "desc": "record/ Geo Json Layer/input/name/desc",
-            "required": true,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.parser.HasDefaultValue()"
-            ]
-        },
-        {
-            "title": "style",
-            "desc": "record/ Geo Json Layer/input/style/desc",
-            "required": true,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.parser.HasDefaultValue()"
-            ]
-        },
-        {
-            "title": "renderAsSvg",
-            "desc": "record/ Geo Json Layer/input/renderAsSvg/desc",
-            "required": true,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.parser.HasDefaultValue()"
-            ]
-        },
-        {
-            "title": "opacity",
-            "desc": "record/ Geo Json Layer/input/opacity/desc",
-            "required": true,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.parser.HasDefaultValue()"
-            ]
-        },
-        {
-            "title": "geoJson",
-            "desc": "record/ Geo Json Layer/input/geoJson/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
             ]
         }
     ],
@@ -585,6 +298,15 @@ docs.mapLayers = [{
             "annotations": [
                 "@org.mapfish.print.parser.HasDefaultValue()"
             ]
+        },
+        {
+            "title": "failOnError",
+            "desc": "record/WMTS Layer/input/failOnError/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
         }
     ],
     "output": [
@@ -593,25 +315,16 @@ docs.mapLayers = [{
     "translateTitle": true
 },
 {
-    "title": "record/ Tiled Wms Layer/title",
-    "desc": "record/ Tiled Wms Layer/desc",
-    "summaryDesc": "record/ Tiled Wms Layer/summaryDesc",
+    "title": "record/ Geotiff Layer/title",
+    "desc": "record/ Geotiff Layer/desc",
+    "summaryDesc": "record/ Geotiff Layer/summaryDesc",
     "details": [
         
     ],
     "input": [
         {
-            "title": "styles",
-            "desc": "record/ Tiled Wms Layer/input/styles/desc",
-            "required": true,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.parser.HasDefaultValue()"
-            ]
-        },
-        {
-            "title": "baseURL",
-            "desc": "record/ Tiled Wms Layer/input/baseURL/desc",
+            "title": "url",
+            "desc": "record/ Geotiff Layer/input/url/desc",
             "required": false,
             "translateTitle": false,
             "annotations": [
@@ -620,7 +333,7 @@ docs.mapLayers = [{
         },
         {
             "title": "name",
-            "desc": "record/ Tiled Wms Layer/input/name/desc",
+            "desc": "record/ Geotiff Layer/input/name/desc",
             "required": true,
             "translateTitle": false,
             "annotations": [
@@ -628,35 +341,8 @@ docs.mapLayers = [{
             ]
         },
         {
-            "title": "version",
-            "desc": "record/ Tiled Wms Layer/input/version/desc",
-            "required": true,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.parser.HasDefaultValue()"
-            ]
-        },
-        {
-            "title": "serverType",
-            "desc": "record/ Tiled Wms Layer/input/serverType/desc",
-            "required": true,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.parser.HasDefaultValue()"
-            ]
-        },
-        {
-            "title": "customParams",
-            "desc": "record/ Tiled Wms Layer/input/customParams/desc",
-            "required": true,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.parser.HasDefaultValue()"
-            ]
-        },
-        {
-            "title": "mergeableParams",
-            "desc": "record/ Tiled Wms Layer/input/mergeableParams/desc",
+            "title": "style",
+            "desc": "record/ Geotiff Layer/input/style/desc",
             "required": true,
             "translateTitle": false,
             "annotations": [
@@ -665,7 +351,102 @@ docs.mapLayers = [{
         },
         {
             "title": "opacity",
-            "desc": "record/ Tiled Wms Layer/input/opacity/desc",
+            "desc": "record/ Geotiff Layer/input/opacity/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        },
+        {
+            "title": "failOnError",
+            "desc": "record/ Geotiff Layer/input/failOnError/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        }
+    ],
+    "output": [
+        
+    ],
+    "translateTitle": true
+},
+{
+    "title": "record/ Wms Layer/title",
+    "desc": "record/ Wms Layer/desc",
+    "summaryDesc": "record/ Wms Layer/summaryDesc",
+    "details": [
+        
+    ],
+    "input": [
+        {
+            "title": "styles",
+            "desc": "record/ Wms Layer/input/styles/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        },
+        {
+            "title": "baseURL",
+            "desc": "record/ Wms Layer/input/baseURL/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "name",
+            "desc": "record/ Wms Layer/input/name/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        },
+        {
+            "title": "version",
+            "desc": "record/ Wms Layer/input/version/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        },
+        {
+            "title": "serverType",
+            "desc": "record/ Wms Layer/input/serverType/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        },
+        {
+            "title": "customParams",
+            "desc": "record/ Wms Layer/input/customParams/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        },
+        {
+            "title": "mergeableParams",
+            "desc": "record/ Wms Layer/input/mergeableParams/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        },
+        {
+            "title": "opacity",
+            "desc": "record/ Wms Layer/input/opacity/desc",
             "required": true,
             "translateTitle": false,
             "annotations": [
@@ -674,7 +455,7 @@ docs.mapLayers = [{
         },
         {
             "title": "layers",
-            "desc": "record/ Tiled Wms Layer/input/layers/desc",
+            "desc": "record/ Wms Layer/input/layers/desc",
             "required": false,
             "translateTitle": false,
             "annotations": [
@@ -683,7 +464,7 @@ docs.mapLayers = [{
         },
         {
             "title": "imageFormat",
-            "desc": "record/ Tiled Wms Layer/input/imageFormat/desc",
+            "desc": "record/ Wms Layer/input/imageFormat/desc",
             "required": true,
             "translateTitle": false,
             "annotations": [
@@ -692,7 +473,7 @@ docs.mapLayers = [{
         },
         {
             "title": "useNativeAngle",
-            "desc": "record/ Tiled Wms Layer/input/useNativeAngle/desc",
+            "desc": "record/ Wms Layer/input/useNativeAngle/desc",
             "required": true,
             "translateTitle": false,
             "annotations": [
@@ -700,8 +481,48 @@ docs.mapLayers = [{
             ]
         },
         {
-            "title": "tileSize",
-            "desc": "record/ Tiled Wms Layer/input/tileSize/desc",
+            "title": "rasterStyle",
+            "desc": "record/ Wms Layer/input/rasterStyle/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        },
+        {
+            "title": "failOnError",
+            "desc": "record/ Wms Layer/input/failOnError/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        }
+    ],
+    "output": [
+        
+    ],
+    "translateTitle": true
+},
+{
+    "title": "record/ Feature Layer/title",
+    "desc": "record/ Feature Layer/desc",
+    "summaryDesc": "record/ Feature Layer/summaryDesc",
+    "details": [
+        {
+            "title": "Parser",
+            "desc": "record/ Feature Layer/detail/Parser/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        }
+    ],
+    "input": [
+        {
+            "title": "style",
+            "desc": "record/ Feature Layer/input/style/desc",
             "required": false,
             "translateTitle": false,
             "annotations": [
@@ -709,8 +530,53 @@ docs.mapLayers = [{
             ]
         },
         {
-            "title": "rasterStyle",
-            "desc": "record/ Tiled Wms Layer/input/rasterStyle/desc",
+            "title": "name",
+            "desc": "record/ Feature Layer/input/name/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        },
+        {
+            "title": "defaultStyle",
+            "desc": "record/ Feature Layer/input/defaultStyle/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "opacity",
+            "desc": "record/ Feature Layer/input/opacity/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        },
+        {
+            "title": "features",
+            "desc": "record/ Feature Layer/input/features/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "renderAsSvg",
+            "desc": "record/ Feature Layer/input/renderAsSvg/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "failOnError",
+            "desc": "record/ Feature Layer/input/failOnError/desc",
             "required": true,
             "translateTitle": false,
             "annotations": [
@@ -811,6 +677,15 @@ docs.mapLayers = [{
             "annotations": [
                 "@org.mapfish.print.parser.HasDefaultValue()"
             ]
+        },
+        {
+            "title": "failOnError",
+            "desc": "record/ Grid Layer/input/failOnError/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
         }
     ],
     "output": [
@@ -819,25 +694,24 @@ docs.mapLayers = [{
     "translateTitle": true
 },
 {
-    "title": "record/ Geotiff Layer/title",
-    "desc": "record/ Geotiff Layer/desc",
-    "summaryDesc": "record/ Geotiff Layer/summaryDesc",
+    "title": "record/ Geo Json Layer/title",
+    "desc": "record/ Geo Json Layer/desc",
+    "summaryDesc": "record/ Geo Json Layer/summaryDesc",
     "details": [
-        
-    ],
-    "input": [
         {
-            "title": "url",
-            "desc": "record/ Geotiff Layer/input/url/desc",
+            "title": "Parser",
+            "desc": "record/ Geo Json Layer/detail/Parser/desc",
             "required": false,
             "translateTitle": false,
             "annotations": [
                 
             ]
-        },
+        }
+    ],
+    "input": [
         {
             "title": "name",
-            "desc": "record/ Geotiff Layer/input/name/desc",
+            "desc": "record/ Geo Json Layer/input/name/desc",
             "required": true,
             "translateTitle": false,
             "annotations": [
@@ -846,7 +720,16 @@ docs.mapLayers = [{
         },
         {
             "title": "style",
-            "desc": "record/ Geotiff Layer/input/style/desc",
+            "desc": "record/ Geo Json Layer/input/style/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        },
+        {
+            "title": "renderAsSvg",
+            "desc": "record/ Geo Json Layer/input/renderAsSvg/desc",
             "required": true,
             "translateTitle": false,
             "annotations": [
@@ -855,7 +738,225 @@ docs.mapLayers = [{
         },
         {
             "title": "opacity",
-            "desc": "record/ Geotiff Layer/input/opacity/desc",
+            "desc": "record/ Geo Json Layer/input/opacity/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        },
+        {
+            "title": "geoJson",
+            "desc": "record/ Geo Json Layer/input/geoJson/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "failOnError",
+            "desc": "record/ Geo Json Layer/input/failOnError/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        }
+    ],
+    "output": [
+        
+    ],
+    "translateTitle": true
+},
+{
+    "title": "record/ Gml Layer/title",
+    "desc": "record/ Gml Layer/desc",
+    "summaryDesc": "record/ Gml Layer/summaryDesc",
+    "details": [
+        {
+            "title": "Parser",
+            "desc": "record/ Gml Layer/detail/Parser/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        }
+    ],
+    "input": [
+        {
+            "title": "name",
+            "desc": "record/ Gml Layer/input/name/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        },
+        {
+            "title": "url",
+            "desc": "record/ Gml Layer/input/url/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "style",
+            "desc": "record/ Gml Layer/input/style/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        },
+        {
+            "title": "renderAsSvg",
+            "desc": "record/ Gml Layer/input/renderAsSvg/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        },
+        {
+            "title": "opacity",
+            "desc": "record/ Gml Layer/input/opacity/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        },
+        {
+            "title": "failOnError",
+            "desc": "record/ Gml Layer/input/failOnError/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        }
+    ],
+    "output": [
+        
+    ],
+    "translateTitle": true
+},
+{
+    "title": "record/ Osm Layer/title",
+    "desc": "record/ Osm Layer/desc",
+    "summaryDesc": "record/ Osm Layer/summaryDesc",
+    "details": [
+        
+    ],
+    "input": [
+        {
+            "title": "name",
+            "desc": "record/ Osm Layer/input/name/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        },
+        {
+            "title": "dpi",
+            "desc": "record/ Osm Layer/input/dpi/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        },
+        {
+            "title": "maxExtent",
+            "desc": "record/ Osm Layer/input/maxExtent/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        },
+        {
+            "title": "baseURL",
+            "desc": "record/ Osm Layer/input/baseURL/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "resolutions",
+            "desc": "record/ Osm Layer/input/resolutions/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        },
+        {
+            "title": "imageFormat",
+            "desc": "record/ Osm Layer/input/imageFormat/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.CanSatisfyOneOf(value=extension)",
+                "@java.lang.Deprecated()"
+            ]
+        },
+        {
+            "title": "imageExtension",
+            "desc": "record/ Osm Layer/input/imageExtension/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()",
+                "@org.mapfish.print.parser.CanSatisfyOneOf(value=extension)"
+            ]
+        },
+        {
+            "title": "tileSize",
+            "desc": "record/ Osm Layer/input/tileSize/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        },
+        {
+            "title": "opacity",
+            "desc": "record/ Osm Layer/input/opacity/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        },
+        {
+            "title": "rasterStyle",
+            "desc": "record/ Osm Layer/input/rasterStyle/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        },
+        {
+            "title": "resolutionTolerance",
+            "desc": "record/ Osm Layer/input/resolutionTolerance/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        },
+        {
+            "title": "failOnError",
+            "desc": "record/ Osm Layer/input/failOnError/desc",
             "required": true,
             "translateTitle": false,
             "annotations": [
@@ -886,21 +987,6 @@ docs.outputFormats = [{
     "translateTitle": false
 },
 {
-    "title": "image/gif",
-    "desc": "record/image/gif/desc",
-    "summaryDesc": "record/image/gif/summaryDesc",
-    "details": [
-        
-    ],
-    "input": [
-        
-    ],
-    "output": [
-        
-    ],
-    "translateTitle": false
-},
-{
     "title": "image/tif",
     "desc": "record/image/tif/desc",
     "summaryDesc": "record/image/tif/summaryDesc",
@@ -916,9 +1002,9 @@ docs.outputFormats = [{
     "translateTitle": false
 },
 {
-    "title": "image/tiff",
-    "desc": "record/image/tiff/desc",
-    "summaryDesc": "record/image/tiff/summaryDesc",
+    "title": "image/bmp",
+    "desc": "record/image/bmp/desc",
+    "summaryDesc": "record/image/bmp/summaryDesc",
     "details": [
         
     ],
@@ -931,9 +1017,24 @@ docs.outputFormats = [{
     "translateTitle": false
 },
 {
-    "title": "image/bmp",
-    "desc": "record/image/bmp/desc",
-    "summaryDesc": "record/image/bmp/summaryDesc",
+    "title": "image/gif",
+    "desc": "record/image/gif/desc",
+    "summaryDesc": "record/image/gif/summaryDesc",
+    "details": [
+        
+    ],
+    "input": [
+        
+    ],
+    "output": [
+        
+    ],
+    "translateTitle": false
+},
+{
+    "title": "image/tiff",
+    "desc": "record/image/tiff/desc",
+    "summaryDesc": "record/image/tiff/summaryDesc",
     "details": [
         
     ],
@@ -963,9 +1064,9 @@ docs.outputFormats = [{
 ];
 
 docs.fileLoaders = [{
-    "title": "classpath",
-    "desc": "record/classpath/desc",
-    "summaryDesc": "record/classpath/summaryDesc",
+    "title": "servlet",
+    "desc": "record/servlet/desc",
+    "summaryDesc": "record/servlet/summaryDesc",
     "details": [
         
     ],
@@ -978,9 +1079,9 @@ docs.fileLoaders = [{
     "translateTitle": false
 },
 {
-    "title": "servlet",
-    "desc": "record/servlet/desc",
-    "summaryDesc": "record/servlet/summaryDesc",
+    "title": "classpath",
+    "desc": "record/classpath/desc",
+    "summaryDesc": "record/classpath/summaryDesc",
     "details": [
         
     ],
@@ -1010,228 +1111,11 @@ docs.fileLoaders = [{
 ];
 
 docs.config = [{
-    "title": "!pdfConfig",
-    "desc": "record/!pdfConfig/desc",
-    "summaryDesc": "record/!pdfConfig/summaryDesc",
+    "title": "!acceptAll",
+    "desc": "record/!acceptAll/desc",
+    "summaryDesc": "record/!acceptAll/summaryDesc",
     "details": [
-        {
-            "title": "Author",
-            "desc": "record/!pdfConfig/detail/Author/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Compressed",
-            "desc": "record/!pdfConfig/detail/Compressed/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Creator",
-            "desc": "record/!pdfConfig/detail/Creator/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Keywords",
-            "desc": "record/!pdfConfig/detail/Keywords/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Subject",
-            "desc": "record/!pdfConfig/detail/Subject/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Title",
-            "desc": "record/!pdfConfig/detail/Title/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        }
-    ],
-    "input": [
         
-    ],
-    "output": [
-        
-    ],
-    "translateTitle": false
-},
-{
-    "title": "!certificateStore",
-    "desc": "record/!certificateStore/desc",
-    "summaryDesc": "record/!certificateStore/summaryDesc",
-    "details": [
-        {
-            "title": "Configuration",
-            "desc": "record/!certificateStore/detail/Configuration/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Password",
-            "desc": "record/!certificateStore/detail/Password/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Uri",
-            "desc": "record/!certificateStore/detail/Uri/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        }
-    ],
-    "input": [
-        
-    ],
-    "output": [
-        
-    ],
-    "translateTitle": false
-},
-{
-    "title": "!proxy",
-    "desc": "record/!proxy/desc",
-    "summaryDesc": "record/!proxy/summaryDesc",
-    "details": [
-        {
-            "title": "Host",
-            "desc": "record/!proxy/detail/Host/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Matchers",
-            "desc": "record/!proxy/detail/Matchers/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Password",
-            "desc": "record/!proxy/detail/Password/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Port",
-            "desc": "record/!proxy/detail/Port/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Scheme",
-            "desc": "record/!proxy/detail/Scheme/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Username",
-            "desc": "record/!proxy/detail/Username/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        }
-    ],
-    "input": [
-        
-    ],
-    "output": [
-        
-    ],
-    "translateTitle": false
-},
-{
-    "title": "!updatePdfConfigUpdate",
-    "desc": "record/!updatePdfConfigUpdate/desc",
-    "summaryDesc": "record/!updatePdfConfigUpdate/summaryDesc",
-    "details": [
-        {
-            "title": "Format",
-            "desc": "record/!updatePdfConfigUpdate/detail/Format/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Value Key",
-            "desc": "record/!updatePdfConfigUpdate/detail/Value Key/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        }
-    ],
-    "input": [
-        
-    ],
-    "output": [
-        
-    ],
-    "translateTitle": false
-},
-{
-    "title": "!zoomLevels",
-    "desc": "record/!zoomLevels/desc",
-    "summaryDesc": "record/!zoomLevels/summaryDesc",
-    "details": [
-        {
-            "title": "Scales",
-            "desc": "record/!zoomLevels/detail/Scales/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        }
     ],
     "input": [
         
@@ -1249,132 +1133,6 @@ docs.config = [{
         {
             "title": "Required Roles",
             "desc": "record/roleAccessAssertion/detail/Required Roles/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        }
-    ],
-    "input": [
-        
-    ],
-    "output": [
-        
-    ],
-    "translateTitle": false
-},
-{
-    "title": "andAssertion",
-    "desc": "record/andAssertion/desc",
-    "summaryDesc": "record/andAssertion/summaryDesc",
-    "details": [
-        {
-            "title": "Predicates",
-            "desc": "record/andAssertion/detail/Predicates/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        }
-    ],
-    "input": [
-        
-    ],
-    "output": [
-        
-    ],
-    "translateTitle": false
-},
-{
-    "title": "!credential",
-    "desc": "record/!credential/desc",
-    "summaryDesc": "record/!credential/summaryDesc",
-    "details": [
-        {
-            "title": "Matchers",
-            "desc": "record/!credential/detail/Matchers/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Password",
-            "desc": "record/!credential/detail/Password/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Username",
-            "desc": "record/!credential/detail/Username/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        }
-    ],
-    "input": [
-        
-    ],
-    "output": [
-        
-    ],
-    "translateTitle": false
-},
-{
-    "title": "alwaysAllowedAssertion",
-    "desc": "record/alwaysAllowedAssertion/desc",
-    "summaryDesc": "record/alwaysAllowedAssertion/summaryDesc",
-    "details": [
-        
-    ],
-    "input": [
-        
-    ],
-    "output": [
-        
-    ],
-    "translateTitle": false
-},
-{
-    "title": "!acceptAll",
-    "desc": "record/!acceptAll/desc",
-    "summaryDesc": "record/!acceptAll/summaryDesc",
-    "details": [
-        
-    ],
-    "input": [
-        
-    ],
-    "output": [
-        
-    ],
-    "translateTitle": false
-},
-{
-    "title": "!localMatch",
-    "desc": "record/!localMatch/desc",
-    "summaryDesc": "record/!localMatch/summaryDesc",
-    "details": [
-        {
-            "title": "Path Regex",
-            "desc": "record/!localMatch/detail/Path Regex/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Port",
-            "desc": "record/!localMatch/detail/Port/desc",
             "required": false,
             "translateTitle": false,
             "annotations": [
@@ -1586,6 +1344,158 @@ docs.config = [{
     "translateTitle": false
 },
 {
+    "title": "alwaysAllowedAssertion",
+    "desc": "record/alwaysAllowedAssertion/desc",
+    "summaryDesc": "record/alwaysAllowedAssertion/summaryDesc",
+    "details": [
+        
+    ],
+    "input": [
+        
+    ],
+    "output": [
+        
+    ],
+    "translateTitle": false
+},
+{
+    "title": "!zoomLevels",
+    "desc": "record/!zoomLevels/desc",
+    "summaryDesc": "record/!zoomLevels/summaryDesc",
+    "details": [
+        {
+            "title": "Scales",
+            "desc": "record/!zoomLevels/detail/Scales/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        }
+    ],
+    "input": [
+        
+    ],
+    "output": [
+        
+    ],
+    "translateTitle": false
+},
+{
+    "title": "!certificateStore",
+    "desc": "record/!certificateStore/desc",
+    "summaryDesc": "record/!certificateStore/summaryDesc",
+    "details": [
+        {
+            "title": "Configuration",
+            "desc": "record/!certificateStore/detail/Configuration/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Password",
+            "desc": "record/!certificateStore/detail/Password/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Uri",
+            "desc": "record/!certificateStore/detail/Uri/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        }
+    ],
+    "input": [
+        
+    ],
+    "output": [
+        
+    ],
+    "translateTitle": false
+},
+{
+    "title": "!oldApi",
+    "desc": "record/!oldApi/desc",
+    "summaryDesc": "record/!oldApi/summaryDesc",
+    "details": [
+        {
+            "title": "Layers First Is Base Layer",
+            "desc": "record/!oldApi/detail/Layers First Is Base Layer/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Wms Reverse Layers",
+            "desc": "record/!oldApi/detail/Wms Reverse Layers/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        }
+    ],
+    "input": [
+        
+    ],
+    "output": [
+        
+    ],
+    "translateTitle": false
+},
+{
+    "title": "!credential",
+    "desc": "record/!credential/desc",
+    "summaryDesc": "record/!credential/summaryDesc",
+    "details": [
+        {
+            "title": "Matchers",
+            "desc": "record/!credential/detail/Matchers/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Password",
+            "desc": "record/!credential/detail/Password/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Username",
+            "desc": "record/!credential/detail/Username/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        }
+    ],
+    "input": [
+        
+    ],
+    "output": [
+        
+    ],
+    "translateTitle": false
+},
+{
     "title": "!dnsMatch",
     "desc": "record/!dnsMatch/desc",
     "summaryDesc": "record/!dnsMatch/summaryDesc",
@@ -1611,6 +1521,229 @@ docs.config = [{
         {
             "title": "Port",
             "desc": "record/!dnsMatch/detail/Port/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        }
+    ],
+    "input": [
+        
+    ],
+    "output": [
+        
+    ],
+    "translateTitle": false
+},
+{
+    "title": "andAssertion",
+    "desc": "record/andAssertion/desc",
+    "summaryDesc": "record/andAssertion/summaryDesc",
+    "details": [
+        {
+            "title": "Predicates",
+            "desc": "record/andAssertion/detail/Predicates/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        }
+    ],
+    "input": [
+        
+    ],
+    "output": [
+        
+    ],
+    "translateTitle": false
+},
+{
+    "title": "!updatePdfConfigUpdate",
+    "desc": "record/!updatePdfConfigUpdate/desc",
+    "summaryDesc": "record/!updatePdfConfigUpdate/summaryDesc",
+    "details": [
+        {
+            "title": "Format",
+            "desc": "record/!updatePdfConfigUpdate/detail/Format/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Value Key",
+            "desc": "record/!updatePdfConfigUpdate/detail/Value Key/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        }
+    ],
+    "input": [
+        
+    ],
+    "output": [
+        
+    ],
+    "translateTitle": false
+},
+{
+    "title": "!pdfConfig",
+    "desc": "record/!pdfConfig/desc",
+    "summaryDesc": "record/!pdfConfig/summaryDesc",
+    "details": [
+        {
+            "title": "Author",
+            "desc": "record/!pdfConfig/detail/Author/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Compressed",
+            "desc": "record/!pdfConfig/detail/Compressed/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Creator",
+            "desc": "record/!pdfConfig/detail/Creator/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Keywords",
+            "desc": "record/!pdfConfig/detail/Keywords/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Subject",
+            "desc": "record/!pdfConfig/detail/Subject/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Title",
+            "desc": "record/!pdfConfig/detail/Title/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        }
+    ],
+    "input": [
+        
+    ],
+    "output": [
+        
+    ],
+    "translateTitle": false
+},
+{
+    "title": "!localMatch",
+    "desc": "record/!localMatch/desc",
+    "summaryDesc": "record/!localMatch/summaryDesc",
+    "details": [
+        {
+            "title": "Path Regex",
+            "desc": "record/!localMatch/detail/Path Regex/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Port",
+            "desc": "record/!localMatch/detail/Port/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        }
+    ],
+    "input": [
+        
+    ],
+    "output": [
+        
+    ],
+    "translateTitle": false
+},
+{
+    "title": "!proxy",
+    "desc": "record/!proxy/desc",
+    "summaryDesc": "record/!proxy/summaryDesc",
+    "details": [
+        {
+            "title": "Host",
+            "desc": "record/!proxy/detail/Host/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Matchers",
+            "desc": "record/!proxy/detail/Matchers/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Password",
+            "desc": "record/!proxy/detail/Password/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Port",
+            "desc": "record/!proxy/detail/Port/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Scheme",
+            "desc": "record/!proxy/detail/Scheme/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Username",
+            "desc": "record/!proxy/detail/Username/desc",
             "required": false,
             "translateTitle": false,
             "annotations": [
@@ -1711,744 +1844,6 @@ docs.styles = [{
 ];
 
 docs.attributes = [{
-    "title": "!northArrow",
-    "desc": "record/!northArrow/desc",
-    "summaryDesc": "record/!northArrow/summaryDesc",
-    "details": [
-        {
-            "title": "Config Name",
-            "desc": "record/!northArrow/detail/Config Name/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Default",
-            "desc": "record/!northArrow/detail/Default/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Size",
-            "desc": "record/!northArrow/detail/Size/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        }
-    ],
-    "input": [
-        {
-            "title": "graphic",
-            "desc": "record/!northArrow/input/graphic/desc",
-            "required": true,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.parser.HasDefaultValue()"
-            ]
-        },
-        {
-            "title": "backgroundColor",
-            "desc": "record/!northArrow/input/backgroundColor/desc",
-            "required": true,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.parser.HasDefaultValue()"
-            ]
-        }
-    ],
-    "output": [
-        
-    ],
-    "translateTitle": false
-},
-{
-    "title": "!features",
-    "desc": "record/!features/desc",
-    "summaryDesc": "record/!features/summaryDesc",
-    "details": [
-        {
-            "title": "Config Name",
-            "desc": "record/!features/detail/Config Name/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Default",
-            "desc": "record/!features/detail/Default/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        }
-    ],
-    "input": [
-        {
-            "title": "features",
-            "desc": "record/!features/input/features/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "longitudeFirst",
-            "desc": "record/!features/input/longitudeFirst/desc",
-            "required": true,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.parser.HasDefaultValue()"
-            ]
-        }
-    ],
-    "output": [
-        
-    ],
-    "translateTitle": false
-},
-{
-    "title": "!legend",
-    "desc": "record/!legend/desc",
-    "summaryDesc": "record/!legend/summaryDesc",
-    "details": [
-        {
-            "title": "Config Name",
-            "desc": "record/!legend/detail/Config Name/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Default",
-            "desc": "record/!legend/detail/Default/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        }
-    ],
-    "input": [
-        {
-            "title": "classes",
-            "desc": "record/!legend/input/classes/desc",
-            "required": true,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.parser.HasDefaultValue()"
-            ]
-        },
-        {
-            "title": "name",
-            "desc": "record/!legend/input/name/desc",
-            "required": true,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.parser.HasDefaultValue()"
-            ]
-        },
-        {
-            "title": "icons",
-            "desc": "record/!legend/input/icons/desc",
-            "required": true,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.parser.HasDefaultValue()"
-            ]
-        }
-    ],
-    "output": [
-        
-    ],
-    "translateTitle": false
-},
-{
-    "title": "!datasource",
-    "desc": "record/!datasource/desc",
-    "summaryDesc": "record/!datasource/summaryDesc",
-    "details": [
-        {
-            "title": "Attributes",
-            "desc": "record/!datasource/detail/Attributes/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Config Name",
-            "desc": "record/!datasource/detail/Config Name/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Default",
-            "desc": "record/!datasource/detail/Default/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        }
-    ],
-    "input": [
-        
-    ],
-    "output": [
-        
-    ],
-    "translateTitle": false
-},
-{
-    "title": "!float",
-    "desc": "record/!float/desc",
-    "summaryDesc": "record/!float/summaryDesc",
-    "details": [
-        {
-            "title": "Config Name",
-            "desc": "record/!float/detail/Config Name/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Default",
-            "desc": "record/!float/detail/Default/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        }
-    ],
-    "input": [
-        
-    ],
-    "output": [
-        
-    ],
-    "translateTitle": false
-},
-{
-    "title": "!style",
-    "desc": "record/!style/desc",
-    "summaryDesc": "record/!style/summaryDesc",
-    "details": [
-        {
-            "title": "Config Name",
-            "desc": "record/!style/detail/Config Name/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Default",
-            "desc": "record/!style/detail/Default/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        }
-    ],
-    "input": [
-        {
-            "title": "style",
-            "desc": "record/!style/input/style/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        }
-    ],
-    "output": [
-        
-    ],
-    "translateTitle": false
-},
-{
-    "title": "!stringArray",
-    "desc": "record/!stringArray/desc",
-    "summaryDesc": "record/!stringArray/summaryDesc",
-    "details": [
-        {
-            "title": "Config Name",
-            "desc": "record/!stringArray/detail/Config Name/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Default",
-            "desc": "record/!stringArray/detail/Default/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        }
-    ],
-    "input": [
-        
-    ],
-    "output": [
-        
-    ],
-    "translateTitle": false
-},
-{
-    "title": "!map",
-    "desc": "record/!map/desc",
-    "summaryDesc": "record/!map/summaryDesc",
-    "details": [
-        {
-            "title": "Config Name",
-            "desc": "record/!map/detail/Config Name/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Default",
-            "desc": "record/!map/detail/Default/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Dpi Suggestions",
-            "desc": "record/!map/detail/Dpi Suggestions/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Height",
-            "desc": "record/!map/detail/Height/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Max Dpi",
-            "desc": "record/!map/detail/Max Dpi/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Width",
-            "desc": "record/!map/detail/Width/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Zoom Level Snap Strategy",
-            "desc": "record/!map/detail/Zoom Level Snap Strategy/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Zoom Levels",
-            "desc": "record/!map/detail/Zoom Levels/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Zoom Snap Tolerance",
-            "desc": "record/!map/detail/Zoom Snap Tolerance/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        }
-    ],
-    "input": [
-        {
-            "title": "center",
-            "desc": "record/!map/input/center/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.parser.Requires(value=[scale])",
-                "@org.mapfish.print.parser.OneOf(value=MapBounds)"
-            ]
-        },
-        {
-            "title": "bbox",
-            "desc": "record/!map/input/bbox/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.parser.OneOf(value=MapBounds)"
-            ]
-        },
-        {
-            "title": "rotation",
-            "desc": "record/!map/input/rotation/desc",
-            "required": true,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.parser.HasDefaultValue()"
-            ]
-        },
-        {
-            "title": "useNearestScale",
-            "desc": "record/!map/input/useNearestScale/desc",
-            "required": true,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.parser.HasDefaultValue()"
-            ]
-        },
-        {
-            "title": "dpi",
-            "desc": "record/!map/input/dpi/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "areaOfInterest",
-            "desc": "record/!map/input/areaOfInterest/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.parser.CanSatisfyOneOf(value=MapBounds)"
-            ]
-        },
-        {
-            "title": "longitudeFirst",
-            "desc": "record/!map/input/longitudeFirst/desc",
-            "required": true,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.parser.HasDefaultValue()"
-            ]
-        },
-        {
-            "title": "useAdjustBounds",
-            "desc": "record/!map/input/useAdjustBounds/desc",
-            "required": true,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.parser.HasDefaultValue()"
-            ]
-        },
-        {
-            "title": "scale",
-            "desc": "record/!map/input/scale/desc",
-            "required": true,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.parser.HasDefaultValue()"
-            ]
-        },
-        {
-            "title": "layers",
-            "desc": "record/!map/input/layers/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "projection",
-            "desc": "record/!map/input/projection/desc",
-            "required": true,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.parser.HasDefaultValue()"
-            ]
-        },
-        {
-            "title": "dpiSensitiveStyle",
-            "desc": "record/!map/input/dpiSensitiveStyle/desc",
-            "required": true,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.parser.HasDefaultValue()"
-            ]
-        },
-        {
-            "title": "zoomToFeatures",
-            "desc": "record/!map/input/zoomToFeatures/desc",
-            "required": true,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.parser.HasDefaultValue()"
-            ]
-        }
-    ],
-    "output": [
-        
-    ],
-    "translateTitle": false
-},
-{
-    "title": "!string",
-    "desc": "record/!string/desc",
-    "summaryDesc": "record/!string/summaryDesc",
-    "details": [
-        {
-            "title": "Config Name",
-            "desc": "record/!string/detail/Config Name/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Default",
-            "desc": "record/!string/detail/Default/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        }
-    ],
-    "input": [
-        
-    ],
-    "output": [
-        
-    ],
-    "translateTitle": false
-},
-{
-    "title": "!overviewMap",
-    "desc": "record/!overviewMap/desc",
-    "summaryDesc": "record/!overviewMap/summaryDesc",
-    "details": [
-        {
-            "title": "Config Name",
-            "desc": "record/!overviewMap/detail/Config Name/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Default",
-            "desc": "record/!overviewMap/detail/Default/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Dpi Suggestions",
-            "desc": "record/!overviewMap/detail/Dpi Suggestions/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Height",
-            "desc": "record/!overviewMap/detail/Height/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Max Dpi",
-            "desc": "record/!overviewMap/detail/Max Dpi/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Style",
-            "desc": "record/!overviewMap/detail/Style/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Width",
-            "desc": "record/!overviewMap/detail/Width/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Zoom Factor",
-            "desc": "record/!overviewMap/detail/Zoom Factor/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Zoom Level Snap Strategy",
-            "desc": "record/!overviewMap/detail/Zoom Level Snap Strategy/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Zoom Levels",
-            "desc": "record/!overviewMap/detail/Zoom Levels/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Zoom Snap Tolerance",
-            "desc": "record/!overviewMap/detail/Zoom Snap Tolerance/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        }
-    ],
-    "input": [
-        {
-            "title": "rotation",
-            "desc": "record/!overviewMap/input/rotation/desc",
-            "required": true,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.parser.HasDefaultValue()"
-            ]
-        },
-        {
-            "title": "projection",
-            "desc": "record/!overviewMap/input/projection/desc",
-            "required": true,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.parser.HasDefaultValue()"
-            ]
-        },
-        {
-            "title": "dpiSensitiveStyle",
-            "desc": "record/!overviewMap/input/dpiSensitiveStyle/desc",
-            "required": true,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.parser.HasDefaultValue()"
-            ]
-        },
-        {
-            "title": "dpi",
-            "desc": "record/!overviewMap/input/dpi/desc",
-            "required": true,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.parser.HasDefaultValue()"
-            ]
-        },
-        {
-            "title": "useNearestScale",
-            "desc": "record/!overviewMap/input/useNearestScale/desc",
-            "required": true,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.parser.HasDefaultValue()"
-            ]
-        },
-        {
-            "title": "layers",
-            "desc": "record/!overviewMap/input/layers/desc",
-            "required": true,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.parser.HasDefaultValue()"
-            ]
-        },
-        {
-            "title": "longitudeFirst",
-            "desc": "record/!overviewMap/input/longitudeFirst/desc",
-            "required": true,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.parser.HasDefaultValue()"
-            ]
-        },
-        {
-            "title": "useAdjustBounds",
-            "desc": "record/!overviewMap/input/useAdjustBounds/desc",
-            "required": true,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.parser.HasDefaultValue()"
-            ]
-        }
-    ],
-    "output": [
-        
-    ],
-    "translateTitle": false
-},
-{
     "title": "!scalebar",
     "desc": "record/!scalebar/desc",
     "summaryDesc": "record/!scalebar/summaryDesc",
@@ -2512,6 +1907,15 @@ docs.attributes = [{
         {
             "title": "unit",
             "desc": "record/!scalebar/input/unit/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        },
+        {
+            "title": "geodetic",
+            "desc": "record/!scalebar/input/geodetic/desc",
             "required": true,
             "translateTitle": false,
             "annotations": [
@@ -2669,6 +2073,227 @@ docs.attributes = [{
     "translateTitle": false
 },
 {
+    "title": "!map",
+    "desc": "record/!map/desc",
+    "summaryDesc": "record/!map/summaryDesc",
+    "details": [
+        {
+            "title": "Config Name",
+            "desc": "record/!map/detail/Config Name/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Default",
+            "desc": "record/!map/detail/Default/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Dpi Suggestions",
+            "desc": "record/!map/detail/Dpi Suggestions/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Height",
+            "desc": "record/!map/detail/Height/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Max Dpi",
+            "desc": "record/!map/detail/Max Dpi/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Width",
+            "desc": "record/!map/detail/Width/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Zoom Level Snap Strategy",
+            "desc": "record/!map/detail/Zoom Level Snap Strategy/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Zoom Levels",
+            "desc": "record/!map/detail/Zoom Levels/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Zoom Snap Geodetic",
+            "desc": "record/!map/detail/Zoom Snap Geodetic/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Zoom Snap Tolerance",
+            "desc": "record/!map/detail/Zoom Snap Tolerance/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        }
+    ],
+    "input": [
+        {
+            "title": "center",
+            "desc": "record/!map/input/center/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.Requires(value=[scale])",
+                "@org.mapfish.print.parser.OneOf(value=MapBounds)"
+            ]
+        },
+        {
+            "title": "bbox",
+            "desc": "record/!map/input/bbox/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.OneOf(value=MapBounds)"
+            ]
+        },
+        {
+            "title": "rotation",
+            "desc": "record/!map/input/rotation/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        },
+        {
+            "title": "useNearestScale",
+            "desc": "record/!map/input/useNearestScale/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        },
+        {
+            "title": "dpi",
+            "desc": "record/!map/input/dpi/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "areaOfInterest",
+            "desc": "record/!map/input/areaOfInterest/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.CanSatisfyOneOf(value=MapBounds)"
+            ]
+        },
+        {
+            "title": "longitudeFirst",
+            "desc": "record/!map/input/longitudeFirst/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        },
+        {
+            "title": "useAdjustBounds",
+            "desc": "record/!map/input/useAdjustBounds/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        },
+        {
+            "title": "scale",
+            "desc": "record/!map/input/scale/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        },
+        {
+            "title": "layers",
+            "desc": "record/!map/input/layers/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "projection",
+            "desc": "record/!map/input/projection/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        },
+        {
+            "title": "dpiSensitiveStyle",
+            "desc": "record/!map/input/dpiSensitiveStyle/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        },
+        {
+            "title": "zoomToFeatures",
+            "desc": "record/!map/input/zoomToFeatures/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        }
+    ],
+    "output": [
+        
+    ],
+    "translateTitle": false
+},
+{
     "title": "!table",
     "desc": "record/!table/desc",
     "summaryDesc": "record/!table/summaryDesc",
@@ -2718,6 +2343,259 @@ docs.attributes = [{
     "translateTitle": false
 },
 {
+    "title": "!datasource",
+    "desc": "record/!datasource/desc",
+    "summaryDesc": "record/!datasource/summaryDesc",
+    "details": [
+        {
+            "title": "Attributes",
+            "desc": "record/!datasource/detail/Attributes/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Config Name",
+            "desc": "record/!datasource/detail/Config Name/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Default",
+            "desc": "record/!datasource/detail/Default/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        }
+    ],
+    "input": [
+        
+    ],
+    "output": [
+        
+    ],
+    "translateTitle": false
+},
+{
+    "title": "!features",
+    "desc": "record/!features/desc",
+    "summaryDesc": "record/!features/summaryDesc",
+    "details": [
+        {
+            "title": "Config Name",
+            "desc": "record/!features/detail/Config Name/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Default",
+            "desc": "record/!features/detail/Default/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        }
+    ],
+    "input": [
+        {
+            "title": "features",
+            "desc": "record/!features/input/features/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "longitudeFirst",
+            "desc": "record/!features/input/longitudeFirst/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        }
+    ],
+    "output": [
+        
+    ],
+    "translateTitle": false
+},
+{
+    "title": "!float",
+    "desc": "record/!float/desc",
+    "summaryDesc": "record/!float/summaryDesc",
+    "details": [
+        {
+            "title": "Config Name",
+            "desc": "record/!float/detail/Config Name/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Default",
+            "desc": "record/!float/detail/Default/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        }
+    ],
+    "input": [
+        
+    ],
+    "output": [
+        
+    ],
+    "translateTitle": false
+},
+{
+    "title": "!string",
+    "desc": "record/!string/desc",
+    "summaryDesc": "record/!string/summaryDesc",
+    "details": [
+        {
+            "title": "Config Name",
+            "desc": "record/!string/detail/Config Name/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Default",
+            "desc": "record/!string/detail/Default/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Max Length",
+            "desc": "record/!string/detail/Max Length/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        }
+    ],
+    "input": [
+        
+    ],
+    "output": [
+        
+    ],
+    "translateTitle": false
+},
+{
+    "title": "!boolean",
+    "desc": "record/!boolean/desc",
+    "summaryDesc": "record/!boolean/summaryDesc",
+    "details": [
+        {
+            "title": "Config Name",
+            "desc": "record/!boolean/detail/Config Name/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Default",
+            "desc": "record/!boolean/detail/Default/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        }
+    ],
+    "input": [
+        
+    ],
+    "output": [
+        
+    ],
+    "translateTitle": false
+},
+{
+    "title": "!legend",
+    "desc": "record/!legend/desc",
+    "summaryDesc": "record/!legend/summaryDesc",
+    "details": [
+        {
+            "title": "Config Name",
+            "desc": "record/!legend/detail/Config Name/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Default",
+            "desc": "record/!legend/detail/Default/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        }
+    ],
+    "input": [
+        {
+            "title": "classes",
+            "desc": "record/!legend/input/classes/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        },
+        {
+            "title": "name",
+            "desc": "record/!legend/input/name/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        },
+        {
+            "title": "icons",
+            "desc": "record/!legend/input/icons/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        }
+    ],
+    "output": [
+        
+    ],
+    "translateTitle": false
+},
+{
     "title": "!integer",
     "desc": "record/!integer/desc",
     "summaryDesc": "record/!integer/summaryDesc",
@@ -2743,6 +2621,317 @@ docs.attributes = [{
     ],
     "input": [
         
+    ],
+    "output": [
+        
+    ],
+    "translateTitle": false
+},
+{
+    "title": "!overviewMap",
+    "desc": "record/!overviewMap/desc",
+    "summaryDesc": "record/!overviewMap/summaryDesc",
+    "details": [
+        {
+            "title": "Config Name",
+            "desc": "record/!overviewMap/detail/Config Name/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Default",
+            "desc": "record/!overviewMap/detail/Default/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Dpi Suggestions",
+            "desc": "record/!overviewMap/detail/Dpi Suggestions/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Height",
+            "desc": "record/!overviewMap/detail/Height/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Max Dpi",
+            "desc": "record/!overviewMap/detail/Max Dpi/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Style",
+            "desc": "record/!overviewMap/detail/Style/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Width",
+            "desc": "record/!overviewMap/detail/Width/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Zoom Factor",
+            "desc": "record/!overviewMap/detail/Zoom Factor/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Zoom Level Snap Strategy",
+            "desc": "record/!overviewMap/detail/Zoom Level Snap Strategy/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Zoom Levels",
+            "desc": "record/!overviewMap/detail/Zoom Levels/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Zoom Snap Geodetic",
+            "desc": "record/!overviewMap/detail/Zoom Snap Geodetic/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Zoom Snap Tolerance",
+            "desc": "record/!overviewMap/detail/Zoom Snap Tolerance/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        }
+    ],
+    "input": [
+        {
+            "title": "rotation",
+            "desc": "record/!overviewMap/input/rotation/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        },
+        {
+            "title": "projection",
+            "desc": "record/!overviewMap/input/projection/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        },
+        {
+            "title": "dpiSensitiveStyle",
+            "desc": "record/!overviewMap/input/dpiSensitiveStyle/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        },
+        {
+            "title": "dpi",
+            "desc": "record/!overviewMap/input/dpi/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        },
+        {
+            "title": "useNearestScale",
+            "desc": "record/!overviewMap/input/useNearestScale/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        },
+        {
+            "title": "layers",
+            "desc": "record/!overviewMap/input/layers/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        },
+        {
+            "title": "bbox",
+            "desc": "record/!overviewMap/input/bbox/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        },
+        {
+            "title": "longitudeFirst",
+            "desc": "record/!overviewMap/input/longitudeFirst/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        },
+        {
+            "title": "scale",
+            "desc": "record/!overviewMap/input/scale/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        },
+        {
+            "title": "useAdjustBounds",
+            "desc": "record/!overviewMap/input/useAdjustBounds/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        },
+        {
+            "title": "center",
+            "desc": "record/!overviewMap/input/center/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.Requires(value=[scale])",
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        }
+    ],
+    "output": [
+        
+    ],
+    "translateTitle": false
+},
+{
+    "title": "!stringArray",
+    "desc": "record/!stringArray/desc",
+    "summaryDesc": "record/!stringArray/summaryDesc",
+    "details": [
+        {
+            "title": "Config Name",
+            "desc": "record/!stringArray/detail/Config Name/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Default",
+            "desc": "record/!stringArray/detail/Default/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        }
+    ],
+    "input": [
+        
+    ],
+    "output": [
+        
+    ],
+    "translateTitle": false
+},
+{
+    "title": "!northArrow",
+    "desc": "record/!northArrow/desc",
+    "summaryDesc": "record/!northArrow/summaryDesc",
+    "details": [
+        {
+            "title": "Config Name",
+            "desc": "record/!northArrow/detail/Config Name/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Default",
+            "desc": "record/!northArrow/detail/Default/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Size",
+            "desc": "record/!northArrow/detail/Size/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        }
+    ],
+    "input": [
+        {
+            "title": "graphic",
+            "desc": "record/!northArrow/input/graphic/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        },
+        {
+            "title": "backgroundColor",
+            "desc": "record/!northArrow/input/backgroundColor/desc",
+            "required": true,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.parser.HasDefaultValue()"
+            ]
+        }
     ],
     "output": [
         
@@ -2815,17 +3004,15 @@ docs.attributes = [{
         
     ],
     "translateTitle": false
-}
-];
-
-docs.processors = [{
-    "title": "!prepareLegend",
-    "desc": "record/!prepareLegend/desc",
-    "summaryDesc": "record/!prepareLegend/summaryDesc",
+},
+{
+    "title": "!style",
+    "desc": "record/!style/desc",
+    "summaryDesc": "record/!style/summaryDesc",
     "details": [
         {
-            "title": "Dpi",
-            "desc": "record/!prepareLegend/detail/Dpi/desc",
+            "title": "Config Name",
+            "desc": "record/!style/detail/Config Name/desc",
             "required": false,
             "translateTitle": false,
             "annotations": [
@@ -2833,62 +3020,8 @@ docs.processors = [{
             ]
         },
         {
-            "title": "Input Mapper",
-            "desc": "record/!prepareLegend/detail/Input Mapper/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Input Prefix",
-            "desc": "record/!prepareLegend/detail/Input Prefix/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Max Width",
-            "desc": "record/!prepareLegend/detail/Max Width/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Output Mapper",
-            "desc": "record/!prepareLegend/detail/Output Mapper/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Output Prefix",
-            "desc": "record/!prepareLegend/detail/Output Prefix/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Prefix",
-            "desc": "record/!prepareLegend/detail/Prefix/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Template",
-            "desc": "record/!prepareLegend/detail/Template/desc",
+            "title": "Default",
+            "desc": "record/!style/detail/Default/desc",
             "required": false,
             "translateTitle": false,
             "annotations": [
@@ -2898,74 +3031,23 @@ docs.processors = [{
     ],
     "input": [
         {
-            "title": "tempTaskDirectory",
-            "desc": "record/!prepareLegend/input/tempTaskDirectory/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.processor.InternalValue()"
-            ]
-        },
-        {
-            "title": "legend",
-            "desc": "record/!prepareLegend/input/legend/desc",
+            "title": "style",
+            "desc": "record/!style/input/style/desc",
             "required": false,
             "translateTitle": false,
             "annotations": [
                 
-            ]
-        },
-        {
-            "title": "clientHttpRequestFactory",
-            "desc": "record/!prepareLegend/input/clientHttpRequestFactory/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.processor.InternalValue()"
-            ]
-        },
-        {
-            "title": "template",
-            "desc": "record/!prepareLegend/input/template/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.processor.InternalValue()"
             ]
         }
     ],
     "output": [
-        {
-            "title": "legendSubReport",
-            "desc": "record/!prepareLegend/output/legendSubReport/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "numberOfLegendRows",
-            "desc": "record/!prepareLegend/output/numberOfLegendRows/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "legend",
-            "desc": "record/!prepareLegend/output/legend/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        }
+        
     ],
     "translateTitle": false
-},
-{
+}
+];
+
+docs.processors = [{
     "title": "!updatePdfConfig",
     "desc": "record/!updatePdfConfig/desc",
     "summaryDesc": "record/!updatePdfConfig/summaryDesc",
@@ -3051,13 +3133,13 @@ docs.processors = [{
     "translateTitle": false
 },
 {
-    "title": "!createScalebar",
-    "desc": "record/!createScalebar/desc",
-    "summaryDesc": "record/!createScalebar/summaryDesc",
+    "title": "!reportBuilder",
+    "desc": "record/!reportBuilder/desc",
+    "summaryDesc": "record/!reportBuilder/summaryDesc",
     "details": [
         {
-            "title": "Input Mapper",
-            "desc": "record/!createScalebar/detail/Input Mapper/desc",
+            "title": "Configuration",
+            "desc": "record/!reportBuilder/detail/Configuration/desc",
             "required": false,
             "translateTitle": false,
             "annotations": [
@@ -3065,110 +3147,8 @@ docs.processors = [{
             ]
         },
         {
-            "title": "Input Prefix",
-            "desc": "record/!createScalebar/detail/Input Prefix/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Output Mapper",
-            "desc": "record/!createScalebar/detail/Output Mapper/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Output Prefix",
-            "desc": "record/!createScalebar/detail/Output Prefix/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Prefix",
-            "desc": "record/!createScalebar/detail/Prefix/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        }
-    ],
-    "input": [
-        {
-            "title": "scalebar",
-            "desc": "record/!createScalebar/input/scalebar/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "map",
-            "desc": "record/!createScalebar/input/map/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "template",
-            "desc": "record/!createScalebar/input/template/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.processor.InternalValue()"
-            ]
-        },
-        {
-            "title": "tempTaskDirectory",
-            "desc": "record/!createScalebar/input/tempTaskDirectory/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.processor.InternalValue()"
-            ]
-        }
-    ],
-    "output": [
-        {
-            "title": "graphic",
-            "desc": "record/!createScalebar/output/graphic/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.processor.InternalValue()"
-            ]
-        },
-        {
-            "title": "scalebarSubReport",
-            "desc": "record/!createScalebar/output/scalebarSubReport/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        }
-    ],
-    "translateTitle": false
-},
-{
-    "title": "!configureHttpRequests",
-    "desc": "record/!configureHttpRequests/desc",
-    "summaryDesc": "record/!configureHttpRequests/summaryDesc",
-    "details": [
-        {
-            "title": "Http Processors",
-            "desc": "record/!configureHttpRequests/detail/Http Processors/desc",
+            "title": "Directory",
+            "desc": "record/!reportBuilder/detail/Directory/desc",
             "required": false,
             "translateTitle": false,
             "annotations": [
@@ -3177,7 +3157,7 @@ docs.processors = [{
         },
         {
             "title": "Input Mapper",
-            "desc": "record/!configureHttpRequests/detail/Input Mapper/desc",
+            "desc": "record/!reportBuilder/detail/Input Mapper/desc",
             "required": false,
             "translateTitle": false,
             "annotations": [
@@ -3186,7 +3166,7 @@ docs.processors = [{
         },
         {
             "title": "Input Prefix",
-            "desc": "record/!configureHttpRequests/detail/Input Prefix/desc",
+            "desc": "record/!reportBuilder/detail/Input Prefix/desc",
             "required": false,
             "translateTitle": false,
             "annotations": [
@@ -3195,7 +3175,7 @@ docs.processors = [{
         },
         {
             "title": "Output Mapper",
-            "desc": "record/!configureHttpRequests/detail/Output Mapper/desc",
+            "desc": "record/!reportBuilder/detail/Output Mapper/desc",
             "required": false,
             "translateTitle": false,
             "annotations": [
@@ -3204,7 +3184,7 @@ docs.processors = [{
         },
         {
             "title": "Output Prefix",
-            "desc": "record/!configureHttpRequests/detail/Output Prefix/desc",
+            "desc": "record/!reportBuilder/detail/Output Prefix/desc",
             "required": false,
             "translateTitle": false,
             "annotations": [
@@ -3213,7 +3193,7 @@ docs.processors = [{
         },
         {
             "title": "Prefix",
-            "desc": "record/!configureHttpRequests/detail/Prefix/desc",
+            "desc": "record/!reportBuilder/detail/Prefix/desc",
             "required": false,
             "translateTitle": false,
             "annotations": [
@@ -3222,258 +3202,112 @@ docs.processors = [{
         }
     ],
     "input": [
-        {
-            "title": "TEMPLATE_KEY",
-            "desc": "record/!configureHttpRequests/input/TEMPLATE_KEY/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "CLIENT_HTTP_REQUEST_FACTORY_KEY",
-            "desc": "record/!configureHttpRequests/input/CLIENT_HTTP_REQUEST_FACTORY_KEY/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "TASK_DIRECTORY_KEY",
-            "desc": "record/!configureHttpRequests/input/TASK_DIRECTORY_KEY/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "PDF_CONFIG",
-            "desc": "record/!configureHttpRequests/input/PDF_CONFIG/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "SUBREPORT_DIR",
-            "desc": "record/!configureHttpRequests/input/SUBREPORT_DIR/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        }
-    ],
-    "output": [
-        {
-            "title": "clientHttpRequestFactory",
-            "desc": "record/!configureHttpRequests/output/clientHttpRequestFactory/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        }
-    ],
-    "translateTitle": false
-},
-{
-    "title": "!createOverviewMap",
-    "desc": "record/!createOverviewMap/desc",
-    "summaryDesc": "record/!createOverviewMap/summaryDesc",
-    "details": [
-        {
-            "title": "Input Mapper",
-            "desc": "record/!createOverviewMap/detail/Input Mapper/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Input Prefix",
-            "desc": "record/!createOverviewMap/detail/Input Prefix/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Output Mapper",
-            "desc": "record/!createOverviewMap/detail/Output Mapper/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Output Prefix",
-            "desc": "record/!createOverviewMap/detail/Output Prefix/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Prefix",
-            "desc": "record/!createOverviewMap/detail/Prefix/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        }
-    ],
-    "input": [
-        {
-            "title": "map",
-            "desc": "record/!createOverviewMap/input/map/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "clientHttpRequestFactory",
-            "desc": "record/!createOverviewMap/input/clientHttpRequestFactory/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "tempTaskDirectory",
-            "desc": "record/!createOverviewMap/input/tempTaskDirectory/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "overviewMap",
-            "desc": "record/!createOverviewMap/input/overviewMap/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        }
-    ],
-    "output": [
-        {
-            "title": "layerGraphics",
-            "desc": "record/!createOverviewMap/output/layerGraphics/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.processor.InternalValue()"
-            ]
-        },
-        {
-            "title": "overviewMapSubReport",
-            "desc": "record/!createOverviewMap/output/overviewMapSubReport/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        }
-    ],
-    "translateTitle": false
-},
-{
-    "title": "!setStyle",
-    "desc": "record/!setStyle/desc",
-    "summaryDesc": "record/!setStyle/summaryDesc",
-    "details": [
-        {
-            "title": "Input Mapper",
-            "desc": "record/!setStyle/detail/Input Mapper/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Input Prefix",
-            "desc": "record/!setStyle/detail/Input Prefix/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Output Mapper",
-            "desc": "record/!setStyle/detail/Output Mapper/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Output Prefix",
-            "desc": "record/!setStyle/detail/Output Prefix/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Prefix",
-            "desc": "record/!setStyle/detail/Prefix/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        }
-    ],
-    "input": [
-        {
-            "title": "map",
-            "desc": "record/!setStyle/input/map/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "style",
-            "desc": "record/!setStyle/input/style/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "clientHttpRequestFactory",
-            "desc": "record/!setStyle/input/clientHttpRequestFactory/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        }
+        
     ],
     "output": [
         
+    ],
+    "translateTitle": false
+},
+{
+    "title": "!forwardHeaders",
+    "desc": "record/!forwardHeaders/desc",
+    "summaryDesc": "record/!forwardHeaders/summaryDesc",
+    "details": [
+        {
+            "title": "All",
+            "desc": "record/!forwardHeaders/detail/All/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Headers",
+            "desc": "record/!forwardHeaders/detail/Headers/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Input Mapper",
+            "desc": "record/!forwardHeaders/detail/Input Mapper/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Input Prefix",
+            "desc": "record/!forwardHeaders/detail/Input Prefix/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Output Mapper",
+            "desc": "record/!forwardHeaders/detail/Output Mapper/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Output Prefix",
+            "desc": "record/!forwardHeaders/detail/Output Prefix/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Prefix",
+            "desc": "record/!forwardHeaders/detail/Prefix/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        }
+    ],
+    "input": [
+        {
+            "title": "clientHttpRequestFactory",
+            "desc": "record/!forwardHeaders/input/clientHttpRequestFactory/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "requestHeaders",
+            "desc": "record/!forwardHeaders/input/requestHeaders/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        }
+    ],
+    "output": [
+        {
+            "title": "clientHttpRequestFactory",
+            "desc": "record/!forwardHeaders/output/clientHttpRequestFactory/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        }
     ],
     "translateTitle": false
 },
@@ -3556,117 +3390,6 @@ docs.processors = [{
             "translateTitle": false,
             "annotations": [
                 
-            ]
-        }
-    ],
-    "translateTitle": false
-},
-{
-    "title": "!createNorthArrow",
-    "desc": "record/!createNorthArrow/desc",
-    "summaryDesc": "record/!createNorthArrow/summaryDesc",
-    "details": [
-        {
-            "title": "Input Mapper",
-            "desc": "record/!createNorthArrow/detail/Input Mapper/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Input Prefix",
-            "desc": "record/!createNorthArrow/detail/Input Prefix/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Output Mapper",
-            "desc": "record/!createNorthArrow/detail/Output Mapper/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Output Prefix",
-            "desc": "record/!createNorthArrow/detail/Output Prefix/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Prefix",
-            "desc": "record/!createNorthArrow/detail/Prefix/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        }
-    ],
-    "input": [
-        {
-            "title": "tempTaskDirectory",
-            "desc": "record/!createNorthArrow/input/tempTaskDirectory/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "clientHttpRequestFactory",
-            "desc": "record/!createNorthArrow/input/clientHttpRequestFactory/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "northArrow",
-            "desc": "record/!createNorthArrow/input/northArrow/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "map",
-            "desc": "record/!createNorthArrow/input/map/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        }
-    ],
-    "output": [
-        {
-            "title": "northArrowSubReport",
-            "desc": "record/!createNorthArrow/output/northArrowSubReport/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "graphic",
-            "desc": "record/!createNorthArrow/output/graphic/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.processor.InternalValue()"
             ]
         }
     ],
@@ -3838,454 +3561,6 @@ docs.processors = [{
                 
             ]
         }
-    ],
-    "translateTitle": false
-},
-{
-    "title": "!addHeaders",
-    "desc": "record/!addHeaders/desc",
-    "summaryDesc": "record/!addHeaders/summaryDesc",
-    "details": [
-        {
-            "title": "Headers",
-            "desc": "record/!addHeaders/detail/Headers/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Input Mapper",
-            "desc": "record/!addHeaders/detail/Input Mapper/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Input Prefix",
-            "desc": "record/!addHeaders/detail/Input Prefix/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Output Mapper",
-            "desc": "record/!addHeaders/detail/Output Mapper/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Output Prefix",
-            "desc": "record/!addHeaders/detail/Output Prefix/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Prefix",
-            "desc": "record/!addHeaders/detail/Prefix/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        }
-    ],
-    "input": [
-        {
-            "title": "clientHttpRequestFactory",
-            "desc": "record/!addHeaders/input/clientHttpRequestFactory/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        }
-    ],
-    "output": [
-        {
-            "title": "clientHttpRequestFactory",
-            "desc": "record/!addHeaders/output/clientHttpRequestFactory/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        }
-    ],
-    "translateTitle": false
-},
-{
-    "title": "!mergeDataSources",
-    "desc": "record/!mergeDataSources/desc",
-    "summaryDesc": "record/!mergeDataSources/summaryDesc",
-    "details": [
-        {
-            "title": "Input Mapper",
-            "desc": "record/!mergeDataSources/detail/Input Mapper/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Input Prefix",
-            "desc": "record/!mergeDataSources/detail/Input Prefix/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Output Mapper",
-            "desc": "record/!mergeDataSources/detail/Output Mapper/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Output Prefix",
-            "desc": "record/!mergeDataSources/detail/Output Prefix/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Prefix",
-            "desc": "record/!mergeDataSources/detail/Prefix/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Sources",
-            "desc": "record/!mergeDataSources/detail/Sources/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        }
-    ],
-    "input": [
-        {
-            "title": "values",
-            "desc": "record/!mergeDataSources/input/values/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                "@org.mapfish.print.processor.InternalValue()"
-            ]
-        }
-    ],
-    "output": [
-        {
-            "title": "mergedDataSource",
-            "desc": "record/!mergeDataSources/output/mergedDataSource/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        }
-    ],
-    "translateTitle": false
-},
-{
-    "title": "!forwardHeaders",
-    "desc": "record/!forwardHeaders/desc",
-    "summaryDesc": "record/!forwardHeaders/summaryDesc",
-    "details": [
-        {
-            "title": "All",
-            "desc": "record/!forwardHeaders/detail/All/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Headers",
-            "desc": "record/!forwardHeaders/detail/Headers/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Input Mapper",
-            "desc": "record/!forwardHeaders/detail/Input Mapper/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Input Prefix",
-            "desc": "record/!forwardHeaders/detail/Input Prefix/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Output Mapper",
-            "desc": "record/!forwardHeaders/detail/Output Mapper/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Output Prefix",
-            "desc": "record/!forwardHeaders/detail/Output Prefix/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Prefix",
-            "desc": "record/!forwardHeaders/detail/Prefix/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        }
-    ],
-    "input": [
-        {
-            "title": "clientHttpRequestFactory",
-            "desc": "record/!forwardHeaders/input/clientHttpRequestFactory/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "requestHeaders",
-            "desc": "record/!forwardHeaders/input/requestHeaders/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        }
-    ],
-    "output": [
-        {
-            "title": "clientHttpRequestFactory",
-            "desc": "record/!forwardHeaders/output/clientHttpRequestFactory/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        }
-    ],
-    "translateTitle": false
-},
-{
-    "title": "!useHttpForHttps",
-    "desc": "record/!useHttpForHttps/desc",
-    "summaryDesc": "record/!useHttpForHttps/summaryDesc",
-    "details": [
-        {
-            "title": "Hosts",
-            "desc": "record/!useHttpForHttps/detail/Hosts/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Input Mapper",
-            "desc": "record/!useHttpForHttps/detail/Input Mapper/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Input Prefix",
-            "desc": "record/!useHttpForHttps/detail/Input Prefix/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Output Mapper",
-            "desc": "record/!useHttpForHttps/detail/Output Mapper/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Output Prefix",
-            "desc": "record/!useHttpForHttps/detail/Output Prefix/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Port Mapping",
-            "desc": "record/!useHttpForHttps/detail/Port Mapping/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Prefix",
-            "desc": "record/!useHttpForHttps/detail/Prefix/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        }
-    ],
-    "input": [
-        {
-            "title": "clientHttpRequestFactory",
-            "desc": "record/!useHttpForHttps/input/clientHttpRequestFactory/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        }
-    ],
-    "output": [
-        {
-            "title": "clientHttpRequestFactory",
-            "desc": "record/!useHttpForHttps/output/clientHttpRequestFactory/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        }
-    ],
-    "translateTitle": false
-},
-{
-    "title": "!setWmsCustomParam",
-    "desc": "record/!setWmsCustomParam/desc",
-    "summaryDesc": "record/!setWmsCustomParam/summaryDesc",
-    "details": [
-        {
-            "title": "Input Mapper",
-            "desc": "record/!setWmsCustomParam/detail/Input Mapper/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Input Prefix",
-            "desc": "record/!setWmsCustomParam/detail/Input Prefix/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Output Mapper",
-            "desc": "record/!setWmsCustomParam/detail/Output Mapper/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Output Prefix",
-            "desc": "record/!setWmsCustomParam/detail/Output Prefix/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Param Name",
-            "desc": "record/!setWmsCustomParam/detail/Param Name/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Prefix",
-            "desc": "record/!setWmsCustomParam/detail/Prefix/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        }
-    ],
-    "input": [
-        {
-            "title": "value",
-            "desc": "record/!setWmsCustomParam/input/value/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "map",
-            "desc": "record/!setWmsCustomParam/input/map/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        }
-    ],
-    "output": [
-        
     ],
     "translateTitle": false
 },
@@ -4518,83 +3793,6 @@ docs.processors = [{
     "translateTitle": false
 },
 {
-    "title": "!reportBuilder",
-    "desc": "record/!reportBuilder/desc",
-    "summaryDesc": "record/!reportBuilder/summaryDesc",
-    "details": [
-        {
-            "title": "Configuration",
-            "desc": "record/!reportBuilder/detail/Configuration/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Directory",
-            "desc": "record/!reportBuilder/detail/Directory/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Input Mapper",
-            "desc": "record/!reportBuilder/detail/Input Mapper/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Input Prefix",
-            "desc": "record/!reportBuilder/detail/Input Prefix/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Output Mapper",
-            "desc": "record/!reportBuilder/detail/Output Mapper/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Output Prefix",
-            "desc": "record/!reportBuilder/detail/Output Prefix/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Prefix",
-            "desc": "record/!reportBuilder/detail/Prefix/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        }
-    ],
-    "input": [
-        
-    ],
-    "output": [
-        
-    ],
-    "translateTitle": false
-},
-{
     "title": "!createDataSource",
     "desc": "record/!createDataSource/desc",
     "summaryDesc": "record/!createDataSource/summaryDesc",
@@ -4714,6 +3912,925 @@ docs.processors = [{
         {
             "title": "jrDataSource",
             "desc": "record/!createDataSource/output/jrDataSource/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        }
+    ],
+    "translateTitle": false
+},
+{
+    "title": "!createNorthArrow",
+    "desc": "record/!createNorthArrow/desc",
+    "summaryDesc": "record/!createNorthArrow/summaryDesc",
+    "details": [
+        {
+            "title": "Input Mapper",
+            "desc": "record/!createNorthArrow/detail/Input Mapper/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Input Prefix",
+            "desc": "record/!createNorthArrow/detail/Input Prefix/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Output Mapper",
+            "desc": "record/!createNorthArrow/detail/Output Mapper/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Output Prefix",
+            "desc": "record/!createNorthArrow/detail/Output Prefix/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Prefix",
+            "desc": "record/!createNorthArrow/detail/Prefix/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        }
+    ],
+    "input": [
+        {
+            "title": "tempTaskDirectory",
+            "desc": "record/!createNorthArrow/input/tempTaskDirectory/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "clientHttpRequestFactory",
+            "desc": "record/!createNorthArrow/input/clientHttpRequestFactory/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "northArrow",
+            "desc": "record/!createNorthArrow/input/northArrow/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "map",
+            "desc": "record/!createNorthArrow/input/map/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        }
+    ],
+    "output": [
+        {
+            "title": "northArrowSubReport",
+            "desc": "record/!createNorthArrow/output/northArrowSubReport/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "graphic",
+            "desc": "record/!createNorthArrow/output/graphic/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.processor.InternalValue()"
+            ]
+        }
+    ],
+    "translateTitle": false
+},
+{
+    "title": "!createScalebar",
+    "desc": "record/!createScalebar/desc",
+    "summaryDesc": "record/!createScalebar/summaryDesc",
+    "details": [
+        {
+            "title": "Input Mapper",
+            "desc": "record/!createScalebar/detail/Input Mapper/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Input Prefix",
+            "desc": "record/!createScalebar/detail/Input Prefix/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Output Mapper",
+            "desc": "record/!createScalebar/detail/Output Mapper/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Output Prefix",
+            "desc": "record/!createScalebar/detail/Output Prefix/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Prefix",
+            "desc": "record/!createScalebar/detail/Prefix/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        }
+    ],
+    "input": [
+        {
+            "title": "scalebar",
+            "desc": "record/!createScalebar/input/scalebar/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "mapContext",
+            "desc": "record/!createScalebar/input/mapContext/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "template",
+            "desc": "record/!createScalebar/input/template/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.processor.InternalValue()"
+            ]
+        },
+        {
+            "title": "tempTaskDirectory",
+            "desc": "record/!createScalebar/input/tempTaskDirectory/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.processor.InternalValue()"
+            ]
+        }
+    ],
+    "output": [
+        {
+            "title": "graphic",
+            "desc": "record/!createScalebar/output/graphic/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.processor.InternalValue()"
+            ]
+        },
+        {
+            "title": "scalebarSubReport",
+            "desc": "record/!createScalebar/output/scalebarSubReport/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        }
+    ],
+    "translateTitle": false
+},
+{
+    "title": "!mergeDataSources",
+    "desc": "record/!mergeDataSources/desc",
+    "summaryDesc": "record/!mergeDataSources/summaryDesc",
+    "details": [
+        {
+            "title": "Input Mapper",
+            "desc": "record/!mergeDataSources/detail/Input Mapper/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Input Prefix",
+            "desc": "record/!mergeDataSources/detail/Input Prefix/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Output Mapper",
+            "desc": "record/!mergeDataSources/detail/Output Mapper/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Output Prefix",
+            "desc": "record/!mergeDataSources/detail/Output Prefix/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Prefix",
+            "desc": "record/!mergeDataSources/detail/Prefix/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Sources",
+            "desc": "record/!mergeDataSources/detail/Sources/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        }
+    ],
+    "input": [
+        {
+            "title": "values",
+            "desc": "record/!mergeDataSources/input/values/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.processor.InternalValue()"
+            ]
+        }
+    ],
+    "output": [
+        {
+            "title": "mergedDataSource",
+            "desc": "record/!mergeDataSources/output/mergedDataSource/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        }
+    ],
+    "translateTitle": false
+},
+{
+    "title": "!setWmsCustomParam",
+    "desc": "record/!setWmsCustomParam/desc",
+    "summaryDesc": "record/!setWmsCustomParam/summaryDesc",
+    "details": [
+        {
+            "title": "Input Mapper",
+            "desc": "record/!setWmsCustomParam/detail/Input Mapper/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Input Prefix",
+            "desc": "record/!setWmsCustomParam/detail/Input Prefix/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Output Mapper",
+            "desc": "record/!setWmsCustomParam/detail/Output Mapper/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Output Prefix",
+            "desc": "record/!setWmsCustomParam/detail/Output Prefix/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Param Name",
+            "desc": "record/!setWmsCustomParam/detail/Param Name/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Prefix",
+            "desc": "record/!setWmsCustomParam/detail/Prefix/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        }
+    ],
+    "input": [
+        {
+            "title": "value",
+            "desc": "record/!setWmsCustomParam/input/value/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "map",
+            "desc": "record/!setWmsCustomParam/input/map/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        }
+    ],
+    "output": [
+        
+    ],
+    "translateTitle": false
+},
+{
+    "title": "!prepareLegend",
+    "desc": "record/!prepareLegend/desc",
+    "summaryDesc": "record/!prepareLegend/summaryDesc",
+    "details": [
+        {
+            "title": "Dpi",
+            "desc": "record/!prepareLegend/detail/Dpi/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Input Mapper",
+            "desc": "record/!prepareLegend/detail/Input Mapper/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Input Prefix",
+            "desc": "record/!prepareLegend/detail/Input Prefix/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Max Width",
+            "desc": "record/!prepareLegend/detail/Max Width/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Output Mapper",
+            "desc": "record/!prepareLegend/detail/Output Mapper/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Output Prefix",
+            "desc": "record/!prepareLegend/detail/Output Prefix/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Prefix",
+            "desc": "record/!prepareLegend/detail/Prefix/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Template",
+            "desc": "record/!prepareLegend/detail/Template/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        }
+    ],
+    "input": [
+        {
+            "title": "tempTaskDirectory",
+            "desc": "record/!prepareLegend/input/tempTaskDirectory/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.processor.InternalValue()"
+            ]
+        },
+        {
+            "title": "legend",
+            "desc": "record/!prepareLegend/input/legend/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "clientHttpRequestFactory",
+            "desc": "record/!prepareLegend/input/clientHttpRequestFactory/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.processor.InternalValue()"
+            ]
+        },
+        {
+            "title": "template",
+            "desc": "record/!prepareLegend/input/template/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.processor.InternalValue()"
+            ]
+        }
+    ],
+    "output": [
+        {
+            "title": "legendSubReport",
+            "desc": "record/!prepareLegend/output/legendSubReport/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "numberOfLegendRows",
+            "desc": "record/!prepareLegend/output/numberOfLegendRows/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "legend",
+            "desc": "record/!prepareLegend/output/legend/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        }
+    ],
+    "translateTitle": false
+},
+{
+    "title": "!useHttpForHttps",
+    "desc": "record/!useHttpForHttps/desc",
+    "summaryDesc": "record/!useHttpForHttps/summaryDesc",
+    "details": [
+        {
+            "title": "Hosts",
+            "desc": "record/!useHttpForHttps/detail/Hosts/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Input Mapper",
+            "desc": "record/!useHttpForHttps/detail/Input Mapper/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Input Prefix",
+            "desc": "record/!useHttpForHttps/detail/Input Prefix/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Output Mapper",
+            "desc": "record/!useHttpForHttps/detail/Output Mapper/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Output Prefix",
+            "desc": "record/!useHttpForHttps/detail/Output Prefix/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Port Mapping",
+            "desc": "record/!useHttpForHttps/detail/Port Mapping/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Prefix",
+            "desc": "record/!useHttpForHttps/detail/Prefix/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        }
+    ],
+    "input": [
+        {
+            "title": "clientHttpRequestFactory",
+            "desc": "record/!useHttpForHttps/input/clientHttpRequestFactory/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        }
+    ],
+    "output": [
+        {
+            "title": "clientHttpRequestFactory",
+            "desc": "record/!useHttpForHttps/output/clientHttpRequestFactory/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        }
+    ],
+    "translateTitle": false
+},
+{
+    "title": "!addHeaders",
+    "desc": "record/!addHeaders/desc",
+    "summaryDesc": "record/!addHeaders/summaryDesc",
+    "details": [
+        {
+            "title": "Headers",
+            "desc": "record/!addHeaders/detail/Headers/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Input Mapper",
+            "desc": "record/!addHeaders/detail/Input Mapper/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Input Prefix",
+            "desc": "record/!addHeaders/detail/Input Prefix/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Output Mapper",
+            "desc": "record/!addHeaders/detail/Output Mapper/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Output Prefix",
+            "desc": "record/!addHeaders/detail/Output Prefix/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Prefix",
+            "desc": "record/!addHeaders/detail/Prefix/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        }
+    ],
+    "input": [
+        {
+            "title": "clientHttpRequestFactory",
+            "desc": "record/!addHeaders/input/clientHttpRequestFactory/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        }
+    ],
+    "output": [
+        {
+            "title": "clientHttpRequestFactory",
+            "desc": "record/!addHeaders/output/clientHttpRequestFactory/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        }
+    ],
+    "translateTitle": false
+},
+{
+    "title": "!configureHttpRequests",
+    "desc": "record/!configureHttpRequests/desc",
+    "summaryDesc": "record/!configureHttpRequests/summaryDesc",
+    "details": [
+        {
+            "title": "Http Processors",
+            "desc": "record/!configureHttpRequests/detail/Http Processors/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Input Mapper",
+            "desc": "record/!configureHttpRequests/detail/Input Mapper/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Input Prefix",
+            "desc": "record/!configureHttpRequests/detail/Input Prefix/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Output Mapper",
+            "desc": "record/!configureHttpRequests/detail/Output Mapper/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Output Prefix",
+            "desc": "record/!configureHttpRequests/detail/Output Prefix/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Prefix",
+            "desc": "record/!configureHttpRequests/detail/Prefix/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        }
+    ],
+    "input": [
+        {
+            "title": "TEMPLATE_KEY",
+            "desc": "record/!configureHttpRequests/input/TEMPLATE_KEY/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "CLIENT_HTTP_REQUEST_FACTORY_KEY",
+            "desc": "record/!configureHttpRequests/input/CLIENT_HTTP_REQUEST_FACTORY_KEY/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "TASK_DIRECTORY_KEY",
+            "desc": "record/!configureHttpRequests/input/TASK_DIRECTORY_KEY/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "PDF_CONFIG",
+            "desc": "record/!configureHttpRequests/input/PDF_CONFIG/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "SUBREPORT_DIR",
+            "desc": "record/!configureHttpRequests/input/SUBREPORT_DIR/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        }
+    ],
+    "output": [
+        {
+            "title": "clientHttpRequestFactory",
+            "desc": "record/!configureHttpRequests/output/clientHttpRequestFactory/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        }
+    ],
+    "translateTitle": false
+},
+{
+    "title": "!mapUri",
+    "desc": "record/!mapUri/desc",
+    "summaryDesc": "record/!mapUri/summaryDesc",
+    "details": [
+        {
+            "title": "Input Mapper",
+            "desc": "record/!mapUri/detail/Input Mapper/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Input Prefix",
+            "desc": "record/!mapUri/detail/Input Prefix/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Mapping",
+            "desc": "record/!mapUri/detail/Mapping/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Output Mapper",
+            "desc": "record/!mapUri/detail/Output Mapper/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Output Prefix",
+            "desc": "record/!mapUri/detail/Output Prefix/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Prefix",
+            "desc": "record/!mapUri/detail/Prefix/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        }
+    ],
+    "input": [
+        {
+            "title": "clientHttpRequestFactory",
+            "desc": "record/!mapUri/input/clientHttpRequestFactory/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        }
+    ],
+    "output": [
+        {
+            "title": "clientHttpRequestFactory",
+            "desc": "record/!mapUri/output/clientHttpRequestFactory/desc",
             "required": false,
             "translateTitle": false,
             "annotations": [
@@ -4844,13 +4961,13 @@ docs.processors = [{
     "translateTitle": false
 },
 {
-    "title": "!mapUri",
-    "desc": "record/!mapUri/desc",
-    "summaryDesc": "record/!mapUri/summaryDesc",
+    "title": "!setStyle",
+    "desc": "record/!setStyle/desc",
+    "summaryDesc": "record/!setStyle/summaryDesc",
     "details": [
         {
             "title": "Input Mapper",
-            "desc": "record/!mapUri/detail/Input Mapper/desc",
+            "desc": "record/!setStyle/detail/Input Mapper/desc",
             "required": false,
             "translateTitle": false,
             "annotations": [
@@ -4859,16 +4976,7 @@ docs.processors = [{
         },
         {
             "title": "Input Prefix",
-            "desc": "record/!mapUri/detail/Input Prefix/desc",
-            "required": false,
-            "translateTitle": false,
-            "annotations": [
-                
-            ]
-        },
-        {
-            "title": "Mapping",
-            "desc": "record/!mapUri/detail/Mapping/desc",
+            "desc": "record/!setStyle/detail/Input Prefix/desc",
             "required": false,
             "translateTitle": false,
             "annotations": [
@@ -4877,7 +4985,7 @@ docs.processors = [{
         },
         {
             "title": "Output Mapper",
-            "desc": "record/!mapUri/detail/Output Mapper/desc",
+            "desc": "record/!setStyle/detail/Output Mapper/desc",
             "required": false,
             "translateTitle": false,
             "annotations": [
@@ -4886,7 +4994,7 @@ docs.processors = [{
         },
         {
             "title": "Output Prefix",
-            "desc": "record/!mapUri/detail/Output Prefix/desc",
+            "desc": "record/!setStyle/detail/Output Prefix/desc",
             "required": false,
             "translateTitle": false,
             "annotations": [
@@ -4895,7 +5003,7 @@ docs.processors = [{
         },
         {
             "title": "Prefix",
-            "desc": "record/!mapUri/detail/Prefix/desc",
+            "desc": "record/!setStyle/detail/Prefix/desc",
             "required": false,
             "translateTitle": false,
             "annotations": [
@@ -4905,8 +5013,120 @@ docs.processors = [{
     ],
     "input": [
         {
+            "title": "map",
+            "desc": "record/!setStyle/input/map/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "style",
+            "desc": "record/!setStyle/input/style/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
             "title": "clientHttpRequestFactory",
-            "desc": "record/!mapUri/input/clientHttpRequestFactory/desc",
+            "desc": "record/!setStyle/input/clientHttpRequestFactory/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        }
+    ],
+    "output": [
+        
+    ],
+    "translateTitle": false
+},
+{
+    "title": "!createOverviewMap",
+    "desc": "record/!createOverviewMap/desc",
+    "summaryDesc": "record/!createOverviewMap/summaryDesc",
+    "details": [
+        {
+            "title": "Input Mapper",
+            "desc": "record/!createOverviewMap/detail/Input Mapper/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Input Prefix",
+            "desc": "record/!createOverviewMap/detail/Input Prefix/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Output Mapper",
+            "desc": "record/!createOverviewMap/detail/Output Mapper/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Output Prefix",
+            "desc": "record/!createOverviewMap/detail/Output Prefix/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "Prefix",
+            "desc": "record/!createOverviewMap/detail/Prefix/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        }
+    ],
+    "input": [
+        {
+            "title": "map",
+            "desc": "record/!createOverviewMap/input/map/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "clientHttpRequestFactory",
+            "desc": "record/!createOverviewMap/input/clientHttpRequestFactory/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "tempTaskDirectory",
+            "desc": "record/!createOverviewMap/input/tempTaskDirectory/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                
+            ]
+        },
+        {
+            "title": "overviewMap",
+            "desc": "record/!createOverviewMap/input/overviewMap/desc",
             "required": false,
             "translateTitle": false,
             "annotations": [
@@ -4916,8 +5136,17 @@ docs.processors = [{
     ],
     "output": [
         {
-            "title": "clientHttpRequestFactory",
-            "desc": "record/!mapUri/output/clientHttpRequestFactory/desc",
+            "title": "layerGraphics",
+            "desc": "record/!createOverviewMap/output/layerGraphics/desc",
+            "required": false,
+            "translateTitle": false,
+            "annotations": [
+                "@org.mapfish.print.processor.InternalValue()"
+            ]
+        },
+        {
+            "title": "overviewMapSubReport",
+            "desc": "record/!createOverviewMap/output/overviewMapSubReport/desc",
             "required": false,
             "translateTitle": false,
             "annotations": [
