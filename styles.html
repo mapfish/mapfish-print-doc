@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MapFish Print 3 Documentation - Vector Styles</title>
+
+    <link rel="stylesheet" href="css/sphinx_rtd_theme.css" type="text/css" />
+    <link rel="stylesheet" href="css/readthedocs-doc-embed.css" type="text/css" />
+    <link rel="stylesheet" href="css/custom.css" type="text/css" />
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+
+            <a href="index.html" class="icon icon-home"> MapFish Print 3</a>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+
+
+
+                <ul class="current">
+<li class="toctree-l1 ">
+  <a class="reference internal " href="index.html">Introduction</a>
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="jasperreports.html">JasperReports</a>
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="api.html">Web API</a>
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="attributes.html">Attributes</a>
+  
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="configuration.html">Configuration</a>
+  
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="layers.html">Map Layers</a>
+  
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="processors.html">Processors</a>
+  
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="fileloaders.html">File-Loaders</a>
+  
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="outputformats.html">Output Formats</a>
+  
+</li>
+<li class="toctree-l1 current">
+  <a class="reference internal current" href="styles.html">Styles</a>
+  <ul>
+  <li class="toctree-l2"><a class="reference internal" href="#mapfishJsonParser">mapfishJsonParser</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="#sldParser">sldParser</a></li>
+</ul>
+
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="tableimages.html">Images in tables</a>
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="download.html">Download</a>
+</li>
+</ul>
+
+
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">MapFish Print 3</a>
+      </nav>
+
+
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+
+    <li>Vector Styles</li>
+      <li class="wy-breadcrumbs-aside">
+
+
+            <a href="https://github.com/mapfish/mapfish-print" class="fa fa-github"> mapfish/mapfish-print</a>
+
+
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             <h1>Vector Styles</h1>
+             <div class="section">
+<p>Styles for vector layers.</p>
+
+</div>
+
+<div class="section" id="mapfishJsonParser">
+  <h1>mapfishJsonParser<a class="headerlink" href="#mapfishJsonParser" title="Permalink to this headline">¶</a></h1>
+  <div class="block">Supports a JSON based style format.
+ <p>
+     This style parser support two versions of JSON formatting.  Both versions use the same parameter names for configuring
+     the values of the various properties of the style but the layout differs between the two and version 2 is more flexible
+     and powerful than version 1.
+ </p><h2>Mapfish JSON Style Version 1</h2><p>
+     Version 1 is compatible with mapfish print <= v2 and is based on the OpenLayers v2 styling.  The layout is as follows:
+ </p><div class="highlight"><pre> {<br>   "version" : "1",<br>   "styleProperty":"_gx_style",<br>   "1": {<br>     "fillColor":"#FF0000",<br>     "fillOpacity":0,<br>     "rotation" : "30",<br><br>     "externalGraphic" : "mark.png"<br>     "graphicName": "circle",<br>     "graphicOpacity": 0.4,<br>     "pointRadius": 5,<br><br>     "strokeColor":"#FFA829",<br>     "strokeOpacity":1,<br>     "strokeWidth":5,<br>     "strokeLinecap":"round",<br>     "strokeDashstyle":"dot",<br><br>     "fontColor":"#000000",<br>     "fontFamily": "sans-serif",<br>     "fontSize": "12px",<br>     "fontStyle": "normal",<br>     "fontWeight": "bold",<br>     "haloColor": "#123456",<br>     "haloOpacity": "0.7",<br>     "haloRadius": "3.0",<br>     "label": "${name}",<br>     "labelAlign": "cm",<br>     "labelRotation": "45",<br>     "labelXOffset": "-25.0",<br>     "labelYOffset": "-35.0"<br>    }<br> }</pre></div><p></p><h2>Mapfish JSON Style Version 2</h2><p>
+     Version 2 uses the same property names as version 1 but has a different structure.  The layout is as follows:
+ </p><div class="highlight"><pre> {<br>   "version" : "2",<br>   // shared values can be declared here (at top level)<br>   // and used in form ${constName} later in json<br>   "val1" : "#FFA829",<br>   // default values for properties can be defined here<br>   " strokeDashstyle" : "dot"<br>   "[population > 300]" : {<br>     // default values for current rule can be defined here<br>     // they will override default values defined at<br>     // higher level<br>     "rotation" : "30",<br><br>     //min and max scale denominator are optional<br>     "maxScale" : 1000000,<br>     "minScale" : 100000,<br>     "symbolizers" : [{<br>       // values defined in symbolizer will override defaults<br>       "type" : "point",<br>       "fillColor":"#FF0000",<br>       "fillOpacity":0,<br>       "rotation" : "30",<br>       "externalGraphic" : "mark.png",<br><br>       "graphicName": "circle",<br>       "graphicOpacity": 0.4,<br>       "pointRadius": 5,<br><br>       "strokeColor":"${val1}",<br>       "strokeOpacity":1,<br>       "strokeWidth":5,<br>       "strokeLinecap":"round",<br>       "strokeDashstyle":"dot"<br>     },{<br>       "type" : "line",<br>       "strokeColor":"${val1}",<br>       "strokeOpacity":1,<br>       "strokeWidth":5,<br>       "strokeLinecap":"round",<br>       "strokeDashstyle":"dot"<br>     },{<br>       "type" : "polygon",<br>       "fillColor":"#FF0000",<br>       "fillOpacity":0,<br><br>       "strokeColor":"${val1}",<br>       "strokeOpacity":1,<br>       "strokeWidth":5,<br>       "strokeLinecap":"round",<br>       "strokeDashstyle":"dot"<br>     },{<br>       "type" : "text",<br>       "fontColor":"#000000",<br>       "fontFamily": "sans-serif",<br>       "fontSize": "12px",<br>       "fontStyle": "normal",<br>       "fontWeight": "bold",<br>       "haloColor": "#123456",<br>       "haloOpacity": "0.7",<br>       "haloRadius": "3.0",<br>       "label": "[name]",<br>       "fillColor":"#FF0000",<br>       "fillOpacity":0,<br>       "labelAlign": "cm",<br>       "labelRotation": "45",<br>       "labelXOffset": "-25.0",<br>       "labelYOffset": "-35.0"<br>     }<br>   ]}<br> }</pre></div><p>
+     As illustrated above the style consists of:
+ </p><ul><li>The version number (2) (required)</li><li>
+         Common values which can be referenced in symbolizer property values.(optional)
+         <p>Values can be referenced in the value of a property with the pattern: ${valName}</p><p>Value names can only contain numbers, characters, _ or -</p><p>
+             Values do not have to be the full property they will be interpolated.  For example:
+             <code>The value is ${val}</code></p></li><li>
+         Defaults property definitions(optional):
+         <p>
+             In order to reduce duplication and keep the style definitions small, default values can be specified.  The
+             default values in the root (style level) will be used in all symbolizers if the value is not defined.  The
+             style level default will apply to all symbolizers defined in the system.
+         </p><p>
+             The only difference between a value and a default is that the default has a well known name, therefore defaults
+             can also be used as values.
+         </p></li><li>
+         All the styling rules (At least one is required)
+         <p>
+             A styling rule has a key which is the filter which selects the features that the rule will be used to draw and the
+             rule definition object.
+         </p><p>The filter is either <code>*</code> or an
+             <a shape="rect" href="http://docs.geoserver.org/stable/en/user/filter/ecql_reference.html#filter-ecql-reference">
+             ECQL Expression</a>) surrounded by square brackets.  For example: [att < 23].
+         </p><p><em>WARNING:</em> At the moment DWITHIN and BEYOND spatial functions take a unit parameter.  However it
+             is ignored by geotools and the distance is always in the crs of the geometry projection.
+         </p>
+         The rule definition is as follows:
+         <ul><li>
+                     Default property values (optional):
+                 <p>
+                         Each rule can also have defaults.  If the style and the rule have a default for the same property
+                         the rule will override the style default.  All defaults can be (of course) overridden by a value
+                         in a symbolizer.
+                     </p></li><li>
+                     minScale (optional)
+                     <p>
+                         The minimum scale that the rule should evaluate to true
+                     </p></li><li>
+                     maxScale (optional)
+                     <p>
+                         The maximum scale that the rule should evaluate to true
+                     </p></li><li>
+                     An array of symbolizers. (at least one required).
+                     <p>
+                         A symbolizer must have a type property (point, line, polygon, text) which indicates the type of
+                         symbolizer and it has the attributes for that type of symbolizer.  All values have defaults
+                         so it is possible to define a symbolizer as with only the type property. The only exception is
+                         that the "text" symbolizer needs a label property.
+                     </p></li></ul></li></ul><p></p><h2>Configuration Elements</h2>
+ The items in the list below are the properties that can be set on the different symbolizers.  In brackets list the symbolizers
+ the values can apply to.
+ <p>
+     Most properties can be static values or ECQL expressions.  If the property has <code>[ ]</code> around the property value
+     then it will be interpreted as an ECQL expression.  Otherwise it is assumed to be static text.  If you need static text
+     that start and ends with <code>[ ]</code> then you will have to enter: <code>['propertyValue']</code> (where propertyValue
+     start and ends with <code>[ ]</code>.
+ </p><p>
+     The items below with (ECQL) can have ECQL expressions.
+ </p><ul><li><strong>fillColor</strong>(ECQL) - (polygon, point, text) The color used to fill the point graphic, polygon or text.</li><li><strong>fillOpacity</strong>(ECQL) - (polygon,  point, text) The opacity used when fill the point graphic, polygon or text.</li><li><strong>rotation</strong>(ECQL) - (point) The rotation of the point graphic</li><li><strong>externalGraphic</strong> - (point) one of the two options for declaring the point graphic to use.  This can
+         be a URL to the icon to use or, if just a string it will be assumed to refer to a file in the
+         configuration directory (or subdirectory).  Only files in the configuration directory (or subdirectory) will be allowed.
+     </li><li><strong>graphicName</strong>(ECQL) - (point) one of the two options for declaring the point graphic to use.  This is the
+         default and will be a square if not specified. The option are any of the Geotools Marks.
+         <p>Geotools has by default 3 types of marks:</p><ul><li>WellKnownMarks: cross, star, triangle, arrow, X, hatch, square</li><li>ShapeMarks: shape://vertline, shape://horline, shape://slash, shape://backslash, shape://dot, shape://plus,
+                 shape://times, shape://oarrow, shape://carrow, shape://coarrow, shape://ccarrow</li><li>TTFMarkFactory: ttf://fontName#code (where fontName is a TrueType font and the code is the code number of the
+                 character to render for the point.</li></ul></li><li><strong>graphicOpacity</strong>(ECQL) - (point) the opacity to use when drawing the point graphic</li><li><strong>pointRadius</strong>(ECQL) - (point) the size at which to draw the point graphic</li><li><strong>strokeColor</strong>(ECQL) - (line, point, polygon) the color to use when drawing a line or the outline of a
+         polygon or point graphic
+     </li><li><strong>strokeOpacity</strong>(ECQL) - (line, point, polygon) the opacity to use when drawing the line/stroke</li><li><strong>strokeWidth</strong>(ECQL) - (line, point, polygon) the widh of the line/stroke</li><li><strong>strokeLinecap</strong>(ECQL) - (line, point, polygon) the style used when drawing the end of a line.
+         <p>
+             Options:  butt (sharp square edge), round (rounded edge), and square (slightly elongated square edge). Default is butt
+         </p></li><li><strong>strokeDashstyle</strong> - (line, point, polygon) A string describing how to draw the line or an array of
+         floats describing the line lengths and space lengths:
+         <ul><li>dot - translates to dash array: [0.1, 2 * strokeWidth]</li><li>dash - translates to dash array: [2 * strokeWidth, 2 * strokeWidth]</li><li>dashdot - translates to dash array: [3 * strokeWidth, 2 * strokeWidth, 0.1, 2 * strokeWidth]</li><li>longdash - translates to dash array: [4 * strokeWidth, 2 * strokeWidth]</li><li>longdashdot - translates to dash array: [5 * strokeWidth, 2 * strokeWidth, 0.1, 2 * strokeWidth]</li><li>{string containing spaces to delimit array elements} - Example: [1 2 3 1 2]</li></ul></li><li><strong>fontColor</strong>(ECQL) - (text) the color of the text drawn</li><li><strong>fontFamily</strong>(ECQL) - (text) the font of the text drawn</li><li><strong>fontSize</strong>(ECQL) - (text) the font size of the text drawn</li><li><strong>fontStyle</strong>(ECQL) - (text) the font style of the text drawn</li><li><strong>fontWeight</strong>(ECQL) - (text) the font weight of the text drawn</li><li><strong>haloColor</strong>(ECQL) - (text) the color of the halo around the text</li><li><strong>haloOpacity</strong>(ECQL) - (text) the opacity of the halo around the text</li><li><strong>haloRadius</strong>(ECQL) - (text) the radius of the halo around the text</li><li><strong>label</strong>(ECQL) - (text) the expression used to create the label e.  See the section on labelling for more
+         details
+     </li><li><strong>labelAlign</strong> - (Point Placement) the indicator of how to align the text with respect to the geometry.
+         This property must have 2 characters, the x-align and the y-align.
+         <p>
+             X-Align options:
+         </p><ul><li>l - align to the left of the geometric center</li><li>c - align on the center of the geometric center</li><li>r - align to the right of the geometric center</li></ul><p>
+             Y-Align options:
+         </p><ul><li>b - align to the bottom of the geometric center</li><li>m - align on the middle of the geometric center</li><li>t - align to the top of the geometric center</li></ul></li><li><strong>labelRotation</strong>(ECQL) - (Point Placement) the rotation of the label</li><li><strong>labelXOffset</strong>(ECQL) - (Point Placement) the amount to offset the label along the x axis.  negative number
+     offset to the left</li><li><strong>labelYOffset</strong>(ECQL) - (Point Placement) the amount to offset the label along the y axis.  negative number
+     offset to the top of the printing</li><li><strong>labelAnchorPointX</strong>(ECQL) - (Point Placement) The point along the x axis that the label is started at
+     anchored). Offset and rotation is relative to this point.  Only one of labelAnchorPointX/Y or labelAlign will be respected,
+     since they are both ways of defining the anchor Point</li><li><strong>labelAnchorPointY</strong>(ECQL) - (Point Placement) The point along the y axis that the label is started at
+     (anchored). Offset and rotation is relative to this point.  Only one of labelAnchorPointX/Y or labelAlign will be respected,
+     since they are both ways of defining the anchor Point</li><li><strong>labelPerpendicularOffset</strong>(ECQL) - (Line Placement) If this property is defined it will be assumed that the
+     geometry is a line and this property defines how far from the center of the line the label should be drawn.</li></ul><p></p><h2>Labelling:</h2><p>
+     Labelling in this style format is done by defining a text symbolizer ("type":"text").  All text sybmolizers consist of:
+ </p><ul><li>Label Property</li><li>Halo Properties</li><li>Font/weight/style/color/opacity</li><li>Placement Properties</li></ul><h3>Label Property</h3><p>
+     The label property defines what label will be drawn for a given feature.  The value is either a string which will
+     be the static label for all features that the symbolizer will be drawn on or a string surrounded by [] which
+     indicates that it is an ECQL Expression.  Examples:
+ </p><ul><li>Static label</li><li>[attributeName]</li><li>['Static Label Again']</li><li>[5]</li><li>5</li><li>env('java.home')</li><li>centroid(geomAtt)</li></ul><h3>Halo Properties</h3><p>
+     A halo is a space around the drawn label text that is color (using the halo properties).  A label with a halo is like
+     the drawn label text with a buffer around the label text drawn using the halo properties.  This allows the label to
+     be clearly visible regardless of the background.  For example if the text is black and the halo is with, then the text will
+     always be readable thanks to the white buffer around the label text.
+ </p><h3>Font/weight/style/color/opacity</h3><p>
+     The Font/weight/style/color/opacity properties define how the label text is drawn.  They are for the most part equivalent to
+     the similarly named css and SLD properties.
+ </p><h3>Placement Properties</h3><p>
+     An important part of defining a text symbolizer is defining where the text/label will be drawn.  The placement properties
+     are used for this purpose.  There are two types of placements, Point and Line placement and <em>only one</em> type of placement
+     can be used. The type of placement is determined by inspecting the properties in the text symbolizer and if the
+     <em>labelPerpendicularOffset</em> property is defined then a line placement will be created for the text symbolizer.
+ </p><p>
+     It is important to realize that since only one type of placement can be used, an error will be reported if
+     <em>labelPerpendicularOffset</em> is defined in the text symbolizer along with <em>any</em> of the point placement properties.
+ </p><p><strong>Point Placement</strong></p><p>
+     Point placement defines an <em>anchor point</em> which is the point to draw the text relative to.  For example an
+     anchor point of 0.5, 0.5 ("labelAnchorPointX" : "0.5", "labelAnchorPointY" : "0.5") would position the start of the label
+     at the center of the geometry.
+ </p><p>
+     After <em>anchor point</em>, comes <em>displacement</em> displacement defines the distance
+     from the anchor point to start the label.  The combination of the two values determines the final location of the
+     label.
+ </p><p>Lastly, there is a label rotation which defines the orientation of the label.</p><p>
+     There are two ways to define the anchor point, either the <em>labelAnchorPointX/Y</em> properties are set or the
+     <em>labelAlign</em> property is set.  If both are defined then the <em>labelAlign</em> will be ignored.
+ </p><p></p><h2>ECQL references:</h2><ul><li><a shape="rect" href="http://docs.geoserver.org/stable/en/user/filter/ecql_reference.html#ecql-expr">
+         http://docs.geoserver.org/stable/en/user/filter/ecql_reference.html#ecql-expr</a></li><li><a shape="rect" href="http://udig.refractions.net/files/docs/latest/user/Constraint%20Query%20Language.html">
+         http://udig.refractions.net/files/docs/latest/user/Constraint%20Query%20Language.html</a></li><li><a shape="rect" href="http://docs.geoserver.org/stable/en/user/filter/function_reference.html#filter-function-reference">
+         http://docs.geoserver.org/stable/en/user/filter/function_reference.html#filter-function-reference</a></li><li><a shape="rect" href="http://docs.geotools.org/stable/userguide/library/cql/ecql.html">
+         http://docs.geotools.org/stable/userguide/library/cql/ecql.html</a></li><li><a shape="rect" href="http://docs.geoserver.org/latest/en/user/tutorials/cql/cql_tutorial.html">
+         http://docs.geoserver.org/latest/en/user/tutorials/cql/cql_tutorial.html</a></li></ul></div>
+
+
+
+
+</div>
+<div class="section" id="sldParser">
+  <h1>sldParser<a class="headerlink" href="#sldParser" title="Permalink to this headline">¶</a></h1>
+  <div class="block">Basic implementation for loading and parsing an SLD style.</div>
+
+
+
+
+</div>
+
+
+
+
+           </div>
+          </div>
+          <footer>
+
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        <a href="http://www.camptocamp.com/geospatial/" target="_blank">Camptocamp</a> <br>
+        <span class="commit">
+          Revision <code><a href="https://github.com/mapfish/mapfish-print/commit/faecdcb61a67996576076ae47809404967712ce3
+" target="_blank">faecdcb6</a></code>.
+        </span>
+
+
+    </p>
+  </div>
+  Theme based on a <a href="https://github.com/snide/sphinx_rtd_theme">template</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+
+
+      <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+      <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+      <script type="text/javascript" src="js/underscore.js"></script>
+      <script type="text/javascript" src="js/theme.js"></script>
+      <script type="text/javascript">
+        jQuery(function () {
+            SphinxRtdTheme.StickyNav.enable();
+        });
+      </script>
+
+</body>
+</html>

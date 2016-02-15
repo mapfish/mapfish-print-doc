@@ -1,96 +1,252 @@
-<!--
-  ~ Copyright (C) 2014  Camptocamp
-  ~
-  ~ This file is part of MapFish Print
-  ~
-  ~ MapFish Print is free software: you can redistribute it and/or modify
-  ~ it under the terms of the GNU General Public License as published by
-  ~ the Free Software Foundation, either version 3 of the License, or
-  ~ (at your option) any later version.
-  ~
-  ~ MapFish Print is distributed in the hope that it will be useful,
-  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
-  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  ~ GNU General Public License for more details.
-  ~
-  ~ You should have received a copy of the GNU General Public License
-  ~ along with MapFish Print.  If not, see <http://www.gnu.org/licenses/>.
-  -->
-
-<html>
+<!DOCTYPE html>
+<html lang="en" >
 <head>
-    <title>Mapfish Print Documentation</title>
-    <link rel="shortcut icon" href="favicon.ico" />
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="custom.css">
-    <style>
+  <meta charset="utf-8">
 
-        blockquote {
-            font-size: 14px;
-            font-style: italic;
-        }
-        div.title {
-            margin-bottom: 2em;
-        }
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        img.icon {
-            margin-top: 10px;
-            width: 180px;
-            height: 96px;
-        }
-        h2.contentsTitle {
-            padding-right: 5px;
-        }
-        h2.pageTitle, h2.contentsTitle {
-            padding-left: 5px;
-        }
-        span.architecture > svg {
-            max-height: 450px;
-        }
-        table {
-            width:100%;
-        }
-        tr, td {
-            padding: 5px;
-            text-align: left;
-        }
-    </style>
-     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.14/angular.min.js"></script>
-    <script src="angular-translate.min.js"></script>
-    <script src="angular-translate-loader-static-files.min.js"></script>
+  <title>MapFish Print 3 Documentation - Overview</title>
 
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.14/angular.js"></script>-->
-    <!--<script src="angular-translate.js"></script>-->
-    <!--<script src="angular-translate-loader-static-files.js"></script>-->
+    <link rel="stylesheet" href="css/sphinx_rtd_theme.css" type="text/css" />
+    <link rel="stylesheet" href="css/readthedocs-doc-embed.css" type="text/css" />
+    <link rel="stylesheet" href="css/custom.css" type="text/css" />
 
-    <script src="ui-bootstrap-tpls-0.11.0.min.js"></script>
-
-    <script src="lib.js" charset="UTF-8"></script>
-    <script src="generated-data.js" charset="UTF-8"></script>
 </head>
-<body ng-app="docsApp">
-<div ng-controller="DocsCtrl">
-    <div class="row col-sm-12 title">
-        <a href=""><img class="icon col-xs-2" src="mapfish_transparent.png" /></a>
-        <div class="col-xs-10">
-            <h1>{{'headerTitle' | translate}}</h1>
-            <div>3.3-SNAPSHOT</div>
-            <div><a href="http://www.camptocamp.com/geospatial/">Camptocamp SA</a></div>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+
+            <a href="index.html" class="icon icon-home"> MapFish Print 3</a>
         </div>
-    </div>
-    <div class="row col-sm-2">
-        <h2 class="contentsTitle">{{'contentsTitle' | translate}}</h2>
-        <ul class="nav nav-pills nav-stacked">
-            <li ng-repeat="v in pages | sortTableOfContents"
-                ng-class="page == v.key ? 'active' : ''"><a href="{{'#'+v.key}}" ng-click="select(v.key)">{{v.title}}</a></li>
-        </ul>
-    </div>
-    <div class="col-sm-10">
-        <h2 class="pageTitle">{{pages[page].title | translate}}</h2>
-        <div ng-include="pages[page].html"/>
-    </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+
+
+
+                <ul class="current">
+<li class="toctree-l1 current">
+  <a class="reference internal current" href="index.html">Introduction</a>
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="jasperreports.html">JasperReports</a>
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="api.html">Web API</a>
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="attributes.html">Attributes</a>
+  
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="configuration.html">Configuration</a>
+  
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="layers.html">Map Layers</a>
+  
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="processors.html">Processors</a>
+  
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="fileloaders.html">File-Loaders</a>
+  
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="outputformats.html">Output Formats</a>
+  
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="styles.html">Styles</a>
+  
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="tableimages.html">Images in tables</a>
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="download.html">Download</a>
+</li>
+</ul>
+
+
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">MapFish Print 3</a>
+      </nav>
+
+
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+
+    <li>Overview</li>
+      <li class="wy-breadcrumbs-aside">
+
+
+            <a href="https://github.com/mapfish/mapfish-print" class="fa fa-github"> mapfish/mapfish-print</a>
+
+
+      </li>
+  </ul>
+  <hr/>
 </div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             <h1>Overview</h1>
+             <div class="section">
+<p>The purpose of Mapfish Print is to create reports that contain maps (and map related components) within them.
+</p>
+<p>
+    The project is a Java based servlet/library/application based on the mature
+    <a href="http://community.jaspersoft.com/project/jasperreports-library" target="_blank">Jasper Reports Library</a>.
+</p>
+<p>
+    Mapfish Print has the following distributions:
+<ul>
+    <li>
+        The most commonly used distribution is the <em>war</em> distribution where Mapfish Print is a servlet and can be run in a
+        servlet container like <a href="http://tomcat.apache.org/" target="_blank">Apache Tomcat</a>.
+    </li>
+    <li>
+        Mapfish Print is also distributed as a Java <em>jar</em> which allows Mapfish Print to be used like a normal Java library, or
+        embedded in an existing Java web application as an addition servlet.
+    </li>
+    <li>
+        The Java <em>war</em> is also packaged as a debian package.
+    </li>
+    <li>
+        The last distribution is an command-line application where the reports can be generated via command line.  This is useful for
+        debugging configurations and requests.
+    </li>
+</ul>
+</p>
+
+<h2>Design Philosophy</h2>
+<p>The (much simplified) architecture of Mapfish Print is as follows:
+</p>
+
+<img class="architecture" src="images/Mapfish_Print_V3_Architecture.svg" />
+
+<p>This diagram illustrates how a client (web-client or Java application) communicates with the Mapfish Print Server.  In the case of a Java application
+the communication is directly with the Java Servlet Object and for web-clients via HTTP requests.  The protocol consists of several requests, only a few of which are shown in the diagram.  For the full list of requests see:
+<a href="api.html">Web Protocol</a>.</p>
+
+<p>The typical request sequence a client will make is as follows:
+<ul>
+    <li>
+        If the client is a generic client, the client will make a capabilities request in order to obtain information about the required <a href="attributes.html">attributes</a> needed to be sent to the server.
+    </li>
+    <li>
+        Next the create request will be made and all the <a href="attributes.html">attributes</a> (the data required in order to print the report) are sent to the server.  The server will return a reference id of the print job for obtaining the report and the status.
+    </li>
+    <li>
+        Once the create request returns, the client will poll the server asking about the status of the print.
+    </li>
+    <li>
+        Once the status request returns the completion response (and not an error) then the client will make the GET report request.
+    </li>
+</ul>
+</p>
+<p>
+    On the server side, once a create request is received the server will create a print job and send it to the job manager, which is
+    responsible for running the print job asynchronously (possibly on a completely different server) and allowing the HTTP request to
+    return a response to the user without waiting for the print job to complete. As an aside, there is a <code>createAndGet</code> request that will
+    wait until the printing is done and directly return the report without having to poll to see if the print is done. This is a
+    convenience for client makers.
+</p>
+<p>
+    While creating the print job all of the <a href="attributes.html">attributes</a> are parsed from the JSON and a job reference id is
+    generated to uniquely identify the created job.
+</p>
+<p>
+    Once the print job is started, the <a href="attributes.html">attributes</a> are passed to the <a href="processors.html">processors</a>. The
+    processors work with the <a href="attributes.html">attributes</a> in order to generate the maps, tables, legends, etc... that are required
+    by the <a href="outputformats.html">output format</a> (Jasper template).
+</p>
+<p>
+    Once the <a href="processors.html">processors</a> have all completed execution all of the values are passed to the <a
+        href="outputformats.html">output format</a> which uses that information to generate the report. In theory an <a href="outputformats.html">output
+    format</a> could be anything that generates a report. However the current version uses the
+    <a href="http://community.jaspersoft.com/project/jasperreports-library">Jasper Reports Library</a> for its outputs and several of the
+    processors are Jasper Reports focuses.
+    Because of this the documentation will assume that the output format is always based on
+    <a href="http://community.jaspersoft.com/project/jasperreports-library">Jasper Reports</a>.
+</p>
+<p>
+    The <a href="outputformats.html">output format</a> will generate a report and store it in some way for later retrieval. At this point the
+    status request would return a response indicating that the print job has completed.
+</p>
+
+</div>
+
+
+
+
+
+           </div>
+          </div>
+          <footer>
+
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        <a href="http://www.camptocamp.com/geospatial/" target="_blank">Camptocamp</a> <br>
+        <span class="commit">
+          Revision <code><a href="https://github.com/mapfish/mapfish-print/commit/faecdcb61a67996576076ae47809404967712ce3
+" target="_blank">faecdcb6</a></code>.
+        </span>
+
+
+    </p>
+  </div>
+  Theme based on a <a href="https://github.com/snide/sphinx_rtd_theme">template</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+
+
+      <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+      <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+      <script type="text/javascript" src="js/underscore.js"></script>
+      <script type="text/javascript" src="js/theme.js"></script>
+      <script type="text/javascript">
+        jQuery(function () {
+            SphinxRtdTheme.StickyNav.enable();
+        });
+      </script>
+
 </body>
 </html>

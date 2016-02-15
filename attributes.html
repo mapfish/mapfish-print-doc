@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MapFish Print 3 Documentation - Attributes</title>
+
+    <link rel="stylesheet" href="css/sphinx_rtd_theme.css" type="text/css" />
+    <link rel="stylesheet" href="css/readthedocs-doc-embed.css" type="text/css" />
+    <link rel="stylesheet" href="css/custom.css" type="text/css" />
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+
+            <a href="index.html" class="icon icon-home"> MapFish Print 3</a>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+
+
+
+                <ul class="current">
+<li class="toctree-l1 ">
+  <a class="reference internal " href="index.html">Introduction</a>
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="jasperreports.html">JasperReports</a>
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="api.html">Web API</a>
+</li>
+<li class="toctree-l1 current">
+  <a class="reference internal current" href="attributes.html">Attributes</a>
+  <ul>
+  <li class="toctree-l2"><a class="reference internal" href="#!boolean">!boolean</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="#!datasource">!datasource</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="#!features">!features</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="#!float">!float</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="#!integer">!integer</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="#!legend">!legend</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="#!map">!map</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="#!northArrow">!northArrow</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="#!overviewMap">!overviewMap</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="#!paging">!paging</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="#!scalebar">!scalebar</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="#!staticLayers">!staticLayers</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="#!string">!string</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="#!stringArray">!stringArray</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="#!style">!style</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="#!table">!table</a></li>
+</ul>
+
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="configuration.html">Configuration</a>
+  
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="layers.html">Map Layers</a>
+  
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="processors.html">Processors</a>
+  
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="fileloaders.html">File-Loaders</a>
+  
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="outputformats.html">Output Formats</a>
+  
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="styles.html">Styles</a>
+  
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="tableimages.html">Images in tables</a>
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="download.html">Download</a>
+</li>
+</ul>
+
+
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">MapFish Print 3</a>
+      </nav>
+
+
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+
+    <li>Attributes</li>
+      <li class="wy-breadcrumbs-aside">
+
+
+            <a href="https://github.com/mapfish/mapfish-print" class="fa fa-github"> mapfish/mapfish-print</a>
+
+
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             <h1>Attributes</h1>
+             <div class="section">
+<p>
+    An attribute is a value that a processor requires as its input (if it is not satisfied by the output of another processor) or the
+    report template. An attribute represents one or more values. Usually simple values (numbers, strings, etc...) are values required by
+    the report template but on occasion they might be required by a processor. Typically a processor will require a specific attribute
+    type, for example the <a href="processors.html#!createMap">!createMap</a> processor requires a <a href="attributes.html#!map">!map</a>
+    attribute, which contains all of the information required to render a map (layers, bbox, projections, etc...)
+</p><p>
+    Attributes are declared in the configuration yaml file in the !attribute block. The
+    attribute block is a map of name - > attributeType pairs. This means that each attribute consists of a name and a type. Each processor
+    has a inputs which must be satisfied by an attribute or the output of another processor. Each input has a name/key that is used to
+    look up the attribute (or output). If an input of a processor is not satisfied, an error will be reported to the client detailing the
+    attribute(s) that are missing.
+</p><p>
+    All attributes can have a <em>default</em> block where the values of the attribute can be supplied. As the term implies, an attribute
+    with default values does not need to be supplied by the client (although they can be overridden). Further, if an attribute has
+    multiple values the default block may only provide defaults for a subset of the values (the client must supply the rest).
+</p><p>
+    Defaults provide a way to make the API the client must use to be very simple (when designing a custom client) but remain flexible.
+</p><p>
+  <strong>Example</strong>
+</p><p>
+  <code>config.yaml</code>
+  <div class="highlight-yaml"><div class="highlight"><pre>
+templates:
+  A4 portrait: !template
+    reportTemplate: simpleReport.jrxml
+    attributes:
+      number: !integer {}
+      title: !string {}
+      description: !string {}
+      map: !map
+        height: 200
+        width: 400</pre></div></div>
+</p><p>
+  <code>request.json</code>
+  <div class="highlight-json"><div class="highlight"><pre>
+{
+    "layout": "A4 portrait",
+    "outputFormat": "pdf",
+    "attributes": {
+        "number": 45,
+        "name": "The map",
+        "description": "A map showing..."
+        },
+        "map": {
+          "bbox": [100, -1, 106, 2],
+          "projection": "CRS:84",
+          "dpi": 72,
+          ...
+        }
+    }
+}</pre></div></div>
+</p>
+
+</div>
+
+<div class="section" id="!boolean">
+  <h1>!boolean<a class="headerlink" href="#!boolean" title="Permalink to this headline">¶</a></h1>
+  <div class="block"><p>A boolean type attribute.</p>
+ </div>
+
+  <div class="admonition note examples">
+    <p class="first admonition-title">Example</p>
+    <p class="last">
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/verboseExample" target="_blank" class="fa fa-book">&nbsp;verboseExample</a>&nbsp;
+    </p>
+  </div>
+
+    <h3>Configuration</h3>
+  <dl>
+    <dt>
+      <code>default</code>  
+    </dt>
+    <dd>
+      <div class="block"><p>A default value for this attribute. Example:</p><div class="highlight"><pre>     attributes:<br>       title: !string<br>         default: "Report"</pre></div></div>
+    </dd>
+  </dl>
+
+
+</div>
+<div class="section" id="!datasource">
+  <h1>!datasource<a class="headerlink" href="#!datasource" title="Permalink to this headline">¶</a></h1>
+  <div class="block"><p>
+     This attribute represents a collection of attributes which can be used as the data source of a Jasper report's
+     table/detail section.
+ </p><p>
+     For example consider the case where the report should contain multiple tables or charts but the number of reports
+     may change depending on the request.  In this case the client will post a datasource attribute json object containing an array
+     of all the table attribute objects.  The <a title="class in org.mapfish.print.processor.jasper" shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/jasper/DataSourceProcessor.html"><code>DataSourceProcessor</code></a> will process
+     the datasource attribute and create a Jasper datasource that contains all the tables.
+ </p><p>
+     This datasource must be used in tandem with the <a title="class in org.mapfish.print.processor.jasper" shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/jasper/DataSourceProcessor.html"><code>DataSourceProcessor</code></a> processor
+     (see <a shape="rect" href="processors.html#!createDataSource">!createDataSource</a> processor).
+ </p><p>
+     The json data of this attribute is special since it represents an array of attributes, each element in the array must
+     contain all of the attributes required to satisfy the processors in the
+     <a title="class in org.mapfish.print.processor.jasper" shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/jasper/DataSourceProcessor.html"><code>DataSourceProcessor</code></a>.
+ </p><p>
+ Example configuration:
+ </p><div class="highlight"><pre> datasource: !datasource<br>   table: !table<br>   map: !map<br>     width: 200<br>     height: 100</pre></div><p>
+ Example request data:
+ </p><div class="highlight"><pre> datasource: [<br>   {<br>       table: {<br>           ... // normal table attribute data<br>       },<br>       map: {<br>           ... // normal map attribute data<br>       }<br>   }, {<br>       table: {<br>           ... // normal table attribute data<br>       },<br>       map: {<br>           ... // normal map attribute data<br>       }<br>   }<br> ]</pre></div>
+ </div>
+
+  <div class="admonition note examples">
+    <p class="first admonition-title">Example</p>
+    <p class="last">
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/verboseExample" target="_blank" class="fa fa-book">&nbsp;verboseExample</a>&nbsp;
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/datasource_dynamic_tables" target="_blank" class="fa fa-book">&nbsp;datasource_dynamic_tables</a>&nbsp;
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/datasource_many_dynamictables_legend" target="_blank" class="fa fa-book">&nbsp;datasource_many_dynamictables_legend</a>&nbsp;
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/datasource_multiple_maps" target="_blank" class="fa fa-book">&nbsp;datasource_multiple_maps</a>&nbsp;
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/customDynamicReport" target="_blank" class="fa fa-book">&nbsp;customDynamicReport</a>&nbsp;
+    </p>
+  </div>
+
+    <h3>Configuration</h3>
+  <dl>
+    <dt>
+      <code>attributes</code>  
+    </dt>
+    <dd>
+      <div class="block">The attributes that are acceptable by this dataSource.  The format is the same as the template attributes section.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>default</code>  
+    </dt>
+    <dd>
+      <div class="block"><p>Default values for this attribute. Example:</p><div class="highlight"><pre>     attributes:<br>       datasource: !datasource<br>         attributes:<br>           name: !string {}<br>           count: !integer {}<br>         default:<br>           - name: "name"<br>           - count: 3</pre></div></div>
+    </dd>
+  </dl>
+
+
+</div>
+<div class="section" id="!features">
+  <h1>!features<a class="headerlink" href="#!features" title="Permalink to this headline">¶</a></h1>
+  <div class="block">Attribute for GeoJson feature collection.</div>
+
+
+    <h3>Configuration</h3>
+  <dl>
+    <dt>
+      <code>default</code>  
+    </dt>
+    <dd>
+      <div class="block"><p>Default values for this attribute. Example:</p><div class="highlight"><pre> attributes:<br>   legend: !legend<br>     default:<br>       name: "Legend"</pre></div></div>
+    </dd>
+  </dl>
+
+    <h3>Inputs</h3>
+  <dl>
+    <dt>
+      <code>features</code>  required
+    </dt>
+    <dd>
+      <div class="block">The geojson features.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>longitudeFirst</code>  
+    </dt>
+    <dd>
+      <div class="block">By default the normal axis order as specified in EPSG code will be used when parsing projections.  However
+ the requestor can override this by explicitly declaring that longitude axis is first.</div>
+    </dd>
+  </dl>
+
+</div>
+<div class="section" id="!float">
+  <h1>!float<a class="headerlink" href="#!float" title="Permalink to this headline">¶</a></h1>
+  <div class="block"><p>A float type attribute.</p>
+ </div>
+
+  <div class="admonition note examples">
+    <p class="first admonition-title">Example</p>
+    <p class="last">
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/verboseExample" target="_blank" class="fa fa-book">&nbsp;verboseExample</a>&nbsp;
+    </p>
+  </div>
+
+    <h3>Configuration</h3>
+  <dl>
+    <dt>
+      <code>default</code>  
+    </dt>
+    <dd>
+      <div class="block"><p>A default value for this attribute. Example:</p><div class="highlight"><pre>     attributes:<br>       title: !string<br>         default: "Report"</pre></div></div>
+    </dd>
+  </dl>
+
+
+</div>
+<div class="section" id="!integer">
+  <h1>!integer<a class="headerlink" href="#!integer" title="Permalink to this headline">¶</a></h1>
+  <div class="block"><p>An integer type attribute.</p>
+ </div>
+
+  <div class="admonition note examples">
+    <p class="first admonition-title">Example</p>
+    <p class="last">
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/verboseExample" target="_blank" class="fa fa-book">&nbsp;verboseExample</a>&nbsp;
+    </p>
+  </div>
+
+    <h3>Configuration</h3>
+  <dl>
+    <dt>
+      <code>default</code>  
+    </dt>
+    <dd>
+      <div class="block"><p>A default value for this attribute. Example:</p><div class="highlight"><pre>     attributes:<br>       title: !string<br>         default: "Report"</pre></div></div>
+    </dd>
+  </dl>
+
+
+</div>
+<div class="section" id="!legend">
+  <h1>!legend<a class="headerlink" href="#!legend" title="Permalink to this headline">¶</a></h1>
+  <div class="block">Objects needed by the <a title="class in org.mapfish.print.processor.jasper" shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/jasper/LegendProcessor.html"><code>LegendProcessor</code></a> (see
+ <a shape="rect" href="processors.html#!prepareLegend">!prepareLegend</a> processor).
+ </div>
+
+  <div class="admonition note examples">
+    <p class="first admonition-title">Example</p>
+    <p class="last">
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/verboseExample" target="_blank" class="fa fa-book">&nbsp;verboseExample</a>&nbsp;
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/legend_cropped" target="_blank" class="fa fa-book">&nbsp;legend_cropped</a>&nbsp;
+    </p>
+  </div>
+
+    <h3>Configuration</h3>
+  <dl>
+    <dt>
+      <code>default</code>  
+    </dt>
+    <dd>
+      <div class="block"><p>Default values for this attribute. Example:</p><div class="highlight"><pre> attributes:<br>   legend: !legend<br>     default:<br>       name: "Legend"</pre></div></div>
+    </dd>
+  </dl>
+
+    <h3>Inputs</h3>
+  <dl>
+    <dt>
+      <code>classes</code>  
+    </dt>
+    <dd>
+      <div class="block">Other embedded classes.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>icons</code>  
+    </dt>
+    <dd>
+      <div class="block">Urls for downloading icons for each legend row.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>name</code>  
+    </dt>
+    <dd>
+      <div class="block">Name of the legend class.</div>
+    </dd>
+  </dl>
+
+</div>
+<div class="section" id="!map">
+  <h1>!map<a class="headerlink" href="#!map" title="Permalink to this headline">¶</a></h1>
+  <div class="block"><p>The attributes for <a title="class in org.mapfish.print.processor.map" shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/map/CreateMapProcessor.html"><code>CreateMapProcessor</code></a> (see
+ <a shape="rect" href="processors.html#!createMap">!createMap</a> processor).</p>
+ </div>
+
+  <div class="admonition note examples">
+    <p class="first admonition-title">Example</p>
+    <p class="last">
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/verboseExample" target="_blank" class="fa fa-book">&nbsp;verboseExample</a>&nbsp;
+    </p>
+  </div>
+
+    <h3>Configuration</h3>
+  <dl>
+    <dt>
+      <code>default</code>  
+    </dt>
+    <dd>
+      <div class="block"><p>Default values for this attribute. Example:</p><div class="highlight"><pre> attributes:<br>   legend: !legend<br>     default:<br>       name: "Legend"</pre></div></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>dpiSuggestions</code>  
+    </dt>
+    <dd>
+      <div class="block">Suggestions for DPI values to use. Typically these are used by the client to create a UI for a user.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>height</code>  
+    </dt>
+    <dd>
+      <div class="block">The height of the map in pixels. This value should match the height
+ of the sub-report in the JasperReport template.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>maxDpi</code>  
+    </dt>
+    <dd>
+      <div></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>width</code>  
+    </dt>
+    <dd>
+      <div class="block">The width of the map in pixels. This value should match the width
+ of the sub-report in the JasperReport template.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>zoomLevelSnapStrategy</code>  
+    </dt>
+    <dd>
+      <div></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>zoomLevels</code>  
+    </dt>
+    <dd>
+      <div></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>zoomSnapGeodetic</code>  
+    </dt>
+    <dd>
+      <div></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>zoomSnapTolerance</code>  
+    </dt>
+    <dd>
+      <div></div>
+    </dd>
+  </dl>
+
+    <h3>Inputs</h3>
+  <dl>
+    <dt>
+      <code>areaOfInterest</code>  
+    </dt>
+    <dd>
+      <div class="block">A GeoJSON geometry that is essentially the area of the area to draw on the map.
+ <p></p></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>bbox</code>  required
+    </dt>
+    <dd>
+      <div class="block">An array of 4 doubles, minX, minY, maxX, maxY.  The bounding box of the map.
+ <p></p>
+ Either the bbox or the center + scale must be defined
+ <p></p></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>center</code>  required
+    </dt>
+    <dd>
+      <div class="block">An array of 2 doubles, (x, y).  The center of the map.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>dpi</code>  required
+    </dt>
+    <dd>
+      <div class="block">The output dpi of the printed map.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>dpiSensitiveStyle</code>  
+    </dt>
+    <dd>
+      <div class="block">Should the vector style definitions be adapted to the target DPI resolution? (Default: true)
+ <p></p>
+ The style definitions are often optimized for a use with OpenLayers (which uses
+ a DPI value of 72). When these styles are used to print with a higher DPI value,
+ lines often look too thin, label are too small, etc.
+ <p></p>
+ If this property is set to `true`, the style definitions will be scaled to the target DPI value.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>layers</code>  required
+    </dt>
+    <dd>
+      <div class="block">The json with all the layer information.  This will be parsed in postConstruct into a list of layers and
+ therefore this field should not normally be accessed.
+
+ The first layer in the array will be the top layer in the map.  The last layer in the array will be the bottom
+ layer in the map.  There for the last layer will be hidden by the first layer (where not transparent).</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>longitudeFirst</code>  
+    </dt>
+    <dd>
+      <div class="block">By default the normal axis order as specified in EPSG code will be used when parsing projections.  However
+ the requestor can override this by explicitly declaring that longitude axis is first.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>projection</code>  
+    </dt>
+    <dd>
+      <div class="block">The projection of the map.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>rotation</code>  
+    </dt>
+    <dd>
+      <div class="block">The rotation of the map.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>scale</code>  
+    </dt>
+    <dd>
+      <div class="block">If center is defined then this is the scale of the map centered at center.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>useAdjustBounds</code>  
+    </dt>
+    <dd>
+      <div class="block">Indicates if the map should adjust its bounds.
+ <p></p></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>useNearestScale</code>  
+    </dt>
+    <dd>
+      <div class="block">Indicates if the map should adjust its scale/zoom level to be equal to one of those defined in the configuration file.
+ <p></p></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>zoomToFeatures</code>  
+    </dt>
+    <dd>
+      <div class="block">Zoom the map to the features of a specific layer or all features of the map.</div>
+    </dd>
+  </dl>
+
+</div>
+<div class="section" id="!northArrow">
+  <h1>!northArrow<a class="headerlink" href="#!northArrow" title="Permalink to this headline">¶</a></h1>
+  <div class="block"><p>The attributes for <a title="class in org.mapfish.print.processor.map" shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/map/CreateNorthArrowProcessor.html"><code>CreateNorthArrowProcessor</code></a> (see
+ <a shape="rect" href="processors.html#!createNorthArrow">!createNorthArrow</a> processor).</p>
+ </div>
+
+  <div class="admonition note examples">
+    <p class="first admonition-title">Example</p>
+    <p class="last">
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/verboseExample" target="_blank" class="fa fa-book">&nbsp;verboseExample</a>&nbsp;
+    </p>
+  </div>
+
+    <h3>Configuration</h3>
+  <dl>
+    <dt>
+      <code>default</code>  
+    </dt>
+    <dd>
+      <div class="block"><p>Default values for this attribute. Example:</p><div class="highlight"><pre> attributes:<br>   legend: !legend<br>     default:<br>       name: "Legend"</pre></div></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>size</code>  
+    </dt>
+    <dd>
+      <div class="block">The size (width and height) of the north-arrow graphic in the
+ JasperReport template.
+ <p>The graphic is a square so that the arrow can be rotated properly.</p></div>
+    </dd>
+  </dl>
+
+    <h3>Inputs</h3>
+  <dl>
+    <dt>
+      <code>backgroundColor</code>  
+    </dt>
+    <dd>
+      <div class="block">The background color for the north-arrow graphic (default: rgba(255, 255, 255, 0)).</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>graphic</code>  
+    </dt>
+    <dd>
+      <div class="block">The path to a graphic to use for the north-arrow.
+ <p>It can either be an URL ("http://xyx.com/img/north-arrow.png") or
+ a file in the configuration folder ("file://NorthArrow.svg").
+ Both SVG graphics and raster graphics (png, jpeg, tiff, ...) are
+ supported.</p><p>While the resulting graphic used in the JasperReport template is
+ a square, this graphic can have an arbitrary aspect ratio. The graphic
+ will be scaled to the output size and rotated around its center.</p><p>If no graphic is given, a default north-arrow is used.</p></div>
+    </dd>
+  </dl>
+
+</div>
+<div class="section" id="!overviewMap">
+  <h1>!overviewMap<a class="headerlink" href="#!overviewMap" title="Permalink to this headline">¶</a></h1>
+  <div class="block"><p>The attributes for an overview map (see
+ <a shape="rect" href="processors.html#!createOverviewMap">!createOverviewMap</a> processor).</p>
+ </div>
+
+  <div class="admonition note examples">
+    <p class="first admonition-title">Example</p>
+    <p class="last">
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/verboseExample" target="_blank" class="fa fa-book">&nbsp;verboseExample</a>&nbsp;
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/overviewmap_tyger_ny_EPSG_900913" target="_blank" class="fa fa-book">&nbsp;overviewmap_tyger_ny_EPSG_900913</a>&nbsp;
+    </p>
+  </div>
+
+    <h3>Configuration</h3>
+  <dl>
+    <dt>
+      <code>default</code>  
+    </dt>
+    <dd>
+      <div class="block"><p>Default values for this attribute. Example:</p><div class="highlight"><pre> attributes:<br>   legend: !legend<br>     default:<br>       name: "Legend"</pre></div></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>dpiSuggestions</code>  
+    </dt>
+    <dd>
+      <div class="block">Suggestions for DPI values to use. Typically these are used by the client to create a UI for a user.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>height</code>  
+    </dt>
+    <dd>
+      <div class="block">The height of the map in pixels. This value should match the height
+ of the sub-report in the JasperReport template.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>maxDpi</code>  
+    </dt>
+    <dd>
+      <div></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>style</code>  
+    </dt>
+    <dd>
+      <div class="block">The style name of a style to apply to the bbox rectangle of the original map during rendering.
+ The style name must map to a style in the template or the configuration objects.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>width</code>  
+    </dt>
+    <dd>
+      <div class="block">The width of the map in pixels. This value should match the width
+ of the sub-report in the JasperReport template.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>zoomFactor</code>  
+    </dt>
+    <dd>
+      <div class="block">The zoom factor by which the extent of the main map will be augmented to
+ create an overview.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>zoomLevelSnapStrategy</code>  
+    </dt>
+    <dd>
+      <div></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>zoomLevels</code>  
+    </dt>
+    <dd>
+      <div></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>zoomSnapGeodetic</code>  
+    </dt>
+    <dd>
+      <div></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>zoomSnapTolerance</code>  
+    </dt>
+    <dd>
+      <div></div>
+    </dd>
+  </dl>
+
+    <h3>Inputs</h3>
+  <dl>
+    <dt>
+      <code>bbox</code>  
+    </dt>
+    <dd>
+      <div class="block">An array of 4 doubles, minX, minY, maxX, maxY.  The bounding box of the overview-map.
+ <p></p>
+ If a bounding box is given, the overview-map shows a fixed extent. The configuration
+ parameter <code>zoomFactor</code> is ignored in this case.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>center</code>  
+    </dt>
+    <dd>
+      <div class="block">An array of 2 doubles, (x, y).  The center of the overview-map.
+ <p></p>
+ If center and scale are given, the overview-map shows a fixed extent. The configuration
+ parameter <code>zoomFactor</code> is ignored in this case.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>dpi</code>  
+    </dt>
+    <dd>
+      <div class="block">The output dpi of the printed map.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>dpiSensitiveStyle</code>  
+    </dt>
+    <dd>
+      <div class="block">Should the vector style definitions be adapted to the target DPI resolution? (Default: true)
+ <p></p>
+ The style definitions are often optimized for a use with OpenLayers (which uses
+ a DPI value of 72). When these styles are used to print with a higher DPI value,
+ lines often look too thin, label are too small, etc.
+ <p></p>
+ If this property is set to `true`, the style definitions will be scaled to the target DPI value.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>layers</code>  
+    </dt>
+    <dd>
+      <div class="block">The json with all the layer information.  This will be parsed in postConstruct into a list of layers and
+ therefore this field should not normally be accessed.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>longitudeFirst</code>  
+    </dt>
+    <dd>
+      <div class="block">By default the normal axis order as specified in EPSG code will be used when parsing projections.  However
+ the requestor can override this by explicitly declaring that longitude axis is first.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>projection</code>  
+    </dt>
+    <dd>
+      <div class="block">The projection of the map.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>rotation</code>  
+    </dt>
+    <dd>
+      <div class="block">The rotation of the map.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>scale</code>  
+    </dt>
+    <dd>
+      <div class="block">If <code>center</code> is defined then this is the scale of the map centered at <code>center</code>.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>useAdjustBounds</code>  
+    </dt>
+    <dd>
+      <div class="block">Indicates if the map should adjust its bounds.
+ <p></p></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>useNearestScale</code>  
+    </dt>
+    <dd>
+      <div class="block">Indicates if the map should adjust its scale/zoom level to be equal to one of those defined in the configuration file.
+ <p></p></div>
+    </dd>
+  </dl>
+
+</div>
+<div class="section" id="!paging">
+  <h1>!paging<a class="headerlink" href="#!paging" title="Permalink to this headline">¶</a></h1>
+  <div class="block"><p>Attribute that defines how a map is displayed across many pages.</p><p>This is used by the <a shape="rect" href="processors.html#!paging">paging processor</a>.</p>
+ </div>
+
+  <div class="admonition note examples">
+    <p class="first admonition-title">Example</p>
+    <p class="last">
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/paging" target="_blank" class="fa fa-book">&nbsp;paging</a>&nbsp;
+    </p>
+  </div>
+
+    <h3>Configuration</h3>
+  <dl>
+    <dt>
+      <code>default</code>  
+    </dt>
+    <dd>
+      <div class="block"><p>Default values for this attribute. Example:</p><div class="highlight"><pre> attributes:<br>   legend: !legend<br>     default:<br>       name: "Legend"</pre></div></div>
+    </dd>
+  </dl>
+
+    <h3>Inputs</h3>
+  <dl>
+    <dt>
+      <code>aoiDisplay</code>  
+    </dt>
+    <dd>
+      <div class="block">Indicates how to render the area of interest on this sub-map. This
+ makes it easier to how the all the sub-maps fit together to for the complete map.  Also if the map is rendered as a whole
+ in one part of the report one can easily see where in the complete map the sub-map fits, even without looking at the
+ labelling.
+ <p>
+     For options see: <a title="enum in org.mapfish.print.attribute.map" shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/attribute/map/AreaOfInterest.AoiDisplay.html"><code>AreaOfInterest.AoiDisplay</code></a></p><p>
+     By default the rendering in the <a shape="rect" href="index.html#/attributes?location=!map">map attribute's</a>
+     area of interest will be used
+ </p></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>aoiStyle</code>  
+    </dt>
+    <dd>
+      <div class="block">If this is defined it will override the style used for rendering the Area Of Interest in the
+ main <a shape="rect" href="index.html#/attributes?location=!map">map attribute's</a> Area of Interest definition.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>overlap</code>  
+    </dt>
+    <dd>
+      <div class="block">The amount that each page/sub-map should overlap each other.
+ <p>
+     For example if the value is 1 and the projection of the map is degrees then the overlap will be 1 degree.
+ </p><p>
+     The default is to not have any overlap.
+ </p></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>scale</code>  required
+    </dt>
+    <dd>
+      <div class="block">The scale denominator for each page/sub-map.</div>
+    </dd>
+  </dl>
+
+</div>
+<div class="section" id="!scalebar">
+  <h1>!scalebar<a class="headerlink" href="#!scalebar" title="Permalink to this headline">¶</a></h1>
+  <div class="block"><p>The attributes for <a title="class in org.mapfish.print.processor.map.scalebar" shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/map/scalebar/CreateScalebarProcessor.html"><code>CreateScalebarProcessor</code></a> (see
+ <a shape="rect" href="processors.html#!createScalebar">!createScalebar</a> processor).</p>
+ </div>
+
+  <div class="admonition note examples">
+    <p class="first admonition-title">Example</p>
+    <p class="last">
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/verboseExample" target="_blank" class="fa fa-book">&nbsp;verboseExample</a>&nbsp;
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/print_osm_new_york_EPSG_900913" target="_blank" class="fa fa-book">&nbsp;print_osm_new_york_EPSG_900913</a>&nbsp;
+    </p>
+  </div>
+
+    <h3>Configuration</h3>
+  <dl>
+    <dt>
+      <code>default</code>  
+    </dt>
+    <dd>
+      <div class="block"><p>Default values for this attribute. Example:</p><div class="highlight"><pre> attributes:<br>   legend: !legend<br>     default:<br>       name: "Legend"</pre></div></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>height</code>  
+    </dt>
+    <dd>
+      <div class="block">The height of the scalebar in pixels. This value should match the height
+ of the sub-report in the JasperReport template.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>width</code>  
+    </dt>
+    <dd>
+      <div class="block">The width of the scalebar in pixels. This value should match the width
+ of the sub-report in the JasperReport template.</div>
+    </dd>
+  </dl>
+
+    <h3>Inputs</h3>
+  <dl>
+    <dt>
+      <code>align</code>  
+    </dt>
+    <dd>
+      <div class="block">The horizontal alignment of the scalebar inside the scalebar graphic (default: left).</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>backgroundColor</code>  
+    </dt>
+    <dd>
+      <div class="block">The background color for the scalebar graphic (default: rgba(255, 255, 255, 0)).</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>barBgColor</code>  
+    </dt>
+    <dd>
+      <div class="block">The color used to draw the alternating blocks for style "bar" and "bar_sub" (default: white).</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>barSize</code>  
+    </dt>
+    <dd>
+      <div class="block">The thickness of the bar or the height of the tick marks on the line (in pixel).</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>color</code>  
+    </dt>
+    <dd>
+      <div class="block">The color used to draw the bar and lines (default: black).</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>font</code>  
+    </dt>
+    <dd>
+      <div class="block">The font used for the labels (default: Helvetica).</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>fontColor</code>  
+    </dt>
+    <dd>
+      <div class="block">The font color of the labels (default: black).</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>fontSize</code>  
+    </dt>
+    <dd>
+      <div class="block">The font size (in pt) of the labels (default: 12).</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>geodetic</code>  
+    </dt>
+    <dd>
+      <div class="block">Use geodetic measurement calculations for the scalebar.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>intervals</code>  
+    </dt>
+    <dd>
+      <div class="block">The number of intervals (default: 3).
+ There must be at least two intervals.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>labelDistance</code>  
+    </dt>
+    <dd>
+      <div class="block">The distance between scalebar and labels (in pixel).</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>lineWidth</code>  
+    </dt>
+    <dd>
+      <div class="block">The thickness of the lines or the bar border (in pixel).</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>lockUnits</code>  
+    </dt>
+    <dd>
+      <div class="block">Force that the given unit is used (default: false).
+ For example if the unit is set to meters and `lockUnits` is enabled,
+ then meters is always used, even when kilometers would create nicer
+ values.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>orientation</code>  
+    </dt>
+    <dd>
+      <div class="block">The scalebar orientation.
+
+ <p>Available options:</p><ul><li>"horizontalLabelsBelow" (default): Horizontal scalebar and the labels are shown below the bar.</li><li>"horizontalLabelsAbove": Horizontal scalebar and the labels are shown above the bar.</li><li>"verticalLabelsLeft": Vertical scalebar and the labels are shown left of the bar.</li><li>"verticalLabelsRight": Vertical scalebar and the labels are shown right of the bar.</li></ul></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>padding</code>  
+    </dt>
+    <dd>
+      <div class="block">The padding around the scalebar (in pixel).</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>renderAsSvg</code>  
+    </dt>
+    <dd>
+      <div class="block">Indicates if the scalebar graphic is rendered as SVG
+ (will default to <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/config/Configuration.html#defaultStyle"><code>Configuration.defaultStyle</code></a>).</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>subIntervals</code>  
+    </dt>
+    <dd>
+      <div class="block">Should sub-intervals be shown? Default: false
+ <p>The main intervals are divided into additional sub-intervals to provide
+ visual guidance. The number of sub-intervals depends on the length of an interval.</p></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>type</code>  
+    </dt>
+    <dd>
+      <div class="block">The scalebar type.
+
+ <p>Available types:</p><ul><li>"line": A simple line with graduations.</li><li>"bar" (default): A thick bar with alternating black and white zones marking the intervals.
+          The colors can be customized by changing the properties `color` and `barBgColor`.
+      </li><li>"bar_sub": Like "bar", but with little ticks for the labels.</li></ul></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>unit</code>  
+    </dt>
+    <dd>
+      <div class="block">The unit to use.
+
+ <p>The unit can be any of:</p><ul><li>m (mm, cm, m or km)</li><li>ft (in, ft, yd, mi)</li><li>degrees (min, sec, °)</li></ul><p>If the value is too big or too small, the module will switch to one of the unit in parenthesis
+ (the same unit is used for every interval). If this behaviour is not desired, the `lockUnits` parameter
+ will force the declared unit (or map unit if no unit is declared) to be used for the scalebar.</p></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>verticalAlign</code>  
+    </dt>
+    <dd>
+      <div class="block">The vertical alignment of the scalebar inside the scalebar graphic (default: bottom).</div>
+    </dd>
+  </dl>
+
+</div>
+<div class="section" id="!staticLayers">
+  <h1>!staticLayers<a class="headerlink" href="#!staticLayers" title="Permalink to this headline">¶</a></h1>
+  <div class="block"><p>The attributes for the <a title="class in org.mapfish.print.processor.map" shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/map/AddStaticLayersProcessor.html"><code>AddStaticLayersProcessor</code></a> (see
+ <a shape="rect" href="processors.html#!addBackgroundLayers">!addBackgroundLayers</a> and
+ <a shape="rect" href="processors.html#!addOverlayLayers">!addOverlayLayers</a> processor) which adds the layers in this
+ attribute to the layers in the map.  The typical use is to add the background or overlay layers as the "default"
+ in the config.yaml file if the client desires it can override those values.</p>
+ </div>
+
+  <div class="admonition note examples">
+    <p class="first admonition-title">Example</p>
+    <p class="last">
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/add_overlay_layer" target="_blank" class="fa fa-book">&nbsp;add_overlay_layer</a>&nbsp;
+    </p>
+  </div>
+
+    <h3>Configuration</h3>
+  <dl>
+    <dt>
+      <code>default</code>  
+    </dt>
+    <dd>
+      <div class="block"><p>Default values for this attribute. Example:</p><div class="highlight"><pre> attributes:<br>   legend: !legend<br>     default:<br>       name: "Legend"</pre></div></div>
+    </dd>
+  </dl>
+
+    <h3>Inputs</h3>
+  <dl>
+    <dt>
+      <code>layers</code>  required
+    </dt>
+    <dd>
+      <div class="block">An array of layers (the same as for <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/attribute/map/MapAttribute.MapAttributeValues.html#layers"><code>MapAttribute.MapAttributeValues.layers</code></a>).
+
+ These layers will be added to the map.</div>
+    </dd>
+  </dl>
+
+</div>
+<div class="section" id="!string">
+  <h1>!string<a class="headerlink" href="#!string" title="Permalink to this headline">¶</a></h1>
+  <div class="block"><p>Attribute that reads a string from the request data.</p>
+ </div>
+
+  <div class="admonition note examples">
+    <p class="first admonition-title">Example</p>
+    <p class="last">
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/verboseExample" target="_blank" class="fa fa-book">&nbsp;verboseExample</a>&nbsp;
+    </p>
+  </div>
+
+    <h3>Configuration</h3>
+  <dl>
+    <dt>
+      <code>default</code>  
+    </dt>
+    <dd>
+      <div class="block"><p>A default value for this attribute. Example:</p><div class="highlight"><pre>     attributes:<br>       title: !string<br>         default: "Report"</pre></div></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>maxLength</code>  
+    </dt>
+    <dd>
+      <div class="block">The maximum number of characters allowed for this field (default: unlimited).</div>
+    </dd>
+  </dl>
+
+
+</div>
+<div class="section" id="!stringArray">
+  <h1>!stringArray<a class="headerlink" href="#!stringArray" title="Permalink to this headline">¶</a></h1>
+  <div class="block"><p>An attribute that can contain an array of strings.</p>
+ </div>
+
+  <div class="admonition note examples">
+    <p class="first admonition-title">Example</p>
+    <p class="last">
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/verboseExample" target="_blank" class="fa fa-book">&nbsp;verboseExample</a>&nbsp;
+    </p>
+  </div>
+
+    <h3>Configuration</h3>
+  <dl>
+    <dt>
+      <code>default</code>  
+    </dt>
+    <dd>
+      <div class="block"><p>A default value for this attribute. Example:</p><div class="highlight"><pre>     attributes:<br>       title: !string<br>         default: "Report"</pre></div></div>
+    </dd>
+  </dl>
+
+
+</div>
+<div class="section" id="!style">
+  <h1>!style<a class="headerlink" href="#!style" title="Permalink to this headline">¶</a></h1>
+  <div class="block">Attribute for GeoJson Styles collection.</div>
+
+
+    <h3>Configuration</h3>
+  <dl>
+    <dt>
+      <code>default</code>  
+    </dt>
+    <dd>
+      <div class="block"><p>Default values for this attribute. Example:</p><div class="highlight"><pre> attributes:<br>   legend: !legend<br>     default:<br>       name: "Legend"</pre></div></div>
+    </dd>
+  </dl>
+
+    <h3>Inputs</h3>
+  <dl>
+    <dt>
+      <code>style</code>  required
+    </dt>
+    <dd>
+      <div class="block">The SLD string.</div>
+    </dd>
+  </dl>
+
+</div>
+<div class="section" id="!table">
+  <h1>!table<a class="headerlink" href="#!table" title="Permalink to this headline">¶</a></h1>
+  <div class="block"><p>The attributes for <a title="class in org.mapfish.print.processor.jasper" shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/jasper/TableProcessor.html"><code>TableProcessor</code></a> (see
+ <a shape="rect" href="processors.html#!prepareTable">!prepareTable</a> processor).</p>
+ </div>
+
+  <div class="admonition note examples">
+    <p class="first admonition-title">Example</p>
+    <p class="last">
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/verboseExample" target="_blank" class="fa fa-book">&nbsp;verboseExample</a>&nbsp;
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/datasource_dynamic_tables" target="_blank" class="fa fa-book">&nbsp;datasource_dynamic_tables</a>&nbsp;
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/customDynamicReport" target="_blank" class="fa fa-book">&nbsp;customDynamicReport</a>&nbsp;
+    </p>
+  </div>
+
+    <h3>Configuration</h3>
+  <dl>
+    <dt>
+      <code>default</code>  
+    </dt>
+    <dd>
+      <div class="block"><p>Default values for this attribute. Example:</p><div class="highlight"><pre> attributes:<br>   legend: !legend<br>     default:<br>       name: "Legend"</pre></div></div>
+    </dd>
+  </dl>
+
+    <h3>Inputs</h3>
+  <dl>
+    <dt>
+      <code>columns</code>  required
+    </dt>
+    <dd>
+      <div class="block">The column configuration names for the table.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>data</code>  required
+    </dt>
+    <dd>
+      <div class="block">An array for each table row.</div>
+    </dd>
+  </dl>
+
+</div>
+
+
+
+
+           </div>
+          </div>
+          <footer>
+
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        <a href="http://www.camptocamp.com/geospatial/" target="_blank">Camptocamp</a> <br>
+        <span class="commit">
+          Revision <code><a href="https://github.com/mapfish/mapfish-print/commit/faecdcb61a67996576076ae47809404967712ce3
+" target="_blank">faecdcb6</a></code>.
+        </span>
+
+
+    </p>
+  </div>
+  Theme based on a <a href="https://github.com/snide/sphinx_rtd_theme">template</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+
+
+      <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+      <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+      <script type="text/javascript" src="js/underscore.js"></script>
+      <script type="text/javascript" src="js/theme.js"></script>
+      <script type="text/javascript">
+        jQuery(function () {
+            SphinxRtdTheme.StickyNav.enable();
+        });
+      </script>
+
+</body>
+</html>

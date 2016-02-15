@@ -1,0 +1,2635 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MapFish Print 3 Documentation - Processors</title>
+
+    <link rel="stylesheet" href="css/sphinx_rtd_theme.css" type="text/css" />
+    <link rel="stylesheet" href="css/readthedocs-doc-embed.css" type="text/css" />
+    <link rel="stylesheet" href="css/custom.css" type="text/css" />
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+
+            <a href="index.html" class="icon icon-home"> MapFish Print 3</a>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+
+
+
+                <ul class="current">
+<li class="toctree-l1 ">
+  <a class="reference internal " href="index.html">Introduction</a>
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="jasperreports.html">JasperReports</a>
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="api.html">Web API</a>
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="attributes.html">Attributes</a>
+  
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="configuration.html">Configuration</a>
+  
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="layers.html">Map Layers</a>
+  
+</li>
+<li class="toctree-l1 current">
+  <a class="reference internal current" href="processors.html">Processors</a>
+  <ul>
+  <li class="toctree-l2"><a class="reference internal" href="#!addBackgroundLayers">!addBackgroundLayers</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="#!addHeaders">!addHeaders</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="#!addOverlayLayers">!addOverlayLayers</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="#!configureHttpRequests">!configureHttpRequests</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="#!createDataSource">!createDataSource</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="#!createMap">!createMap</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="#!createMapPages">!createMapPages</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="#!createNorthArrow">!createNorthArrow</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="#!createOverviewMap">!createOverviewMap</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="#!createScalebar">!createScalebar</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="#!forwardHeaders">!forwardHeaders</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="#!mapUri">!mapUri</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="#!mergeDataSources">!mergeDataSources</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="#!prepareLegend">!prepareLegend</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="#!prepareTable">!prepareTable</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="#!reportBuilder">!reportBuilder</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="#!restrictUris">!restrictUris</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="#!setFeatures">!setFeatures</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="#!setStyle">!setStyle</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="#!setWmsCustomParam">!setWmsCustomParam</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="#!updatePdfConfig">!updatePdfConfig</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="#!useHttpForHttps">!useHttpForHttps</a></li>
+</ul>
+
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="fileloaders.html">File-Loaders</a>
+  
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="outputformats.html">Output Formats</a>
+  
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="styles.html">Styles</a>
+  
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="tableimages.html">Images in tables</a>
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="download.html">Download</a>
+</li>
+</ul>
+
+
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">MapFish Print 3</a>
+      </nav>
+
+
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+
+    <li>Processors</li>
+      <li class="wy-breadcrumbs-aside">
+
+
+            <a href="https://github.com/mapfish/mapfish-print" class="fa fa-github"> mapfish/mapfish-print</a>
+
+
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             <h1>Processors</h1>
+             <div class="section">
+<p>
+    This page lists all the <em>processors </em> available in the Mapfish Print distribution. The documentation consists of several parts:
+</p>
+<p>
+<ul>
+    <li><b>Description</b>: the full description for each processor can be found by expanding one of the list elements.</li>
+    <li><b>Configuration</b>: the configuration options are also listed when a processor element is expanded. A configuration option is a value
+        that can be set on the processor in the configuration yaml file. These options are consistent across all print jobs because they
+        are not provided by the client.
+    </li>
+    <li><b>Input</b>: the required input values of the processor are listed when the processor element is in expanded form. Input values are
+        either <a href="attributes.html">attributes</a> or the output values of other processors.
+    </li>
+    <li><b>Output</b>: the output values of the processors are also listed when a processor element is expanded. As the name implies, the output
+        values are the data the processor produces and is the input of other processors or the input parameters of the outputFormat
+        template.
+    </li>
+</ul>
+</p>
+<p>
+A processor's main responsibility is to take the <a
+        href="attributes.html">attributes</a> for the print job and producing the parameters required by the <a href="outputformats.html">
+    output format</a> to produce the report.
+</p>
+<p>
+    While many processors are responsible for directly producing the parameters required by the <a href="outputformats.html">output format</a>,
+    some processors be considered <em>support</em> processors. A support processor is a processor that in some way prepares attributes for
+    the </em>primary</em> processors. For example, there are processors that can add layers to the map so that all maps will have the
+    layers (reducing the data the client needs to send.) Another example are several processors which configure how http requests are make
+    (add cookies, headers, remap URLs, etc...)
+</p>
+<p>
+    A processor usually has inputs and outputs, in the simple case an input is one of the attributes and the outputs all map to parameters
+    in the Jasper template. Each input and output have default names and often these are sufficient.
+</p>
+<p>
+    However consider the case where a report had two maps (or legends or....). In this case the default input and output parameter names
+    are not sufficient because the input attributes need to be mapped to the correct processor and the output values need to be mapped to
+    the correct parameters in the templates. In order to account for this case, processors have the configuration options: <code>inputMapper</code> and
+    <code>outputMapper</code>.
+</p>
+<p>
+    <code>inputMapper</code> and <code>outputMapper</code> configuration parameters can be configured as follows:
+<div class="highlight-yaml"><div class="highlight"><pre>
+- !createMap
+    inputMapper: {attributeName: defaultInputParamName}
+    outputMapper: {defaultOutputName: templateParamName}</pre></div></div>
+
+Or if the there are multiple mappings that need to be made :
+<div class="highlight-yaml"><div class="highlight"><pre>
+- processorName
+    inputMapper : {
+      attributeName1 : inputName1
+      attributeName2 : inputName2
+    }</pre></div></div>
+
+</div>
+
+<div class="section" id="!addBackgroundLayers">
+  <h1>!addBackgroundLayers<a class="headerlink" href="#!addBackgroundLayers" title="Permalink to this headline">¶</a></h1>
+  <div class="block"><p>This processor adds the configured set of layers to the map.</p><p>This is useful when all maps should have a default set of background layers or overlays
+ added to those that the client sends for printing.</p><p>This can simplify the client so the client only needs to be concerned with the data layers.</p><p>See also: <a shape="rect" href="attributes.html#!staticLayers">!staticLayers</a> attribute</p>
+ </div>
+
+  <div class="admonition note examples">
+    <p class="first admonition-title">Example</p>
+    <p class="last">
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/add_overlay_layer" target="_blank" class="fa fa-book">&nbsp;add_overlay_layer</a>&nbsp;
+    </p>
+  </div>
+
+    <h3>Configuration</h3>
+  <dl>
+    <dt>
+      <code>inputMapper</code>  
+    </dt>
+    <dd>
+      <div class="block">The input mapper.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>inputPrefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each input value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>outputMapper</code>  
+    </dt>
+    <dd>
+      <div class="block">The output mapper.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>outputPrefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each output value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>position</code>  
+    </dt>
+    <dd>
+      <div class="block">Set the position enumeration which indicates where the layers should be added to the map:
+ <a title="enum in org.mapfish.print.processor.map" shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/map/AddStaticLayersProcessor.StaticLayerPosition.html"><code>AddStaticLayersProcessor.StaticLayerPosition</code></a>.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>prefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+
+    <h3>Inputs</h3>
+  <dl>
+    <dt>
+      <code>map</code>  required
+    </dt>
+    <dd>
+      <div class="block">The map to update with the static layers.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>staticLayers</code>  required
+    </dt>
+    <dd>
+      <div class="block">The attribute containing the static layers to add to the map.</div>
+    </dd>
+  </dl>
+
+</div>
+<div class="section" id="!addHeaders">
+  <h1>!addHeaders<a class="headerlink" href="#!addHeaders" title="Permalink to this headline">¶</a></h1>
+  <div class="block"><p>This processor allows adding static headers to an http request.</p><p>Example: add a Cookie header with multiple header values and add header2 with only one value</p><div class="highlight"><pre> - !addHeaders<br>   headers:<br>     Cookie : [cookie-value, cookie-value2]<br>     Header2 : header2-value</pre></div><p>Can be applied conditionally using matchers, like in <a title="class in org.mapfish.print.processor.http" shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/http/RestrictUrisProcessor.html"><code>RestrictUrisProcessor</code></a> 
+ (<a shape="rect" href="processors.html#!restrictUris">!restrictUris</a>).</p>
+ </div>
+
+  <div class="admonition note examples">
+    <p class="first admonition-title">Example</p>
+    <p class="last">
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/http_processors" target="_blank" class="fa fa-book">&nbsp;http_processors</a>&nbsp;
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/osm_custom_params" target="_blank" class="fa fa-book">&nbsp;osm_custom_params</a>&nbsp;
+    </p>
+  </div>
+
+    <h3>Configuration</h3>
+  <dl>
+    <dt>
+      <code>headers</code>  
+    </dt>
+    <dd>
+      <div class="block">A map of the header key value pairs.  Keys are strings and values are either list of strings or a string.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>inputMapper</code>  
+    </dt>
+    <dd>
+      <div class="block">The input mapper.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>inputPrefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each input value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>matchers</code>  
+    </dt>
+    <dd>
+      <div class="block">The matchers used to select the urls that are going to be modified by the processor.
+ For example:
+ <div class="highlight"><pre> - !restrictUris<br>   matchers:<br>     - !localMatch<br>       dummy: true<br>     - !ipMatch<br>     ip: www.camptocamp.org<br>     - !dnsMatch<br>       host: mapfish-geoportal.demo-camptocamp.com<br>       port: 80<br>     - !dnsMatch<br>       host: labs.metacarta.com<br>       port: 80<br>     - !dnsMatch<br>       host: terraservice.net<br>       port: 80<br>     - !dnsMatch<br>       host: tile.openstreetmap.org<br>       port: 80<br>     - !dnsMatch<br>       host: www.geocat.ch<br>       port: 80</pre></div></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>outputMapper</code>  
+    </dt>
+    <dd>
+      <div class="block">The output mapper.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>outputPrefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each output value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>prefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+
+    <h3>Inputs</h3>
+  <dl>
+    <dt>
+      <code>clientHttpRequestFactory</code>  required
+    </dt>
+    <dd>
+      <div class="block">The object for creating requests.  There should always be an instance in the values object
+ so it does not need to be created.</div>
+    </dd>
+  </dl>
+
+    <h3>Outputs</h3>
+  <dl>
+    <dt>
+      <code>clientHttpRequestFactory</code>  required
+    </dt>
+    <dd>
+      <div class="block">The object for creating requests.  There should always be an instance in the values object
+ so it does not need to be created.</div>
+    </dd>
+  </dl>
+</div>
+<div class="section" id="!addOverlayLayers">
+  <h1>!addOverlayLayers<a class="headerlink" href="#!addOverlayLayers" title="Permalink to this headline">¶</a></h1>
+  <div class="block"><p>This processor adds the configured set of layers to the map.</p><p>This is useful when all maps should have a default set of background layers or overlays
+ added to those that the client sends for printing.</p><p>This can simplify the client so the client only needs to be concerned with the data layers.</p><p>See also: <a shape="rect" href="attributes.html#!staticLayers">!staticLayers</a> attribute</p>
+ </div>
+
+  <div class="admonition note examples">
+    <p class="first admonition-title">Example</p>
+    <p class="last">
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/add_overlay_layer" target="_blank" class="fa fa-book">&nbsp;add_overlay_layer</a>&nbsp;
+    </p>
+  </div>
+
+    <h3>Configuration</h3>
+  <dl>
+    <dt>
+      <code>inputMapper</code>  
+    </dt>
+    <dd>
+      <div class="block">The input mapper.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>inputPrefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each input value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>outputMapper</code>  
+    </dt>
+    <dd>
+      <div class="block">The output mapper.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>outputPrefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each output value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>position</code>  
+    </dt>
+    <dd>
+      <div class="block">Set the position enumeration which indicates where the layers should be added to the map:
+ <a title="enum in org.mapfish.print.processor.map" shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/map/AddStaticLayersProcessor.StaticLayerPosition.html"><code>AddStaticLayersProcessor.StaticLayerPosition</code></a>.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>prefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+
+    <h3>Inputs</h3>
+  <dl>
+    <dt>
+      <code>map</code>  required
+    </dt>
+    <dd>
+      <div class="block">The map to update with the static layers.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>staticLayers</code>  required
+    </dt>
+    <dd>
+      <div class="block">The attribute containing the static layers to add to the map.</div>
+    </dd>
+  </dl>
+
+</div>
+<div class="section" id="!configureHttpRequests">
+  <h1>!configureHttpRequests<a class="headerlink" href="#!configureHttpRequests" title="Permalink to this headline">¶</a></h1>
+  <div class="block"><p>A processor that wraps several <a title="class in org.mapfish.print.processor.http" shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/http/AbstractClientHttpRequestFactoryProcessor.html"><code>AbstractClientHttpRequestFactoryProcessor</code></a>s.</p><p>
+   This makes it more convenient to configure multiple processors that modify
+   <a title="interface in org.mapfish.print.http" shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/http/MfClientHttpRequestFactory.html"><code>MfClientHttpRequestFactory</code></a> objects.
+</p><p>
+     Consider the case where you need to:
+ </p><ul><li>Restrict allowed URIS using the !restrictUris processor</li><li>Forward all headers from print request to all requests using !forwardHeaders</li><li>Change the url using the !mapUri processor</li></ul><p>
+     In this case the !mapUri processor must execute before the !restrictUris processor but it is difficult to enforce this, the
+     inputMapping and outputMapping must be carefully designed in order to do it.  The following should work but compare it with
+     the example below:
+ </p><div class="highlight"><pre> - !mapUri<br>   mapping:<br>     (http)://localhost(.*) : "$1://127.0.0.1$2"<br>   outputMapper: {clientHttpRequestFactory: clientHttpRequestFactoryMapped}<br> - !forwardHeaders<br>   all: true<br>   inputMapper: {clientHttpRequestFactoryMapped :clientHttpRequestFactory}<br>   outputMapper: {clientHttpRequestFactory: clientHttpRequestFactoryWithHeaders}<br> - !restrictUris<br>   matchers: [!localMatch {}]<br>   inputMapper: {clientHttpRequestFactoryWithHeaders:clientHttpRequestFactory}<br>     </pre></div><p>
+     The recommended way to write the above configuration is as follows:
+ </p><div class="highlight"><pre> - !configureHttpRequests<br>   httpProcessors:<br>     - !mapUri<br>       mapping:<br>         (http)://localhost(.*) : "$1://127.0.0.1$2"<br>     - !forwardHeaders<br>       all: true<br>     - !restrictUris<br>       matchers: [!localMatch {}]</pre></div>
+ </div>
+
+  <div class="admonition note examples">
+    <p class="first admonition-title">Example</p>
+    <p class="last">
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/http_processors" target="_blank" class="fa fa-book">&nbsp;http_processors</a>&nbsp;
+    </p>
+  </div>
+
+    <h3>Configuration</h3>
+  <dl>
+    <dt>
+      <code>httpProcessors</code>  
+    </dt>
+    <dd>
+      <div class="block">Sets all the http processors that will executed by this processor.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>inputMapper</code>  
+    </dt>
+    <dd>
+      <div class="block">The input mapper.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>inputPrefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each input value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>outputMapper</code>  
+    </dt>
+    <dd>
+      <div class="block">The output mapper.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>outputPrefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each output value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>prefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+
+    <h3>Inputs</h3>
+  <dl>
+    <dt>
+      <code>CLIENT_HTTP_REQUEST_FACTORY_KEY</code>  required
+    </dt>
+    <dd>
+      <div class="block">The key that is used to store <a title="interface in org.mapfish.print.http" shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/http/MfClientHttpRequestFactory.html"><code>MfClientHttpRequestFactory</code></a>.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>PDF_CONFIG</code>  required
+    </dt>
+    <dd>
+      <div class="block">The key for the values object for the <a title="class in org.mapfish.print.config" shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/config/PDFConfig.html"><code>PDFConfig</code></a> object.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>SUBREPORT_DIR</code>  required
+    </dt>
+    <dd>
+      <div class="block">The key for the values object for the subreport directory.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>TASK_DIRECTORY_KEY</code>  required
+    </dt>
+    <dd>
+      <div class="block">The key that is used to store the task directory in the values map.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>TEMPLATE_KEY</code>  required
+    </dt>
+    <dd>
+      <div class="block">The key that is used to store <a title="class in org.mapfish.print.config" shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/config/Template.html"><code>Template</code></a>.</div>
+    </dd>
+  </dl>
+
+    <h3>Outputs</h3>
+  <dl>
+    <dt>
+      <code>clientHttpRequestFactory</code>  required
+    </dt>
+    <dd>
+      <div class="block">The object for creating requests.  There should always be an instance in the values object
+ so it does not need to be created.</div>
+    </dd>
+  </dl>
+</div>
+<div class="section" id="!createDataSource">
+  <h1>!createDataSource<a class="headerlink" href="#!createDataSource" title="Permalink to this headline">¶</a></h1>
+  <div class="block"><p>A processor that will process a <a title="class in org.mapfish.print.attribute" shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/attribute/DataSourceAttribute.DataSourceAttributeValue.html"><code>DataSourceAttribute.DataSourceAttributeValue</code></a> and construct
+ a single Jasper DataSource from the input values in the <a title="class in org.mapfish.print.attribute" shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/attribute/DataSourceAttribute.DataSourceAttributeValue.html"><code>DataSourceAttribute.DataSourceAttributeValue</code></a>
+ input object.</p><p>The <a title="class in org.mapfish.print.attribute" shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/attribute/DataSourceAttribute.DataSourceAttributeValue.html"><code>DataSourceAttribute.DataSourceAttributeValue</code></a> has an array of maps, each map in the array
+ equates to a row in the Jasper DataSource.</p><p>The DataSourceProcessor can be configured with processors which will be used
+ to transform each map in the input array before constructing the final DataSource row.</p><p>For example, each map in the array could be <a title="class in org.mapfish.print.attribute.map" shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/attribute/map/MapAttribute.MapAttributeValues.html"><code>MapAttribute.MapAttributeValues</code></a> and the
+ DataSourceProcessor could be configured with !createMap processor.  In this scenario each element in the array would be transformed
+ by the !createMap processor and thus each row of the resulting DataSource will contain the map subreport created by the !createMap
+ processor.</p><p>An additional point to remember is that (as with the normal execution) in addition to the output of the processors, the attributes
+ in the input map will also be columns in the row.  This means that the jasper report that makes use of the resulting DataSource
+ will have access to both the results of the processor as well as the input values (unless overwritten by the processor output).</p><p>If the reportKey is defined (and reportTemplate) then a the reportTemplate jrxml file will be compiled (as required by all
+ jrxml files) and an additional column will be added to each row [reportKey] : [compiled reportTemplate File]</p><p>If reportKey is defined the reportTemplate must also be defined (and vice-versa).</p><p>See also: <a shape="rect" href="attributes.html#!datasource">!datasource</a> attribute</p>
+ </div>
+
+  <div class="admonition note examples">
+    <p class="first admonition-title">Example</p>
+    <p class="last">
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/verboseExample" target="_blank" class="fa fa-book">&nbsp;verboseExample</a>&nbsp;
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/datasource_dynamic_tables" target="_blank" class="fa fa-book">&nbsp;datasource_dynamic_tables</a>&nbsp;
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/datasource_many_dynamictables_legend" target="_blank" class="fa fa-book">&nbsp;datasource_many_dynamictables_legend</a>&nbsp;
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/datasource_multiple_maps" target="_blank" class="fa fa-book">&nbsp;datasource_multiple_maps</a>&nbsp;
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/customDynamicReport" target="_blank" class="fa fa-book">&nbsp;customDynamicReport</a>&nbsp;
+    </p>
+  </div>
+
+    <h3>Configuration</h3>
+  <dl>
+    <dt>
+      <code>attributes</code>  
+    </dt>
+    <dd>
+      <div class="block">All the attributes needed either by the processors for each datasource row or by the jasper template.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>inputMapper</code>  
+    </dt>
+    <dd>
+      <div class="block">The input mapper.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>inputPrefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each input value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>outputMapper</code>  
+    </dt>
+    <dd>
+      <div class="block">The output mapper.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>outputPrefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each output value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>prefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>processors</code>  
+    </dt>
+    <dd>
+      <div class="block">All the processors that will executed for each value retrieved from the <a title="class in org.mapfish.print.output" shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/output/Values.html"><code>Values</code></a> object
+ with the datasource name.  All output values from the processor graph will be the datasource values.
+ <p></p><p>
+ Each value retrieved from values with the datasource name will be the input of the processor graph
+ and all the output values for that execution will be the values of a single row in the datasource.
+ The Jasper template can use any of the values in its detail band.
+ </p></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>reportKey</code>  
+    </dt>
+    <dd>
+      <div class="block">The key/name to use when putting the path to the compiled subreport in each row of the datasource.
+ This is required if <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/jasper/DataSourceProcessor.html#reportTemplate"><code>reportTemplate</code></a> has been set.  The path to the compiled
+ subreport will be added to each row in the datasource with this value as the key.  This allows the containing report to
+ reference the subreport in each row.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>reportTemplate</code>  
+    </dt>
+    <dd>
+      <div class="block">The path to the report template used to render each row of the data.  This is only required if a subreport needs to be
+ compiled and is referenced in the containing report's detail section.
+ <p>
+     The path should be relative to the configuration directory
+ </p></div>
+    </dd>
+  </dl>
+
+    <h3>Inputs</h3>
+  <dl>
+    <dt>
+      <code>datasource</code>  required
+    </dt>
+    <dd>
+      <div class="block">The data that will be processed by this processor in order to create a Jasper DataSource object.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>template</code>  required
+    </dt>
+    <dd>
+      <div class="block">The values object with all values.  This is required in order to run sub-processor graph</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>values</code>  required
+    </dt>
+    <dd>
+      <div class="block">The values object with all values.  This is required in order to run sub-processor graph</div>
+    </dd>
+  </dl>
+
+    <h3>Outputs</h3>
+  <dl>
+    <dt>
+      <code>jrDataSource</code>  required
+    </dt>
+    <dd>
+      <div class="block">The datasource to be assigned to a report or sub-report detail/table section.</div>
+    </dd>
+  </dl>
+</div>
+<div class="section" id="!createMap">
+  <h1>!createMap<a class="headerlink" href="#!createMap" title="Permalink to this headline">¶</a></h1>
+  <div class="block"><p>A processor to render a map that can be embedded as a sub-report into a JasperReports
+ template.</p><p>See also: <a shape="rect" href="attributes.html#!map">!map</a> attribute</p>
+ </div>
+
+  <div class="admonition note examples">
+    <p class="first admonition-title">Example</p>
+    <p class="last">
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/verboseExample" target="_blank" class="fa fa-book">&nbsp;verboseExample</a>&nbsp;
+    </p>
+  </div>
+
+    <h3>Configuration</h3>
+  <dl>
+    <dt>
+      <code>imageType</code>  
+    </dt>
+    <dd>
+      <div class="block">Set the type of buffered image rendered to.  See <code>CreateMapProcessor.BufferedImageType</code>.
+ <p></p>
+ Default is <code>CreateMapProcessor.BufferedImageType.TYPE_4BYTE_ABGR</code>.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>inputMapper</code>  
+    </dt>
+    <dd>
+      <div class="block">The input mapper.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>inputPrefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each input value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>outputMapper</code>  
+    </dt>
+    <dd>
+      <div class="block">The output mapper.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>outputPrefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each output value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>prefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+
+    <h3>Inputs</h3>
+  <dl>
+    <dt>
+      <code>clientHttpRequestFactory</code>  required
+    </dt>
+    <dd>
+      <div class="block">A factory for making http requests.  This is added to the values by the framework and therefore
+ does not need to be set in configuration</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>map</code>  required
+    </dt>
+    <dd>
+      <div class="block">The required parameters for the map.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>tempTaskDirectory</code>  required
+    </dt>
+    <dd>
+      <div class="block">The path to the temporary directory for the print task.</div>
+    </dd>
+  </dl>
+
+    <h3>Outputs</h3>
+  <dl>
+    <dt>
+      <code>layerGraphics</code>  required
+    </dt>
+    <dd>
+      <div class="block">The paths to a graphic for each layer.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>mapContext</code>  required
+    </dt>
+    <dd>
+      <div class="block">The map parameters used after zooming and all other calculations that are made.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>mapSubReport</code>  required
+    </dt>
+    <dd>
+      <div class="block">The path to the compiled sub-report for the map.</div>
+    </dd>
+  </dl>
+</div>
+<div class="section" id="!createMapPages">
+  <h1>!createMapPages<a class="headerlink" href="#!createMapPages" title="Permalink to this headline">¶</a></h1>
+  <div class="block"><p>Processor used to display a map on multiple pages.</p><p>
+     This processor will take the defined <a shape="rect" href="attributes.html#!map">map attribute</a> and using the geometry defined in the
+     <a shape="rect" href="attributes.html#!map">map attribute's</a> area of interest, will create an Iterable<Values> each of which
+     contains:
+ </p><ul><li>a new definition of a <a shape="rect" href="attributes.html#!map">map attribute</a></li><li>name value which is a string that roughly describes which part of the main map this sub-map is</li><li>left value which is the name of the sub-map to the left of the current map</li><li>right value which is the name of the sub-map to the right of the current map</li><li>top value which is the name of the sub-map to the top of the current map</li><li>bottom value which is the name of the sub-map to the bottom of the current map</li></ul><p>
+     The iterable of values can be consumed by a <a shape="rect" href="processors.html#!createDataSource">!createDataSource</a> processor
+     and as a result be put in the report (or one of the sub-reports) table.  One must be careful as
+     this can result in truly giant reports.
+ </p><p>See also: <a shape="rect" href="attributes.html#!paging">!paging</a> attribute</p>
+ </div>
+
+  <div class="admonition note examples">
+    <p class="first admonition-title">Example</p>
+    <p class="last">
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/paging" target="_blank" class="fa fa-book">&nbsp;paging</a>&nbsp;
+    </p>
+  </div>
+
+    <h3>Configuration</h3>
+  <dl>
+    <dt>
+      <code>inputMapper</code>  
+    </dt>
+    <dd>
+      <div class="block">The input mapper.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>inputPrefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each input value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>outputMapper</code>  
+    </dt>
+    <dd>
+      <div class="block">The output mapper.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>outputPrefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each output value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>prefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+
+    <h3>Inputs</h3>
+  <dl>
+    <dt>
+      <code>map</code>  required
+    </dt>
+    <dd>
+      <div class="block">The required parameters for the map.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>paging</code>  required
+    </dt>
+    <dd>
+      <div class="block">Attributes that define how each page/sub-map will be generated.  It defines the scale and how to render the area of interest,
+ etc...</div>
+    </dd>
+  </dl>
+
+    <h3>Outputs</h3>
+  <dl>
+    <dt>
+      <code>datasource</code>  required
+    </dt>
+    <dd>
+      <div class="block">Resulting list of values for the maps.</div>
+    </dd>
+  </dl>
+</div>
+<div class="section" id="!createNorthArrow">
+  <h1>!createNorthArrow<a class="headerlink" href="#!createNorthArrow" title="Permalink to this headline">¶</a></h1>
+  <div class="block"><p>Processor to create a north-arrow for a map.</p><p>The north-arrow is rotated according to the rotation
+ of the associated map.</p><p>Example configuration:</p><div class="highlight"><pre> attributes:<br>   ...<br>   northArrowDef: !northArrow<br>     size: 50<br>     default:<br>       graphic: "file://NorthArrow_10.svg"<br><br> processors:<br> ...<br>   - !createNorthArrow<br>     inputMapper: {<br>       mapDef: map,<br>       northArrowDef: northArrow<br>     }<br>     outputMapper: {<br>       northArrowSubReport: northArrowSubReport<br>     }</pre></div><p>See also: <a shape="rect" href="attributes.html#!northArrow">!northArrow</a> attribute</p>
+ </div>
+
+  <div class="admonition note examples">
+    <p class="first admonition-title">Example</p>
+    <p class="last">
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/verboseExample" target="_blank" class="fa fa-book">&nbsp;verboseExample</a>&nbsp;
+    </p>
+  </div>
+
+    <h3>Configuration</h3>
+  <dl>
+    <dt>
+      <code>inputMapper</code>  
+    </dt>
+    <dd>
+      <div class="block">The input mapper.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>inputPrefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each input value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>outputMapper</code>  
+    </dt>
+    <dd>
+      <div class="block">The output mapper.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>outputPrefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each output value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>prefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+
+    <h3>Inputs</h3>
+  <dl>
+    <dt>
+      <code>clientHttpRequestFactory</code>  required
+    </dt>
+    <dd>
+      <div class="block">The factory to use for making http requests.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>map</code>  required
+    </dt>
+    <dd>
+      <div class="block">The map the north arrow is created for.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>northArrow</code>  required
+    </dt>
+    <dd>
+      <div class="block">The parameters for the north arrow.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>tempTaskDirectory</code>  required
+    </dt>
+    <dd>
+      <div class="block">The path to the temporary directory for the print task.</div>
+    </dd>
+  </dl>
+
+    <h3>Outputs</h3>
+  <dl>
+    <dt>
+      <code>graphic</code>  required
+    </dt>
+    <dd>
+      <div class="block">The path to the north arrow graphic (for testing purposes).</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>northArrowSubReport</code>  required
+    </dt>
+    <dd>
+      <div class="block">The path to the compiled sub-report for the north arrow.</div>
+    </dd>
+  </dl>
+</div>
+<div class="section" id="!createOverviewMap">
+  <h1>!createOverviewMap<a class="headerlink" href="#!createOverviewMap" title="Permalink to this headline">¶</a></h1>
+  <div class="block">Processor to create overview maps. Internally <a title="class in org.mapfish.print.processor.map" shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/map/CreateMapProcessor.html"><code>CreateMapProcessor</code></a> is used.
+ <p></p>
+ Example Configuration:
+ <div class="highlight"><pre> attributes:<br>    ...<br>    overviewMapDef: !overviewMap<br>      width: 300<br>      height: 200<br>      maxDpi: 400<br> processors:<br>    ...<br>    - !createOverviewMap<br>      inputMapper: {<br>        mapDef: map,<br>        overviewMapDef: overviewMap<br>      }<br>      outputMapper: {<br>        overviewMapSubReport: overviewMapOut,<br>        layerGraphics: overviewMapLayerGraphics<br>      }</pre></div><p></p><strong>Features:</strong><p></p>
+ The attribute overviewMap allows to overwrite all properties of the main map, for example to use different layers.
+ The overview map can have a different rotation than the main map. For example the main map is rotated and the overview map faces
+ north. But the overview map can also be rotated.
+ <p></p><p>The style of the bbox rectangle can be changed by setting the <code>style</code> property.</p><p>See also: <a shape="rect" href="attributes.html#!overviewMap">!overviewMap</a> attribute</p>
+ </div>
+
+  <div class="admonition note examples">
+    <p class="first admonition-title">Example</p>
+    <p class="last">
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/verboseExample" target="_blank" class="fa fa-book">&nbsp;verboseExample</a>&nbsp;
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/overviewmap_tyger_ny_EPSG_900913" target="_blank" class="fa fa-book">&nbsp;overviewmap_tyger_ny_EPSG_900913</a>&nbsp;
+    </p>
+  </div>
+
+    <h3>Configuration</h3>
+  <dl>
+    <dt>
+      <code>inputMapper</code>  
+    </dt>
+    <dd>
+      <div class="block">The input mapper.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>inputPrefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each input value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>outputMapper</code>  
+    </dt>
+    <dd>
+      <div class="block">The output mapper.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>outputPrefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each output value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>prefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+
+    <h3>Inputs</h3>
+  <dl>
+    <dt>
+      <code>clientHttpRequestFactory</code>  required
+    </dt>
+    <dd>
+      <div class="block">A factory for making http requests.  This is added to the values by the framework and therefore
+ does not need to be set in configuration</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>map</code>  required
+    </dt>
+    <dd>
+      <div class="block">The required parameters for the map.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>overviewMap</code>  required
+    </dt>
+    <dd>
+      <div class="block">Optional parameters for the overview map which allow to override
+ parameters of the main map.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>tempTaskDirectory</code>  required
+    </dt>
+    <dd>
+      <div class="block">The path to the temporary directory for the print task.</div>
+    </dd>
+  </dl>
+
+    <h3>Outputs</h3>
+  <dl>
+    <dt>
+      <code>layerGraphics</code>  required
+    </dt>
+    <dd>
+      <div class="block">The paths to a graphic for each layer.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>overviewMapSubReport</code>  required
+    </dt>
+    <dd>
+      <div class="block">The path to the compiled sub-report for the overview map.</div>
+    </dd>
+  </dl>
+</div>
+<div class="section" id="!createScalebar">
+  <h1>!createScalebar<a class="headerlink" href="#!createScalebar" title="Permalink to this headline">¶</a></h1>
+  <div class="block"><p>Processor to create a scalebar for a map.</p><p>See also: <a shape="rect" href="attributes.html#!scalebar">!scalebar</a> attribute</p>
+ </div>
+
+  <div class="admonition note examples">
+    <p class="first admonition-title">Example</p>
+    <p class="last">
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/verboseExample" target="_blank" class="fa fa-book">&nbsp;verboseExample</a>&nbsp;
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/print_osm_new_york_EPSG_900913" target="_blank" class="fa fa-book">&nbsp;print_osm_new_york_EPSG_900913</a>&nbsp;
+    </p>
+  </div>
+
+    <h3>Configuration</h3>
+  <dl>
+    <dt>
+      <code>inputMapper</code>  
+    </dt>
+    <dd>
+      <div class="block">The input mapper.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>inputPrefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each input value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>outputMapper</code>  
+    </dt>
+    <dd>
+      <div class="block">The output mapper.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>outputPrefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each output value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>prefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+
+    <h3>Inputs</h3>
+  <dl>
+    <dt>
+      <code>mapContext</code>  required
+    </dt>
+    <dd>
+      <div class="block">The map the scalebar is created for.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>scalebar</code>  required
+    </dt>
+    <dd>
+      <div class="block">The parameters for the scalebar.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>tempTaskDirectory</code>  required
+    </dt>
+    <dd>
+      <div class="block">The path to the temporary directory for the print task.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>template</code>  required
+    </dt>
+    <dd>
+      <div class="block">The containing template.</div>
+    </dd>
+  </dl>
+
+    <h3>Outputs</h3>
+  <dl>
+    <dt>
+      <code>graphic</code>  required
+    </dt>
+    <dd>
+      <div class="block">The path to the scalebar graphic (for testing purposes).</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>scalebarSubReport</code>  required
+    </dt>
+    <dd>
+      <div class="block">The path to the compiled sub-report for the scalebar.</div>
+    </dd>
+  </dl>
+</div>
+<div class="section" id="!forwardHeaders">
+  <h1>!forwardHeaders<a class="headerlink" href="#!forwardHeaders" title="Permalink to this headline">¶</a></h1>
+  <div class="block"><p>This processor forwards all the headers from the print request (from the Mapfish Print client) to each http request made for
+ the particular print job. All headers can be forwarded (if forwardAll is set to true) or the specific headers to forward
+ can be specified.</p><p>Example 1: Forward all headers from print request</p><div class="highlight"><pre> - !forwardHeaders<br>   all: true</pre></div><p>Example 2: Forward specific headers (header1 and header2 will be forwarded)</p><div class="highlight"><pre> - !forwardHeaders<br>   headers: [header1, header2]</pre></div><p>Can be applied conditionally using matchers, like in <a title="class in org.mapfish.print.processor.http" shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/http/RestrictUrisProcessor.html"><code>RestrictUrisProcessor</code></a> 
+ (<a shape="rect" href="processors.html#!restrictUris">!restrictUris</a>).</p>
+ </div>
+
+  <div class="admonition note examples">
+    <p class="first admonition-title">Example</p>
+    <p class="last">
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/http_processors" target="_blank" class="fa fa-book">&nbsp;http_processors</a>&nbsp;
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/osm_custom_params" target="_blank" class="fa fa-book">&nbsp;osm_custom_params</a>&nbsp;
+    </p>
+  </div>
+
+    <h3>Configuration</h3>
+  <dl>
+    <dt>
+      <code>all</code>  
+    </dt>
+    <dd>
+      <div class="block">If set to true then all headers are forwarded.  If this is true headers should be empty (or undefined)</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>headers</code>  
+    </dt>
+    <dd>
+      <div class="block">Set the header names to forward from the request.  Should not be defined if all is set to true</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>inputMapper</code>  
+    </dt>
+    <dd>
+      <div class="block">The input mapper.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>inputPrefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each input value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>matchers</code>  
+    </dt>
+    <dd>
+      <div class="block">The matchers used to select the urls that are going to be modified by the processor.
+ For example:
+ <div class="highlight"><pre> - !restrictUris<br>   matchers:<br>     - !localMatch<br>       dummy: true<br>     - !ipMatch<br>     ip: www.camptocamp.org<br>     - !dnsMatch<br>       host: mapfish-geoportal.demo-camptocamp.com<br>       port: 80<br>     - !dnsMatch<br>       host: labs.metacarta.com<br>       port: 80<br>     - !dnsMatch<br>       host: terraservice.net<br>       port: 80<br>     - !dnsMatch<br>       host: tile.openstreetmap.org<br>       port: 80<br>     - !dnsMatch<br>       host: www.geocat.ch<br>       port: 80</pre></div></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>outputMapper</code>  
+    </dt>
+    <dd>
+      <div class="block">The output mapper.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>outputPrefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each output value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>prefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+
+    <h3>Inputs</h3>
+  <dl>
+    <dt>
+      <code>clientHttpRequestFactory</code>  required
+    </dt>
+    <dd>
+      <div class="block">The object for creating requests.  There should always be an instance in the values object
+ so it does not need to be created.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>requestHeaders</code>  required
+    </dt>
+    <dd>
+      <div class="block">The http headers from the print request.</div>
+    </dd>
+  </dl>
+
+    <h3>Outputs</h3>
+  <dl>
+    <dt>
+      <code>clientHttpRequestFactory</code>  required
+    </dt>
+    <dd>
+      <div class="block">The object for creating requests.  There should always be an instance in the values object
+ so it does not need to be created.</div>
+    </dd>
+  </dl>
+</div>
+<div class="section" id="!mapUri">
+  <h1>!mapUri<a class="headerlink" href="#!mapUri" title="Permalink to this headline">¶</a></h1>
+  <div class="block"><p>This processor maps uris submitted to the <a title="interface in org.mapfish.print.http" shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/http/MfClientHttpRequestFactory.html"><code>MfClientHttpRequestFactory</code></a> to a modified uri
+ as specified by the mapping parameter.</p><p>Example: change the hostname of all requests that are http requests and have the hostname: myhost.com to localhost instead
+ of myhost.com</p><div class="highlight"><pre> - !mapUri<br>   mapping: {(http)://myhost.com(.*) : "$1://localhost$2"}</pre></div><p>Can be applied conditionally using matchers, like in <a title="class in org.mapfish.print.processor.http" shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/http/RestrictUrisProcessor.html"><code>RestrictUrisProcessor</code></a> 
+ (<a shape="rect" href="processors.html#!restrictUris">!restrictUris</a>).</p>
+ </div>
+
+  <div class="admonition note examples">
+    <p class="first admonition-title">Example</p>
+    <p class="last">
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/http_processors" target="_blank" class="fa fa-book">&nbsp;http_processors</a>&nbsp;
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/osm_custom_params" target="_blank" class="fa fa-book">&nbsp;osm_custom_params</a>&nbsp;
+    </p>
+  </div>
+
+    <h3>Configuration</h3>
+  <dl>
+    <dt>
+      <code>inputMapper</code>  
+    </dt>
+    <dd>
+      <div class="block">The input mapper.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>inputPrefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each input value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>mapping</code>  
+    </dt>
+    <dd>
+      <div class="block">Set the uri mappings.
+
+ The key is a regular expression that must match uri's string form. The value will be used for the replacement.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>matchers</code>  
+    </dt>
+    <dd>
+      <div class="block">The matchers used to select the urls that are going to be modified by the processor.
+ For example:
+ <div class="highlight"><pre> - !restrictUris<br>   matchers:<br>     - !localMatch<br>       dummy: true<br>     - !ipMatch<br>     ip: www.camptocamp.org<br>     - !dnsMatch<br>       host: mapfish-geoportal.demo-camptocamp.com<br>       port: 80<br>     - !dnsMatch<br>       host: labs.metacarta.com<br>       port: 80<br>     - !dnsMatch<br>       host: terraservice.net<br>       port: 80<br>     - !dnsMatch<br>       host: tile.openstreetmap.org<br>       port: 80<br>     - !dnsMatch<br>       host: www.geocat.ch<br>       port: 80</pre></div></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>outputMapper</code>  
+    </dt>
+    <dd>
+      <div class="block">The output mapper.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>outputPrefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each output value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>prefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+
+    <h3>Inputs</h3>
+  <dl>
+    <dt>
+      <code>clientHttpRequestFactory</code>  required
+    </dt>
+    <dd>
+      <div class="block">The object for creating requests.  There should always be an instance in the values object
+ so it does not need to be created.</div>
+    </dd>
+  </dl>
+
+    <h3>Outputs</h3>
+  <dl>
+    <dt>
+      <code>clientHttpRequestFactory</code>  required
+    </dt>
+    <dd>
+      <div class="block">The object for creating requests.  There should always be an instance in the values object
+ so it does not need to be created.</div>
+    </dd>
+  </dl>
+</div>
+<div class="section" id="!mergeDataSources">
+  <h1>!mergeDataSources<a class="headerlink" href="#!mergeDataSources" title="Permalink to this headline">¶</a></h1>
+  <div class="block"><p>This processor combines DataSources and individual processor outputs (or attribute values) into a single DataSource which
+ can be used in a jasper report's detail section.</p><p>
+ An example use case is where we might have zero or many of tables and zero or many legends.  You can configure the
+ template with a detail section that contains a subreport, the name of which is a field in the DataSources and the DataSources
+ for the sub-template another field.  Then you can merge the legend and the tables into a single DataSources.  This way the
+ report will nicely expand depending on if you have a legend and how many tables you have in your report.
+ </p>
+ </div>
+
+  <div class="admonition note examples">
+    <p class="first admonition-title">Example</p>
+    <p class="last">
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/merged_datasource" target="_blank" class="fa fa-book">&nbsp;merged_datasource</a>&nbsp;
+    </p>
+  </div>
+
+    <h3>Configuration</h3>
+  <dl>
+    <dt>
+      <code>inputMapper</code>  
+    </dt>
+    <dd>
+      <div class="block">The input mapper.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>inputPrefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each input value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>outputMapper</code>  
+    </dt>
+    <dd>
+      <div class="block">The output mapper.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>outputPrefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each output value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>prefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>sources</code>  
+    </dt>
+    <dd>
+      <div class="block"><p>The <em>source</em> to add to the merged DataSource.</p><p>Each <em>source</em> indicates if it should be treated
+ as a datasource or as a single item to add to the merged DataSource. If the source indicates that it is a
+ <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/jasper/MergeDataSourceProcessor.SourceType.html#DATASOURCE"><code>MergeDataSourceProcessor.SourceType.DATASOURCE</code></a> the object
+ each row in the datasource will be used to form a row in the merged DataSource.  If the source type is
+ <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/jasper/MergeDataSourceProcessor.SourceType.html#SINGLE"><code>MergeDataSourceProcessor.SourceType.SINGLE</code></a> the object will be a single row
+ even if it is in fact a DataSource.</p><p>See also: <a shape="rect" href="configuration.html#!mergeSource">!mergeSource</a></p></div>
+    </dd>
+  </dl>
+
+    <h3>Inputs</h3>
+  <dl>
+    <dt>
+      <code>values</code>  required
+    </dt>
+    <dd>
+      <div class="block">The values used to look up the values to merge together.</div>
+    </dd>
+  </dl>
+
+    <h3>Outputs</h3>
+  <dl>
+    <dt>
+      <code>mergedDataSource</code>  required
+    </dt>
+    <dd>
+      <div class="block">The resulting datasource.</div>
+    </dd>
+  </dl>
+</div>
+<div class="section" id="!prepareLegend">
+  <h1>!prepareLegend<a class="headerlink" href="#!prepareLegend" title="Permalink to this headline">¶</a></h1>
+  <div class="block"><p>Create a legend.</p><p>See also: <a shape="rect" href="attributes.html#!legend">!legend</a> attribute</p>
+ </div>
+
+  <div class="admonition note examples">
+    <p class="first admonition-title">Example</p>
+    <p class="last">
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/verboseExample" target="_blank" class="fa fa-book">&nbsp;verboseExample</a>&nbsp;
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/legend_cropped" target="_blank" class="fa fa-book">&nbsp;legend_cropped</a>&nbsp;
+    </p>
+  </div>
+
+    <h3>Configuration</h3>
+  <dl>
+    <dt>
+      <code>dpi</code>  
+    </dt>
+    <dd>
+      <div class="block">The DPI value that is used for the legend graphics.
+ Note: This parameter is only considered when `maxWidth` is set.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>inputMapper</code>  
+    </dt>
+    <dd>
+      <div class="block">The input mapper.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>inputPrefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each input value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>maxWidth</code>  
+    </dt>
+    <dd>
+      <div class="block">The maximum width in pixels for the legend graphics.
+ If this parameter is set, the legend graphics are cropped to the given maximum
+ width. In this case a sub-report is created containing the graphic.
+ For reference see the example `legend_dynamic`.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>outputMapper</code>  
+    </dt>
+    <dd>
+      <div class="block">The output mapper.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>outputPrefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each output value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>prefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>template</code>  
+    </dt>
+    <dd>
+      <div class="block">The path to the Jasper Report template for rendering the legend data.</div>
+    </dd>
+  </dl>
+
+    <h3>Inputs</h3>
+  <dl>
+    <dt>
+      <code>clientHttpRequestFactory</code>  required
+    </dt>
+    <dd>
+      <div class="block">A factory for making http requests.  This is added to the values by the framework and therefore
+ does not need to be set in configuration</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>legend</code>  required
+    </dt>
+    <dd>
+      <div class="block">The data required for creating the legend.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>tempTaskDirectory</code>  required
+    </dt>
+    <dd>
+      <div class="block">The path to the temporary directory for the print task.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>template</code>  required
+    </dt>
+    <dd>
+      <div class="block">The template that contains this processor.</div>
+    </dd>
+  </dl>
+
+    <h3>Outputs</h3>
+  <dl>
+    <dt>
+      <code>legend</code>  required
+    </dt>
+    <dd>
+      <div class="block">The datasource for the legend object in the report.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>legendSubReport</code>  required
+    </dt>
+    <dd>
+      <div class="block">The path to the compiled subreport.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>numberOfLegendRows</code>  required
+    </dt>
+    <dd>
+      <div class="block">The number of rows in the legend.</div>
+    </dd>
+  </dl>
+</div>
+<div class="section" id="!prepareTable">
+  <h1>!prepareTable<a class="headerlink" href="#!prepareTable" title="Permalink to this headline">¶</a></h1>
+  <div class="block"><p>A processor for generating a table.</p><p>See also: <a shape="rect" href="attributes.html#!table">!table</a> attribute</p>
+ </div>
+
+  <div class="admonition note examples">
+    <p class="first admonition-title">Example</p>
+    <p class="last">
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/verboseExample" target="_blank" class="fa fa-book">&nbsp;verboseExample</a>&nbsp;
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/datasource_dynamic_tables" target="_blank" class="fa fa-book">&nbsp;datasource_dynamic_tables</a>&nbsp;
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/customDynamicReport" target="_blank" class="fa fa-book">&nbsp;customDynamicReport</a>&nbsp;
+    </p>
+  </div>
+
+    <h3>Configuration</h3>
+  <dl>
+    <dt>
+      <code>columns</code>  
+    </dt>
+    <dd>
+      <div class="block">Set strategies for converting the textual representation of each column to some other object (image, other text, etc...).
+ <p></p>
+ Note: The type returned by the column converter must match the type in the jasper template.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>converters</code>  
+    </dt>
+    <dd>
+      <div class="block">Set strategies for converting the textual representation of each cell to some other object (image, other text, etc...).
+ <p></p>
+ This is similar to the converters specified for a particular column. The difference is that these converters are applied
+ to every cell of the table (except for the cells of those columns that are assigned a specific converter).</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>detailStyle</code>  
+    </dt>
+    <dd>
+      <div class="block">The id of the style to apply to the all columns in the table detail section except first and last columns.  This value is will be
+ used as a default if either firstDetailStyle or lastDetailStyle is not defined.  This is required if dynamic is true
+ and is not permitted if dynamic is false.
+ <p>
+     The style must be a style element in the jasperTemplate.
+ </p></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>dynamic</code>  
+    </dt>
+    <dd>
+      <div class="block">If true then the JasperReport template will be generated dynamically based on the columns in the table attribute.
+ <p>Default: false</p></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>excludeColumns</code>  
+    </dt>
+    <dd>
+      <div class="block">A set of column names to exclude from the table.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>firstDetailStyle</code>  
+    </dt>
+    <dd>
+      <div class="block">The id of the style to apply to the first column in the table detail section.  This is optional.
+ <p>
+     The style must be a style element in the jasperTemplate.
+ </p></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>firstHeaderStyle</code>  
+    </dt>
+    <dd>
+      <div class="block">The id of the style to apply to the first column in the table header.  This is optional.
+ <p>
+     The style must be a style element in the jasperTemplate.
+ </p></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>headerStyle</code>  
+    </dt>
+    <dd>
+      <div class="block">The id of the style to apply to the all columns in the table header except first and last columns.  This value is will be
+ used as a default if either firstHeaderStyle or lastHeaderStyle is not defined.  This is required if dynamic is true
+ and is not permitted if dynamic is false.
+ <p>
+     The style must be a style element in the jasperTemplate.
+ </p></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>inputMapper</code>  
+    </dt>
+    <dd>
+      <div class="block">The input mapper.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>inputPrefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each input value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>jasperTemplate</code>  
+    </dt>
+    <dd>
+      <div class="block">The path to the JasperReports template that contains the template for the sub-report. If dynamic is false then the template
+ will be used without any changes. It will simply be compiled and used as is.
+ <p>
+ If dynamic is true then the template will be used to obtain the column styles and the size of the subreport and to
+ get the position of the first header and field element.
+ The actual field and column definitions will be dynamically generated from the table data that is provided.
+ </p>
+ This may be null if dynamic is false.  If it is null then the main template will likely use the generated
+ table datasource directly as its datasource for use in its detail section and the table will be directly in the main template's
+ detail section.  Or a later processor may use the table's datasource in someway.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>lastDetailStyle</code>  
+    </dt>
+    <dd>
+      <div class="block">The id of the style to apply to the last column in the table detail section.  This is optional.
+ <p>
+     The style must be a style element in the jasperTemplate.
+ </p></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>lastHeaderStyle</code>  
+    </dt>
+    <dd>
+      <div class="block">The id of the style to apply to the last column in the table header.  This is optional.
+ <p>
+     The style must be a style element in the jasperTemplate.
+ </p></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>maxColumns</code>  
+    </dt>
+    <dd>
+      <div class="block">The maximum number of columns to allow.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>outputMapper</code>  
+    </dt>
+    <dd>
+      <div class="block">The output mapper.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>outputPrefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each output value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>prefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>reportWidth</code>  
+    </dt>
+    <dd>
+      <div class="block">If dynamic is true, the page width of the table report can be adjusted with this property.</div>
+    </dd>
+  </dl>
+
+    <h3>Inputs</h3>
+  <dl>
+    <dt>
+      <code>clientHttpRequestFactory</code>  required
+    </dt>
+    <dd>
+      <div class="block">A factory for making http requests.  This is added to the values by the framework and therefore
+ does not need to be set in configuration</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>table</code>  required
+    </dt>
+    <dd>
+      <div class="block">Data for constructing the table Datasource.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>tempTaskDirectory</code>  required
+    </dt>
+    <dd>
+      <div class="block">The directory to write the generated table to (if dynamic).</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>template</code>  required
+    </dt>
+    <dd>
+      <div class="block">The template containing this table processor.</div>
+    </dd>
+  </dl>
+
+    <h3>Outputs</h3>
+  <dl>
+    <dt>
+      <code>numberOfTableRows</code>  required
+    </dt>
+    <dd>
+      <div class="block">The number of rows in the table.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>table</code>  required
+    </dt>
+    <dd>
+      <div class="block">The table datasource.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>tableSubReport</code>  required
+    </dt>
+    <dd>
+      <div class="block">The path to the generated sub-report.  If dynamic is false then this will be null.</div>
+    </dd>
+  </dl>
+</div>
+<div class="section" id="!reportBuilder">
+  <h1>!reportBuilder<a class="headerlink" href="#!reportBuilder" title="Permalink to this headline">¶</a></h1>
+  <div class="block"><p>A processor that actually compiles a JasperReport template file.</p><p>Example</p><div class="highlight"><pre>     processors:<br>         - !reportBuilder # compile all reports in current directory<br>               directory: '.'</pre></div>
+ </div>
+
+  <div class="admonition note examples">
+    <p class="first admonition-title">Example</p>
+    <p class="last">
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/verboseExample" target="_blank" class="fa fa-book">&nbsp;verboseExample</a>&nbsp;
+    </p>
+  </div>
+
+    <h3>Configuration</h3>
+  <dl>
+    <dt>
+      <code>configuration</code>  
+    </dt>
+    <dd>
+      <div class="block"><strong>Description copied from interface: <code><a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/config/HasConfiguration.html#setConfiguration(org.mapfish.print.config.Configuration)">HasConfiguration</a></code></strong></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>directory</code>  
+    </dt>
+    <dd>
+      <div class="block">Set the directory and test that the directory exists and is contained within the Configuration directory.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>inputMapper</code>  
+    </dt>
+    <dd>
+      <div class="block">The input mapper.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>inputPrefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each input value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>outputMapper</code>  
+    </dt>
+    <dd>
+      <div class="block">The output mapper.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>outputPrefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each output value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>prefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+
+
+</div>
+<div class="section" id="!restrictUris">
+  <h1>!restrictUris<a class="headerlink" href="#!restrictUris" title="Permalink to this headline">¶</a></h1>
+  <div class="block"><p>This processor check urls against a set of url matchers to see if the request should be allowed or rejected.</p><p>
+     Usage of processor is as follows:
+ </p><div class="highlight"><pre> - !restrictUris<br>   matchers:<br>     - !localMatch {}<br>     - !ipMatch<br>       ip: www.camptocamp.org<br>     - !dnsMatch<br>       host: mapfish-geoportal.demo-camptocamp.com<br>       port: 80<br>     - !dnsMatch<br>       host: labs.metacarta.com<br>       port: 80<br>     - !dnsMatch<br>       host: terraservice.net<br>       port: 80<br>     - !dnsMatch<br>       host: tile.openstreetmap.org<br>       port: 80<br>     - !dnsMatch<br>       host: www.geocat.ch<br>       port: 80</pre></div><p></p><p>
+     By default a matcher allows the URL, but it can be setup to reject the URL (by setting reject to true).
+     The first matcher that matches will be the one picking the final outcome. If no matcher matches,
+     the URI is rejected. So, for example, you can allow every URLs apart from the internal URLs like that:
+ </p><div class="highlight"><pre> - !restrictUris<br>   matchers:<br>     - !ipMatch<br>       ip : 192.178.0.0<br>       mask : 255.255.0.0<br>       reject: true<br>     - !acceptAll</pre></div><p></p><p>
+     If the Print service is in your DMZ and needs to allow access to any WMS server, it is strongly
+     recommended to have a configuration like the previous one in order to avoid having the Print
+     service being used as a proxy to access your internal servers.
+ </p><p><strong>Note:</strong> if this class is part of a CompositeClientHttpRequestFactoryProcessor (!configureHttpRequests) then
+     it should be the last one so that the checks are done after all changes to the URIs
+ </p>
+ </div>
+
+  <div class="admonition note examples">
+    <p class="first admonition-title">Example</p>
+    <p class="last">
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/http_processors" target="_blank" class="fa fa-book">&nbsp;http_processors</a>&nbsp;
+    </p>
+  </div>
+
+    <h3>Configuration</h3>
+  <dl>
+    <dt>
+      <code>inputMapper</code>  
+    </dt>
+    <dd>
+      <div class="block">The input mapper.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>inputPrefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each input value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>matchers</code>  
+    </dt>
+    <dd>
+      <div class="block">The matchers used to select the urls that are going to be modified by the processor.
+ For example:
+ <div class="highlight"><pre> - !restrictUris<br>   matchers:<br>     - !localMatch<br>       dummy: true<br>     - !ipMatch<br>     ip: www.camptocamp.org<br>     - !dnsMatch<br>       host: mapfish-geoportal.demo-camptocamp.com<br>       port: 80<br>     - !dnsMatch<br>       host: labs.metacarta.com<br>       port: 80<br>     - !dnsMatch<br>       host: terraservice.net<br>       port: 80<br>     - !dnsMatch<br>       host: tile.openstreetmap.org<br>       port: 80<br>     - !dnsMatch<br>       host: www.geocat.ch<br>       port: 80</pre></div></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>outputMapper</code>  
+    </dt>
+    <dd>
+      <div class="block">The output mapper.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>outputPrefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each output value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>prefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+
+    <h3>Inputs</h3>
+  <dl>
+    <dt>
+      <code>clientHttpRequestFactory</code>  required
+    </dt>
+    <dd>
+      <div class="block">The object for creating requests.  There should always be an instance in the values object
+ so it does not need to be created.</div>
+    </dd>
+  </dl>
+
+    <h3>Outputs</h3>
+  <dl>
+    <dt>
+      <code>clientHttpRequestFactory</code>  required
+    </dt>
+    <dd>
+      <div class="block">The object for creating requests.  There should always be an instance in the values object
+ so it does not need to be created.</div>
+    </dd>
+  </dl>
+</div>
+<div class="section" id="!setFeatures">
+  <h1>!setFeatures<a class="headerlink" href="#!setFeatures" title="Permalink to this headline">¶</a></h1>
+  <div class="block"><p>Processor to set features on vector layers.
+ </p></div>
+
+
+    <h3>Configuration</h3>
+  <dl>
+    <dt>
+      <code>inputMapper</code>  
+    </dt>
+    <dd>
+      <div class="block">The input mapper.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>inputPrefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each input value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>outputMapper</code>  
+    </dt>
+    <dd>
+      <div class="block">The output mapper.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>outputPrefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each output value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>prefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+
+    <h3>Inputs</h3>
+  <dl>
+    <dt>
+      <code>clientHttpRequestFactory</code>  required
+    </dt>
+    <dd>
+      <div class="block">The factory to use for making http requests.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>features</code>  required
+    </dt>
+    <dd>
+      <div class="block">The features.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>map</code>  required
+    </dt>
+    <dd>
+      <div class="block">The map to update.</div>
+    </dd>
+  </dl>
+
+</div>
+<div class="section" id="!setStyle">
+  <h1>!setStyle<a class="headerlink" href="#!setStyle" title="Permalink to this headline">¶</a></h1>
+  <div class="block"><p>Processor to set a style on vector layers from the attributes.
+ </p></div>
+
+
+    <h3>Configuration</h3>
+  <dl>
+    <dt>
+      <code>inputMapper</code>  
+    </dt>
+    <dd>
+      <div class="block">The input mapper.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>inputPrefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each input value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>outputMapper</code>  
+    </dt>
+    <dd>
+      <div class="block">The output mapper.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>outputPrefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each output value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>prefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+
+    <h3>Inputs</h3>
+  <dl>
+    <dt>
+      <code>clientHttpRequestFactory</code>  required
+    </dt>
+    <dd>
+      <div class="block">A factory for making http requests.  This is added to the values by the framework and therefore
+ does not need to be set in configuration</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>map</code>  required
+    </dt>
+    <dd>
+      <div class="block">The map to update.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>style</code>  required
+    </dt>
+    <dd>
+      <div class="block">The style.</div>
+    </dd>
+  </dl>
+
+</div>
+<div class="section" id="!setWmsCustomParam">
+  <h1>!setWmsCustomParam<a class="headerlink" href="#!setWmsCustomParam" title="Permalink to this headline">¶</a></h1>
+  <div class="block"><p>Processor to set a param on WMS layers.
+ </p></div>
+
+
+    <h3>Configuration</h3>
+  <dl>
+    <dt>
+      <code>inputMapper</code>  
+    </dt>
+    <dd>
+      <div class="block">The input mapper.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>inputPrefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each input value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>outputMapper</code>  
+    </dt>
+    <dd>
+      <div class="block">The output mapper.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>outputPrefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each output value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>paramName</code>  
+    </dt>
+    <dd>
+      <div class="block">Set the parameter name.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>prefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+
+    <h3>Inputs</h3>
+  <dl>
+    <dt>
+      <code>map</code>  required
+    </dt>
+    <dd>
+      <div class="block">The map to update.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>value</code>  required
+    </dt>
+    <dd>
+      <div class="block">The value.</div>
+    </dd>
+  </dl>
+
+</div>
+<div class="section" id="!updatePdfConfig">
+  <h1>!updatePdfConfig<a class="headerlink" href="#!updatePdfConfig" title="Permalink to this headline">¶</a></h1>
+  <div class="block"><p>This processor allows the dynamic configuration of the <a title="class in org.mapfish.print.config" shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/config/PDFConfig.html"><code>PDFConfig</code></a> object by obtaining data
+ from attributes.  For example the title and author could be string attributes posted from the client, this processor would update
+ the <a title="class in org.mapfish.print.config" shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/config/PDFConfig.html"><code>PDFConfig</code></a> object with the attribute data allowing per report PDF metadata.
+ </p><p>
+ Note: The <a title="class in org.mapfish.print.config" shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/config/PDFConfig.html"><code>PDFConfig</code></a> can also be configured in the config.yaml either at the config or template level.
+ </p><p>See also: <a shape="rect" href="attributes.html#!updatePdfConfigUpdate">!updatePdfConfigUpdate</a> attribute</p>
+ </div>
+
+  <div class="admonition note examples">
+    <p class="first admonition-title">Example</p>
+    <p class="last">
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/updatePdfMetadata" target="_blank" class="fa fa-book">&nbsp;updatePdfMetadata</a>&nbsp;
+    </p>
+  </div>
+
+    <h3>Configuration</h3>
+  <dl>
+    <dt>
+      <code>inputMapper</code>  
+    </dt>
+    <dd>
+      <div class="block">The input mapper.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>inputPrefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each input value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>outputMapper</code>  
+    </dt>
+    <dd>
+      <div class="block">The output mapper.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>outputPrefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each output value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>prefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>updates</code>  
+    </dt>
+    <dd>
+      <div class="block">The pdf metadata property -> attribute name map.  The keys must be one of the values in
+ <a title="class in org.mapfish.print.config" shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/config/PDFConfig.html"><code>PDFConfig</code></a> and the values must be the name of the attribute to obtain the
+ the data from.  Example Configuration:
+ <p></p><div class="highlight"><pre> processors:<br>   - !updatePdfConfig<br>     updates:<br>       title: "titleAttribute"<br>       subject: "subjectAttribute"</pre></div><p></p>
+ The type of the attribute must be of the correct type, for example title mus be a string, keywords must be an array of strings,
+ compress must be a boolean.
+ <p></p>
+ If the value is within the attribute output object then you can use dot separators for each level. For example suppose
+ there is a custom attribute: myconfig, if and it has a property title then the configuration would be:
+ <div class="highlight"><pre> processors:<br>   - updatePdfConfig<br>     updates: {title: :myconfig.title"}</pre></div><p></p>
+ For more power a "format" can be defined.  The format is a printf style format string which will be called with a single
+ value that is identified by the value key/path.  In this case the short hand key: value can't be used instead it is as follows:
+ <div class="highlight"><pre>   - updatePdfConfig<br>     updates:<br>       title: !updatePdfConfigUpdate<br>          valueKey: "myconfig.title"<br>          format: "Print Report %s"</pre></div></div>
+    </dd>
+  </dl>
+
+    <h3>Inputs</h3>
+  <dl>
+    <dt>
+      <code>pdfConfig</code>  required
+    </dt>
+    <dd>
+      <div class="block">The pdf configuration object.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>values</code>  required
+    </dt>
+    <dd>
+      <div class="block">The values object used to retrieve the required attributes.</div>
+    </dd>
+  </dl>
+
+</div>
+<div class="section" id="!useHttpForHttps">
+  <h1>!useHttpForHttps<a class="headerlink" href="#!useHttpForHttps" title="Permalink to this headline">¶</a></h1>
+  <div class="block">This processor maps https requests to http requests for certain hosts. The port number can also be mapped since that is usually
+ required.
+ <p>Example: </p><div class="highlight"><pre> - !useHttpForHttps<br>   hosts: [localhost, www.camptocamp.com]<br>   portMapping:<br>     443 : 80<br>     8443 : 8443</pre></div><p>Can be applied conditionally using matchers, like in <a title="class in org.mapfish.print.processor.http" shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/http/RestrictUrisProcessor.html"><code>RestrictUrisProcessor</code></a> 
+ (<a shape="rect" href="processors.html#!restrictUris">!restrictUris</a>).</p>
+ </div>
+
+  <div class="admonition note examples">
+    <p class="first admonition-title">Example</p>
+    <p class="last">
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/http_processors" target="_blank" class="fa fa-book">&nbsp;http_processors</a>&nbsp;
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/osm_custom_params" target="_blank" class="fa fa-book">&nbsp;osm_custom_params</a>&nbsp;
+    </p>
+  </div>
+
+    <h3>Configuration</h3>
+  <dl>
+    <dt>
+      <code>hosts</code>  
+    </dt>
+    <dd>
+      <div class="block">Set the patterns to use for selecting the hosts to apply the https -> http mapping to.
+ <ul><li>If the host starts and ends with / then it is compiled as a regular expression</li><li>Otherwise the hosts must exactly match</li></ul></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>inputMapper</code>  
+    </dt>
+    <dd>
+      <div class="block">The input mapper.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>inputPrefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each input value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>matchers</code>  
+    </dt>
+    <dd>
+      <div class="block">The matchers used to select the urls that are going to be modified by the processor.
+ For example:
+ <div class="highlight"><pre> - !restrictUris<br>   matchers:<br>     - !localMatch<br>       dummy: true<br>     - !ipMatch<br>     ip: www.camptocamp.org<br>     - !dnsMatch<br>       host: mapfish-geoportal.demo-camptocamp.com<br>       port: 80<br>     - !dnsMatch<br>       host: labs.metacarta.com<br>       port: 80<br>     - !dnsMatch<br>       host: terraservice.net<br>       port: 80<br>     - !dnsMatch<br>       host: tile.openstreetmap.org<br>       port: 80<br>     - !dnsMatch<br>       host: www.geocat.ch<br>       port: 80</pre></div></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>outputMapper</code>  
+    </dt>
+    <dd>
+      <div class="block">The output mapper.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>outputPrefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each output value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>portMapping</code>  
+    </dt>
+    <dd>
+      <div class="block">Set the https port to http port mapping.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>prefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The prefix to apply to each value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+
+    <h3>Inputs</h3>
+  <dl>
+    <dt>
+      <code>clientHttpRequestFactory</code>  required
+    </dt>
+    <dd>
+      <div class="block">The object for creating requests.  There should always be an instance in the values object
+ so it does not need to be created.</div>
+    </dd>
+  </dl>
+
+    <h3>Outputs</h3>
+  <dl>
+    <dt>
+      <code>clientHttpRequestFactory</code>  required
+    </dt>
+    <dd>
+      <div class="block">The object for creating requests.  There should always be an instance in the values object
+ so it does not need to be created.</div>
+    </dd>
+  </dl>
+</div>
+
+
+
+
+           </div>
+          </div>
+          <footer>
+
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        <a href="http://www.camptocamp.com/geospatial/" target="_blank">Camptocamp</a> <br>
+        <span class="commit">
+          Revision <code><a href="https://github.com/mapfish/mapfish-print/commit/faecdcb61a67996576076ae47809404967712ce3
+" target="_blank">faecdcb6</a></code>.
+        </span>
+
+
+    </p>
+  </div>
+  Theme based on a <a href="https://github.com/snide/sphinx_rtd_theme">template</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+
+
+      <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+      <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+      <script type="text/javascript" src="js/underscore.js"></script>
+      <script type="text/javascript" src="js/theme.js"></script>
+      <script type="text/javascript">
+        jQuery(function () {
+            SphinxRtdTheme.StickyNav.enable();
+        });
+      </script>
+
+</body>
+</html>

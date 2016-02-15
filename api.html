@@ -1,21 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MapFish Print 3 Documentation - Web Protocol</title>
+
+    <link rel="stylesheet" href="css/sphinx_rtd_theme.css" type="text/css" />
+    <link rel="stylesheet" href="css/readthedocs-doc-embed.css" type="text/css" />
+    <link rel="stylesheet" href="css/custom.css" type="text/css" />
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+
+            <a href="index.html" class="icon icon-home"> MapFish Print 3</a>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+
+
+
+                <ul class="current">
+<li class="toctree-l1 ">
+  <a class="reference internal " href="index.html">Introduction</a>
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="jasperreports.html">JasperReports</a>
+</li>
+<li class="toctree-l1 current">
+  <a class="reference internal current" href="api.html">Web API</a>
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="attributes.html">Attributes</a>
+  
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="configuration.html">Configuration</a>
+  
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="layers.html">Map Layers</a>
+  
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="processors.html">Processors</a>
+  
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="fileloaders.html">File-Loaders</a>
+  
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="outputformats.html">Output Formats</a>
+  
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="styles.html">Styles</a>
+  
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="tableimages.html">Images in tables</a>
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="download.html">Download</a>
+</li>
+</ul>
+
+
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">MapFish Print 3</a>
+      </nav>
+
+
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+
+    <li>Web Protocol</li>
+      <li class="wy-breadcrumbs-aside">
+
+
+            <a href="https://github.com/mapfish/mapfish-print" class="fa fa-github"> mapfish/mapfish-print</a>
+
+
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             <h1>Web Protocol</h1>
+             <div class="section">
 <div class="api">
 <p>
   The API is the web/HTTP protocol allowing a client to interact with the print service via the web.
 </p>
 <p>
   <ul>
-    <li><a href="#/API#apps">List available print configurations</a></li>
-    <li><a href="#/API#capabilities">Get the capabilities for a print configuration</a></li>
-    <li><a href="#/API#create">Create a print job</a></li>
-    <li><a href="#/API#status">Get the status for a print job</a></li>
-    <li><a href="#/API#download">Download the report for a print job</a></li>
-    <li><a href="#/API#cancel">Cancel a print job</a></li>
-    <li><a href="#/API#listFonts">List available fonts</a></li>
+    <li><a href="#apps">List available print configurations</a></li>
+    <li><a href="#capabilities">Get the capabilities for a print configuration</a></li>
+    <li><a href="#create">Create a print job</a></li>
+    <li><a href="#status">Get the status for a print job</a></li>
+    <li><a href="#download">Download the report for a print job</a></li>
+    <li><a href="#cancel">Cancel a print job</a></li>
+    <li><a href="#listFonts">List available fonts</a></li>
     <!-- <li>Create and get report</li> -->
   </ul>
 </p>
 
-<h3 id="apps">List available print configurations</h3>
+<h3 id="apps">List available print configurations <a class="headerlink" href="#apps" title="Permalink to this headline">¶</a></h3>
 <p>
   Lists the identifiers of all print configurations that are available in the MapFish Print
   instance.
@@ -27,15 +147,16 @@
 
 <h4>Response Sample</h4>
 <p>
-  <pre>
+  <div class="highlight"><pre>
 [
 "simple",
 "default"
 ]
-  </pre>
+  </pre></div>
 </p>
 
-<h3 id="capabilities">Get the capabilities for a print configuration</h3>
+
+<h3 id="capabilities">Get the capabilities for a print configuration <a class="headerlink" href="#capabilities" title="Permalink to this headline">¶</a></h3>
 <p>
   Return the capabilities for a specific print configuration.
 </p>
@@ -53,7 +174,7 @@
   Request URI: <code>GET /simple/capabilities.json</code>
 </p>
 <p>
-  <pre>
+  <div class="highlight"><pre>
 {
     "app": "simple",
     "layouts": [
@@ -73,13 +194,13 @@
         "tiff"
     ]
 }
-  </pre>
+  </pre></div>
 </p>
 
-<h3 id="create">Create a print job</h3>
+
+<h3 id="create">Create a print job <a class="headerlink" href="#create" title="Permalink to this headline">¶</a></h3>
 <p>
-  Lists the identifiers of all print configurations that are available in the MapFish Print
-  instance.
+  Send a print request to create a print job.
 </p>
 <h4>URI</h4>
 <p>
@@ -138,7 +259,7 @@
 </p>
 <p>
   Request body
-  <pre>
+  <div class="highlight"><pre>
 {
     "layout": "A4 Portrait",
     "attributes": {
@@ -161,21 +282,22 @@
         "title": "Sample Print"
     }
 }
-  </pre>
+  </pre></div>
 </p>
 
 <h4>Response Sample</h4>
 <p>
-  <pre>
+  <div class="highlight"><pre>
 {
     "ref": "15179fee-618d-4356-8114-cfd8f146e273@3067ade6-0768-4fc6-b41d-40422d0cdb8b",
     "statusURL": "/print/status/15179fee-618d-4356-8114-cfd8f146e273.json",
     "downloadURL": "/print/report/15179fee-618d-4356-8114-cfd8f146e273"
 }
-  </pre>
+  </pre></div>
 </p>
 
-<h3 id="status">Get the status for a print job</h3>
+
+<h3 id="status">Get the status for a print job <a class="headerlink" href="#status" title="Permalink to this headline">¶</a></h3>
 <p>
   Returns the status for a print job.
 </p>
@@ -233,7 +355,7 @@
   Request URI: <code>GET /status/15179fee-618d-4356-8114-cfd8f146e273.json</code>
 </p>
 <p>
-  <pre>
+  <div class="highlight"><pre>
 {
     "done": false,
     "status": "running",
@@ -241,10 +363,11 @@
     "waitingTime": 0,
     "downloadURL": "/print/report/15179fee-618d-4356-8114-cfd8f146e273"
 }
-  </pre>
+  </pre></div>
 </p>
 
-<h3 id="download">Download the report for a print job</h3>
+
+<h3 id="download">Download the report for a print job <a class="headerlink" href="#download" title="Permalink to this headline">¶</a></h3>
 <p>
   Downloads a finished print job.
 </p>
@@ -267,7 +390,7 @@
   Request URI: <code>GET /report/15179fee-618d-4356-8114-cfd8f146e273</code>
 </p>
 
-<h3 id="cancel">Cancel a print job</h3>
+<h3 id="cancel">Cancel a print job <a class="headerlink" href="#cancel" title="Permalink to this headline">¶</a></h3>
 <p>
   Request the cancellation of a print job.
 </p>
@@ -291,7 +414,7 @@
 </p>
 
 
-<h3 id="listFonts">List Available Fonts</h3>
+<h3 id="listFonts">List Available Fonts <a class="headerlink" href="#listFonts" title="Permalink to this headline">¶</a></h3>
 <p>
   List fonts installed in Java Runtime on server.  This lists the fonts that can be put in the Jasper Report Templates
 </p>
@@ -310,3 +433,53 @@
   Request URI: <code>GET /fonts</code>
 </p>
 </div>
+
+</div>
+
+
+
+
+
+           </div>
+          </div>
+          <footer>
+
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        <a href="http://www.camptocamp.com/geospatial/" target="_blank">Camptocamp</a> <br>
+        <span class="commit">
+          Revision <code><a href="https://github.com/mapfish/mapfish-print/commit/faecdcb61a67996576076ae47809404967712ce3
+" target="_blank">faecdcb6</a></code>.
+        </span>
+
+
+    </p>
+  </div>
+  Theme based on a <a href="https://github.com/snide/sphinx_rtd_theme">template</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+
+
+      <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+      <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+      <script type="text/javascript" src="js/underscore.js"></script>
+      <script type="text/javascript" src="js/theme.js"></script>
+      <script type="text/javascript">
+        jQuery(function () {
+            SphinxRtdTheme.StickyNav.enable();
+        });
+      </script>
+
+</body>
+</html>
