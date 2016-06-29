@@ -600,10 +600,10 @@ templates:
 </div>
 <div class="section" id="!proxy">
   <h1>!proxy<a class="headerlink" href="#!proxy" title="Permalink to this headline">¶</a></h1>
-  <div class="block">This configuration object configures the proxies to be used by the system.  This is configured as
+  <div class="block">This configuration object configures the proxies to be used by the system. This is configured as
  one of the root elements of the config.yaml
 
- <p>Example - Explicitly declare that requests to localhost or www.camptocamp.org require proxying: </p><div class="highlight"><pre> proxies:<br>   - !proxy<br>     requireProxy:<br>       - !localMatch {}<br>       - !ipMatch<br>         ip: www.camptocamp.org<br>     host: proxy.host.com<br>     port: 8888<br>     username: username<br>     password: xyzpassword</pre></div><p>Example - Proxy all requests except localhost and www.camptocamp.org: </p><div class="highlight"><pre> proxies:<br>   - !proxy<br>     noProxy:<br>       - !localMatch {}<br>       - !ipMatch<br>         ip: www.camptocamp.org<br>     scheme: http<br>     host: proxy.host.com<br>     port: 8888<br>     username: username<br>     password: xyzpassword</pre></div></div>
+ <p>Example - Proxy all requests except localhost and www.camptocamp.org:</p><div class="highlight"><pre> proxies:<br>   - !proxy<br>     scheme: http<br>     host: proxy.host.com<br>     port: 8888<br>     username: username<br>     password: xyzpassword<br>     matchers:<br>       - !localMatch<br>         reject: true<br>       - !dnsMatch<br>         host: www.camptocamp.org<br>         reject: true<br>       - !acceptAll {}</pre></div></div>
 
 
     <h3>Configuration</h3>
@@ -931,8 +931,8 @@ templates:
     <p>
         <a href="http://www.camptocamp.com/geospatial/" target="_blank">Camptocamp</a> <br>
         <span class="commit">
-          Revision <code><a href="https://github.com/mapfish/mapfish-print/commit/4da2a4c2a1734ea9583480a9b7a4335a291c1779
-" target="_blank">4da2a4c2</a></code>.
+          Revision <code><a href="https://github.com/mapfish/mapfish-print/commit/ec71ae3e5c7d1ee796a01662c17318f117598330
+" target="_blank">ec71ae3e</a></code>.
         </span>
 
 
