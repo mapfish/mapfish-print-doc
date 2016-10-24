@@ -396,6 +396,14 @@ other attributes in that they have attribute values.</p>
     <h3>Inputs</h3>
   <dl>
     <dt>
+      <code>DEFAULT_UNIT_FORMAT</code>  required
+    </dt>
+    <dd>
+      <div class="block">Grid label default format pattern for the unit (if valueFormat is used).</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
       <code>failOnError</code>  
     </dt>
     <dd>
@@ -408,6 +416,24 @@ other attributes in that they have attribute values.</p>
     </dt>
     <dd>
       <div class="block">Configuration for the font of the grid labels.  The default is the default system font.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>formatDecimalSeparator</code>  
+    </dt>
+    <dd>
+      <div class="block">The character used to separate the decimal part (for example ","). This parameter is only used
+ if <code>valueFormat</code> is used. The default is the character of the default locale.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>formatGroupingSeparator</code>  
+    </dt>
+    <dd>
+      <div class="block">The character used for the thousands separator (for example "'"). This parameter is only used
+ if <code>valueFormat</code> is used. The default is the character of the default locale.</div>
     </dd>
   </dl>
   <dl>
@@ -470,11 +496,14 @@ other attributes in that they have attribute values.</p>
   </dl>
   <dl>
     <dt>
-      <code>labelFomat</code>  
+      <code>labelFormat</code>  
     </dt>
     <dd>
       <div class="block">The formatting string used to format the label (for example "%1.2f %s"). By default the label is formatted
- according to the unit and label value.</div>
+ according to the unit and label value. For the format syntax, see
+ <a shape="rect" href="https://docs.oracle.com/javase/7/docs/api/java/util/Formatter.html">java.util.Formatter</a>.
+ If <code>labelFormat</code> is set, <code>valueFormat</code>, <code>unitFormat</code> and custom separator
+ characters will be ignored.</div>
     </dd>
   </dl>
   <dl>
@@ -585,6 +614,27 @@ other attributes in that they have attribute values.</p>
  then the style will be crosses with a haloRadius sized halo around the cross.  If <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/geotools/grid/GridType.html#LINES"><code>GridType.LINES</code></a> then the style will
  be a dashed line with no halo.
  <p></p></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>unitFormat</code>  
+    </dt>
+    <dd>
+      <div class="block">The formatting string used to format the unit part of a label (for example " %s"). This parameter
+ is ignored if <code>labelFormat</code> is set. <code>valueFormat</code> must be set to use this
+ parameter. For the format syntax, see
+ <a shape="rect" href="https://docs.oracle.com/javase/7/docs/api/java/util/Formatter.html">java.util.Formatter</a>.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>valueFormat</code>  
+    </dt>
+    <dd>
+      <div class="block">The formatting string used to format the decimal part of a label (for example "###,###"). This parameter
+ is ignored if <code>labelFormat</code> is set. For the format syntax, see
+ <a shape="rect" href="https://docs.oracle.com/javase/tutorial/i18n/format/decimalFormat.html">DecimalFormat</a>.</div>
     </dd>
   </dl>
   <dl>
@@ -1232,8 +1282,8 @@ other attributes in that they have attribute values.</p>
     <p>
         <a href="http://www.camptocamp.com/geospatial/" target="_blank">Camptocamp</a> <br>
         <span class="commit">
-          Revision <code><a href="https://github.com/mapfish/mapfish-print/commit/34f1474a91787447dd5f1de12cf2aa94600a88b7
-" target="_blank">34f1474a</a></code>.
+          Revision <code><a href="https://github.com/mapfish/mapfish-print/commit/fb4a0a36b58abf6443490a36f854c87c06287ad6
+" target="_blank">fb4a0a36</a></code>.
         </span>
 
 
