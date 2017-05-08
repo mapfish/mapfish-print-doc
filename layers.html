@@ -54,6 +54,7 @@
   <li class="toctree-l2"><a class="reference internal" href="#Geotiff Layer">Geotiff Layer</a></li>
   <li class="toctree-l2"><a class="reference internal" href="#Gml Layer">Gml Layer</a></li>
   <li class="toctree-l2"><a class="reference internal" href="#Grid Layer">Grid Layer</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="#Image Layer">Image Layer</a></li>
   <li class="toctree-l2"><a class="reference internal" href="#Osm Layer">Osm Layer</a></li>
   <li class="toctree-l2"><a class="reference internal" href="#Tiled Wms Layer">Tiled Wms Layer</a></li>
   <li class="toctree-l2"><a class="reference internal" href="#WMTS Layer">WMTS Layer</a></li>
@@ -202,7 +203,7 @@ other attributes in that they have attribute values.</p>
   </dl>
   <dl>
     <dt>
-      <code>geoJson</code>  required
+      <code>geoJson</code>  
     </dt>
     <dd>
       <div class="block">A geojson formatted string or url to the geoJson or the raw GeoJSON data.
@@ -648,6 +649,63 @@ other attributes in that they have attribute values.</p>
   </dl>
 
 </div>
+<div class="section" id="Image Layer">
+  <h1>Image Layer<a class="headerlink" href="#Image Layer" title="Permalink to this headline">¶</a></h1>
+  <div class="block"><p>Renders an image as layer.</p><p>Type: <code>image</code></p></div>
+
+
+
+    <h3>Inputs</h3>
+  <dl>
+    <dt>
+      <code>baseURL</code>  required
+    </dt>
+    <dd>
+      <div class="block">The base URL for the image file.  Used for making request.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>extent</code>  required
+    </dt>
+    <dd>
+      <div class="block">The extent of the image.  Used for placing image on map.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>failOnError</code>  
+    </dt>
+    <dd>
+      <div class="block">Fail if a tile return an error.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>name</code>  
+    </dt>
+    <dd>
+      <div class="block">The name of the layer.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>opacity</code>  
+    </dt>
+    <dd>
+      <div class="block">The opacity of the image.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>style</code>  
+    </dt>
+    <dd>
+      <div class="block">The styles to apply to the image.</div>
+    </dd>
+  </dl>
+
+</div>
 <div class="section" id="Osm Layer">
   <h1>Osm Layer<a class="headerlink" href="#Osm Layer" title="Permalink to this headline">¶</a></h1>
   <div class="block"><p>Renders OpenStreetMap or other tiled layers.</p><p>Type: <code>osm</code></p>
@@ -716,7 +774,7 @@ other attributes in that they have attribute values.</p>
       <code>imageFormat</code>  required
     </dt>
     <dd>
-      <div class="block"><span class="strong">Deprecated.</span> <i></i></div>
+      <div class="block"><span class="deprecatedLabel">Deprecated.</span> </div>
     </dd>
   </dl>
   <dl>
@@ -823,14 +881,6 @@ other attributes in that they have attribute values.</p>
     </dt>
     <dd>
       <div class="block">Fail if a tile return an error.</div>
-    </dd>
-  </dl>
-  <dl>
-    <dt>
-      <code>imageFormat</code>  
-    </dt>
-    <dd>
-      <div class="block">The format of the image. for example image/png, image/jpeg, etc...</div>
     </dd>
   </dl>
   <dl>
@@ -1001,16 +1051,6 @@ other attributes in that they have attribute values.</p>
  If specified they must be dimensions supported by the server.
  <p></p>
  These are keys to the <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/tiled/wmts/WMTSLayerParam.html#dimensionParams"><code>dimensionParams</code></a>.</div>
-    </dd>
-  </dl>
-  <dl>
-    <dt>
-      <code>dpi</code>  
-    </dt>
-    <dd>
-      <div class="block">The dpi of the returned images.
- <p></p>
- By default this is the OGC default DPI.</div>
     </dd>
   </dl>
   <dl>
@@ -1282,8 +1322,8 @@ other attributes in that they have attribute values.</p>
     <p>
         <a href="http://www.camptocamp.com/geospatial/" target="_blank">Camptocamp</a> <br>
         <span class="commit">
-          Revision <code><a href="https://github.com/mapfish/mapfish-print/commit/fb4a0a36b58abf6443490a36f854c87c06287ad6
-" target="_blank">fb4a0a36</a></code>.
+          Revision <code><a href="https://github.com/mapfish/mapfish-print/commit/48b9960b80e3574b869ee9b5b86e02d1587f4421
+" target="_blank">48b9960b</a></code>.
         </span>
 
 

@@ -177,9 +177,8 @@ templates:
     "outputFormat": "pdf",
     "attributes": {
         "number": 45,
-        "name": "The map",
-        "description": "A map showing..."
-        },
+        "title": "The map",
+        "description": "A map showing...",
         "map": {
           "bbox": [100, -1, 106, 2],
           "projection": "CRS:84",
@@ -187,7 +186,8 @@ templates:
           ...
         }
     }
-}</pre></div></div>
+}
+  </pre></div></div>
 </p>
 
 </div>
@@ -210,7 +210,7 @@ templates:
       <code>default</code>  
     </dt>
     <dd>
-      <div class="block"><p>A default value for this attribute. Example:</p><div class="highlight"><pre>     attributes:<br>       title: !string<br>         default: "Report"</pre></div></div>
+      <div class="block"><p>A default value for this attribute. Example:</p><div class="highlight"><pre>     attributes:<br>       title: !boolean<br>         default: True</pre></div></div>
     </dd>
   </dl>
 
@@ -224,32 +224,23 @@ templates:
  </p><p>
      For example consider the case where the report should contain multiple tables or charts but the number of reports
      may change depending on the request.  In this case the client will post a datasource attribute json object containing an array
-     of all the table attribute objects.  The <a title="class in org.mapfish.print.processor.jasper" shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/jasper/DataSourceProcessor.html"><code>DataSourceProcessor</code></a> will process
+     of all the table attribute objects.  The <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/jasper/DataSourceProcessor.html" title="class in org.mapfish.print.processor.jasper"><code>DataSourceProcessor</code></a> will process
      the datasource attribute and create a Jasper datasource that contains all the tables.
  </p><p>
-     This datasource must be used in tandem with the <a title="class in org.mapfish.print.processor.jasper" shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/jasper/DataSourceProcessor.html"><code>DataSourceProcessor</code></a> processor
+     This datasource must be used in tandem with the <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/jasper/DataSourceProcessor.html" title="class in org.mapfish.print.processor.jasper"><code>DataSourceProcessor</code></a> processor
      (see <a shape="rect" href="processors.html#!createDataSource">!createDataSource</a> processor).
  </p><p>
      The json data of this attribute is special since it represents an array of attributes, each element in the array must
      contain all of the attributes required to satisfy the processors in the
-     <a title="class in org.mapfish.print.processor.jasper" shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/jasper/DataSourceProcessor.html"><code>DataSourceProcessor</code></a>.
+     <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/jasper/DataSourceProcessor.html" title="class in org.mapfish.print.processor.jasper"><code>DataSourceProcessor</code></a>.
  </p><p>
  Example configuration:
  </p><div class="highlight"><pre> datasource: !datasource<br>   table: !table<br>   map: !map<br>     width: 200<br>     height: 100</pre></div><p>
  Example request data:
  </p><div class="highlight"><pre> datasource: [<br>   {<br>       table: {<br>           ... // normal table attribute data<br>       },<br>       map: {<br>           ... // normal map attribute data<br>       }<br>   }, {<br>       table: {<br>           ... // normal table attribute data<br>       },<br>       map: {<br>           ... // normal map attribute data<br>       }<br>   }<br> ]</pre></div>
- </div>
+ [[examples=verboseExample,datasource_dynamic_tables,datasource_many_dynamictables_legend,
+ datasource_multiple_maps,customDynamicReport,report]]</div>
 
-  <div class="admonition note examples">
-    <p class="first admonition-title">Example</p>
-    <p class="last">
-        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/verboseExample" target="_blank" class="fa fa-book">&nbsp;verboseExample</a>&nbsp;
-        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/datasource_dynamic_tables" target="_blank" class="fa fa-book">&nbsp;datasource_dynamic_tables</a>&nbsp;
-        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/datasource_many_dynamictables_legend" target="_blank" class="fa fa-book">&nbsp;datasource_many_dynamictables_legend</a>&nbsp;
-        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/datasource_multiple_maps" target="_blank" class="fa fa-book">&nbsp;datasource_multiple_maps</a>&nbsp;
-        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/customDynamicReport" target="_blank" class="fa fa-book">&nbsp;customDynamicReport</a>&nbsp;
-    </p>
-  </div>
 
     <h3>Configuration</h3>
   <dl>
@@ -273,8 +264,15 @@ templates:
 </div>
 <div class="section" id="!features">
   <h1>!features<a class="headerlink" href="#!features" title="Permalink to this headline">¶</a></h1>
-  <div class="block">Attribute for GeoJson feature collection.</div>
+  <div class="block">Attribute for GeoJson feature collection.
+ </div>
 
+  <div class="admonition note examples">
+    <p class="first admonition-title">Example</p>
+    <p class="last">
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/report" target="_blank" class="fa fa-book">&nbsp;report</a>&nbsp;
+    </p>
+  </div>
 
     <h3>Configuration</h3>
   <dl>
@@ -324,7 +322,7 @@ templates:
       <code>default</code>  
     </dt>
     <dd>
-      <div class="block"><p>A default value for this attribute. Example:</p><div class="highlight"><pre>     attributes:<br>       title: !string<br>         default: "Report"</pre></div></div>
+      <div class="block"><p>A default value for this attribute. Example:</p><div class="highlight"><pre>     attributes:<br>       title: !float<br>         default: 4.2</pre></div></div>
     </dd>
   </dl>
 
@@ -348,7 +346,7 @@ templates:
       <code>default</code>  
     </dt>
     <dd>
-      <div class="block"><p>A default value for this attribute. Example:</p><div class="highlight"><pre>     attributes:<br>       title: !string<br>         default: "Report"</pre></div></div>
+      <div class="block"><p>A default value for this attribute. Example:</p><div class="highlight"><pre>     attributes:<br>       title: !integer<br>         default: 42</pre></div></div>
     </dd>
   </dl>
 
@@ -356,7 +354,7 @@ templates:
 </div>
 <div class="section" id="!legend">
   <h1>!legend<a class="headerlink" href="#!legend" title="Permalink to this headline">¶</a></h1>
-  <div class="block">Objects needed by the <a title="class in org.mapfish.print.processor.jasper" shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/jasper/LegendProcessor.html"><code>LegendProcessor</code></a> (see
+  <div class="block">Objects needed by the <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/jasper/LegendProcessor.html" title="class in org.mapfish.print.processor.jasper"><code>LegendProcessor</code></a> (see
  <a shape="rect" href="processors.html#!prepareLegend">!prepareLegend</a> processor).
  </div>
 
@@ -407,7 +405,7 @@ templates:
 </div>
 <div class="section" id="!map">
   <h1>!map<a class="headerlink" href="#!map" title="Permalink to this headline">¶</a></h1>
-  <div class="block"><p>The attributes for <a title="class in org.mapfish.print.processor.map" shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/map/CreateMapProcessor.html"><code>CreateMapProcessor</code></a> (see
+  <div class="block"><p>The attributes for <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/map/CreateMapProcessor.html" title="class in org.mapfish.print.processor.map"><code>CreateMapProcessor</code></a> (see
  <a shape="rect" href="processors.html#!createMap">!createMap</a> processor).</p>
  </div>
 
@@ -447,6 +445,22 @@ templates:
   <dl>
     <dt>
       <code>maxDpi</code>  
+    </dt>
+    <dd>
+      <div></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>maxHeight</code>  
+    </dt>
+    <dd>
+      <div></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>maxWidth</code>  
     </dt>
     <dd>
       <div></div>
@@ -547,7 +561,15 @@ templates:
   </dl>
   <dl>
     <dt>
-      <code>layers</code>  required
+      <code>height</code>  
+    </dt>
+    <dd>
+      <div class="block">The height of the map.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>layers</code>  
     </dt>
     <dd>
       <div class="block">The json with all the layer information.  This will be parsed in postConstruct into a list of layers and
@@ -610,7 +632,15 @@ templates:
   </dl>
   <dl>
     <dt>
-      <code>zoomToFeatures</code>  
+      <code>width</code>  
+    </dt>
+    <dd>
+      <div class="block">The width of the map.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>zoomToFeatures</code>  required
     </dt>
     <dd>
       <div class="block">Zoom the map to the features of a specific layer or all features of the map.</div>
@@ -620,7 +650,7 @@ templates:
 </div>
 <div class="section" id="!northArrow">
   <h1>!northArrow<a class="headerlink" href="#!northArrow" title="Permalink to this headline">¶</a></h1>
-  <div class="block"><p>The attributes for <a title="class in org.mapfish.print.processor.map" shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/map/CreateNorthArrowProcessor.html"><code>CreateNorthArrowProcessor</code></a> (see
+  <div class="block"><p>The attributes for <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/map/CreateNorthArrowProcessor.html" title="class in org.mapfish.print.processor.map"><code>CreateNorthArrowProcessor</code></a> (see
  <a shape="rect" href="processors.html#!createNorthArrow">!createNorthArrow</a> processor).</p>
  </div>
 
@@ -628,10 +658,19 @@ templates:
     <p class="first admonition-title">Example</p>
     <p class="last">
         <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/verboseExample" target="_blank" class="fa fa-book">&nbsp;verboseExample</a>&nbsp;
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/print_osm_new_york_nosubreports" target="_blank" class="fa fa-book">&nbsp;print_osm_new_york_nosubreports</a>&nbsp;
     </p>
   </div>
 
     <h3>Configuration</h3>
+  <dl>
+    <dt>
+      <code>createSubReport</code>  
+    </dt>
+    <dd>
+      <div class="block">Specifies whether a subreport should be created, or only a graphic.</div>
+    </dd>
+  </dl>
   <dl>
     <dt>
       <code>default</code>  
@@ -719,6 +758,22 @@ templates:
   <dl>
     <dt>
       <code>maxDpi</code>  
+    </dt>
+    <dd>
+      <div></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>maxHeight</code>  
+    </dt>
+    <dd>
+      <div></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>maxWidth</code>  
     </dt>
     <dd>
       <div></div>
@@ -831,6 +886,14 @@ templates:
   </dl>
   <dl>
     <dt>
+      <code>height</code>  
+    </dt>
+    <dd>
+      <div class="block">The height of the map.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
       <code>layers</code>  
     </dt>
     <dd>
@@ -889,6 +952,14 @@ templates:
  <p></p></div>
     </dd>
   </dl>
+  <dl>
+    <dt>
+      <code>width</code>  
+    </dt>
+    <dd>
+      <div class="block">The width of the map.</div>
+    </dd>
+  </dl>
 
 </div>
 <div class="section" id="!paging">
@@ -924,7 +995,7 @@ templates:
  in one part of the report one can easily see where in the complete map the sub-map fits, even without looking at the
  labelling.
  <p>
-     For options see: <a title="enum in org.mapfish.print.attribute.map" shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/attribute/map/AreaOfInterest.AoiDisplay.html"><code>AreaOfInterest.AoiDisplay</code></a></p><p>
+     For options see: <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/attribute/map/AreaOfInterest.AoiDisplay.html" title="enum in org.mapfish.print.attribute.map"><code>AreaOfInterest.AoiDisplay</code></a></p><p>
      By default the rendering in the <a shape="rect" href="index.html#/attributes?location=!map">map attribute's</a>
      area of interest will be used
  </p></div>
@@ -964,7 +1035,7 @@ templates:
 </div>
 <div class="section" id="!scalebar">
   <h1>!scalebar<a class="headerlink" href="#!scalebar" title="Permalink to this headline">¶</a></h1>
-  <div class="block"><p>The attributes for <a title="class in org.mapfish.print.processor.map.scalebar" shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/map/scalebar/CreateScalebarProcessor.html"><code>CreateScalebarProcessor</code></a> (see
+  <div class="block"><p>The attributes for <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/map/scalebar/CreateScalebarProcessor.html" title="class in org.mapfish.print.processor.map.scalebar"><code>CreateScalebarProcessor</code></a> (see
  <a shape="rect" href="processors.html#!createScalebar">!createScalebar</a> processor).</p>
  </div>
 
@@ -973,10 +1044,19 @@ templates:
     <p class="last">
         <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/verboseExample" target="_blank" class="fa fa-book">&nbsp;verboseExample</a>&nbsp;
         <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/print_osm_new_york_EPSG_900913" target="_blank" class="fa fa-book">&nbsp;print_osm_new_york_EPSG_900913</a>&nbsp;
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/print_osm_new_york_nosubreports" target="_blank" class="fa fa-book">&nbsp;print_osm_new_york_nosubreports</a>&nbsp;
     </p>
   </div>
 
     <h3>Configuration</h3>
+  <dl>
+    <dt>
+      <code>createSubReport</code>  
+    </dt>
+    <dd>
+      <div class="block">Specifies whether a subreport should be created, or only a graphic.</div>
+    </dd>
+  </dl>
   <dl>
     <dt>
       <code>default</code>  
@@ -1096,6 +1176,14 @@ templates:
   </dl>
   <dl>
     <dt>
+      <code>labelRotation</code>  
+    </dt>
+    <dd>
+      <div class="block">Rotate the label to some degree.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
       <code>lineWidth</code>  
     </dt>
     <dd>
@@ -1186,7 +1274,7 @@ templates:
 </div>
 <div class="section" id="!staticLayers">
   <h1>!staticLayers<a class="headerlink" href="#!staticLayers" title="Permalink to this headline">¶</a></h1>
-  <div class="block"><p>The attributes for the <a title="class in org.mapfish.print.processor.map" shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/map/AddStaticLayersProcessor.html"><code>AddStaticLayersProcessor</code></a> (see
+  <div class="block"><p>The attributes for the <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/map/AddStaticLayersProcessor.html" title="class in org.mapfish.print.processor.map"><code>AddStaticLayersProcessor</code></a> (see
  <a shape="rect" href="processors.html#!addBackgroundLayers">!addBackgroundLayers</a> and
  <a shape="rect" href="processors.html#!addOverlayLayers">!addOverlayLayers</a> processor) which adds the layers in this
  attribute to the layers in the map.  The typical use is to add the background or overlay layers as the "default"
@@ -1197,6 +1285,7 @@ templates:
     <p class="first admonition-title">Example</p>
     <p class="last">
         <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/add_overlay_layer" target="_blank" class="fa fa-book">&nbsp;add_overlay_layer</a>&nbsp;
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/report" target="_blank" class="fa fa-book">&nbsp;report</a>&nbsp;
     </p>
   </div>
 
@@ -1241,7 +1330,7 @@ templates:
       <code>default</code>  
     </dt>
     <dd>
-      <div class="block"><p>A default value for this attribute. Example:</p><div class="highlight"><pre>     attributes:<br>       title: !string<br>         default: "Report"</pre></div></div>
+      <div class="block"><p>A default value for this attribute. Example:</p><div class="highlight"><pre>     attributes:<br>       title: !string<br>         default: The title</pre></div></div>
     </dd>
   </dl>
   <dl>
@@ -1273,7 +1362,7 @@ templates:
       <code>default</code>  
     </dt>
     <dd>
-      <div class="block"><p>A default value for this attribute. Example:</p><div class="highlight"><pre>     attributes:<br>       title: !string<br>         default: "Report"</pre></div></div>
+      <div class="block"><p>A default value for this attribute. Example:</p><div class="highlight"><pre>     attributes:<br>       title: !stringArray<br>         default: [one, two, three]</pre></div></div>
     </dd>
   </dl>
 
@@ -1281,8 +1370,15 @@ templates:
 </div>
 <div class="section" id="!style">
   <h1>!style<a class="headerlink" href="#!style" title="Permalink to this headline">¶</a></h1>
-  <div class="block">Attribute for GeoJson Styles collection.</div>
+  <div class="block">Attribute for GeoJson Styles collection.
+ </div>
 
+  <div class="admonition note examples">
+    <p class="first admonition-title">Example</p>
+    <p class="last">
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/report" target="_blank" class="fa fa-book">&nbsp;report</a>&nbsp;
+    </p>
+  </div>
 
     <h3>Configuration</h3>
   <dl>
@@ -1300,14 +1396,14 @@ templates:
       <code>style</code>  required
     </dt>
     <dd>
-      <div class="block">The SLD string.</div>
+      <div class="block">The style string.</div>
     </dd>
   </dl>
 
 </div>
 <div class="section" id="!table">
   <h1>!table<a class="headerlink" href="#!table" title="Permalink to this headline">¶</a></h1>
-  <div class="block"><p>The attributes for <a title="class in org.mapfish.print.processor.jasper" shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/jasper/TableProcessor.html"><code>TableProcessor</code></a> (see
+  <div class="block"><p>The attributes for <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/jasper/TableProcessor.html" title="class in org.mapfish.print.processor.jasper"><code>TableProcessor</code></a> (see
  <a shape="rect" href="processors.html#!prepareTable">!prepareTable</a> processor).</p>
  </div>
 
@@ -1364,8 +1460,8 @@ templates:
     <p>
         <a href="http://www.camptocamp.com/geospatial/" target="_blank">Camptocamp</a> <br>
         <span class="commit">
-          Revision <code><a href="https://github.com/mapfish/mapfish-print/commit/fb4a0a36b58abf6443490a36f854c87c06287ad6
-" target="_blank">fb4a0a36</a></code>.
+          Revision <code><a href="https://github.com/mapfish/mapfish-print/commit/48b9960b80e3574b869ee9b5b86e02d1587f4421
+" target="_blank">48b9960b</a></code>.
         </span>
 
 

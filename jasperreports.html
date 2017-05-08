@@ -644,11 +644,11 @@ from the server to the same folder as the local copy of the template.
 </p>
 <h4>6: others</h4>
 <p>
-In order to add a numeric scale you have to create a text field with the 
+In order to add a numeric scale you have to create a text field with the
 following expression:
 </p>
 <div class="highlight"><pre>
-   String.format("Massstab 1: %.0f", $P{mapContext}.getRoundedScale())
+   String.format("Massstab 1: %.0f", $P{mapContext}.getRoundedScaleDenominator())
 </pre></div>
 <p>
 Finally add the missing mapContext parameter with the following properties:
@@ -674,7 +674,7 @@ such modification for fixing this type of error:
 &lt;parameter name="mapSubReport" class="java.lang.String"
 isForPrompting="false"/&gt;
     ...
-    &lt;textFieldExpression&gt;&lt;![CDATA[String.format("Massstab 1: %.0f", $P{mapContext}.getRoundedScale())]]&gt;&lt;/textFieldExpression&gt;
+    &lt;textFieldExpression&gt;&lt;![CDATA[String.format("Massstab 1: %.0f", $P{mapContext}.getRoundedScaleDenominator())]]&gt;&lt;/textFieldExpression&gt;
     ...
 ==>
     ...
@@ -788,8 +788,8 @@ tools. You can create as many variables as you wish.
     <p>
         <a href="http://www.camptocamp.com/geospatial/" target="_blank">Camptocamp</a> <br>
         <span class="commit">
-          Revision <code><a href="https://github.com/mapfish/mapfish-print/commit/fb4a0a36b58abf6443490a36f854c87c06287ad6
-" target="_blank">fb4a0a36</a></code>.
+          Revision <code><a href="https://github.com/mapfish/mapfish-print/commit/48b9960b80e3574b869ee9b5b86e02d1587f4421
+" target="_blank">48b9960b</a></code>.
         </span>
 
 

@@ -29,6 +29,8 @@ org.mapfish.print.processor.map.scalebar
 org.mapfish.print.servlet
 org.mapfish.print.servlet.fileloader
 org.mapfish.print.servlet.job
+org.mapfish.print.servlet.job.impl
+org.mapfish.print.servlet.job.impl.hibernate
 org.mapfish.print.servlet.job.loader
 org.mapfish.print.servlet.oldapi
 org.mapfish.print.servlet.registry
