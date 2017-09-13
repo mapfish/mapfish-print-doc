@@ -1052,7 +1052,7 @@ Or if the there are multiple mappings that need to be made :
     <p class="first admonition-title">Example</p>
     <p class="last">
         <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/verboseExample" target="_blank" class="fa fa-book">&nbsp;verboseExample</a>&nbsp;
-        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/overviewmap_tyger_ny_EPSG_900913" target="_blank" class="fa fa-book">&nbsp;overviewmap_tyger_ny_EPSG_900913</a>&nbsp;
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/overviewmap_tyger_ny_EPSG_3857" target="_blank" class="fa fa-book">&nbsp;overviewmap_tyger_ny_EPSG_3857</a>&nbsp;
     </p>
   </div>
 
@@ -1169,7 +1169,7 @@ Or if the there are multiple mappings that need to be made :
     <p class="first admonition-title">Example</p>
     <p class="last">
         <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/verboseExample" target="_blank" class="fa fa-book">&nbsp;verboseExample</a>&nbsp;
-        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/print_osm_new_york_EPSG_900913" target="_blank" class="fa fa-book">&nbsp;print_osm_new_york_EPSG_900913</a>&nbsp;
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/print_osm_new_york_EPSG_3857" target="_blank" class="fa fa-book">&nbsp;print_osm_new_york_EPSG_3857</a>&nbsp;
         <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/print_osm_new_york_nosubreports" target="_blank" class="fa fa-book">&nbsp;print_osm_new_york_nosubreports</a>&nbsp;
     </p>
   </div>
@@ -1566,6 +1566,7 @@ Or if the there are multiple mappings that need to be made :
     <p class="last">
         <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/verboseExample" target="_blank" class="fa fa-book">&nbsp;verboseExample</a>&nbsp;
         <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/legend_cropped" target="_blank" class="fa fa-book">&nbsp;legend_cropped</a>&nbsp;
+        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/legend_scaled" target="_blank" class="fa fa-book">&nbsp;legend_scaled</a>&nbsp;
     </p>
   </div>
 
@@ -1575,8 +1576,7 @@ Or if the there are multiple mappings that need to be made :
       <code>dpi</code>  
     </dt>
     <dd>
-      <div class="block">The DPI value that is used for the legend graphics.
- Note: This parameter is only considered when `maxWidth` is set.</div>
+      <div class="block">The DPI value that is used for the legend graphics.</div>
     </dd>
   </dl>
   <dl>
@@ -1601,9 +1601,9 @@ Or if the there are multiple mappings that need to be made :
     </dt>
     <dd>
       <div class="block">The maximum width in pixels for the legend graphics.
- If this parameter is set, the legend graphics are cropped to the given maximum
+ If this parameter is set, the legend graphics are cropped or scaled to the given maximum
  width. In this case a sub-report is created containing the graphic.
- For reference see the example `legend_dynamic`.</div>
+ For reference see the example [[examples=legend_cropped,legend_scaled]].</div>
     </dd>
   </dl>
   <dl>
@@ -1628,6 +1628,16 @@ Or if the there are multiple mappings that need to be made :
     </dt>
     <dd>
       <div class="block">The prefix to apply to each value.  This provides a simple way to make all output values have unique values.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>scaled</code>  
+    </dt>
+    <dd>
+      <div class="block">When the image is too big do a scaled (default) otherwise do a scale.
+ See the example  [[examples=legend_scaled]]
+ Note: This parameter is only considered when `maxWidth` is set.</div>
     </dd>
   </dl>
   <dl>
@@ -1984,7 +1994,8 @@ Or if the there are multiple mappings that need to be made :
       <code>directory</code>  
     </dt>
     <dd>
-      <div class="block">Set the directory and test that the directory exists and is contained within the Configuration directory.</div>
+      <div class="block">Set the directory and test that the directory exists and is contained within the Configuration
+ directory.</div>
     </dd>
   </dl>
   <dl>
@@ -2573,8 +2584,8 @@ Or if the there are multiple mappings that need to be made :
     <p>
         <a href="http://www.camptocamp.com/geospatial/" target="_blank">Camptocamp</a> <br>
         <span class="commit">
-          Revision <code><a href="https://github.com/mapfish/mapfish-print/commit/48b9960b80e3574b869ee9b5b86e02d1587f4421
-" target="_blank">48b9960b</a></code>.
+          Revision <code><a href="https://github.com/mapfish/mapfish-print/commit/4c2127d6391844e29f10a6d5c2e2faf65cba0ade
+" target="_blank">4c2127d6</a></code>.
         </span>
 
 

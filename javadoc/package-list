@@ -35,6 +35,7 @@ org.mapfish.print.servlet.job.loader
 org.mapfish.print.servlet.oldapi
 org.mapfish.print.servlet.registry
 org.mapfish.print.test.util
+org.mapfish.print.url.data
 org.mapfish.print.wrapper
 org.mapfish.print.wrapper.json
 org.mapfish.print.wrapper.multi
