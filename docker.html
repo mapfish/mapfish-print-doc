@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MapFish Print 3 Documentation - Docker</title>
+
+    <link rel="stylesheet" href="css/sphinx_rtd_theme.css" type="text/css" />
+    <link rel="stylesheet" href="css/readthedocs-doc-embed.css" type="text/css" />
+    <link rel="stylesheet" href="css/custom.css" type="text/css" />
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+
+            <a href="index.html" class="icon icon-home"> MapFish Print 3</a>
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+
+
+
+                <ul class="current">
+<li class="toctree-l1 ">
+  <a class="reference internal " href="index.html">Introduction</a>
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="jasperreports.html">JasperReports</a>
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="api.html">Web API</a>
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="attributes.html">Attributes</a>
+  
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="configuration.html">Configuration</a>
+  
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="layers.html">Map Layers</a>
+  
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="processors.html">Processors</a>
+  
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="fileloaders.html">File-Loaders</a>
+  
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="outputformats.html">Output Formats</a>
+  
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="styles.html">Styles</a>
+  
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="tableimages.html">Images in tables</a>
+</li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="download.html">Download</a>
+</li>
+<li class="toctree-l1 current">
+  <a class="reference internal current" href="docker.html">Docker</a>
+</li>
+</ul>
+
+
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">MapFish Print 3</a>
+      </nav>
+
+
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+
+    <li>Docker</li>
+      <li class="wy-breadcrumbs-aside">
+
+
+            <a href="https://github.com/mapfish/mapfish-print" class="fa fa-github"> mapfish/mapfish-print</a>
+
+
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             <h1>Docker</h1>
+             <div class="section">
+<h4 id="docker_image">Image <a class="headerlink" href="#docker_image" title="Permalink to this headline">��</a></h4>
+<p>
+    Docker Hub contains a <a href="https://hub.docker.com/r/camptocamp/mapfish_print/">repository with images</a> that can be used.
+    You can use it directly with a data-only container exporting a <code>VOLUME</code> containing your print apps
+    in <code>/usr/local/tomcat/webapps/ROOT/print-apps</code>.
+</p>
+<p>
+    Or you can derive another image from it and add your own configurations in it with a <code>Dockerfile</code> like that:
+</p>
+<pre>
+FROM camptocamp/mapfish_print:{version}
+ADD {MyApps} ${CATALINA_HOME}/webapps/ROOT/print-apps/
+</pre>
+
+<h4 id="docker_tunings">Tunings <a class="headerlink" href="#docker_tunings" title="Permalink to this headline">��</a></h4>
+
+The docker image can be tuned with several environment variables:
+<ul>
+    <li><code>CATALINA_OPTS</code>: Java startup parameters.</li>
+    <li><code>DEFAULT_LOG_LEVEL</code>: Set the default log level</li>
+    <li><code>TOMCAT_LOG_LEVEL</code>: Set the tomcat log level</li>
+    <li><code>SENTRY_LOG_LEVEL</code>: Set the Sentry log level</li>
+    <li><code>SENTRY_REPORTING_LOG_LEVEL</code>: Starting from what log level to report to Sentry.</li>
+    <li><code>TOMCAT_LOG_TYPE:</code>:
+        <ul>
+            <li><code>classic</code> (default): The logs are human readable. Access logs are going to stdout
+                and the other logs are going to stderr.</li>
+            <li><code>json</code>: The logs will be formatted in a JSON suitable for logstash. Access logs are
+                going to stdout and the other logs are going to stderr.</li>
+            <li><code>logstash</code>: The logs will be formatted in a JSON suitable for logstash (@cee) and
+                sent by syslog/UDP. The access logs are going to stdout in json format. More variables are
+                available for this mode:
+                <ul>
+                    <li><code>TOMCAT_LOG_HOST</code>: the target host</li>
+                    <li><code>TOMCAT_LOG_PORT</code>: the target port</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<p>
+If you want to tune properties from
+<a href="https://github.com/mapfish/mapfish-print/blob/master/core/src/main/resources/mapfish-spring.properties">mapfish-spring.properties</a>
+You can override them by adding <code>-D</code> options to the <code>CATALINA_OPTS</code> environment variable.
+</p>
+
+<h4 id="docker_sentry">Sentry integration <a class="headerlink" href="#docker_sentry" title="Permalink to this headline">��</a></h4>
+
+<p>
+You can enable Sentry crash reports by adding a parameter to the <code>CATALINA_OPTS</code> environment variable with the
+DSN provided by sentry: <code>-Dsentry.dsn=https://public:private@host:port/project_id</code>
+</p>
+
+<p>
+Other parameters are documented here:
+<a href="https://docs.sentry.io/clients/java/config/">https://docs.sentry.io/clients/java/config/</a>
+</p>
+
+</div>
+
+
+
+
+
+           </div>
+          </div>
+          <footer>
+
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        <a href="http://www.camptocamp.com/geospatial/" target="_blank">Camptocamp</a> <br>
+        <span class="commit">
+          Revision <code><a href="https://github.com/mapfish/mapfish-print/commit/91ed8e8d8cb1181c763c7316260e58e8126241fa
+" target="_blank">91ed8e8d</a></code>.
+        </span>
+
+
+    </p>
+  </div>
+  Theme based on a <a href="https://github.com/snide/sphinx_rtd_theme">template</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+
+
+      <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+      <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+      <script type="text/javascript" src="js/underscore.js"></script>
+      <script type="text/javascript" src="js/theme.js"></script>
+      <script type="text/javascript">
+        jQuery(function () {
+            SphinxRtdTheme.StickyNav.enable();
+        });
+      </script>
+
+</body>
+</html>

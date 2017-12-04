@@ -97,6 +97,9 @@
 <li class="toctree-l1 ">
   <a class="reference internal " href="download.html">Download</a>
 </li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="docker.html">Docker</a>
+</li>
 </ul>
 
 
@@ -201,7 +204,7 @@ Or if the there are multiple mappings that need to be made :
 </div>
 
 <div class="section" id="!addBackgroundLayers">
-  <h1>!addBackgroundLayers<a class="headerlink" href="#!addBackgroundLayers" title="Permalink to this headline">¶</a></h1>
+  <h1>!addBackgroundLayers<a class="headerlink" href="#!addBackgroundLayers" title="Permalink to this headline">��</a></h1>
   <div class="block"><p>This processor adds the configured set of layers to the map.</p><p>This is useful when all maps should have a default set of background layers or overlays
  added to those that the client sends for printing.</p><p>This can simplify the client so the client only needs to be concerned with the data layers.</p><p>See also: <a shape="rect" href="attributes.html#!staticLayers">!staticLayers</a> attribute</p>
  </div>
@@ -285,7 +288,7 @@ Or if the there are multiple mappings that need to be made :
 
 </div>
 <div class="section" id="!addHeaders">
-  <h1>!addHeaders<a class="headerlink" href="#!addHeaders" title="Permalink to this headline">¶</a></h1>
+  <h1>!addHeaders<a class="headerlink" href="#!addHeaders" title="Permalink to this headline">��</a></h1>
   <div class="block"><p>This processor allows adding static headers to an http request.</p><p>Example: add a Cookie header with multiple header values and add header2 with only one value</p><div class="highlight"><pre> - !addHeaders<br>   headers:<br>     Cookie : [cookie-value, cookie-value2]<br>     Header2 : header2-value</pre></div><p>Can be applied conditionally using matchers, like in <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/http/RestrictUrisProcessor.html" title="class in org.mapfish.print.processor.http"><code>RestrictUrisProcessor</code></a>
  (<a shape="rect" href="processors.html#!restrictUris">!restrictUris</a>).</p>
  </div>
@@ -371,7 +374,7 @@ Or if the there are multiple mappings that need to be made :
 
 </div>
 <div class="section" id="!addOverlayLayers">
-  <h1>!addOverlayLayers<a class="headerlink" href="#!addOverlayLayers" title="Permalink to this headline">¶</a></h1>
+  <h1>!addOverlayLayers<a class="headerlink" href="#!addOverlayLayers" title="Permalink to this headline">��</a></h1>
   <div class="block"><p>This processor adds the configured set of layers to the map.</p><p>This is useful when all maps should have a default set of background layers or overlays
  added to those that the client sends for printing.</p><p>This can simplify the client so the client only needs to be concerned with the data layers.</p><p>See also: <a shape="rect" href="attributes.html#!staticLayers">!staticLayers</a> attribute</p>
  </div>
@@ -455,7 +458,7 @@ Or if the there are multiple mappings that need to be made :
 
 </div>
 <div class="section" id="!configureHttpRequests">
-  <h1>!configureHttpRequests<a class="headerlink" href="#!configureHttpRequests" title="Permalink to this headline">¶</a></h1>
+  <h1>!configureHttpRequests<a class="headerlink" href="#!configureHttpRequests" title="Permalink to this headline">��</a></h1>
   <div class="block"><p>A processor that wraps several <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/http/AbstractClientHttpRequestFactoryProcessor.html" title="class in org.mapfish.print.processor.http"><code>AbstractClientHttpRequestFactoryProcessor</code></a>s.</p><p>
    This makes it more convenient to configure multiple processors that modify
    <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/http/MfClientHttpRequestFactory.html" title="interface in org.mapfish.print.http"><code>MfClientHttpRequestFactory</code></a> objects.
@@ -548,7 +551,7 @@ Or if the there are multiple mappings that need to be made :
 
 </div>
 <div class="section" id="!createDataSource">
-  <h1>!createDataSource<a class="headerlink" href="#!createDataSource" title="Permalink to this headline">¶</a></h1>
+  <h1>!createDataSource<a class="headerlink" href="#!createDataSource" title="Permalink to this headline">��</a></h1>
   <div class="block"><p>A processor that will process a
  <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/attribute/DataSourceAttribute.DataSourceAttributeValue.html" title="class in org.mapfish.print.attribute"><code>DataSourceAttribute.DataSourceAttributeValue</code></a> and construct a single
  Jasper DataSource from the input values in the
@@ -701,7 +704,7 @@ Or if the there are multiple mappings that need to be made :
   </dl>
 </div>
 <div class="section" id="!createMap">
-  <h1>!createMap<a class="headerlink" href="#!createMap" title="Permalink to this headline">¶</a></h1>
+  <h1>!createMap<a class="headerlink" href="#!createMap" title="Permalink to this headline">��</a></h1>
   <div class="block"><p>A processor to render a map that can be embedded as a sub-report into a JasperReports
  template.</p><p>See also: <a shape="rect" href="attributes.html#!map">!map</a> attribute</p>
  </div>
@@ -716,16 +719,6 @@ Or if the there are multiple mappings that need to be made :
     <h3>Configuration</h3>
   <dl>
     <dt>
-      <code>imageType</code>  
-    </dt>
-    <dd>
-      <div class="block">Set the type of buffered image rendered to.  See <code>CreateMapProcessor.BufferedImageType</code>.
- <p></p>
- Default is <code>CreateMapProcessor.BufferedImageType.TYPE_4BYTE_ABGR</code>.</div>
-    </dd>
-  </dl>
-  <dl>
-    <dt>
       <code>inputMapper</code>  
     </dt>
     <dd>
@@ -738,17 +731,6 @@ Or if the there are multiple mappings that need to be made :
     </dt>
     <dd>
       <div class="block">The prefix to apply to each input value.  This provides a simple way to make all output values have unique values.</div>
-    </dd>
-  </dl>
-  <dl>
-    <dt>
-      <code>jpegImageType</code>  
-    </dt>
-    <dd>
-      <div class="block">Set the type of buffered image rendered to for JPEG files.
- See <code>CreateMapProcessor.BufferedImageType</code>.
- <p></p>
- Default is <code>CreateMapProcessor.BufferedImageType.TYPE_3BYTE_BGR</code>.</div>
     </dd>
   </dl>
   <dl>
@@ -784,6 +766,14 @@ Or if the there are multiple mappings that need to be made :
     <dd>
       <div class="block">A factory for making http requests.  This is added to the values by the framework and therefore
  does not need to be set in configuration</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>jobId</code>  required
+    </dt>
+    <dd>
+      <div class="block">The job id.</div>
     </dd>
   </dl>
   <dl>
@@ -838,7 +828,7 @@ Or if the there are multiple mappings that need to be made :
   </dl>
 </div>
 <div class="section" id="!createMapPages">
-  <h1>!createMapPages<a class="headerlink" href="#!createMapPages" title="Permalink to this headline">¶</a></h1>
+  <h1>!createMapPages<a class="headerlink" href="#!createMapPages" title="Permalink to this headline">��</a></h1>
   <div class="block"><p>Processor used to display a map on multiple pages.</p><p>
      This processor will take the defined <a shape="rect" href="attributes.html#!map">map attribute</a> and using the geometry defined in the
      <a shape="rect" href="attributes.html#!map">map attribute's</a> area of interest, will create an Iterable<Values> each of which
@@ -929,7 +919,7 @@ Or if the there are multiple mappings that need to be made :
   </dl>
 </div>
 <div class="section" id="!createNorthArrow">
-  <h1>!createNorthArrow<a class="headerlink" href="#!createNorthArrow" title="Permalink to this headline">¶</a></h1>
+  <h1>!createNorthArrow<a class="headerlink" href="#!createNorthArrow" title="Permalink to this headline">��</a></h1>
   <div class="block"><p>Processor to create a north-arrow for a map.</p><p>The north-arrow is rotated according to the rotation
  of the associated map.</p><p>Example configuration:</p><div class="highlight"><pre> attributes:<br>   ...<br>   northArrow: !northArrow<br>     size: 50<br>     default:<br>       graphic: "file://NorthArrow_10.svg"<br><br> processors:<br> ...<br>   - !createNorthArrow {}</pre></div><p>See also: <a shape="rect" href="attributes.html#!northArrow">!northArrow</a> attribute</p>
  </div>
@@ -1037,7 +1027,7 @@ Or if the there are multiple mappings that need to be made :
   </dl>
 </div>
 <div class="section" id="!createOverviewMap">
-  <h1>!createOverviewMap<a class="headerlink" href="#!createOverviewMap" title="Permalink to this headline">¶</a></h1>
+  <h1>!createOverviewMap<a class="headerlink" href="#!createOverviewMap" title="Permalink to this headline">��</a></h1>
   <div class="block">Processor to create overview maps. Internally <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/map/CreateMapProcessor.html" title="class in org.mapfish.print.processor.map"><code>CreateMapProcessor</code></a> is used.
  <p></p>
  Example Configuration:
@@ -1110,6 +1100,14 @@ Or if the there are multiple mappings that need to be made :
   </dl>
   <dl>
     <dt>
+      <code>jobId</code>  required
+    </dt>
+    <dd>
+      <div class="block">The job id.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
       <code>map</code>  required
     </dt>
     <dd>
@@ -1161,7 +1159,7 @@ Or if the there are multiple mappings that need to be made :
   </dl>
 </div>
 <div class="section" id="!createScalebar">
-  <h1>!createScalebar<a class="headerlink" href="#!createScalebar" title="Permalink to this headline">¶</a></h1>
+  <h1>!createScalebar<a class="headerlink" href="#!createScalebar" title="Permalink to this headline">��</a></h1>
   <div class="block"><p>Processor to create a scalebar for a map.</p><p>See also: <a shape="rect" href="attributes.html#!scalebar">!scalebar</a> attribute</p>
  </div>
 
@@ -1269,7 +1267,7 @@ Or if the there are multiple mappings that need to be made :
   </dl>
 </div>
 <div class="section" id="!forwardHeaders">
-  <h1>!forwardHeaders<a class="headerlink" href="#!forwardHeaders" title="Permalink to this headline">¶</a></h1>
+  <h1>!forwardHeaders<a class="headerlink" href="#!forwardHeaders" title="Permalink to this headline">��</a></h1>
   <div class="block"><p>This processor forwards all the headers from the print request (from the Mapfish Print client) to each http request made for
  the particular print job. All headers can be forwarded (if forwardAll is set to true) or the specific headers to forward
  can be specified.</p><p>Example 1: Forward all headers from print request</p><div class="highlight"><pre> - !forwardHeaders<br>   all: true</pre></div><p>Example 2: Forward specific headers (header1 and header2 will be forwarded)</p><div class="highlight"><pre> - !forwardHeaders<br>   headers: [header1, header2]</pre></div><p>Can be applied conditionally using matchers, like in <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/http/RestrictUrisProcessor.html" title="class in org.mapfish.print.processor.http"><code>RestrictUrisProcessor</code></a>
@@ -1373,7 +1371,7 @@ Or if the there are multiple mappings that need to be made :
 
 </div>
 <div class="section" id="!mapUri">
-  <h1>!mapUri<a class="headerlink" href="#!mapUri" title="Permalink to this headline">¶</a></h1>
+  <h1>!mapUri<a class="headerlink" href="#!mapUri" title="Permalink to this headline">��</a></h1>
   <div class="block"><p>This processor maps uris submitted to the <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/http/MfClientHttpRequestFactory.html" title="interface in org.mapfish.print.http"><code>MfClientHttpRequestFactory</code></a> to a modified uri
  as specified by the mapping parameter.</p><p>Example: change the hostname of all requests that are http requests and have the hostname: myhost.com to localhost instead
  of myhost.com</p><div class="highlight"><pre> - !mapUri<br>   mapping: {(http)://myhost.com(.*) : "$1://localhost$2"}</pre></div><p>Can be applied conditionally using matchers, like in <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/http/RestrictUrisProcessor.html" title="class in org.mapfish.print.processor.http"><code>RestrictUrisProcessor</code></a>
@@ -1463,7 +1461,7 @@ Or if the there are multiple mappings that need to be made :
 
 </div>
 <div class="section" id="!mergeDataSources">
-  <h1>!mergeDataSources<a class="headerlink" href="#!mergeDataSources" title="Permalink to this headline">¶</a></h1>
+  <h1>!mergeDataSources<a class="headerlink" href="#!mergeDataSources" title="Permalink to this headline">��</a></h1>
   <div class="block"><p>This processor combines DataSources and individual processor outputs (or attribute values) into a
  single DataSource which can be used in a jasper report's detail section.</p><p>
  An example use case is where we might have zero or many of tables and zero or many legends.  You can
@@ -1557,7 +1555,7 @@ Or if the there are multiple mappings that need to be made :
   </dl>
 </div>
 <div class="section" id="!prepareLegend">
-  <h1>!prepareLegend<a class="headerlink" href="#!prepareLegend" title="Permalink to this headline">¶</a></h1>
+  <h1>!prepareLegend<a class="headerlink" href="#!prepareLegend" title="Permalink to this headline">��</a></h1>
   <div class="block"><p>Create a legend.</p><p>See also: <a shape="rect" href="attributes.html#!legend">!legend</a> attribute</p>
  </div>
 
@@ -1711,7 +1709,7 @@ Or if the there are multiple mappings that need to be made :
   </dl>
 </div>
 <div class="section" id="!prepareTable">
-  <h1>!prepareTable<a class="headerlink" href="#!prepareTable" title="Permalink to this headline">¶</a></h1>
+  <h1>!prepareTable<a class="headerlink" href="#!prepareTable" title="Permalink to this headline">��</a></h1>
   <div class="block"><p>A processor for generating a table.</p><p>See also: <a shape="rect" href="attributes.html#!table">!table</a> attribute</p>
  </div>
 
@@ -1969,7 +1967,7 @@ Or if the there are multiple mappings that need to be made :
   </dl>
 </div>
 <div class="section" id="!reportBuilder">
-  <h1>!reportBuilder<a class="headerlink" href="#!reportBuilder" title="Permalink to this headline">¶</a></h1>
+  <h1>!reportBuilder<a class="headerlink" href="#!reportBuilder" title="Permalink to this headline">��</a></h1>
   <div class="block"><p>A processor that actually compiles a JasperReport template file.</p><p>Example</p><div class="highlight"><pre>     processors:<br>         - !reportBuilder # compile all reports in current directory<br>               directory: '.'</pre></div>
  </div>
 
@@ -2042,7 +2040,7 @@ Or if the there are multiple mappings that need to be made :
 
 </div>
 <div class="section" id="!restrictUris">
-  <h1>!restrictUris<a class="headerlink" href="#!restrictUris" title="Permalink to this headline">¶</a></h1>
+  <h1>!restrictUris<a class="headerlink" href="#!restrictUris" title="Permalink to this headline">��</a></h1>
   <div class="block"><p>This processor check urls against a set of url matchers to see if the request should be allowed or rejected.</p><p>
      Usage of processor is as follows:
  </p><div class="highlight"><pre> - !restrictUris<br>   matchers:<br>     - !localMatch {}<br>     - !ipMatch<br>       ip: www.camptocamp.org<br>     - !dnsMatch<br>       host: mapfish-geoportal.demo-camptocamp.com<br>       port: 80<br>     - !dnsMatch<br>       host: labs.metacarta.com<br>       port: 80<br>     - !dnsMatch<br>       host: terraservice.net<br>       port: 80<br>     - !dnsMatch<br>       host: tile.openstreetmap.org<br>       port: 80<br>     - !dnsMatch<br>       host: www.geocat.ch<br>       port: 80</pre></div><p></p><p>
@@ -2130,7 +2128,7 @@ Or if the there are multiple mappings that need to be made :
 
 </div>
 <div class="section" id="!setFeatures">
-  <h1>!setFeatures<a class="headerlink" href="#!setFeatures" title="Permalink to this headline">¶</a></h1>
+  <h1>!setFeatures<a class="headerlink" href="#!setFeatures" title="Permalink to this headline">��</a></h1>
   <div class="block"><p>Processor to set features on vector layers.</p>
  </div>
 
@@ -2211,7 +2209,7 @@ Or if the there are multiple mappings that need to be made :
 
 </div>
 <div class="section" id="!setStyle">
-  <h1>!setStyle<a class="headerlink" href="#!setStyle" title="Permalink to this headline">¶</a></h1>
+  <h1>!setStyle<a class="headerlink" href="#!setStyle" title="Permalink to this headline">��</a></h1>
   <div class="block"><p>Processor to set a style on vector layers from the attributes.</p>
  </div>
 
@@ -2301,7 +2299,7 @@ Or if the there are multiple mappings that need to be made :
 
 </div>
 <div class="section" id="!setWmsCustomParam">
-  <h1>!setWmsCustomParam<a class="headerlink" href="#!setWmsCustomParam" title="Permalink to this headline">¶</a></h1>
+  <h1>!setWmsCustomParam<a class="headerlink" href="#!setWmsCustomParam" title="Permalink to this headline">��</a></h1>
   <div class="block"><p>Processor to set a param on WMS layers.</p></div>
 
 
@@ -2375,7 +2373,7 @@ Or if the there are multiple mappings that need to be made :
 
 </div>
 <div class="section" id="!updatePdfConfig">
-  <h1>!updatePdfConfig<a class="headerlink" href="#!updatePdfConfig" title="Permalink to this headline">¶</a></h1>
+  <h1>!updatePdfConfig<a class="headerlink" href="#!updatePdfConfig" title="Permalink to this headline">��</a></h1>
   <div class="block"><p>This processor allows the dynamic configuration of the <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/config/PDFConfig.html" title="class in org.mapfish.print.config"><code>PDFConfig</code></a> object by obtaining data
  from attributes.  For example the title and author could be string attributes posted from the client, this processor would update
  the <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/config/PDFConfig.html" title="class in org.mapfish.print.config"><code>PDFConfig</code></a> object with the attribute data allowing per report PDF metadata.
@@ -2473,7 +2471,7 @@ Or if the there are multiple mappings that need to be made :
 
 </div>
 <div class="section" id="!useHttpForHttps">
-  <h1>!useHttpForHttps<a class="headerlink" href="#!useHttpForHttps" title="Permalink to this headline">¶</a></h1>
+  <h1>!useHttpForHttps<a class="headerlink" href="#!useHttpForHttps" title="Permalink to this headline">��</a></h1>
   <div class="block">This processor maps https requests to http requests for certain hosts. The port number can also be mapped since that is usually
  required.
  <p>Example: </p><div class="highlight"><pre> - !useHttpForHttps<br>   hosts: [localhost, www.camptocamp.com]<br>   portMapping:<br>     443 : 80<br>     8443 : 8443</pre></div><p>Can be applied conditionally using matchers, like in <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/http/RestrictUrisProcessor.html" title="class in org.mapfish.print.processor.http"><code>RestrictUrisProcessor</code></a>
@@ -2584,8 +2582,8 @@ Or if the there are multiple mappings that need to be made :
     <p>
         <a href="http://www.camptocamp.com/geospatial/" target="_blank">Camptocamp</a> <br>
         <span class="commit">
-          Revision <code><a href="https://github.com/mapfish/mapfish-print/commit/4c2127d6391844e29f10a6d5c2e2faf65cba0ade
-" target="_blank">4c2127d6</a></code>.
+          Revision <code><a href="https://github.com/mapfish/mapfish-print/commit/91ed8e8d8cb1181c763c7316260e58e8126241fa
+" target="_blank">91ed8e8d</a></code>.
         </span>
 
 

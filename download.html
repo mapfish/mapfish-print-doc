@@ -73,6 +73,9 @@
 <li class="toctree-l1 current">
   <a class="reference internal current" href="download.html">Download</a>
 </li>
+<li class="toctree-l1 ">
+  <a class="reference internal " href="docker.html">Docker</a>
+</li>
 </ul>
 
 
@@ -127,7 +130,7 @@
     Please feel free to fork and contribute via pull requests and by creating new issues.
 </p>
 
-<h4 id="downloads">Downloads  <a class="headerlink" href="#downloads" title="Permalink to this headline">¶</a></h4>
+<h4 id="downloads">Downloads  <a class="headerlink" href="#downloads" title="Permalink to this headline">��</a></h4>
 <p>
     Downloads for the latest version are available as:
     <ul>
@@ -146,7 +149,7 @@
     </ul>
 </p>
 
-<h4 id="cli">Command Line Distribution <a class="headerlink" href="#cli" title="Permalink to this headline">¶</a></h4>
+<h4 id="cli">Command Line Distribution <a class="headerlink" href="#cli" title="Permalink to this headline">��</a></h4>
 <p>
     The Zip file and the Tar file are Mapfish Print distributed as an application that can be ran from the commandline to
     execute print jobs. It is useful for debugging print configurations and requests.
@@ -167,7 +170,7 @@ These examples are also used as continuous integration test.
 
 </p>
 
-<h4 id="war">Web Application (WAR) Distribution <a class="headerlink" href="#war" title="Permalink to this headline">¶</a></h4>
+<h4 id="war">Web Application (WAR) Distribution <a class="headerlink" href="#war" title="Permalink to this headline">��</a></h4>
 <p>
     The Mapfish Print WAR file
     is a Java archive that can be ran in any Java Web Application Server like
@@ -186,29 +189,19 @@ These examples are also used as continuous integration test.
     </ul>
 </p>
 
-<h4 id="jar">Java Library Distribution <a class="headerlink" href="#jar" title="Permalink to this headline">¶</a></h4>
+<h4 id="jar">Java Library Distribution <a class="headerlink" href="#jar" title="Permalink to this headline">��</a></h4>
 <p>
     The JAR file contains
     the Mapfish Print code for integrating Mapfish Print into an existing application.  It is only the java code
     with none of the dependent class files, so all dependencies will also need to be downloaded.
 </p>
 
-<h4 id="deb">Debian Package <a class="headerlink" href="#deb" title="Permalink to this headline">¶</a></h4>
+<h4 id="deb">Debian Package <a class="headerlink" href="#deb" title="Permalink to this headline">��</a></h4>
 <p>
     There is a Debian package
     also available which is the war wrapped in a Debian package.  It will install the war at:
     <code>/srv/tomcat/tomcat1/webapps</code> for the moment.
 </p>
-
-<h4 id="docker">Docker Image <a class="headerlink" href="#docker" title="Permalink to this headline">¶</a></h4>
-<p>
-    Docker Hub contains a <a href="https://hub.docker.com/r/camptocamp/mapfish_print/">repository with images</a> that can be used.
-    You can use it directly or derive another image from it and add your own configurations in it with a <code>Dockerfile</code> like that:
-</p>
-<pre>
-FROM camptocamp/mapfish_print:{version}
-ADD {MyApps} ${CATALINA_HOME}/webapps/ROOT/print-apps/
-</pre>
 
 </div>
 
@@ -227,8 +220,8 @@ ADD {MyApps} ${CATALINA_HOME}/webapps/ROOT/print-apps/
     <p>
         <a href="http://www.camptocamp.com/geospatial/" target="_blank">Camptocamp</a> <br>
         <span class="commit">
-          Revision <code><a href="https://github.com/mapfish/mapfish-print/commit/4c2127d6391844e29f10a6d5c2e2faf65cba0ade
-" target="_blank">4c2127d6</a></code>.
+          Revision <code><a href="https://github.com/mapfish/mapfish-print/commit/91ed8e8d8cb1181c763c7316260e58e8126241fa
+" target="_blank">91ed8e8d</a></code>.
         </span>
 
 
