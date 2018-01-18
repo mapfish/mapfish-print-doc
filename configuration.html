@@ -52,6 +52,7 @@
   <li class="toctree-l2"><a class="reference internal" href="#!certificateStore">!certificateStore</a></li>
   <li class="toctree-l2"><a class="reference internal" href="#!credential">!credential</a></li>
   <li class="toctree-l2"><a class="reference internal" href="#!dnsMatch">!dnsMatch</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="#!hostnameMatch">!hostnameMatch</a></li>
   <li class="toctree-l2"><a class="reference internal" href="#!ipMatch">!ipMatch</a></li>
   <li class="toctree-l2"><a class="reference internal" href="#!localMatch">!localMatch</a></li>
   <li class="toctree-l2"><a class="reference internal" href="#!mergeSource">!mergeSource</a></li>
@@ -297,7 +298,9 @@ templates:
 </div>
 <div class="section" id="!dnsMatch">
   <h1>!dnsMatch<a class="headerlink" href="#!dnsMatch" title="Permalink to this headline">��</a></h1>
-  <div class="block">Allows to check that a given URL matches a DNS address (textual format).
+  <div class="block">Allows to check that a given URL matches a DNS address (textual format). The actual comparison is
+ performed on numerical IP addresses. The configured DNS host address is transformed into numerical IP
+ addresses during application startup. The urls to be compared are transformed during the print processing.
  <p>Example 1: Accept any www.camptocamp.com url</p><div class="highlight"><pre>     - !dnsMatch<br>       host : www.camptocamp.com</pre></div><p>Example 2: Accept any www.camptocamp.com url (port == -1 accepts any port)</p><div class="highlight"><pre>     - !dnsMatch<br>       host : www.camptocamp.com<br>       port : -1</pre></div><p>Example 3: Accept any www.camptocamp.com url on port 80 only</p><div class="highlight"><pre>     - !dnsMatch<br>       host : www.camptocamp.com<br>       port : 80</pre></div><p></p>
      Example 4: Accept www.camptocamp.com urls with paths that start with /print/.
      <p>
@@ -311,6 +314,59 @@ templates:
         <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/http_processors" target="_blank" class="fa fa-book">&nbsp;http_processors</a>&nbsp;
     </p>
   </div>
+
+    <h3>Configuration</h3>
+  <dl>
+    <dt>
+      <code>host</code>  
+    </dt>
+    <dd>
+      <div class="block">Set the host.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>pathRegex</code>  
+    </dt>
+    <dd>
+      <div class="block">The regular expression used to verify the path of the uri as is expected.  All paths start with /.
+ <p>
+ The regular expression used are the ones supported by java:
+ <a shape="rect" href="http://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html">
+ http://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html
+ </a></p></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>port</code>  
+    </dt>
+    <dd>
+      <div></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>reject</code>  
+    </dt>
+    <dd>
+      <div class="block">Reverses the matcher. Instead of accepting an URI when the URI matches,
+ the URI is rejected.</div>
+    </dd>
+  </dl>
+
+
+</div>
+<div class="section" id="!hostnameMatch">
+  <h1>!hostnameMatch<a class="headerlink" href="#!hostnameMatch" title="Permalink to this headline">��</a></h1>
+  <div class="block">Allows to check that a given URL matches a hostname literally (textual match).
+
+ <p>Example 1: Accept any www.camptocamp.com url</p><div class="highlight"><pre>     - !hostnameMatch<br>       host : www.camptocamp.com</pre></div><p>Example 2: Accept any www.camptocamp.com url (port == -1 accepts any port)</p><div class="highlight"><pre>     - !hostnameMatch<br>       host : www.camptocamp.com<br>       port : -1</pre></div><p>Example 3: Accept any www.camptocamp.com url on port 80 only</p><div class="highlight"><pre>     - !hostnameMatch<br>       host : www.camptocamp.com<br>       port : 80</pre></div><p></p>
+     Example 4: Accept www.camptocamp.com urls with paths that start with /print/.
+     <p>
+         If the regular expression give does not start with / then it will be added because all paths start with /
+     </p><div class="highlight"><pre>     - !hostnameMatch<br>       host : www.camptocamp.com<br>       pathRegex : /print/.+</pre></div></div>
+
 
     <h3>Configuration</h3>
   <dl>
@@ -942,8 +998,8 @@ templates:
     <p>
         <a href="http://www.camptocamp.com/geospatial/" target="_blank">Camptocamp</a> <br>
         <span class="commit">
-          Revision <code><a href="https://github.com/mapfish/mapfish-print/commit/91ed8e8d8cb1181c763c7316260e58e8126241fa
-" target="_blank">91ed8e8d</a></code>.
+          Revision <code><a href="https://github.com/mapfish/mapfish-print/commit/7e235acf37059fbaf3ff1a86777b8541604e6664
+" target="_blank">7e235acf</a></code>.
         </span>
 
 
