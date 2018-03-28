@@ -50,6 +50,7 @@
   <li class="toctree-l2"><a class="reference internal" href="#!alwaysAllowedAssertion">!alwaysAllowedAssertion</a></li>
   <li class="toctree-l2"><a class="reference internal" href="#!andAssertion">!andAssertion</a></li>
   <li class="toctree-l2"><a class="reference internal" href="#!certificateStore">!certificateStore</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="#!configuration">!configuration</a></li>
   <li class="toctree-l2"><a class="reference internal" href="#!credential">!credential</a></li>
   <li class="toctree-l2"><a class="reference internal" href="#!dnsMatch">!dnsMatch</a></li>
   <li class="toctree-l2"><a class="reference internal" href="#!hostnameMatch">!hostnameMatch</a></li>
@@ -250,6 +251,210 @@ templates:
     <dd>
       <div class="block">The uri to the certificate store. It is a uri to a java jks keystore file along with the
  password for unlocking the store.</div>
+    </dd>
+  </dl>
+
+
+</div>
+<div class="section" id="!configuration">
+  <h1>!configuration<a class="headerlink" href="#!configuration" title="Permalink to this headline">��</a></h1>
+  <div class="block">The Main Configuration Bean.
+ <p></p></div>
+
+
+    <h3>Configuration</h3>
+  <dl>
+    <dt>
+      <code>access</code>  
+    </dt>
+    <dd>
+      <div class="block">The roles required to access this configuration/app.  If empty or not set then it is a
+ <em>public</em> app.  If there are many roles then a user must have one of the roles in order to
+ access the configuration/app.
+ <p></p>
+ The security (how authentication/authorization is done) is configured in the
+ /WEB-INF/classes/mapfish-spring-security.xml
+ <p>
+ Any user without the required role will get an error when trying to access any of the templates and
+ no templates will be listed in the capabilities requests.
+ </p></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>certificateStore</code>  
+    </dt>
+    <dd>
+      <div class="block">The configuration for locating a custom certificate store.  This is only required if the default
+ certificate store which ships with all java installations does not contain the certificates needed
+ by this server.  Usually it is to accept a self-signed certificate, for example on a test server.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>configurationFile</code>  
+    </dt>
+    <dd>
+      <div></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>credentials</code>  
+    </dt>
+    <dd>
+      <div class="block">Http credentials to be used when making http requests.
+ <p>
+ If a proxy needs credentials you don't need to configure it here because the proxy configuration
+ object also has options for declaring the credentials.
+ </p></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>defaultStyle</code>  
+    </dt>
+    <dd>
+      <div class="block">Set the default styles.  the case of the keys are not important.  The retrieval will be case
+ insensitive.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>defaultToSvg</code>  
+    </dt>
+    <dd>
+      <div class="block">If true then all vector layers (and other parts of the system that can be either SVG or Bitmap, like
+ scalebar) will be rendered as SVG (unless layer specifically indicates useSvg as false).
+ <p>
+ The default is false.
+ </p></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>fileLoaderManager</code>  
+    </dt>
+    <dd>
+      <div class="block">Set file loader manager.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>jdbcDrivers</code>  
+    </dt>
+    <dd>
+      <div class="block">Set the JDBC drivers that are required to connect to the databases in the configuration.  JDBC
+ drivers are needed (for example) when database sources are used in templates.  For example if in one
+ of the template you have:
+
+ <div class="highlight"><pre>     jdbcUrl: "jdbc:postgresql://localhost:5432/morges_dpfe"</pre></div>
+
+ then you need to add:
+
+ <div class="highlight"><pre>     jdbcDrivers: [org.postgresql.Driver]</pre></div>
+
+ or
+
+ <div class="highlight"><pre>     jdbcDrivers:<br>       - org.postgresql.Driver</pre></div></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>oldApi</code>  
+    </dt>
+    <dd>
+      <div class="block">Set the configuration options on how to interpret the request in the form of the old API.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>opaqueTileErrorColor</code>  
+    </dt>
+    <dd>
+      <div class="block">Color used for tiles in error on opaque layers.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>outputFilename</code>  
+    </dt>
+    <dd>
+      <div class="block">The default output file name of the report.  This can be overridden by
+ <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/config/Template.html#setOutputFilename-java.lang.String-"><code>Template.setOutputFilename(String)</code></a> and the outputFilename parameter
+ in the request JSON.
+ <p>
+ This can be a string and can also have a date section in the string that will be filled when the
+ report is created for example a section with ${<dateFormatString>} will be replaced with the
+ current date formatted in the way defined by the <dateFormatString> string.  The format rules
+ are the rules in
+ <a shape="rect" href="http://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html">java.text.SimpleDateFormat</a>
+ (do a google search if the link above is broken).
+ </p><p>
+ Example: <code>outputFilename: print-${dd-MM-yyyy}</code> should output:
+ <code>print-22-11-2014.pdf</code></p><p>
+ Note: the suffix will be appended to the end of the name.
+ </p></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>pdfConfig</code>  
+    </dt>
+    <dd>
+      <div class="block">Configure various properties related to the reports generated as PDFs.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>proxies</code>  
+    </dt>
+    <dd>
+      <div class="block">Configuration for proxying http requests.  Each proxy can be configured with authentication
+ and with the uris that they apply to.
+ <p></p>
+ See <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/http/HttpProxy.html" title="class in org.mapfish.print.http"><code>HttpProxy</code></a> for details on how to configure them.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>resourceBundle</code>  
+    </dt>
+    <dd>
+      <div class="block">Set the resource bundle name.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>styles</code>  
+    </dt>
+    <dd>
+      <div class="block">Set the named styles defined in the configuration for this.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>templates</code>  
+    </dt>
+    <dd>
+      <div class="block">Set the configuration of the named template.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>throwErrorOnExtraParameters</code>  
+    </dt>
+    <dd>
+      <div class="block">If true and the request JSON has extra parameters in the layers definition, exceptions will be thrown.
+ Otherwise the information will be logged.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>transparentTileErrorColor</code>  
+    </dt>
+    <dd>
+      <div class="block">Color used for tiles in error on transparent layers.</div>
     </dd>
   </dl>
 
@@ -998,8 +1203,8 @@ templates:
     <p>
         <a href="http://www.camptocamp.com/geospatial/" target="_blank">Camptocamp</a> <br>
         <span class="commit">
-          Revision <code><a href="https://github.com/mapfish/mapfish-print/commit/7e235acf37059fbaf3ff1a86777b8541604e6664
-" target="_blank">7e235acf</a></code>.
+          Revision <code><a href="https://github.com/mapfish/mapfish-print/commit/88d31b0b2d8bb4ac11fe19ad2b502c66d99fd18d
+" target="_blank">88d31b0b</a></code>.
         </span>
 
 
