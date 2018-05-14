@@ -47,6 +47,7 @@
   <li class="toctree-l2"><a class="reference internal" href="#!features">!features</a></li>
   <li class="toctree-l2"><a class="reference internal" href="#!float">!float</a></li>
   <li class="toctree-l2"><a class="reference internal" href="#!integer">!integer</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="#!jsonDatasource">!jsonDatasource</a></li>
   <li class="toctree-l2"><a class="reference internal" href="#!legend">!legend</a></li>
   <li class="toctree-l2"><a class="reference internal" href="#!map">!map</a></li>
   <li class="toctree-l2"><a class="reference internal" href="#!northArrow">!northArrow</a></li>
@@ -352,6 +353,18 @@ templates:
       <div class="block"><p>A default value for this attribute. Example:</p><div class="highlight"><pre>     attributes:<br>       title: !integer<br>         default: 42</pre></div></div>
     </dd>
   </dl>
+
+
+</div>
+<div class="section" id="!jsonDatasource">
+  <h1>!jsonDatasource<a class="headerlink" href="#!jsonDatasource" title="Permalink to this headline">��</a></h1>
+  <div class="block">A JSON data source attribute. To be declared as net.sf.jasperreports.engine.data.JsonDataSource in Jasper.
+ Accepts only JSON objects at the root. To use it, you must pass it to a sub report like that:
+ <div class="highlight"><pre> < subreport><br>     ...<br>     < dataSourceExpression><br>         < ![CDATA[$P{json_attribute}.subDataSource("path.to.list")]]><br>     < /dataSourceExpression><br>     < subreportExpression><![CDATA["subreport_name.jasper"]]>< /subreportExpression><br> < /subreport></pre></div>
+
+ The expression given to the subDataSource method must select an array in the JSON structure.</div>
+
+
 
 
 </div>
@@ -1463,8 +1476,8 @@ templates:
     <p>
         <a href="http://www.camptocamp.com/geospatial/" target="_blank">Camptocamp</a> <br>
         <span class="commit">
-          Revision <code><a href="https://github.com/mapfish/mapfish-print/commit/88d31b0b2d8bb4ac11fe19ad2b502c66d99fd18d
-" target="_blank">88d31b0b</a></code>.
+          Revision <code><a href="https://github.com/mapfish/mapfish-print/commit/2c643a4f31a6411634996edf8eccfdac8741fd88
+" target="_blank">2c643a4f</a></code>.
         </span>
 
 
