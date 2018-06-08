@@ -894,7 +894,7 @@ other attributes in that they have attribute values.</p>
     <dd>
       <div class="block">The wms layer to request in the GetMap request.  The order is important.  It is the order that they
  will appear in the request.
-
+ <p></p>
  As with the WMS specification, the first layer will be the first layer drawn on the map (the
  bottom/base layer) of the map.  This means that layer at position 0 in the array will covered by
  layer 1 (where not transparent) and so on.</div>
@@ -915,6 +915,18 @@ other attributes in that they have attribute values.</p>
  Compare that to DPI parameter (for QGIS wms mapserver).  if two layers have different DPI then the layers
  cannot be merged.  In this case the DPI should <em>NOT</em> be one of the <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/tiled/AbstractWMXLayerParams.html#mergeableParams"><code>mergeableParams</code></a> it should
  be one of the <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/tiled/AbstractWMXLayerParams.html#customParams"><code>customParams</code></a>.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>method</code>  
+    </dt>
+    <dd>
+      <div class="block">The HTTP verb to use for fetching the images. Can be either "GET" (the default) or "POST".
+ <p></p>
+ In case of "POST", the parameters are send in the body of the request using an
+ "application/x-www-form-urlencoded" content type. This can be used when the parameters are too long.
+ Tested only with GeoServer.</div>
     </dd>
   </dl>
   <dl>
@@ -1223,7 +1235,7 @@ other attributes in that they have attribute values.</p>
     <dd>
       <div class="block">The wms layer to request in the GetMap request.  The order is important.  It is the order that they
  will appear in the request.
-
+ <p></p>
  As with the WMS specification, the first layer will be the first layer drawn on the map (the
  bottom/base layer) of the map.  This means that layer at position 0 in the array will covered by
  layer 1 (where not transparent) and so on.</div>
@@ -1244,6 +1256,18 @@ other attributes in that they have attribute values.</p>
  Compare that to DPI parameter (for QGIS wms mapserver).  if two layers have different DPI then the layers
  cannot be merged.  In this case the DPI should <em>NOT</em> be one of the <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/tiled/AbstractWMXLayerParams.html#mergeableParams"><code>mergeableParams</code></a> it should
  be one of the <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/tiled/AbstractWMXLayerParams.html#customParams"><code>customParams</code></a>.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>method</code>  
+    </dt>
+    <dd>
+      <div class="block">The HTTP verb to use for fetching the images. Can be either "GET" (the default) or "POST".
+ <p></p>
+ In case of "POST", the parameters are send in the body of the request using an
+ "application/x-www-form-urlencoded" content type. This can be used when the parameters are too long.
+ Tested only with GeoServer.</div>
     </dd>
   </dl>
   <dl>
@@ -1324,8 +1348,8 @@ other attributes in that they have attribute values.</p>
     <p>
         <a href="http://www.camptocamp.com/geospatial/" target="_blank">Camptocamp</a> <br>
         <span class="commit">
-          Revision <code><a href="https://github.com/mapfish/mapfish-print/commit/2c643a4f31a6411634996edf8eccfdac8741fd88
-" target="_blank">2c643a4f</a></code>.
+          Revision <code><a href="https://github.com/mapfish/mapfish-print/commit/01d2aed3c79f833e3460f3e864eb8e178d643ddc
+" target="_blank">01d2aed3</a></code>.
         </span>
 
 
