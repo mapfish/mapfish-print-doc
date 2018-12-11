@@ -57,10 +57,11 @@
   <li class="toctree-l2"><a class="reference internal" href="#!ipMatch">!ipMatch</a></li>
   <li class="toctree-l2"><a class="reference internal" href="#!localMatch">!localMatch</a></li>
   <li class="toctree-l2"><a class="reference internal" href="#!mergeSource">!mergeSource</a></li>
-  <li class="toctree-l2"><a class="reference internal" href="#!oldApi">!oldApi</a></li>
   <li class="toctree-l2"><a class="reference internal" href="#!pdfConfig">!pdfConfig</a></li>
   <li class="toctree-l2"><a class="reference internal" href="#!proxy">!proxy</a></li>
   <li class="toctree-l2"><a class="reference internal" href="#!roleAccessAssertion">!roleAccessAssertion</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="#!s3reportStorage">!s3reportStorage</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="#!smtpConfig">!smtpConfig</a></li>
   <li class="toctree-l2"><a class="reference internal" href="#!template">!template</a></li>
   <li class="toctree-l2"><a class="reference internal" href="#!updatePdfConfigUpdate">!updatePdfConfigUpdate</a></li>
   <li class="toctree-l2"><a class="reference internal" href="#!urlImage">!urlImage</a></li>
@@ -169,8 +170,7 @@ templates:
 
 <div class="section" id="!acceptAll">
   <h1>!acceptAll<a class="headerlink" href="#!acceptAll" title="Permalink to this headline">��</a></h1>
-  <div class="block">A matcher that always returns true.
- </div>
+  <div class="block">A matcher that always returns true. </div>
 
   <div class="admonition note examples">
     <p class="first admonition-title">Example</p>
@@ -185,8 +185,7 @@ templates:
       <code>reject</code>  
     </dt>
     <dd>
-      <div class="block">Reverses the matcher. Instead of accepting an URI when the URI matches,
- the URI is rejected.</div>
+      <div class="block">Reverses the matcher. Instead of accepting an URI when the URI matches, the URI is rejected.</div>
     </dd>
   </dl>
 
@@ -213,7 +212,7 @@ templates:
     <dd>
       <div class="block">Set all the Predicates/AccessAssertion that have to all pass in order for this assertion to pass.
  <p>
-     An exception is thrown if this method is called more than once.
+ An exception is thrown if this method is called more than once.
  </p></div>
     </dd>
   </dl>
@@ -249,8 +248,8 @@ templates:
       <code>uri</code>  
     </dt>
     <dd>
-      <div class="block">The uri to the certificate store. It is a uri to a java jks keystore file along with the
- password for unlocking the store.</div>
+      <div class="block">The uri to the certificate store. It is a uri to a java jks keystore file along with the password for
+ unlocking the store.</div>
     </dd>
   </dl>
 
@@ -275,9 +274,19 @@ templates:
  The security (how authentication/authorization is done) is configured in the
  /WEB-INF/classes/mapfish-spring-security.xml
  <p>
- Any user without the required role will get an error when trying to access any of the templates and
- no templates will be listed in the capabilities requests.
+ Any user without the required role will get an error when trying to access any of the templates and no
+ templates will be listed in the capabilities requests.
  </p></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>allowedReferers</code>  
+    </dt>
+    <dd>
+      <div class="block">The matchers used to authorize the incoming requests in function of the referer. For example:
+ <div class="highlight"><pre> allowedReferers:<br>   - !hostnameMatch<br>     host: example.com<br>     allowSubDomains: true</pre></div><p>
+ By default, the referer is not checked</p></div>
     </dd>
   </dl>
   <dl>
@@ -286,8 +295,8 @@ templates:
     </dt>
     <dd>
       <div class="block">The configuration for locating a custom certificate store.  This is only required if the default
- certificate store which ships with all java installations does not contain the certificates needed
- by this server.  Usually it is to accept a self-signed certificate, for example on a test server.</div>
+ certificate store which ships with all java installations does not contain the certificates needed by
+ this server.  Usually it is to accept a self-signed certificate, for example on a test server.</div>
     </dd>
   </dl>
   <dl>
@@ -305,8 +314,8 @@ templates:
     <dd>
       <div class="block">Http credentials to be used when making http requests.
  <p>
- If a proxy needs credentials you don't need to configure it here because the proxy configuration
- object also has options for declaring the credentials.
+ If a proxy needs credentials you don't need to configure it here because the proxy configuration object
+ also has options for declaring the credentials.
  </p></div>
     </dd>
   </dl>
@@ -344,27 +353,17 @@ templates:
       <code>jdbcDrivers</code>  
     </dt>
     <dd>
-      <div class="block">Set the JDBC drivers that are required to connect to the databases in the configuration.  JDBC
- drivers are needed (for example) when database sources are used in templates.  For example if in one
- of the template you have:
+      <div class="block">Set the JDBC drivers that are required to connect to the databases in the configuration.  JDBC drivers
+ are needed (for example) when database sources are used in templates.  For example if in one of the
+ template you have:
 
- <div class="highlight"><pre>     jdbcUrl: "jdbc:postgresql://localhost:5432/morges_dpfe"</pre></div>
-
+ <div class="highlight"><pre>     jdbcUrl: "jdbc:postgresql://localhost:5432/morges_dpfe"</pre></div><p>
  then you need to add:
 
- <div class="highlight"><pre>     jdbcDrivers: [org.postgresql.Driver]</pre></div>
-
+ </p><div class="highlight"><pre>     jdbcDrivers: [org.postgresql.Driver]</pre></div><p>
  or
 
- <div class="highlight"><pre>     jdbcDrivers:<br>       - org.postgresql.Driver</pre></div></div>
-    </dd>
-  </dl>
-  <dl>
-    <dt>
-      <code>oldApi</code>  
-    </dt>
-    <dd>
-      <div class="block">Set the configuration options on how to interpret the request in the form of the old API.</div>
+ </p><div class="highlight"><pre>     jdbcDrivers:<br>       - org.postgresql.Driver</pre></div></div>
     </dd>
   </dl>
   <dl>
@@ -380,16 +379,15 @@ templates:
       <code>outputFilename</code>  
     </dt>
     <dd>
-      <div class="block">The default output file name of the report.  This can be overridden by
- <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/config/Template.html#setOutputFilename-java.lang.String-"><code>Template.setOutputFilename(String)</code></a> and the outputFilename parameter
- in the request JSON.
+      <div class="block">The default output file name of the report.  This can be overridden by <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/config/Template.html#setOutputFilename-java.lang.String-"><code>Template.setOutputFilename(String)</code></a> and the outputFilename parameter in the
+ request JSON.
  <p>
- This can be a string and can also have a date section in the string that will be filled when the
- report is created for example a section with ${<dateFormatString>} will be replaced with the
- current date formatted in the way defined by the <dateFormatString> string.  The format rules
- are the rules in
- <a shape="rect" href="http://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html">java.text.SimpleDateFormat</a>
- (do a google search if the link above is broken).
+ This can be a string and can also have a date section in the string that will be filled when the report
+ is created for example a section with ${<dateFormatString>} will be replaced with the current
+ date formatted in the way defined by the <dateFormatString> string.  The format rules are the
+ rules in
+ <a shape="rect" href="http://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html">
+ java.text.SimpleDateFormat</a> (do a google search if the link above is broken).
  </p><p>
  Example: <code>outputFilename: print-${dd-MM-yyyy}</code> should output:
  <code>print-22-11-2014.pdf</code></p><p>
@@ -410,8 +408,8 @@ templates:
       <code>proxies</code>  
     </dt>
     <dd>
-      <div class="block">Configuration for proxying http requests.  Each proxy can be configured with authentication
- and with the uris that they apply to.
+      <div class="block">Configuration for proxying http requests.  Each proxy can be configured with authentication and with
+ the uris that they apply to.
  <p></p>
  See <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/http/HttpProxy.html" title="class in org.mapfish.print.http"><code>HttpProxy</code></a> for details on how to configure them.</div>
     </dd>
@@ -422,6 +420,14 @@ templates:
     </dt>
     <dd>
       <div class="block">Set the resource bundle name.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>smtp</code>  
+    </dt>
+    <dd>
+      <div></div>
     </dd>
   </dl>
   <dl>
@@ -462,9 +468,10 @@ templates:
 </div>
 <div class="section" id="!credential">
   <h1>!credential<a class="headerlink" href="#!credential" title="Permalink to this headline">��</a></h1>
-  <div class="block">Represents a set of credentials to use for an http request.  These can be configured in the Configuration yaml file.
- <p></p><p><em>Note: proxies are also HttpCredentials and when searching for credentials, the proxies will also be searched
- for credentials.</em></p></div>
+  <div class="block">Represents a set of credentials to use for an http request.  These can be configured in the Configuration
+ yaml file.
+ <p></p><p><em>Note: proxies are also HttpCredentials and when searching for credentials, the proxies will also be
+ searched for credentials.</em></p></div>
 
 
     <h3>Configuration</h3>
@@ -503,14 +510,14 @@ templates:
 </div>
 <div class="section" id="!dnsMatch">
   <h1>!dnsMatch<a class="headerlink" href="#!dnsMatch" title="Permalink to this headline">��</a></h1>
-  <div class="block">Allows to check that a given URL matches a DNS address (textual format). The actual comparison is
- performed on numerical IP addresses. The configured DNS host address is transformed into numerical IP
- addresses during application startup. The urls to be compared are transformed during the print processing.
+  <div class="block">Allows to check that a given URL matches a DNS address (textual format). The actual comparison is performed
+ on numerical IP addresses. The configured DNS host address is transformed into numerical IP addresses
+ during application startup. The urls to be compared are transformed during the print processing.
  <p>Example 1: Accept any www.camptocamp.com url</p><div class="highlight"><pre>     - !dnsMatch<br>       host : www.camptocamp.com</pre></div><p>Example 2: Accept any www.camptocamp.com url (port == -1 accepts any port)</p><div class="highlight"><pre>     - !dnsMatch<br>       host : www.camptocamp.com<br>       port : -1</pre></div><p>Example 3: Accept any www.camptocamp.com url on port 80 only</p><div class="highlight"><pre>     - !dnsMatch<br>       host : www.camptocamp.com<br>       port : 80</pre></div><p></p>
-     Example 4: Accept www.camptocamp.com urls with paths that start with /print/.
-     <p>
-         If the regular expression give does not start with / then it will be added because all paths start with /
-     </p><div class="highlight"><pre>     - !dnsMatch<br>       host : www.camptocamp.com<br>       pathRegex : /print/.+</pre></div>
+ Example 4: Accept www.camptocamp.com urls with paths that start with /print/.
+ <p>
+ If the regular expression give does not start with / then it will be added because all paths start with /
+ </p><div class="highlight"><pre>     - !dnsMatch<br>       host : www.camptocamp.com<br>       pathRegex : /print/.+</pre></div>
  </div>
 
   <div class="admonition note examples">
@@ -555,8 +562,7 @@ templates:
       <code>reject</code>  
     </dt>
     <dd>
-      <div class="block">Reverses the matcher. Instead of accepting an URI when the URI matches,
- the URI is rejected.</div>
+      <div class="block">Reverses the matcher. Instead of accepting an URI when the URI matches, the URI is rejected.</div>
     </dd>
   </dl>
 
@@ -567,13 +573,21 @@ templates:
   <div class="block">Allows to check that a given URL matches a hostname literally (textual match).
 
  <p>Example 1: Accept any www.camptocamp.com url</p><div class="highlight"><pre>     - !hostnameMatch<br>       host : www.camptocamp.com</pre></div><p>Example 2: Accept any www.camptocamp.com url (port == -1 accepts any port)</p><div class="highlight"><pre>     - !hostnameMatch<br>       host : www.camptocamp.com<br>       port : -1</pre></div><p>Example 3: Accept any www.camptocamp.com url on port 80 only</p><div class="highlight"><pre>     - !hostnameMatch<br>       host : www.camptocamp.com<br>       port : 80</pre></div><p></p>
-     Example 4: Accept www.camptocamp.com urls with paths that start with /print/.
-     <p>
-         If the regular expression give does not start with / then it will be added because all paths start with /
-     </p><div class="highlight"><pre>     - !hostnameMatch<br>       host : www.camptocamp.com<br>       pathRegex : /print/.+</pre></div></div>
+ Example 4: Accept www.camptocamp.com urls with paths that start with /print/.
+ <p>
+ If the regular expression give does not start with / then it will be added because all paths start with /
+ </p><div class="highlight"><pre>     - !hostnameMatch<br>       host : www.camptocamp.com<br>       pathRegex : /print/.+</pre></div></div>
 
 
     <h3>Configuration</h3>
+  <dl>
+    <dt>
+      <code>allowSubDomains</code>  
+    </dt>
+    <dd>
+      <div class="block">Set if sub-domains are allowed.</div>
+    </dd>
+  </dl>
   <dl>
     <dt>
       <code>host</code>  
@@ -608,8 +622,7 @@ templates:
       <code>reject</code>  
     </dt>
     <dd>
-      <div class="block">Reverses the matcher. Instead of accepting an URI when the URI matches,
- the URI is rejected.</div>
+      <div class="block">Reverses the matcher. Instead of accepting an URI when the URI matches, the URI is rejected.</div>
     </dd>
   </dl>
 
@@ -618,7 +631,8 @@ templates:
 <div class="section" id="!ipMatch">
   <h1>!ipMatch<a class="headerlink" href="#!ipMatch" title="Permalink to this headline">��</a></h1>
   <div class="block">Compares ip address string and mask string by using <code>InetAddress</code> comparison.
- <p>Example 1: accept any uri whose host matches the ip of www.camptocamp.com</p><div class="highlight"><pre>     - !ipMatch<br>       ip : www.camptocamp.com</pre></div><p>Example 2: accept any uri whose host ip starts with 192.1</p><div class="highlight"><pre>     - !ipMatch<br>       ip : 192.1.0.0<br>       mask : 255.255.0.0</pre></div><p>Example 3: accept any uri whose host ip starts with 192.1 and restricts to port 80</p><div class="highlight"><pre>     - !ipMatch<br>       ip : 192.1.0.0<br>       mask : 255.255.0.0<br>       port : 80</pre></div><p>Example 4: accept any uri whose host ip starts with 192.1 and and allows any port (-1 is any port)</p><div class="highlight"><pre>     - !ipMatch<br>       ip : 192.1.0.0<br>       mask : 255.255.0.0<br>       port : -1</pre></div><p>Example 5: accept any uri whose host ip starts with 192.1 and restricts to paths that start with /print/</p><div class="highlight"><pre>     - !ipMatch<br>       ip : 192.1.0.0<br>       mask : 255.255.0.0<br>       pathRegex : /print/.+</pre></div>
+ <p>Example 1: accept any uri whose host matches the ip of www.camptocamp.com</p><div class="highlight"><pre>     - !ipMatch<br>       ip : www.camptocamp.com</pre></div><p>Example 2: accept any uri whose host ip starts with 192.1</p><div class="highlight"><pre>     - !ipMatch<br>       ip : 192.1.0.0<br>       mask : 255.255.0.0</pre></div><p>Example 3: accept any uri whose host ip starts with 192.1 and restricts to port 80</p><div class="highlight"><pre>     - !ipMatch<br>       ip : 192.1.0.0<br>       mask : 255.255.0.0<br>       port : 80</pre></div><p>Example 4: accept any uri whose host ip starts with 192.1 and and allows any port (-1 is any port)</p><div class="highlight"><pre>     - !ipMatch<br>       ip : 192.1.0.0<br>       mask : 255.255.0.0<br>       port : -1</pre></div><p>Example 5: accept any uri whose host ip starts with 192.1 and restricts to paths that start with
+ /print/</p><div class="highlight"><pre>     - !ipMatch<br>       ip : 192.1.0.0<br>       mask : 255.255.0.0<br>       pathRegex : /print/.+</pre></div>
  </div>
 
   <div class="admonition note examples">
@@ -671,8 +685,7 @@ templates:
       <code>reject</code>  
     </dt>
     <dd>
-      <div class="block">Reverses the matcher. Instead of accepting an URI when the URI matches,
- the URI is rejected.</div>
+      <div class="block">Reverses the matcher. Instead of accepting an URI when the URI matches, the URI is rejected.</div>
     </dd>
   </dl>
 
@@ -680,10 +693,10 @@ templates:
 </div>
 <div class="section" id="!localMatch">
   <h1>!localMatch<a class="headerlink" href="#!localMatch" title="Permalink to this headline">��</a></h1>
-  <div class="block">Allows to check that a given URL is served by one of the local network
- interface or one of its aliases.
+  <div class="block">Allows to check that a given URL is served by one of the local network interface or one of its aliases.
  <p>Example 1: Accept any localhost url</p><div class="highlight"><pre>     - localMatch {}</pre></div><p>Example 2: Accept any localhost url (port == -1 accepts any port)</p><div class="highlight"><pre>     - localMatch<br>       port : -1</pre></div><p>Example 3: Accept any localhost url on port 80 only</p><div class="highlight"><pre>     - localMatch<br>       port : 80</pre></div><p>Example 4: Accept localhost urls with paths that start with /print/.</p><p>
- If the regular expression given does not start with / then it will be added because all paths start with /.
+ If the regular expression given does not start with / then it will be added because all paths start with
+ /.
  </p><div class="highlight"><pre>     - localMatch<br>       pathRegex : /print/.+</pre></div>
  </div>
 
@@ -721,8 +734,7 @@ templates:
       <code>reject</code>  
     </dt>
     <dd>
-      <div class="block">Reverses the matcher. Instead of accepting an URI when the URI matches,
- the URI is rejected.</div>
+      <div class="block">Reverses the matcher. Instead of accepting an URI when the URI matches, the URI is rejected.</div>
     </dd>
   </dl>
 
@@ -747,7 +759,8 @@ templates:
       <code>fields</code>  
     </dt>
     <dd>
-      <div class="block">The names of each field in the DataSource.  See <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/jasper/MergeDataSourceProcessor.SourceType.html" title="enum in org.mapfish.print.processor.jasper"><code>MergeDataSourceProcessor.SourceType</code></a>
+      <div class="block">The names of each field in the DataSource.  See
+ <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/jasper/MergeDataSourceProcessor.SourceType.html" title="enum in org.mapfish.print.processor.jasper"><code>MergeDataSourceProcessor.SourceType</code></a>
  for instructions on how to declare the fields</div>
     </dd>
   </dl>
@@ -764,32 +777,9 @@ templates:
       <code>type</code>  
     </dt>
     <dd>
-      <div class="block">The type of source.  See <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/jasper/MergeDataSourceProcessor.SourceType.html" title="enum in org.mapfish.print.processor.jasper"><code>MergeDataSourceProcessor.SourceType</code></a> for the options.</div>
-    </dd>
-  </dl>
-
-
-</div>
-<div class="section" id="!oldApi">
-  <h1>!oldApi<a class="headerlink" href="#!oldApi" title="Permalink to this headline">��</a></h1>
-  <div class="block"><p>Configuration options for how requests to the old API are handled.</p><p>Example</p><div class="highlight"><pre> oldApi: !oldApi<br>   layersFirstIsBaseLayer: false<br>   wmsReverseLayers: true<br> templates:<br>   ..</pre></div></div>
-
-
-    <h3>Configuration</h3>
-  <dl>
-    <dt>
-      <code>layersFirstIsBaseLayer</code>  
-    </dt>
-    <dd>
-      <div class="block">If true then the first layer in the layers array in the JSON request is the bottom layer of the map.</div>
-    </dd>
-  </dl>
-  <dl>
-    <dt>
-      <code>wmsReverseLayers</code>  
-    </dt>
-    <dd>
-      <div class="block">Set if the layer order coming from the old API client will be reversed for the layers within a WMS request.</div>
+      <div class="block">The type of source.  See
+ <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/jasper/MergeDataSourceProcessor.SourceType.html" title="enum in org.mapfish.print.processor.jasper"><code>MergeDataSourceProcessor.SourceType</code></a>
+ for the options.</div>
     </dd>
   </dl>
 
@@ -797,8 +787,8 @@ templates:
 </div>
 <div class="section" id="!pdfConfig">
   <h1>!pdfConfig<a class="headerlink" href="#!pdfConfig" title="Permalink to this headline">��</a></h1>
-  <div class="block"><p>A Configuration object for containing metadata that will be embedded in the PDF and parameters to use when encoding the
- PDF.
+  <div class="block"><p>A Configuration object for containing metadata that will be embedded in the PDF and parameters to use
+ when encoding the PDF.
  </p><p>Naturally this only applies to reports that are exported as PDFs.</p>
  </div>
 
@@ -824,7 +814,8 @@ templates:
       <code>compressed</code>  
     </dt>
     <dd>
-      <div class="block">If this property is set to true then the resulting PDF will be a compressed PDF. By default the PDF is not compressed.</div>
+      <div class="block">If this property is set to true then the resulting PDF will be a compressed PDF. By default the PDF is
+ not compressed.</div>
     </dd>
   </dl>
   <dl>
@@ -864,8 +855,8 @@ templates:
 </div>
 <div class="section" id="!proxy">
   <h1>!proxy<a class="headerlink" href="#!proxy" title="Permalink to this headline">��</a></h1>
-  <div class="block">This configuration object configures the proxies to be used by the system. This is configured as
- one of the root elements of the config.yaml
+  <div class="block">This configuration object configures the proxies to be used by the system. This is configured as one of the
+ root elements of the config.yaml
 
  <p>Example - Proxy all requests except localhost and www.camptocamp.org:</p><div class="highlight"><pre> proxies:<br>   - !proxy<br>     scheme: http<br>     host: proxy.host.com<br>     port: 8888<br>     username: username<br>     password: xyzpassword<br>     matchers:<br>       - !localMatch<br>         reject: true<br>       - !dnsMatch<br>         host: www.camptocamp.org<br>         reject: true<br>       - !acceptAll {}</pre></div></div>
 
@@ -948,11 +939,176 @@ templates:
       <code>requiredRoles</code>  
     </dt>
     <dd>
-      <div class="block">Set the roles required to allow access.  If not roles then the user must be logged in but does not have to have any particular
- role.
+      <div class="block">Set the roles required to allow access.  If not roles then the user must be logged in but does not have
+ to have any particular role.
  <p>
  This method may only be called once, any subsequent calls will result in errors.
  </p></div>
+    </dd>
+  </dl>
+
+
+</div>
+<div class="section" id="!s3reportStorage">
+  <h1>!s3reportStorage<a class="headerlink" href="#!s3reportStorage" title="Permalink to this headline">��</a></h1>
+  <div class="block">Configuration for storing the reports in a S3 compatible storage.
+ <p>
+ By default, authentication is done using the <code>DefaultAWSCredentialsProviderChain</code> which uses
+ Environment Variables, Java System Properties, Credential profiles file, ...</p></div>
+
+
+    <h3>Configuration</h3>
+  <dl>
+    <dt>
+      <code>accessKey</code>  
+    </dt>
+    <dd>
+      <div class="block">To set the access key.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>bucket</code>  
+    </dt>
+    <dd>
+      <div class="block">The S3 bucket to use.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>endpointUrl</code>  
+    </dt>
+    <dd>
+      <div class="block">To override the endpoint URL (for non-Amazon, S3 compatible servers).</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>prefix</code>  
+    </dt>
+    <dd>
+      <div class="block">The key prefix to use.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>region</code>  
+    </dt>
+    <dd>
+      <div class="block">To set the region to use.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>secretKey</code>  
+    </dt>
+    <dd>
+      <div class="block">To set the secret key.</div>
+    </dd>
+  </dl>
+
+
+</div>
+<div class="section" id="!smtpConfig">
+  <h1>!smtpConfig<a class="headerlink" href="#!smtpConfig" title="Permalink to this headline">��</a></h1>
+  <div class="block">Email sending configuration.
+ <p>
+ This configuration is needed only if reports are to be sent to the user by email.</p></div>
+
+
+    <h3>Configuration</h3>
+  <dl>
+    <dt>
+      <code>body</code>  
+    </dt>
+    <dd>
+      <div class="block">The default email body.
+ <br clear="none"></br>
+ This can be changed by the <code>smtp</code>.<code>body</code> property
+ in the request.
+
+ If you have setup a storage, you must put a "{url}" marker where the URL
+ to fetch the report should be put.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>fromAddress</code>  
+    </dt>
+    <dd>
+      <div class="block">The email address used as "From:" in every email.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>host</code>  
+    </dt>
+    <dd>
+      <div class="block">The SMTP server hostname.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>password</code>  
+    </dt>
+    <dd>
+      <div class="block">If auth is needed, the password.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>port</code>  
+    </dt>
+    <dd>
+      <div class="block">The TCP port of the SMTP server.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>ssl</code>  
+    </dt>
+    <dd>
+      <div class="block">True for enabling SSL.
+ <br clear="none"></br>
+ Cannot be enabled at the same time as <code>starttls</code></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>starttls</code>  
+    </dt>
+    <dd>
+      <div class="block">True to use STARTTLS.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>storage</code>  
+    </dt>
+    <dd>
+      <div class="block">The report storage facility to use.
+ <br clear="none"></br>
+ By default, attaches the report in an email. But, for big files, this is not practical. This can be
+ used to configure a storage.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>subject</code>  
+    </dt>
+    <dd>
+      <div class="block">The default email subject.
+ <br clear="none"></br>
+ This can be changed by the <code>smtp</code>.<code>subject</code>
+ property in the request.</div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <code>username</code>  
+    </dt>
+    <dd>
+      <div class="block">If auth is needed, the username.</div>
     </dd>
   </dl>
 
@@ -969,13 +1125,14 @@ templates:
       <code>access</code>  
     </dt>
     <dd>
-      <div class="block">The roles required to access this template.  If empty or not set then it is a <em>public</em> template.  If there are
- many roles then a user must have one of the roles in order to access the template.
+      <div class="block">The roles required to access this template.  If empty or not set then it is a <em>public</em> template.
+ If there are many roles then a user must have one of the roles in order to access the template.
  <p></p>
- The security (how authentication/authorization is done) is configured in the /WEB-INF/classes/mapfish-spring-security.xml
+ The security (how authentication/authorization is done) is configured in the
+ /WEB-INF/classes/mapfish-spring-security.xml
  <p>
- Any user without the required role will get an error when trying to access the template and the template will not
- be visible in the capabilities requests.
+ Any user without the required role will get an error when trying to access the template and the
+ template will not be visible in the capabilities requests.
  </p></div>
     </dd>
   </dl>
@@ -1032,18 +1189,19 @@ templates:
       <code>outputFilename</code>  
     </dt>
     <dd>
-      <div class="block">The default output file name of the report (takes precedence over
- <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/config/Configuration.html#setOutputFilename-java.lang.String-"><code>Configuration.setOutputFilename(String)</code></a>).  This can be overridden by the outputFilename
- parameter in the request JSON.
+      <div class="block">The default output file name of the report (takes precedence over <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/config/Configuration.html#setOutputFilename-java.lang.String-"><code>Configuration.setOutputFilename(String)</code></a>).  This can be overridden by the
+ outputFilename parameter in the request JSON.
  <p>
-     This can be a string and can also have a date section in the string that will be filled when the report is created for
-     example a section with ${<dateFormatString>} will be replaced with the current date formatted in the way defined
-     by the <dateFormatString> string.  The format rules are the rules in
-     <a shape="rect" href="http://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html">java.text.SimpleDateFormat</a>
-     (do a google search if the link above is broken).
+ This can be a string and can also have a date section in the string that will be filled when the report
+ is created for example a section with ${<dateFormatString>} will be replaced with the current
+ date formatted in the way defined by the <dateFormatString> string.  The format rules are the
+ rules in
+ <a shape="rect" href="http://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html">
+ java.text.SimpleDateFormat</a> (do a google search if the link above is broken).
  </p><p>
-     Example: <code>outputFilename: print-${dd-MM-yyyy}</code> should output: <code>print-22-11-2014.pdf</code></p><p>
-     Note: the suffix will be appended to the end of the name.
+ Example: <code>outputFilename: print-${dd-MM-yyyy}</code> should output:
+ <code>print-22-11-2014.pdf</code></p><p>
+ Note: the suffix will be appended to the end of the name.
  </p></div>
     </dd>
   </dl>
@@ -1120,10 +1278,11 @@ templates:
       <code>valueKey</code>  
     </dt>
     <dd>
-      <div class="block">The key to use to look up the value in the values object.  It can be a path that can reach into nested objects.
+      <div class="block">The key to use to look up the value in the values object.  It can be a path that can reach into
+ nested objects.
  <p></p>
- Examples 1 a simple lookup key: "key"
- Example 2 a path.  First part (before .) is the lookup key, the second part is the field name to load: "key.fieldName"</div>
+ Examples 1 a simple lookup key: "key" Example 2 a path.  First part (before .) is the lookup key,
+ the second part is the field name to load: "key.fieldName"</div>
     </dd>
   </dl>
 
@@ -1147,9 +1306,10 @@ templates:
       <code>urlExtractor</code>  
     </dt>
     <dd>
-      <div class="block">Sets the RegExp pattern to use for extracting the url from the text.  By default the whole string is used.
-
- For example: <code>.*&img src="([^"]+)".*</code></div>
+      <div class="block">Sets the RegExp pattern to use for extracting the url from the text.  By default the whole string is
+ used.
+ <p>
+ For example: <code>.*&img src="([^"]+)".*</code></p></div>
     </dd>
   </dl>
   <dl>
@@ -1203,8 +1363,8 @@ templates:
     <p>
         <a href="http://www.camptocamp.com/geospatial/" target="_blank">Camptocamp</a> <br>
         <span class="commit">
-          Revision <code><a href="https://github.com/mapfish/mapfish-print/commit/01d2aed3c79f833e3460f3e864eb8e178d643ddc
-" target="_blank">01d2aed3</a></code>.
+          Revision <code><a href="https://github.com/mapfish/mapfish-print/commit/a9e6fbb8778e7d0691af8fb8e22a5a1431f3c9db
+" target="_blank">a9e6fbb8</a></code>.
         </span>
 
 

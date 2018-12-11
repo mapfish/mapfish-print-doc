@@ -33,7 +33,6 @@ org.mapfish.print.servlet.job
 org.mapfish.print.servlet.job.impl
 org.mapfish.print.servlet.job.impl.hibernate
 org.mapfish.print.servlet.job.loader
-org.mapfish.print.servlet.oldapi
 org.mapfish.print.servlet.registry
 org.mapfish.print.test.util
 org.mapfish.print.url.data

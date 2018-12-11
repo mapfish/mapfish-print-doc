@@ -195,11 +195,17 @@
         "png",
         "tif",
         "tiff"
-    ]
+    ],
+    "smtp": {
+      "enabled": false
+    }
 }
   </pre></div>
 </p>
-
+<p>
+  The smtp section shows <code>"enabled": true</code> if the reports can be sent by email. To enable this
+  feature, please refer to the <a href="configuration.html#!smtpConfig">!smtpConfig</a> section.
+</p>
 
 <h3 id="create">Create a print job <a class="headerlink" href="#create" title="Permalink to this headline">��</a></h3>
 <p>
@@ -236,6 +242,22 @@
       specified layout.
     </li>
   </ul>
+</p>
+
+<p>
+  If the report must sent by email and the feature is enabled in the app, a <code>smtp</code> property
+  looking like that (<code>subject</code> and <code>body</code> are optional) must be added to the request:
+</p>
+<p>
+  <div class="highlight"><pre>
+{
+  "smtp": {
+    "to": "toto@example.com",
+    "subject": "The email subject",
+    "body": "Some &lt;b&gt;html&lt;/b&gt; body"
+  }
+}
+  </pre></div>
 </p>
 
 <h4>Response</h4>
@@ -304,6 +326,9 @@
 <p>
   Returns the status for a print job.
 </p>
+<p>
+  You should not call this API if you requested the report to be sent by email.
+</p>
 <h4>URI</h4>
 <p>
   <code>GET /status/:referenceId.json</code>
@@ -356,6 +381,9 @@
 <h4>Response Sample</h4>
 <p>
   Request URI: <code>GET /status/15179fee-618d-4356-8114-cfd8f146e273.json</code>
+</p>
+<p>
+  You should not call this API if you requested the report to be sent by email.
 </p>
 <p>
   <div class="highlight"><pre>
@@ -454,8 +482,8 @@
     <p>
         <a href="http://www.camptocamp.com/geospatial/" target="_blank">Camptocamp</a> <br>
         <span class="commit">
-          Revision <code><a href="https://github.com/mapfish/mapfish-print/commit/01d2aed3c79f833e3460f3e864eb8e178d643ddc
-" target="_blank">01d2aed3</a></code>.
+          Revision <code><a href="https://github.com/mapfish/mapfish-print/commit/a9e6fbb8778e7d0691af8fb8e22a5a1431f3c9db
+" target="_blank">a9e6fbb8</a></code>.
         </span>
 
 
