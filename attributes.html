@@ -197,7 +197,7 @@ templates:
 </div>
 
 <div class="section" id="!boolean">
-  <h1>!boolean<a class="headerlink" href="#!boolean" title="Permalink to this headline">��</a></h1>
+  <h1>!boolean<a class="headerlink" href="#!boolean" title="Permalink to this headline">¶</a></h1>
   <div class="block"><p>A boolean type attribute.</p>
  </div>
 
@@ -221,7 +221,7 @@ templates:
 
 </div>
 <div class="section" id="!datasource">
-  <h1>!datasource<a class="headerlink" href="#!datasource" title="Permalink to this headline">��</a></h1>
+  <h1>!datasource<a class="headerlink" href="#!datasource" title="Permalink to this headline">¶</a></h1>
   <div class="block"><p>
  This attribute represents a collection of attributes which can be used as the data source of a Jasper
  report's table/detail section.
@@ -268,7 +268,7 @@ templates:
 
 </div>
 <div class="section" id="!features">
-  <h1>!features<a class="headerlink" href="#!features" title="Permalink to this headline">��</a></h1>
+  <h1>!features<a class="headerlink" href="#!features" title="Permalink to this headline">¶</a></h1>
   <div class="block">Attribute for GeoJson feature collection. </div>
 
   <div class="admonition note examples">
@@ -309,7 +309,7 @@ templates:
 
 </div>
 <div class="section" id="!float">
-  <h1>!float<a class="headerlink" href="#!float" title="Permalink to this headline">��</a></h1>
+  <h1>!float<a class="headerlink" href="#!float" title="Permalink to this headline">¶</a></h1>
   <div class="block"><p>A float type attribute.</p>
  </div>
 
@@ -333,7 +333,7 @@ templates:
 
 </div>
 <div class="section" id="!integer">
-  <h1>!integer<a class="headerlink" href="#!integer" title="Permalink to this headline">��</a></h1>
+  <h1>!integer<a class="headerlink" href="#!integer" title="Permalink to this headline">¶</a></h1>
   <div class="block"><p>An integer type attribute.</p>
  </div>
 
@@ -357,7 +357,7 @@ templates:
 
 </div>
 <div class="section" id="!jsonDatasource">
-  <h1>!jsonDatasource<a class="headerlink" href="#!jsonDatasource" title="Permalink to this headline">��</a></h1>
+  <h1>!jsonDatasource<a class="headerlink" href="#!jsonDatasource" title="Permalink to this headline">¶</a></h1>
   <div class="block">A JSON data source attribute. To be declared as net.sf.jasperreports.engine.data.JsonDataSource in Jasper.
  Accepts only JSON objects at the root. To use it, you must pass it to a sub report like that:
  <div class="highlight"><pre> < subreport><br>     ...<br>     < dataSourceExpression><br>         < ![CDATA[$P{json_attribute}.subDataSource("path.to.list")]]><br>     < /dataSourceExpression><br>     < subreportExpression><![CDATA["subreport_name.jasper"]]>< /subreportExpression><br> < /subreport></pre></div><p>
@@ -368,7 +368,7 @@ templates:
 
 </div>
 <div class="section" id="!legend">
-  <h1>!legend<a class="headerlink" href="#!legend" title="Permalink to this headline">��</a></h1>
+  <h1>!legend<a class="headerlink" href="#!legend" title="Permalink to this headline">¶</a></h1>
   <div class="block">Objects needed by the <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/jasper/LegendProcessor.html" title="class in org.mapfish.print.processor.jasper"><code>LegendProcessor</code></a> (see
  <a shape="rect" href="processors.html#!prepareLegend">!prepareLegend</a> processor).
  </div>
@@ -427,7 +427,7 @@ templates:
 
 </div>
 <div class="section" id="!map">
-  <h1>!map<a class="headerlink" href="#!map" title="Permalink to this headline">��</a></h1>
+  <h1>!map<a class="headerlink" href="#!map" title="Permalink to this headline">¶</a></h1>
   <div class="block"><p>The attributes for <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/map/CreateMapProcessor.html" title="class in org.mapfish.print.processor.map"><code>CreateMapProcessor</code></a> (see
  <a shape="rect" href="processors.html#!createMap">!createMap</a> processor).</p>
  </div>
@@ -470,7 +470,9 @@ templates:
       <code>maxDpi</code>  
     </dt>
     <dd>
-      <div></div>
+      <div class="block">The maximum DPI allowed for maps.
+ <p>
+ If a request is made with a higher DPI, the request fails.</p></div>
     </dd>
   </dl>
   <dl>
@@ -478,7 +480,7 @@ templates:
       <code>maxHeight</code>  
     </dt>
     <dd>
-      <div></div>
+      <div class="block">Limits the maximum height of the map.</div>
     </dd>
   </dl>
   <dl>
@@ -486,7 +488,7 @@ templates:
       <code>maxWidth</code>  
     </dt>
     <dd>
-      <div></div>
+      <div class="block">Limits the maximum width of the map.</div>
     </dd>
   </dl>
   <dl>
@@ -503,7 +505,14 @@ templates:
       <code>zoomLevelSnapStrategy</code>  
     </dt>
     <dd>
-      <div></div>
+      <div class="block">The strategy to use to compute the actual zoom level to use.
+ <p>
+ If you specify this value, you must set the zoomLevels as well.
+ </p><p>
+ Possible values are:
+ </p><ul><li>CLOSEST_LOWER_SCALE_ON_TIE: Find the closest zoom level.  If the targetScale is directly between
+ two zoomLevels then the smaller/higher resolution scale will be chosen.</li><li>CLOSEST_HIGHER_SCALE_ON_TIE: Find the closest zoom level.  If the targetScale is directly
+ between two zoomLevels then the larger/lower resolution scale will be chosen.</li><li>HIGHER_SCALE: Always choose the zoom-level that is just higher than the target value.</li><li>LOWER_SCALE: Always choose the zoom-level that is just lower than the target value.</li></ul><p></p></div>
     </dd>
   </dl>
   <dl>
@@ -511,7 +520,9 @@ templates:
       <code>zoomLevels</code>  
     </dt>
     <dd>
-      <div></div>
+      <div class="block">The list of Zoom Levels.
+ <p>
+ Depending on the zoomLevelSnapStrategy, this will be used to compute the actual zoom level of the map.</p></div>
     </dd>
   </dl>
   <dl>
@@ -519,7 +530,7 @@ templates:
       <code>zoomSnapGeodetic</code>  
     </dt>
     <dd>
-      <div></div>
+      <div class="block">If true, snap to geodetic scales.</div>
     </dd>
   </dl>
   <dl>
@@ -527,7 +538,10 @@ templates:
       <code>zoomSnapTolerance</code>  
     </dt>
     <dd>
-      <div></div>
+      <div class="block">The zoom level tolerance.
+ <p>
+ Used in ZoomLevelSnapStrategy.HIGHER_SCALE and ZoomLevelSnapStrategy.LOWER_SCALE to specify the cutoff
+ value.</p></div>
     </dd>
   </dl>
 
@@ -674,7 +688,7 @@ templates:
 
 </div>
 <div class="section" id="!northArrow">
-  <h1>!northArrow<a class="headerlink" href="#!northArrow" title="Permalink to this headline">��</a></h1>
+  <h1>!northArrow<a class="headerlink" href="#!northArrow" title="Permalink to this headline">¶</a></h1>
   <div class="block"><p>The attributes for <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/map/CreateNorthArrowProcessor.html" title="class in org.mapfish.print.processor.map"><code>CreateNorthArrowProcessor</code></a> (see
  <a shape="rect" href="processors.html#!createNorthArrow">!createNorthArrow</a> processor).</p>
  </div>
@@ -739,7 +753,7 @@ templates:
 
 </div>
 <div class="section" id="!overviewMap">
-  <h1>!overviewMap<a class="headerlink" href="#!overviewMap" title="Permalink to this headline">��</a></h1>
+  <h1>!overviewMap<a class="headerlink" href="#!overviewMap" title="Permalink to this headline">¶</a></h1>
   <div class="block"><p>The attributes for an overview map (see
  <a shape="rect" href="processors.html#!createOverviewMap">!createOverviewMap</a> processor).</p>
  </div>
@@ -783,7 +797,9 @@ templates:
       <code>maxDpi</code>  
     </dt>
     <dd>
-      <div></div>
+      <div class="block">The maximum DPI allowed for maps.
+ <p>
+ If a request is made with a higher DPI, the request fails.</p></div>
     </dd>
   </dl>
   <dl>
@@ -791,7 +807,7 @@ templates:
       <code>maxHeight</code>  
     </dt>
     <dd>
-      <div></div>
+      <div class="block">Limits the maximum height of the map.</div>
     </dd>
   </dl>
   <dl>
@@ -799,7 +815,7 @@ templates:
       <code>maxWidth</code>  
     </dt>
     <dd>
-      <div></div>
+      <div class="block">Limits the maximum width of the map.</div>
     </dd>
   </dl>
   <dl>
@@ -833,7 +849,14 @@ templates:
       <code>zoomLevelSnapStrategy</code>  
     </dt>
     <dd>
-      <div></div>
+      <div class="block">The strategy to use to compute the actual zoom level to use.
+ <p>
+ If you specify this value, you must set the zoomLevels as well.
+ </p><p>
+ Possible values are:
+ </p><ul><li>CLOSEST_LOWER_SCALE_ON_TIE: Find the closest zoom level.  If the targetScale is directly between
+ two zoomLevels then the smaller/higher resolution scale will be chosen.</li><li>CLOSEST_HIGHER_SCALE_ON_TIE: Find the closest zoom level.  If the targetScale is directly
+ between two zoomLevels then the larger/lower resolution scale will be chosen.</li><li>HIGHER_SCALE: Always choose the zoom-level that is just higher than the target value.</li><li>LOWER_SCALE: Always choose the zoom-level that is just lower than the target value.</li></ul><p></p></div>
     </dd>
   </dl>
   <dl>
@@ -841,7 +864,9 @@ templates:
       <code>zoomLevels</code>  
     </dt>
     <dd>
-      <div></div>
+      <div class="block">The list of Zoom Levels.
+ <p>
+ Depending on the zoomLevelSnapStrategy, this will be used to compute the actual zoom level of the map.</p></div>
     </dd>
   </dl>
   <dl>
@@ -849,7 +874,7 @@ templates:
       <code>zoomSnapGeodetic</code>  
     </dt>
     <dd>
-      <div></div>
+      <div class="block">If true, snap to geodetic scales.</div>
     </dd>
   </dl>
   <dl>
@@ -857,7 +882,10 @@ templates:
       <code>zoomSnapTolerance</code>  
     </dt>
     <dd>
-      <div></div>
+      <div class="block">The zoom level tolerance.
+ <p>
+ Used in ZoomLevelSnapStrategy.HIGHER_SCALE and ZoomLevelSnapStrategy.LOWER_SCALE to specify the cutoff
+ value.</p></div>
     </dd>
   </dl>
 
@@ -987,7 +1015,7 @@ templates:
 
 </div>
 <div class="section" id="!paging">
-  <h1>!paging<a class="headerlink" href="#!paging" title="Permalink to this headline">��</a></h1>
+  <h1>!paging<a class="headerlink" href="#!paging" title="Permalink to this headline">¶</a></h1>
   <div class="block"><p>Attribute that defines how a map is displayed across many pages.</p><p>This is used by the <a shape="rect" href="processors.html#!paging">paging processor</a>.</p>
  </div>
 
@@ -1059,7 +1087,7 @@ templates:
 
 </div>
 <div class="section" id="!scalebar">
-  <h1>!scalebar<a class="headerlink" href="#!scalebar" title="Permalink to this headline">��</a></h1>
+  <h1>!scalebar<a class="headerlink" href="#!scalebar" title="Permalink to this headline">¶</a></h1>
   <div class="block"><p>The attributes for <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/map/scalebar/CreateScalebarProcessor.html" title="class in org.mapfish.print.processor.map.scalebar"><code>CreateScalebarProcessor</code></a> (see
  <a shape="rect" href="processors.html#!createScalebar">!createScalebar</a> processor).</p>
  </div>
@@ -1297,7 +1325,7 @@ templates:
 
 </div>
 <div class="section" id="!staticLayers">
-  <h1>!staticLayers<a class="headerlink" href="#!staticLayers" title="Permalink to this headline">��</a></h1>
+  <h1>!staticLayers<a class="headerlink" href="#!staticLayers" title="Permalink to this headline">¶</a></h1>
   <div class="block"><p>The attributes for the <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/map/AddStaticLayersProcessor.html" title="class in org.mapfish.print.processor.map"><code>AddStaticLayersProcessor</code></a> (see
  <a shape="rect" href="processors.html#!addBackgroundLayers">!addBackgroundLayers</a> and
  <a shape="rect" href="processors.html#!addOverlayLayers">!addOverlayLayers</a> processor) which adds the layers in this
@@ -1338,7 +1366,7 @@ templates:
 
 </div>
 <div class="section" id="!string">
-  <h1>!string<a class="headerlink" href="#!string" title="Permalink to this headline">��</a></h1>
+  <h1>!string<a class="headerlink" href="#!string" title="Permalink to this headline">¶</a></h1>
   <div class="block"><p>Attribute that reads a string from the request data.</p>
  </div>
 
@@ -1370,7 +1398,7 @@ templates:
 
 </div>
 <div class="section" id="!stringArray">
-  <h1>!stringArray<a class="headerlink" href="#!stringArray" title="Permalink to this headline">��</a></h1>
+  <h1>!stringArray<a class="headerlink" href="#!stringArray" title="Permalink to this headline">¶</a></h1>
   <div class="block"><p>An attribute that can contain an array of strings.</p>
  </div>
 
@@ -1394,7 +1422,7 @@ templates:
 
 </div>
 <div class="section" id="!style">
-  <h1>!style<a class="headerlink" href="#!style" title="Permalink to this headline">��</a></h1>
+  <h1>!style<a class="headerlink" href="#!style" title="Permalink to this headline">¶</a></h1>
   <div class="block">Attribute for GeoJson Styles collection. </div>
 
   <div class="admonition note examples">
@@ -1426,7 +1454,7 @@ templates:
 
 </div>
 <div class="section" id="!table">
-  <h1>!table<a class="headerlink" href="#!table" title="Permalink to this headline">��</a></h1>
+  <h1>!table<a class="headerlink" href="#!table" title="Permalink to this headline">¶</a></h1>
   <div class="block"><p>The attributes for <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/jasper/TableProcessor.html" title="class in org.mapfish.print.processor.jasper"><code>TableProcessor</code></a> (see
  <a shape="rect" href="processors.html#!prepareTable">!prepareTable</a> processor).</p>
  </div>
@@ -1484,8 +1512,8 @@ templates:
     <p>
         <a href="http://www.camptocamp.com/geospatial/" target="_blank">Camptocamp</a> <br>
         <span class="commit">
-          Revision <code><a href="https://github.com/mapfish/mapfish-print/commit/1bd41bf3cfae14ed86782a0241cd32064e754b01
-" target="_blank">1bd41bf3</a></code>.
+          Revision <code><a href="https://github.com/mapfish/mapfish-print/commit/443ae04a9f08f2bb86f50fe86f043328736d3f8a
+" target="_blank">443ae04a</a></code>.
         </span>
 
 
