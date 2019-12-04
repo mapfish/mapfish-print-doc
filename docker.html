@@ -207,17 +207,33 @@ ADD {MyApps} ${CATALINA_HOME}/webapps/ROOT/print-apps/
 </h4>
 
 <p>
-  You can enable multi-instance by adding those to CATALINA_OPTS:
+  In this mode several instances of the print will collaborate together to handle the print jobs.
+  The state is stored in a database. You need to add the following parameters to CATALINA_OPTS:
 </p>
 <ul>
   <li><code>-Ddb.username=...</code>: The PostgresQL username</li>
   <li><code>-Ddb.password=...</code>: The PostgresQL password</li>
   <li><code>-Ddb.host=...</code>: The PostgresQL host name</li>
   <li><code>-Ddb.name=...</code>: The PostgresQL database name</li>
+  <li><code>-Ddb.port=...</code>: The PostgresQL database port (Default value =5432) </li>
 </ul>
 
 <p>
-  The container will then automatically wait on the DB to be up before starting tomcat.
+  Example:
+</p>
+
+<p>
+  <code>
+    docker run  --name mapfish-print-test -p 8080:8080   \
+    -e TOMCAT_LOG_TYPE='json' \
+    -e CATALINA_OPTS="-Ddb.name=mydb -Ddb.host=myserver -Ddb.username=myuser -Ddb.password=mypwd -Ddb.port=5432" \
+    mydockerhub/mapfish-print:latest
+  </code>
+</p>
+
+<p>
+  The necessary tables are created automatically (print_accountings, print_job_results, print_job_statuses).
+  In this mode the container will wait for the database to be reachable before actually starting the tomcat server.
 </p>
 
 <p>The DB polling can be tuned with those two environment variables:</p>
@@ -246,8 +262,8 @@ ADD {MyApps} ${CATALINA_HOME}/webapps/ROOT/print-apps/
     <p>
         <a href="http://www.camptocamp.com/geospatial/" target="_blank">Camptocamp</a> <br>
         <span class="commit">
-          Revision <code><a href="https://github.com/mapfish/mapfish-print/commit/7c10ae62b4e358a73405e7210c8329ecb98f7905
-" target="_blank">7c10ae62</a></code>.
+          Revision <code><a href="https://github.com/mapfish/mapfish-print/commit/1c6d5a1c9fb3fdb2fd2365d932936b15909b4c1f
+" target="_blank">1c6d5a1c</a></code>.
         </span>
 
 
