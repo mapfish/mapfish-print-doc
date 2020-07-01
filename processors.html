@@ -649,7 +649,8 @@ Or if the there are multiple mappings that need to be made :
     <dd>
       <div class="block">All the processors that will executed for each value retrieved from the <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/output/Values.html" title="class in org.mapfish.print.output"><code>Values</code></a> object with the datasource name.  All output values from the processor
  graph will be the datasource values.
- <p></p><p>
+
+ <p>
  Each value retrieved from values with the datasource name will be the input of the processor graph and
  all the output values for that execution will be the values of a single row in the datasource. The
  Jasper template can use any of the values in its detail band.
@@ -1061,13 +1062,15 @@ Or if the there are multiple mappings that need to be made :
 <div class="section" id="!createOverviewMap">
   <h1>!createOverviewMap<a class="headerlink" href="#!createOverviewMap" title="Permalink to this headline">¶</a></h1>
   <div class="block">Processor to create overview maps. Internally <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/map/CreateMapProcessor.html" title="class in org.mapfish.print.processor.map"><code>CreateMapProcessor</code></a> is used.
- <p></p>
+
  Example Configuration:
- <div class="highlight"><pre> attributes:<br>    ...<br>    overviewMap: !overviewMap<br>      width: 300<br>      height: 200<br>      maxDpi: 400<br> processors:<br>    ...<br>    - !createOverviewMap<br>      outputMapper:<br>        layerGraphics: overviewMapLayerGraphics</pre></div><p></p><strong>Features:</strong><p></p>
+ <div class="highlight"><pre> attributes:<br>    ...<br>    overviewMap: !overviewMap<br>      width: 300<br>      height: 200<br>      maxDpi: 400<br> processors:<br>    ...<br>    - !createOverviewMap<br>      outputMapper:<br>        layerGraphics: overviewMapLayerGraphics</pre></div><strong>Features:</strong>
+
  The attribute overviewMap allows to overwrite all properties of the main map, for example to use different
  layers. The overview map can have a different rotation than the main map. For example the main map is
  rotated and the overview map faces north. But the overview map can also be rotated.
- <p></p><p>The style of the bbox rectangle can be changed by setting the <code>style</code> property.</p><p>See also: <a shape="rect" href="attributes.html#!overviewMap">!overviewMap</a> attribute</p>
+
+ <p>The style of the bbox rectangle can be changed by setting the <code>style</code> property.</p><p>See also: <a shape="rect" href="attributes.html#!overviewMap">!overviewMap</a> attribute</p>
  </div>
 
   <div class="admonition note examples">
@@ -1872,7 +1875,7 @@ Or if the there are multiple mappings that need to be made :
     <dd>
       <div class="block">Set strategies for converting the textual representation of each column to some other object (image,
  other text, etc...).
- <p></p>
+
  Note: The type returned by the column converter must match the type in the jasper template.</div>
     </dd>
   </dl>
@@ -1883,7 +1886,7 @@ Or if the there are multiple mappings that need to be made :
     <dd>
       <div class="block">Set strategies for converting the textual representation of each cell to some other object (image,
  other text, etc...).
- <p></p>
+
  This is similar to the converters specified for a particular column. The difference is that these
  converters are applied to every cell of the table (except for the cells of those columns that are
  assigned a specific converter).</div>
@@ -2197,11 +2200,11 @@ Or if the there are multiple mappings that need to be made :
   <div class="block"><p>This processor check urls against a set of url matchers to see if the request should be allowed or
  rejected.</p><p>
  Usage of processor is as follows:
- </p><div class="highlight"><pre> - !restrictUris<br>   matchers:<br>     - !localMatch {}<br>     - !ipMatch<br>       ip: www.camptocamp.org<br>     - !dnsMatch<br>       host: mapfish-geoportal.demo-camptocamp.com<br>       port: 80<br>     - !dnsMatch<br>       host: labs.metacarta.com<br>       port: 80<br>     - !dnsMatch<br>       host: terraservice.net<br>       port: 80<br>     - !dnsMatch<br>       host: tile.openstreetmap.org<br>       port: 80<br>     - !dnsMatch<br>       host: www.geocat.ch<br>       port: 80</pre></div><p></p><p>
+ </p><div class="highlight"><pre> - !restrictUris<br>   matchers:<br>     - !localMatch {}<br>     - !ipMatch<br>       ip: www.camptocamp.org<br>     - !dnsMatch<br>       host: mapfish-geoportal.demo-camptocamp.com<br>       port: 80<br>     - !dnsMatch<br>       host: labs.metacarta.com<br>       port: 80<br>     - !dnsMatch<br>       host: terraservice.net<br>       port: 80<br>     - !dnsMatch<br>       host: tile.openstreetmap.org<br>       port: 80<br>     - !dnsMatch<br>       host: www.geocat.ch<br>       port: 80</pre></div><p>
  By default a matcher allows the URL, but it can be setup to reject the URL (by setting reject to true). The
  first matcher that matches will be the one picking the final outcome. If no matcher matches, the URI is
  rejected. So, for example, you can allow every URLs apart from the internal URLs like that:
- </p><div class="highlight"><pre> - !restrictUris<br>   matchers:<br>     - !ipMatch<br>       ip : 192.178.0.0<br>       mask : 255.255.0.0<br>       reject: true<br>     - !acceptAll</pre></div><p></p><p>
+ </p><div class="highlight"><pre> - !restrictUris<br>   matchers:<br>     - !ipMatch<br>       ip : 192.178.0.0<br>       mask : 255.255.0.0<br>       reject: true<br>     - !acceptAll</pre></div><p>
  If the Print service is in your DMZ and needs to allow access to any WMS server, it is strongly recommended
  to have a configuration like the previous one in order to avoid having the Print service being used as a
  proxy to access your internal servers.
@@ -2695,14 +2698,17 @@ Or if the there are multiple mappings that need to be made :
     <dd>
       <div class="block">The pdf metadata property -> attribute name map.  The keys must be one of the values in <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/config/PDFConfig.html" title="class in org.mapfish.print.config"><code>PDFConfig</code></a> and the values must be the name of the attribute to obtain the the
  data from.  Example Configuration:
- <p></p><div class="highlight"><pre> processors:<br>   - !updatePdfConfig<br>     updates:<br>       title: "titleAttribute"<br>       subject: "subjectAttribute"</pre></div><p></p>
+
+ <div class="highlight"><pre> processors:<br>   - !updatePdfConfig<br>     updates:<br>       title: "titleAttribute"<br>       subject: "subjectAttribute"</pre></div>
+
  The type of the attribute must be of the correct type, for example title mus be a string, keywords must
  be an array of strings, compress must be a boolean.
- <p></p>
+
  If the value is within the attribute output object then you can use dot separators for each level. For
  example suppose there is a custom attribute: myconfig, if and it has a property title then the
  configuration would be:
- <div class="highlight"><pre> processors:<br>   - updatePdfConfig<br>     updates: {title: :myconfig.title"}</pre></div><p></p>
+ <div class="highlight"><pre> processors:<br>   - updatePdfConfig<br>     updates: {title: :myconfig.title"}</pre></div>
+
  For more power a "format" can be defined.  The format is a printf style format string which will be
  called with a single value that is identified by the value key/path.  In this case the short hand key:
  value can't be used instead it is as follows:
@@ -2733,7 +2739,7 @@ Or if the there are multiple mappings that need to be made :
   <h1>!useHttpForHttps<a class="headerlink" href="#!useHttpForHttps" title="Permalink to this headline">¶</a></h1>
   <div class="block">This processor maps https requests to http requests for certain hosts. The port number can also be mapped
  since that is usually required.
- <p>Example: </p><div class="highlight"><pre> - !useHttpForHttps<br>   hosts: [localhost, www.camptocamp.com]<br>   portMapping:<br>     443 : 80<br>     8443 : 8443</pre></div><p>Can be applied conditionally using matchers, like in <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/http/RestrictUrisProcessor.html" title="class in org.mapfish.print.processor.http"><code>RestrictUrisProcessor</code></a>
+ <p>Example: </p><div class="highlight"><pre> - !useHttpForHttps<br>   hosts: [localhost, www.camptocamp.com]<br>   portMapping:<br>     443 : 80<br>     8443 : 8080</pre></div><p>Can be applied conditionally using matchers, like in <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/http/RestrictUrisProcessor.html" title="class in org.mapfish.print.processor.http"><code>RestrictUrisProcessor</code></a>
  (<a shape="rect" href="processors.html#!restrictUris">!restrictUris</a>
  ).</p> </div>
 
@@ -2842,8 +2848,7 @@ Or if the there are multiple mappings that need to be made :
     <p>
         <a href="http://www.camptocamp.com/geospatial/" target="_blank">Camptocamp</a> <br>
         <span class="commit">
-          Revision <code><a href="https://github.com/mapfish/mapfish-print/commit/1c6d5a1c9fb3fdb2fd2365d932936b15909b4c1f
-" target="_blank">1c6d5a1c</a></code>.
+          Revision <code><a href="https://github.com/mapfish/mapfish-print/commit/dab79650df1ac3707c0b2d61422488c2bebb1a81" target="_blank">dab79650</a></code>.
         </span>
 
 
@@ -2862,9 +2867,9 @@ Or if the there are multiple mappings that need to be made :
 
 
 
-      <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
-      <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
-      <script type="text/javascript" src="js/underscore.js"></script>
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.3.0/jquery-migrate.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.10.2/underscore-min.js"></script>
       <script type="text/javascript" src="js/theme.js"></script>
       <script type="text/javascript">
         jQuery(function () {

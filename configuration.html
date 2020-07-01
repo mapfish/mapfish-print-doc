@@ -222,7 +222,7 @@ templates:
 <div class="section" id="!certificateStore">
   <h1>!certificateStore<a class="headerlink" href="#!certificateStore" title="Permalink to this headline">¶</a></h1>
   <div class="block">A configuration object for configuring a custom certificate/trust store.
- <p></p>
+
  It is a uri to a java jks keystore file along with the password for unlocking the store.</div>
 
 
@@ -257,8 +257,7 @@ templates:
 </div>
 <div class="section" id="!configuration">
   <h1>!configuration<a class="headerlink" href="#!configuration" title="Permalink to this headline">¶</a></h1>
-  <div class="block">The Main Configuration Bean.
- <p></p></div>
+  <div class="block">The Main Configuration Bean.</div>
 
 
     <h3>Configuration</h3>
@@ -270,7 +269,7 @@ templates:
       <div class="block">The roles required to access this configuration/app.  If empty or not set then it is a
  <em>public</em> app.  If there are many roles then a user must have one of the roles in order to
  access the configuration/app.
- <p></p>
+
  The security (how authentication/authorization is done) is configured in the
  /WEB-INF/classes/mapfish-spring-security.xml
  <p>
@@ -410,7 +409,7 @@ templates:
     <dd>
       <div class="block">Configuration for proxying http requests.  Each proxy can be configured with authentication and with
  the uris that they apply to.
- <p></p>
+
  See <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/http/HttpProxy.html" title="class in org.mapfish.print.http"><code>HttpProxy</code></a> for details on how to configure them.</div>
     </dd>
   </dl>
@@ -470,7 +469,8 @@ templates:
   <h1>!credential<a class="headerlink" href="#!credential" title="Permalink to this headline">¶</a></h1>
   <div class="block">Represents a set of credentials to use for an http request.  These can be configured in the Configuration
  yaml file.
- <p></p><p><em>Note: proxies are also HttpCredentials and when searching for credentials, the proxies will also be
+
+ <p><em>Note: proxies are also HttpCredentials and when searching for credentials, the proxies will also be
  searched for credentials.</em></p></div>
 
 
@@ -513,7 +513,8 @@ templates:
   <div class="block">Allows to check that a given URL matches a DNS address (textual format). The actual comparison is performed
  on numerical IP addresses. The configured DNS host address is transformed into numerical IP addresses
  during application startup. The urls to be compared are transformed during the print processing.
- <p>Example 1: Accept any www.camptocamp.com url</p><div class="highlight"><pre>     - !dnsMatch<br>       host : www.camptocamp.com</pre></div><p>Example 2: Accept any www.camptocamp.com url (port == -1 accepts any port)</p><div class="highlight"><pre>     - !dnsMatch<br>       host : www.camptocamp.com<br>       port : -1</pre></div><p>Example 3: Accept any www.camptocamp.com url on port 80 only</p><div class="highlight"><pre>     - !dnsMatch<br>       host : www.camptocamp.com<br>       port : 80</pre></div><p></p>
+ <p>Example 1: Accept any www.camptocamp.com url</p><div class="highlight"><pre>     - !dnsMatch<br>       host : www.camptocamp.com</pre></div><p>Example 2: Accept any www.camptocamp.com url (port == -1 accepts any port)</p><div class="highlight"><pre>     - !dnsMatch<br>       host : www.camptocamp.com<br>       port : -1</pre></div><p>Example 3: Accept any www.camptocamp.com url on port 80 only</p><div class="highlight"><pre>     - !dnsMatch<br>       host : www.camptocamp.com<br>       port : 80</pre></div>
+
  Example 4: Accept www.camptocamp.com urls with paths that start with /print/.
  <p>
  If the regular expression give does not start with / then it will be added because all paths start with /
@@ -572,7 +573,8 @@ templates:
   <h1>!hostnameMatch<a class="headerlink" href="#!hostnameMatch" title="Permalink to this headline">¶</a></h1>
   <div class="block">Allows to check that a given URL matches a hostname literally (textual match).
 
- <p>Example 1: Accept any www.camptocamp.com url</p><div class="highlight"><pre>     - !hostnameMatch<br>       host : www.camptocamp.com</pre></div><p>Example 2: Accept any www.camptocamp.com url (port == -1 accepts any port)</p><div class="highlight"><pre>     - !hostnameMatch<br>       host : www.camptocamp.com<br>       port : -1</pre></div><p>Example 3: Accept any www.camptocamp.com url on port 80 only</p><div class="highlight"><pre>     - !hostnameMatch<br>       host : www.camptocamp.com<br>       port : 80</pre></div><p></p>
+ <p>Example 1: Accept any www.camptocamp.com url</p><div class="highlight"><pre>     - !hostnameMatch<br>       host : www.camptocamp.com</pre></div><p>Example 2: Accept any www.camptocamp.com url (port == -1 accepts any port)</p><div class="highlight"><pre>     - !hostnameMatch<br>       host : www.camptocamp.com<br>       port : -1</pre></div><p>Example 3: Accept any www.camptocamp.com url on port 80 only</p><div class="highlight"><pre>     - !hostnameMatch<br>       host : www.camptocamp.com<br>       port : 80</pre></div>
+
  Example 4: Accept www.camptocamp.com urls with paths that start with /print/.
  <p>
  If the regular expression give does not start with / then it will be added because all paths start with /
@@ -1158,7 +1160,7 @@ templates:
     <dd>
       <div class="block">The roles required to access this template.  If empty or not set then it is a <em>public</em> template.
  If there are many roles then a user must have one of the roles in order to access the template.
- <p></p>
+
  The security (how authentication/authorization is done) is configured in the
  /WEB-INF/classes/mapfish-spring-security.xml
  <p>
@@ -1314,7 +1316,7 @@ templates:
     <dd>
       <div class="block">The replacement format.  It is a printf style format.  The documentation is in the Formatter class
  (just google/bing java.util.Formatter).
- <p></p>
+
  Example: "Report for %s"</div>
     </dd>
   </dl>
@@ -1325,7 +1327,7 @@ templates:
     <dd>
       <div class="block">The key to use to look up the value in the values object.  It can be a path that can reach into
  nested objects.
- <p></p>
+
  Examples 1 a simple lookup key: "key" Example 2 a path.  First part (before .) is the lookup key,
  the second part is the field name to load: "key.fieldName"</div>
     </dd>
@@ -1408,8 +1410,7 @@ templates:
     <p>
         <a href="http://www.camptocamp.com/geospatial/" target="_blank">Camptocamp</a> <br>
         <span class="commit">
-          Revision <code><a href="https://github.com/mapfish/mapfish-print/commit/1c6d5a1c9fb3fdb2fd2365d932936b15909b4c1f
-" target="_blank">1c6d5a1c</a></code>.
+          Revision <code><a href="https://github.com/mapfish/mapfish-print/commit/dab79650df1ac3707c0b2d61422488c2bebb1a81" target="_blank">dab79650</a></code>.
         </span>
 
 
@@ -1428,9 +1429,9 @@ templates:
 
 
 
-      <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
-      <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
-      <script type="text/javascript" src="js/underscore.js"></script>
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.3.0/jquery-migrate.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.10.2/underscore-min.js"></script>
       <script type="text/javascript" src="js/theme.js"></script>
       <script type="text/javascript">
         jQuery(function () {

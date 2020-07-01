@@ -139,7 +139,7 @@
  </p><h2 id="stylev1">Mapfish JSON Style Version 1 <a shape="rect" href="#stylev1" class="headerlink">¶</a></h2><p>
  Version 1 is compatible with mapfish print <= v2 and is based on the OpenLayers v2 styling. The layout
  is as follows:
- </p><div class="highlight"><pre> {<br>   "version" : "1",<br>   "styleProperty":"_gx_style",<br>   "1": {<br>     "fillColor":"#FF0000",<br>     "fillOpacity":0,<br>     "rotation" : "30",<br><br>     "externalGraphic" : "mark.png"<br>     "graphicName": "circle",<br>     "graphicOpacity": 0.4,<br>     "pointRadius": 5,<br><br>     "strokeColor":"#FFA829",<br>     "strokeOpacity":1,<br>     "strokeWidth":5,<br>     "strokeLinecap":"round",<br>     "strokeDashstyle":"dot",<br><br>     "fontColor":"#000000",<br>     "fontFamily": "sans-serif",<br>     "fontSize": "12px",<br>     "fontStyle": "normal",<br>     "fontWeight": "bold",<br>     "haloColor": "#123456",<br>     "haloOpacity": "0.7",<br>     "haloRadius": "3.0",<br>     "label": "${name}",<br>     "labelAlign": "cm",<br>     "labelRotation": "45",<br>     "labelXOffset": "-25.0",<br>     "labelYOffset": "-35.0"<br>    }<br> }</pre></div><p></p><h2 id="stylev2">Mapfish JSON Style Version 2 <a shape="rect" href="#stylev2" class="headerlink">¶</a></h2><p>
+ </p><div class="highlight"><pre> {<br>   "version" : "1",<br>   "styleProperty":"_gx_style",<br>   "1": {<br>     "fillColor":"#FF0000",<br>     "fillOpacity":0,<br>     "rotation" : "30",<br><br>     "externalGraphic" : "mark.png"<br>     "graphicName": "circle",<br>     "graphicOpacity": 0.4,<br>     "pointRadius": 5,<br><br>     "strokeColor":"#FFA829",<br>     "strokeOpacity":1,<br>     "strokeWidth":5,<br>     "strokeLinecap":"round",<br>     "strokeDashstyle":"dot",<br><br>     "fontColor":"#000000",<br>     "fontFamily": "sans-serif",<br>     "fontSize": "12px",<br>     "fontStyle": "normal",<br>     "fontWeight": "bold",<br>     "haloColor": "#123456",<br>     "haloOpacity": "0.7",<br>     "haloRadius": "3.0",<br>     "label": "${name}",<br>     "labelAlign": "cm",<br>     "labelRotation": "45",<br>     "labelXOffset": "-25.0",<br>     "labelYOffset": "-35.0"<br>    }<br> }</pre></div><h2 id="stylev2">Mapfish JSON Style Version 2 <a shape="rect" href="#stylev2" class="headerlink">¶</a></h2><p>
  Version 2 uses the same property names as version 1 but has a different structure. The layout is as
  follows:
  </p><div class="highlight"><pre> {<br>   "version" : "2",<br>   // shared values can be declared here (at top level)<br>   // and used in form ${constName} later in json<br>   "val1" : "#FFA829",<br>   // default values for properties can be defined here<br>   " strokeDashstyle" : "dot"<br>   "[population > 300]" : {<br>     // default values for current rule can be defined here<br>     // they will override default values defined at<br>     // higher level<br>     "rotation" : "30",<br><br>     //min and max scale denominator are optional<br>     "maxScale" : 1000000,<br>     "minScale" : 100000,<br>     "symbolizers" : [{<br>       // values defined in symbolizer will override defaults<br>       "type" : "point",<br>       "fillColor":"#FF0000",<br>       "fillOpacity":0,<br>       "rotation" : "30",<br>       "externalGraphic" : "mark.png",<br><br>       "graphicName": "circle",<br>       "graphicOpacity": 0.4,<br>       "pointRadius": 5,<br><br>       "strokeColor":"${val1}",<br>       "strokeOpacity":1,<br>       "strokeWidth":5,<br>       "strokeLinecap":"round",<br>       "strokeDashstyle":"dot"<br>     }, {<br>       "type" : "line",<br>       "strokeColor":"${val1}",<br>       "strokeOpacity":1,<br>       "strokeWidth":5,<br>       "strokeLinecap":"round",<br>       "strokeDashstyle":"dot"<br>     }, {<br>       "type" : "polygon",<br>       "fillColor":"#FF0000",<br>       "fillOpacity":0,<br><br>       "strokeColor":"${val1}",<br>       "strokeOpacity":1,<br>       "strokeWidth":5,<br>       "strokeLinecap":"round",<br>       "strokeDashstyle":"dot"<br>     }, {<br>       "type" : "text",<br>       "fontColor":"#000000",<br>       "fontFamily": "sans-serif",<br>       "fontSize": "12px",<br>       "fontStyle": "normal",<br>       "fontWeight": "bold",<br>       "haloColor": "#123456",<br>       "haloOpacity": "0.7",<br>       "haloRadius": "3.0",<br>       "label": "[name]",<br>       "fillColor":"#FF0000",<br>       "fillOpacity":0,<br>       "labelAlign": "cm",<br>       "labelRotation": "45",<br>       "labelXOffset": "-25.0",<br>       "labelYOffset": "-35.0"<br>     }<br>   ]}<br> }</pre></div><p>
@@ -189,7 +189,7 @@
  and it has the attributes for that type of symbolizer.  All values have defaults so it is possible to
  define a symbolizer as with only the type property. The only exception is that the "text" symbolizer needs
  a label property.
- </p></li></ul></li></ul><p></p><h2 id="config">Configuration Elements <a shape="rect" href="#config" class="headerlink">¶</a></h2>
+ </p></li></ul></li></ul><h2 id="config">Configuration Elements <a shape="rect" href="#config" class="headerlink">¶</a></h2>
  The items in the list below are the properties that can be set on the different symbolizers. In brackets
  list the symbolizers the values can apply to.
  <p>
@@ -242,7 +242,7 @@
  labelAnchorPointX/Y or labelAlign will be respected, since they are both ways of defining the anchor
  Point</li><li><strong>labelPerpendicularOffset</strong>(ECQL) - (Line Placement) If this property is defined
  it will be assumed that the geometry is a line and this property defines how far from the center of the
- line the label should be drawn.</li></ul><p></p><h2 id="labels">Labelling: <a shape="rect" href="#labels" class="headerlink">¶</a></h2><p>
+ line the label should be drawn.</li></ul><h2 id="labels">Labelling: <a shape="rect" href="#labels" class="headerlink">¶</a></h2><p>
  Labelling in this style format is done by defining a text symbolizer ("type":"text").  All text symbolizers
  consist of:
  </p><ul><li><a shape="rect" href="#labelproperties">Label Property</a></li><li><a shape="rect" href="#haloproperties">Halo Properties</a></li><li><a shape="rect" href="#otherproperties">Font/weight/style/color/opacity</a></li><li><a shape="rect" href="#placementproperties">Placement Properties</a></li><li><a shape="rect" href="#vendoroptions">Vendor Options</a></li></ul><h3 id="labelproperties">Label Property <a shape="rect" href="#labelproperties" class="headerlink">¶</a></h3><p>
@@ -298,7 +298,7 @@
  </li><li><strong>spaceAround</strong> (50): The minimum distance between two labels, in pixels.</li></ul><p>Example</p><div class="highlight"><pre> {<br>   "version" : "2",<br>   "*" : {<br>     "symbolizers" : [{<br>       "type" : "text",<br>       "fontColor":"#000000",<br>       "label": "[name]",<br>       "goodnessOfFit": 0.1,<br>       "spaceAround": 10<br>     }<br>   ]}<br> }</pre></div><p>For more information, please refer to the
  <a shape="rect" href="http://docs.geotools.org/latest/userguide/library/render/style.html#textsymbolizer">GeoTools
  documentation</a>.
- </p><p></p><h2>ECQL references:</h2><ul><li><a shape="rect" href="http://docs.geoserver.org/stable/en/user/filter/ecql_reference.html#ecql-expr">
+ </p><h2>ECQL references:</h2><ul><li><a shape="rect" href="http://docs.geoserver.org/stable/en/user/filter/ecql_reference.html#ecql-expr">
  http://docs.geoserver.org/stable/en/user/filter/ecql_reference.html#ecql-expr</a></li><li><a shape="rect" href="http://udig.refractions.net/files/docs/latest/user/Constraint%20Query%20Language.html">
  http://udig.refractions.net/files/docs/latest/user/Constraint%20Query%20Language.html</a></li><li><a shape="rect" href="http://docs.geoserver.org/stable/en/user/filter/function_reference.html#filter-function-reference">
  http://docs.geoserver.org/stable/en/user/filter/function_reference.html#filter-function-reference</a></li><li><a shape="rect" href="http://docs.geotools.org/stable/userguide/library/cql/ecql.html">
@@ -332,8 +332,7 @@
     <p>
         <a href="http://www.camptocamp.com/geospatial/" target="_blank">Camptocamp</a> <br>
         <span class="commit">
-          Revision <code><a href="https://github.com/mapfish/mapfish-print/commit/1c6d5a1c9fb3fdb2fd2365d932936b15909b4c1f
-" target="_blank">1c6d5a1c</a></code>.
+          Revision <code><a href="https://github.com/mapfish/mapfish-print/commit/dab79650df1ac3707c0b2d61422488c2bebb1a81" target="_blank">dab79650</a></code>.
         </span>
 
 
@@ -352,9 +351,9 @@
 
 
 
-      <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
-      <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
-      <script type="text/javascript" src="js/underscore.js"></script>
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.3.0/jquery-migrate.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.10.2/underscore-min.js"></script>
       <script type="text/javascript" src="js/theme.js"></script>
       <script type="text/javascript">
         jQuery(function () {
