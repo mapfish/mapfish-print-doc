@@ -1,148 +1,216 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="utf-8">
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>MapFish Print 3 Documentation - Map Layers</title>
+    <title>MapFish Print 3 Documentation - Map Layers</title>
 
     <link rel="stylesheet" href="css/sphinx_rtd_theme.css" type="text/css" />
-    <link rel="stylesheet" href="css/readthedocs-doc-embed.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="css/readthedocs-doc-embed.css"
+      type="text/css"
+    />
     <link rel="stylesheet" href="css/custom.css" type="text/css" />
+  </head>
 
-</head>
-
-<body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-
-
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
-
+  <body class="wy-body-for-nav" role="document">
+    <div class="wy-grid-for-nav">
+      <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+        <div class="wy-side-scroll">
+          <div class="wy-side-nav-search">
             <a href="index.html" class="icon icon-home"> MapFish Print 3</a>
-        </div>
+          </div>
 
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-
-
-
-                <ul class="current">
-<li class="toctree-l1 ">
-  <a class="reference internal " href="index.html">Introduction</a>
-</li>
-<li class="toctree-l1 ">
-  <a class="reference internal " href="jasperreports.html">JasperReports</a>
-</li>
-<li class="toctree-l1 ">
-  <a class="reference internal " href="api.html">Web API</a>
-</li>
-<li class="toctree-l1 ">
-  <a class="reference internal " href="attributes.html">Attributes</a>
-  
-</li>
-<li class="toctree-l1 ">
-  <a class="reference internal " href="configuration.html">Configuration</a>
-  
-</li>
-<li class="toctree-l1 current">
-  <a class="reference internal current" href="layers.html">Map Layers</a>
-  <ul>
-  <li class="toctree-l2"><a class="reference internal" href="#Geo Json Layer">Geo Json Layer</a></li>
-  <li class="toctree-l2"><a class="reference internal" href="#Geotiff Layer">Geotiff Layer</a></li>
-  <li class="toctree-l2"><a class="reference internal" href="#Gml Layer">Gml Layer</a></li>
-  <li class="toctree-l2"><a class="reference internal" href="#Grid Layer">Grid Layer</a></li>
-  <li class="toctree-l2"><a class="reference internal" href="#Image Layer">Image Layer</a></li>
-  <li class="toctree-l2"><a class="reference internal" href="#Osm Layer">Osm Layer</a></li>
-  <li class="toctree-l2"><a class="reference internal" href="#Tiled Wms Layer">Tiled Wms Layer</a></li>
-  <li class="toctree-l2"><a class="reference internal" href="#WMTS Layer">WMTS Layer</a></li>
-  <li class="toctree-l2"><a class="reference internal" href="#Wms Layer">Wms Layer</a></li>
+          <div
+            class="wy-menu wy-menu-vertical"
+            data-spy="affix"
+            role="navigation"
+            aria-label="main navigation"
+          >
+            <ul class="current">
+              <li class="toctree-l1 ">
+                <a
+                  class="reference internal "
+                  href="index.html"
+                  >Introduction</a
+                >
+              </li>
+              <li class="toctree-l1 ">
+                <a
+                  class="reference internal "
+                  href="jasperreports.html"
+                  >JasperReports</a
+                >
+              </li>
+              <li class="toctree-l1 ">
+                <a class="reference internal " href="api.html"
+                  >Web API</a
+                >
+              </li>
+              <li class="toctree-l1 ">
+                <a
+                  class="reference internal "
+                  href="attributes.html"
+                  >Attributes</a
+                >
+                
+              </li>
+              <li class="toctree-l1 ">
+                <a
+                  class="reference internal "
+                  href="configuration.html"
+                  >Configuration</a
+                >
+                
+              </li>
+              <li class="toctree-l1 current">
+                <a
+                  class="reference internal current"
+                  href="layers.html"
+                  >Map Layers</a
+                >
+                <ul>
+  <li class="toctree-l2">
+    <a class="reference internal" href="#Geo Json Layer">Geo Json Layer</a>
+  </li>
+  <li class="toctree-l2">
+    <a class="reference internal" href="#Geotiff Layer">Geotiff Layer</a>
+  </li>
+  <li class="toctree-l2">
+    <a class="reference internal" href="#Gml Layer">Gml Layer</a>
+  </li>
+  <li class="toctree-l2">
+    <a class="reference internal" href="#Grid Layer">Grid Layer</a>
+  </li>
+  <li class="toctree-l2">
+    <a class="reference internal" href="#Image Layer">Image Layer</a>
+  </li>
+  <li class="toctree-l2">
+    <a class="reference internal" href="#Osm Layer">Osm Layer</a>
+  </li>
+  <li class="toctree-l2">
+    <a class="reference internal" href="#Tiled Wms Layer">Tiled Wms Layer</a>
+  </li>
+  <li class="toctree-l2">
+    <a class="reference internal" href="#WMTS Layer">WMTS Layer</a>
+  </li>
+  <li class="toctree-l2">
+    <a class="reference internal" href="#Wms Layer">Wms Layer</a>
+  </li>
 </ul>
 
-</li>
-<li class="toctree-l1 ">
-  <a class="reference internal " href="processors.html">Processors</a>
-  
-</li>
-<li class="toctree-l1 ">
-  <a class="reference internal " href="fileloaders.html">File-Loaders</a>
-  
-</li>
-<li class="toctree-l1 ">
-  <a class="reference internal " href="outputformats.html">Output Formats</a>
-  
-</li>
-<li class="toctree-l1 ">
-  <a class="reference internal " href="styles.html">Styles</a>
-  
-</li>
-<li class="toctree-l1 ">
-  <a class="reference internal " href="tableimages.html">Images in tables</a>
-</li>
-<li class="toctree-l1 ">
-  <a class="reference internal " href="download.html">Download</a>
-</li>
-<li class="toctree-l1 ">
-  <a class="reference internal " href="docker.html">Docker</a>
-</li>
-</ul>
-
-
-
+              </li>
+              <li class="toctree-l1 ">
+                <a
+                  class="reference internal "
+                  href="processors.html"
+                  >Processors</a
+                >
+                
+              </li>
+              <li class="toctree-l1 ">
+                <a
+                  class="reference internal "
+                  href="fileloaders.html"
+                  >File-Loaders</a
+                >
+                
+              </li>
+              <li class="toctree-l1 ">
+                <a
+                  class="reference internal "
+                  href="outputformats.html"
+                  >Output Formats</a
+                >
+                
+              </li>
+              <li class="toctree-l1 ">
+                <a
+                  class="reference internal "
+                  href="styles.html"
+                  >Styles</a
+                >
+                
+              </li>
+              <li class="toctree-l1 ">
+                <a
+                  class="reference internal "
+                  href="tableimages.html"
+                  >Images in tables</a
+                >
+              </li>
+              <li class="toctree-l1 ">
+                <a
+                  class="reference internal "
+                  href="download.html"
+                  >Download</a
+                >
+              </li>
+              <li class="toctree-l1 ">
+                <a
+                  class="reference internal "
+                  href="docker.html"
+                  >Docker</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">MapFish Print 3</a>
       </nav>
 
+      <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+        <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">MapFish Print 3</a>
+        </nav>
 
+        <div class="wy-nav-content">
+          <div class="rst-content">
+            <div role="navigation" aria-label="breadcrumbs navigation">
+              <ul class="wy-breadcrumbs">
+                <li><a href="index.html">Docs</a> &raquo;</li>
 
-      <div class="wy-nav-content">
-        <div class="rst-content">
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-
-    <li>Map Layers</li>
-      <li class="wy-breadcrumbs-aside">
-
-
-            <a href="https://github.com/mapfish/mapfish-print" class="fa fa-github"> mapfish/mapfish-print</a>
-
-
-      </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             <h1>Map Layers</h1>
-             <div class="section">
-<p>The map layers are the geospatial data types supported by Mapfish Print. Map layers are typically defined in the request JSON as part of
-the map attribute. Since map layers are essentially attribute data specific to the map attribute, they follow the same pattern as all
-other attributes in that they have attribute values.</p>
+                <li>Map Layers</li>
+                <li class="wy-breadcrumbs-aside">
+                  <a
+                    href="https://github.com/mapfish/mapfish-print"
+                    class="fa fa-github"
+                  >
+                    mapfish/mapfish-print</a
+                  >
+                </li>
+              </ul>
+              <hr />
+            </div>
+            <div
+              role="main"
+              class="document"
+              itemscope="itemscope"
+              itemtype="http://schema.org/Article"
+            >
+              <div itemprop="articleBody">
+                <h1>Map Layers</h1>
+                <div class="section"><p>
+  The map layers are the geospatial data types supported by Mapfish Print. Map
+  layers are typically defined in the request JSON as part of the map attribute.
+  Since map layers are essentially attribute data specific to the map attribute,
+  they follow the same pattern as all other attributes in that they have
+  attribute values.
+</p>
 <p>
-    The documentation below describes each map layer listing its required and optional attributes. Here is an example of a map
-    attribute with map layers defined.
+  The documentation below describes each map layer listing its required and
+  optional attributes. Here is an example of a map attribute with map layers
+  defined.
 </p>
 <p>
   <strong>Example <code>request.json</code></strong>
 </p>
-  <div class="highlight-json"><div class="highlight"><pre>
+<div class="highlight-json">
+  <div class="highlight">
+    <pre>
 {
   "attributes": {
     "map": {
@@ -167,738 +235,588 @@ other attributes in that they have attribute values.</p>
     }
   },
   "layout": "A4 landscape"
-}</pre></div></div>
-
+}</pre
+    >
+  </div>
+</div>
 </div>
 
 <div class="section" id="Geo Json Layer">
-  <h1>Geo Json Layer<a class="headerlink" href="#Geo Json Layer" title="Permalink to this headline">¶</a></h1>
+  <h1>
+    Geo Json Layer<a
+      class="headerlink"
+      href="#Geo Json Layer"
+      title="Permalink to this headline"
+      >¶</a
+    >
+  </h1>
   <div class="block"><p>Renders GeoJSON layers.</p><p>Type: <code>geojson</code></p>
- </div>
-
+ </div> 
   <div class="admonition note examples">
     <p class="first admonition-title">Example</p>
     <p class="last">
-        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/json_styling" target="_blank" class="fa fa-book">&nbsp;json_styling</a>&nbsp;
-        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/datasource_multiple_maps" target="_blank" class="fa fa-book">&nbsp;datasource_multiple_maps</a>&nbsp;
-        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/printwms_tyger_ny_EPSG_3857" target="_blank" class="fa fa-book">&nbsp;printwms_tyger_ny_EPSG_3857</a>&nbsp;
+      <a
+        href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/json_styling"
+        target="_blank"
+        class="fa fa-book"
+        >&nbsp;json_styling</a
+      >&nbsp;       <a
+        href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/datasource_multiple_maps"
+        target="_blank"
+        class="fa fa-book"
+        >&nbsp;datasource_multiple_maps</a
+      >&nbsp;       <a
+        href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/printwms_tyger_ny_EPSG_3857"
+        target="_blank"
+        class="fa fa-book"
+        >&nbsp;printwms_tyger_ny_EPSG_3857</a
+      >&nbsp; 
     </p>
   </div>
+   
+  <h3>Configuration</h3>
+   
+  <dl>
+    <dt><code>parser</code> </dt>
+    <dd><div></div></dd>
+  </dl>
+   
+  <h3>Inputs</h3>
+   
+  <dl>
+    <dt><code>failOnError</code> </dt>
+    <dd><div class="block">Fail if a tile return an error.</div></dd>
+  </dl>
+  
+  <dl>
+    <dt><code>geoJson</code> </dt>
+    <dd><div class="block">A geojson formatted string or url to the geoJson or the raw GeoJSON data.
 
-    <h3>Configuration</h3>
-  <dl>
-    <dt>
-      <code>parser</code>  
-    </dt>
-    <dd>
-      <div></div>
-    </dd>
+ The url can be a file url, however if it is it must be relative to the configuration directory.</div></dd>
   </dl>
+  
+  <dl>
+    <dt><code>name</code> </dt>
+    <dd><div class="block">The name of the layer.</div></dd>
+  </dl>
+  
+  <dl>
+    <dt><code>opacity</code> </dt>
+    <dd><div class="block">The opacity of the image.</div></dd>
+  </dl>
+  
+  <dl>
+    <dt><code>renderAsSvg</code> </dt>
+    <dd><div class="block">Indicates if the layer is rendered as SVG.
 
-    <h3>Inputs</h3>
-  <dl>
-    <dt>
-      <code>failOnError</code>  
-    </dt>
-    <dd>
-      <div class="block">Fail if a tile return an error.</div>
-    </dd>
+ (will default to <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/config/Configuration.html#defaultToSvg"><code>Configuration.defaultToSvg</code></a>).</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>geoJson</code>  
-    </dt>
-    <dd>
-      <div class="block">A geojson formatted string or url to the geoJson or the raw GeoJSON data.
-
- The url can be a file url, however if it is it must be relative to the configuration directory.</div>
-    </dd>
-  </dl>
-  <dl>
-    <dt>
-      <code>name</code>  
-    </dt>
-    <dd>
-      <div class="block">The name of the layer.</div>
-    </dd>
-  </dl>
-  <dl>
-    <dt>
-      <code>opacity</code>  
-    </dt>
-    <dd>
-      <div class="block">The opacity of the image.</div>
-    </dd>
-  </dl>
-  <dl>
-    <dt>
-      <code>renderAsSvg</code>  
-    </dt>
-    <dd>
-      <div class="block">Indicates if the layer is rendered as SVG.
-
- (will default to <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/config/Configuration.html#defaultToSvg"><code>Configuration.defaultToSvg</code></a>).</div>
-    </dd>
-  </dl>
-  <dl>
-    <dt>
-      <code>style</code>  
-    </dt>
-    <dd>
-      <div class="block">The style name of a style to apply to the features during rendering.  The style name must map to a
+    <dt><code>style</code> </dt>
+    <dd><div class="block">The style name of a style to apply to the features during rendering.  The style name must map to a
  style in the template or the configuration objects.
 
- If no style is defined then the default style for the geometry type will be used.</div>
-    </dd>
+ If no style is defined then the default style for the geometry type will be used.</div></dd>
   </dl>
-
-</div>
+    </div>
 <div class="section" id="Geotiff Layer">
-  <h1>Geotiff Layer<a class="headerlink" href="#Geotiff Layer" title="Permalink to this headline">¶</a></h1>
-  <div class="block"><p>Renders a GeoTIFF image as layer.</p><p>Type: <code>geotiff</code></p></div>
-
-
-
-    <h3>Inputs</h3>
+  <h1>
+    Geotiff Layer<a
+      class="headerlink"
+      href="#Geotiff Layer"
+      title="Permalink to this headline"
+      >¶</a
+    >
+  </h1>
+  <div class="block"><p>Renders a GeoTIFF image as layer.</p><p>Type: <code>geotiff</code></p></div>    
+  <h3>Inputs</h3>
+   
   <dl>
-    <dt>
-      <code>failOnError</code>  
-    </dt>
-    <dd>
-      <div class="block">Fail if a tile return an error.</div>
-    </dd>
+    <dt><code>failOnError</code> </dt>
+    <dd><div class="block">Fail if a tile return an error.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>name</code>  
-    </dt>
-    <dd>
-      <div class="block">The name of the layer.</div>
-    </dd>
+    <dt><code>name</code> </dt>
+    <dd><div class="block">The name of the layer.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>opacity</code>  
-    </dt>
-    <dd>
-      <div class="block">The opacity of the image.</div>
-    </dd>
+    <dt><code>opacity</code> </dt>
+    <dd><div class="block">The opacity of the image.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>style</code>  
-    </dt>
-    <dd>
-      <div class="block">A string identifying a style to use when rendering the raster.</div>
-    </dd>
+    <dt><code>style</code> </dt>
+    <dd><div class="block">A string identifying a style to use when rendering the raster.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>url</code>  required
-    </dt>
-    <dd>
-      <div class="block">The url of the geotiff.  It can be a file but if it is the file must be contained within the config
- directory.</div>
-    </dd>
+    <dt><code>url</code> required</dt>
+    <dd><div class="block">The url of the geotiff.  It can be a file but if it is the file must be contained within the config
+ directory.</div></dd>
   </dl>
-
-</div>
+    </div>
 <div class="section" id="Gml Layer">
-  <h1>Gml Layer<a class="headerlink" href="#Gml Layer" title="Permalink to this headline">¶</a></h1>
-  <div class="block"><p>Renders GML layers.</p><p>Type: <code>gml</code></p></div>
+  <h1>
+    Gml Layer<a
+      class="headerlink"
+      href="#Gml Layer"
+      title="Permalink to this headline"
+      >¶</a
+    >
+  </h1>
+  <div class="block"><p>Renders GML layers.</p><p>Type: <code>gml</code></p></div>  
+  <h3>Configuration</h3>
+   
+  <dl>
+    <dt><code>parser</code> </dt>
+    <dd><div></div></dd>
+  </dl>
+   
+  <h3>Inputs</h3>
+   
+  <dl>
+    <dt><code>failOnError</code> </dt>
+    <dd><div class="block">Fail if a tile return an error.</div></dd>
+  </dl>
+  
+  <dl>
+    <dt><code>name</code> </dt>
+    <dd><div class="block">The name of the layer.</div></dd>
+  </dl>
+  
+  <dl>
+    <dt><code>opacity</code> </dt>
+    <dd><div class="block">The opacity of the image.</div></dd>
+  </dl>
+  
+  <dl>
+    <dt><code>renderAsSvg</code> </dt>
+    <dd><div class="block">Indicates if the layer is rendered as SVG.
 
-
-    <h3>Configuration</h3>
-  <dl>
-    <dt>
-      <code>parser</code>  
-    </dt>
-    <dd>
-      <div></div>
-    </dd>
+ (will default to <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/config/Configuration.html#defaultToSvg"><code>Configuration.defaultToSvg</code></a>).</div></dd>
   </dl>
-
-    <h3>Inputs</h3>
+  
   <dl>
-    <dt>
-      <code>failOnError</code>  
-    </dt>
-    <dd>
-      <div class="block">Fail if a tile return an error.</div>
-    </dd>
-  </dl>
-  <dl>
-    <dt>
-      <code>name</code>  
-    </dt>
-    <dd>
-      <div class="block">The name of the layer.</div>
-    </dd>
-  </dl>
-  <dl>
-    <dt>
-      <code>opacity</code>  
-    </dt>
-    <dd>
-      <div class="block">The opacity of the image.</div>
-    </dd>
-  </dl>
-  <dl>
-    <dt>
-      <code>renderAsSvg</code>  
-    </dt>
-    <dd>
-      <div class="block">Indicates if the layer is rendered as SVG.
-
- (will default to <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/config/Configuration.html#defaultToSvg"><code>Configuration.defaultToSvg</code></a>).</div>
-    </dd>
-  </dl>
-  <dl>
-    <dt>
-      <code>style</code>  
-    </dt>
-    <dd>
-      <div class="block">The style name of a style to apply to the features during rendering.  The style name must map to a
+    <dt><code>style</code> </dt>
+    <dd><div class="block">The style name of a style to apply to the features during rendering.  The style name must map to a
  style in the template or the configuration objects.
 
- If no style is defined then the default style for the geometry type will be used.</div>
-    </dd>
+ If no style is defined then the default style for the geometry type will be used.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>url</code>  required
-    </dt>
-    <dd>
-      <div class="block">A url to the gml or the raw Gml data.
+    <dt><code>url</code> required</dt>
+    <dd><div class="block">A url to the gml or the raw Gml data.
 
- The url can be a file url, however if it is it must be relative to the configuration directory.</div>
-    </dd>
+ The url can be a file url, however if it is it must be relative to the configuration directory.</div></dd>
   </dl>
-
-</div>
+    </div>
 <div class="section" id="Grid Layer">
-  <h1>Grid Layer<a class="headerlink" href="#Grid Layer" title="Permalink to this headline">¶</a></h1>
+  <h1>
+    Grid Layer<a
+      class="headerlink"
+      href="#Grid Layer"
+      title="Permalink to this headline"
+      >¶</a
+    >
+  </h1>
   <div class="block"><p>A layer which is a spatial grid of lines on the map.</p><p>Type: <code>grid</code></p>
- </div>
-
+ </div> 
   <div class="admonition note examples">
     <p class="first admonition-title">Example</p>
     <p class="last">
-        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/crosses_point_grid" target="_blank" class="fa fa-book">&nbsp;crosses_point_grid</a>&nbsp;
+      <a
+        href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/crosses_point_grid"
+        target="_blank"
+        class="fa fa-book"
+        >&nbsp;crosses_point_grid</a
+      >&nbsp; 
     </p>
   </div>
+   
+  <h3>Configuration</h3>
+   
+  <dl>
+    <dt><code>parser</code> </dt>
+    <dd><div></div></dd>
+  </dl>
+   
+  <h3>Inputs</h3>
+   
+  <dl>
+    <dt><code>failOnError</code> </dt>
+    <dd><div class="block">Fail if a tile return an error.</div></dd>
+  </dl>
+  
+  <dl>
+    <dt><code>font</code> </dt>
+    <dd><div class="block">Configuration for the font of the grid labels.  The default is the default system font.</div></dd>
+  </dl>
+  
+  <dl>
+    <dt><code>formatDecimalSeparator</code> </dt>
+    <dd><div class="block">The character used to separate the decimal part (for example ","). This parameter is only used if
+ <code>valueFormat</code> is used. The default is the character of the default locale.</div></dd>
+  </dl>
+  
+  <dl>
+    <dt><code>formatGroupingSeparator</code> </dt>
+    <dd><div class="block">The character used for the thousands separator (for example "'"). This parameter is only used if
+ <code>valueFormat</code> is used. The default is the character of the default locale.</div></dd>
+  </dl>
+  
+  <dl>
+    <dt><code>gridColor</code> </dt>
+    <dd><div class="block">The color of the grid points or lines.  Default is gray (<a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/geotools/grid/GridParam.html#DEFAULT_GRID_COLOR">"gray"</a>)</div></dd>
+  </dl>
+  
+  <dl>
+    <dt><code>gridType</code> </dt>
+    <dd><div class="block">The type of grid to render.
 
-    <h3>Configuration</h3>
-  <dl>
-    <dt>
-      <code>parser</code>  
-    </dt>
-    <dd>
-      <div></div>
-    </dd>
+ Can be LINES or POINTS. Default is LINES.</div></dd>
   </dl>
-
-    <h3>Inputs</h3>
+  
   <dl>
-    <dt>
-      <code>failOnError</code>  
-    </dt>
-    <dd>
-      <div class="block">Fail if a tile return an error.</div>
-    </dd>
+    <dt><code>haloColor</code> </dt>
+    <dd><div class="block">The color of the halo around grid label text. The color is defined the same as colors in CSS. Default
+ is white (<a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/geotools/grid/GridParam.html#DEFAULT_HALO_COLOR">"#FFF"</a>)</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>font</code>  
-    </dt>
-    <dd>
-      <div class="block">Configuration for the font of the grid labels.  The default is the default system font.</div>
-    </dd>
+    <dt><code>haloRadius</code> </dt>
+    <dd><div class="block">The size of the halo around the Grid Labels. The default is <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/geotools/grid/GridParam.html#DEFAULT_HALO_RADIUS">1</a>.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>formatDecimalSeparator</code>  
-    </dt>
-    <dd>
-      <div class="block">The character used to separate the decimal part (for example ","). This parameter is only used if
- <code>valueFormat</code> is used. The default is the character of the default locale.</div>
-    </dd>
+    <dt><code>horizontalYOffset</code> </dt>
+    <dd><div class="block">Apply an Y offset to horizontal grid line labels, relative to the horizontal grid lines. Defaults to
+ 0.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>formatGroupingSeparator</code>  
-    </dt>
-    <dd>
-      <div class="block">The character used for the thousands separator (for example "'"). This parameter is only used if
- <code>valueFormat</code> is used. The default is the character of the default locale.</div>
-    </dd>
+    <dt><code>indent</code> </dt>
+    <dd><div class="block">The number of pixels to indent the grid labels from the end of the map.  The default is <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/geotools/grid/GridParam.html#DEFAULT_INDENT">5</a>.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>gridColor</code>  
-    </dt>
-    <dd>
-      <div class="block">The color of the grid points or lines.  Default is gray (<a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/geotools/grid/GridParam.html#DEFAULT_GRID_COLOR">"gray"</a>)</div>
-    </dd>
+    <dt><code>labelColor</code> </dt>
+    <dd><div class="block">The color of the grid label text.  Default is dark gray (<a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/geotools/grid/GridParam.html#DEFAULT_LABEL_COLOR">"#444"</a>)</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>gridType</code>  
-    </dt>
-    <dd>
-      <div class="block">The type of grid to render.
-
- Can be LINES or POINTS. Default is LINES.</div>
-    </dd>
-  </dl>
-  <dl>
-    <dt>
-      <code>haloColor</code>  
-    </dt>
-    <dd>
-      <div class="block">The color of the halo around grid label text. The color is defined the same as colors in CSS. Default
- is white (<a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/geotools/grid/GridParam.html#DEFAULT_HALO_COLOR">"#FFF"</a>)</div>
-    </dd>
-  </dl>
-  <dl>
-    <dt>
-      <code>haloRadius</code>  
-    </dt>
-    <dd>
-      <div class="block">The size of the halo around the Grid Labels. The default is <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/geotools/grid/GridParam.html#DEFAULT_HALO_RADIUS">1</a>.</div>
-    </dd>
-  </dl>
-  <dl>
-    <dt>
-      <code>horizontalYOffset</code>  
-    </dt>
-    <dd>
-      <div class="block">Apply an Y offset to horizontal grid line labels, relative to the horizontal grid lines. Defaults to
- 0.</div>
-    </dd>
-  </dl>
-  <dl>
-    <dt>
-      <code>indent</code>  
-    </dt>
-    <dd>
-      <div class="block">The number of pixels to indent the grid labels from the end of the map.  The default is <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/geotools/grid/GridParam.html#DEFAULT_INDENT">5</a>.</div>
-    </dd>
-  </dl>
-  <dl>
-    <dt>
-      <code>labelColor</code>  
-    </dt>
-    <dd>
-      <div class="block">The color of the grid label text.  Default is dark gray (<a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/geotools/grid/GridParam.html#DEFAULT_LABEL_COLOR">"#444"</a>)</div>
-    </dd>
-  </dl>
-  <dl>
-    <dt>
-      <code>labelFormat</code>  
-    </dt>
-    <dd>
-      <div class="block">The formatting string used to format the label (for example "%1.2f %s"). By default the label is
+    <dt><code>labelFormat</code> </dt>
+    <dd><div class="block">The formatting string used to format the label (for example "%1.2f %s"). By default the label is
  formatted according to the unit and label value. For the format syntax, see
  <a shape="rect" href="https://docs.oracle.com/javase/7/docs/api/java/util/Formatter.html">java.util.Formatter</a>.
  If <code>labelFormat</code> is set, <code>valueFormat</code>, <code>unitFormat</code> and custom
- separator characters will be ignored.</div>
-    </dd>
+ separator characters will be ignored.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>labelProjection</code>  
-    </dt>
-    <dd>
-      <div class="block">The projection code to use for the labels.  The value should be the string <code>authority:code</code>
- form identifying the projection.  By default it will be the same projection as the map.</div>
-    </dd>
+    <dt><code>labelProjection</code> </dt>
+    <dd><div class="block">The projection code to use for the labels.  The value should be the string <code>authority:code</code>
+ form identifying the projection.  By default it will be the same projection as the map.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>longitudeFirst</code>  
-    </dt>
-    <dd>
-      <div class="block">By default the normal axis order as specified in EPSG code will be used when parsing projections.
- However the requestor can override this by explicitly declaring that longitude axis is first.</div>
-    </dd>
+    <dt><code>longitudeFirst</code> </dt>
+    <dd><div class="block">By default the normal axis order as specified in EPSG code will be used when parsing projections.
+ However the requestor can override this by explicitly declaring that longitude axis is first.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>name</code>  
-    </dt>
-    <dd>
-      <div class="block">The name of the layer.</div>
-    </dd>
+    <dt><code>name</code> </dt>
+    <dd><div class="block">The name of the layer.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>numberOfLines</code>  required
-    </dt>
-    <dd>
-      <div class="block">The x,y number of grid lines.
+    <dt><code>numberOfLines</code> required</dt>
+    <dd><div class="block">The x,y number of grid lines.
 
- The x is the number of lines that run vertically along the page.</div>
-    </dd>
+ The x is the number of lines that run vertically along the page.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>opacity</code>  
-    </dt>
-    <dd>
-      <div class="block">The opacity of the image.</div>
-    </dd>
+    <dt><code>opacity</code> </dt>
+    <dd><div class="block">The opacity of the image.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>origin</code>  
-    </dt>
-    <dd>
-      <div class="block">The x,y point of grid origin.
+    <dt><code>origin</code> </dt>
+    <dd><div class="block">The x,y point of grid origin.
 
- This is required if <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/geotools/grid/GridParam.html#spacing"><code>spacing</code></a> is defined.</div>
-    </dd>
+ This is required if <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/geotools/grid/GridParam.html#spacing"><code>spacing</code></a> is defined.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>pointsInLine</code>  
-    </dt>
-    <dd>
-      <div class="block">The number of points that will be in the grid line (if the gridType is LINES).  If the line will be
+    <dt><code>pointsInLine</code> </dt>
+    <dd><div class="block">The number of points that will be in the grid line (if the gridType is LINES).  If the line will be
  curved (for certain projections) then the more points the smoother the curve.
 
- The default number of points is <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/geotools/grid/GridParam.html#DEFAULT_POINTS_IN_GRID_LINE">10000</a>.</div>
-    </dd>
+ The default number of points is <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/geotools/grid/GridParam.html#DEFAULT_POINTS_IN_GRID_LINE">10000</a>.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>renderAsSvg</code>  
-    </dt>
-    <dd>
-      <div class="block">Indicates if the layer is rendered as SVG.
+    <dt><code>renderAsSvg</code> </dt>
+    <dd><div class="block">Indicates if the layer is rendered as SVG.
 
- (will default to <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/config/Configuration.html#defaultToSvg"><code>Configuration.defaultToSvg</code></a>).</div>
-    </dd>
+ (will default to <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/config/Configuration.html#defaultToSvg"><code>Configuration.defaultToSvg</code></a>).</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>rotateLabels</code>  
-    </dt>
-    <dd>
-      <div class="block">If true (the default), the labels will be rotated to follow the lines they belong to. Otherwise they
- are orientated west to east.</div>
-    </dd>
+    <dt><code>rotateLabels</code> </dt>
+    <dd><div class="block">If true (the default), the labels will be rotated to follow the lines they belong to. Otherwise they
+ are orientated west to east.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>spacing</code>  required
-    </dt>
-    <dd>
-      <div class="block">The x,y spacing between grid lines.
+    <dt><code>spacing</code> required</dt>
+    <dd><div class="block">The x,y spacing between grid lines.
 
  Either <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/geotools/grid/GridParam.html#spacing"><code>spacing</code></a> or <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/geotools/grid/GridParam.html#numberOfLines"><code>numberOfLines</code></a>
 
- If spacing is defined then <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/geotools/grid/GridParam.html#origin"><code>origin</code></a> must also be defined</div>
-    </dd>
+ If spacing is defined then <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/geotools/grid/GridParam.html#origin"><code>origin</code></a> must also be defined</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>style</code>  
-    </dt>
-    <dd>
-      <div class="block">The style name of a style to apply to the features during rendering.  The style name must map to a
+    <dt><code>style</code> </dt>
+    <dd><div class="block">The style name of a style to apply to the features during rendering.  The style name must map to a
  style in the template or the configuration objects.
 
  If no style is defined then the default grid style will be used.  The default will depend if the type
  is point or line and will respect <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/geotools/grid/GridParam.html#gridColor"><code>gridColor</code></a> and <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/geotools/grid/GridParam.html#haloColor"><code>haloColor</code></a> and <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/geotools/grid/GridParam.html#haloRadius"><code>haloRadius</code></a>. If
  <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/geotools/grid/GridParam.html#gridType"><code>gridType</code></a> is <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/geotools/grid/GridType.html#POINTS"><code>GridType.POINTS</code></a> then the style will be crosses with a haloRadius sized
- halo around the cross.  If <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/geotools/grid/GridType.html#LINES"><code>GridType.LINES</code></a> then the style will be a dashed line with no halo.</div>
-    </dd>
+ halo around the cross.  If <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/geotools/grid/GridType.html#LINES"><code>GridType.LINES</code></a> then the style will be a dashed line with no halo.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>unitFormat</code>  
-    </dt>
-    <dd>
-      <div class="block">The formatting string used to format the unit part of a label (for example " %s"). This parameter is
+    <dt><code>unitFormat</code> </dt>
+    <dd><div class="block">The formatting string used to format the unit part of a label (for example " %s"). This parameter is
  ignored if <code>labelFormat</code> is set. <code>valueFormat</code> must be set to use this parameter.
  For the format syntax, see
- <a shape="rect" href="https://docs.oracle.com/javase/7/docs/api/java/util/Formatter.html">java.util.Formatter</a>.</div>
-    </dd>
+ <a shape="rect" href="https://docs.oracle.com/javase/7/docs/api/java/util/Formatter.html">java.util.Formatter</a>.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>valueFormat</code>  
-    </dt>
-    <dd>
-      <div class="block">The formatting string used to format the decimal part of a label (for example "###,###"). This
+    <dt><code>valueFormat</code> </dt>
+    <dd><div class="block">The formatting string used to format the decimal part of a label (for example "###,###"). This
  parameter is ignored if <code>labelFormat</code> is set. For the format syntax, see
- <a shape="rect" href="https://docs.oracle.com/javase/tutorial/i18n/format/decimalFormat.html">DecimalFormat</a>.</div>
-    </dd>
+ <a shape="rect" href="https://docs.oracle.com/javase/tutorial/i18n/format/decimalFormat.html">DecimalFormat</a>.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>verticalXOffset</code>  
-    </dt>
-    <dd>
-      <div class="block">Apply an X offset to the vertical grid line labels, relative to the vertical grid lines. Defaults to
- 0.</div>
-    </dd>
+    <dt><code>verticalXOffset</code> </dt>
+    <dd><div class="block">Apply an X offset to the vertical grid line labels, relative to the vertical grid lines. Defaults to
+ 0.</div></dd>
   </dl>
-
-</div>
+    </div>
 <div class="section" id="Image Layer">
-  <h1>Image Layer<a class="headerlink" href="#Image Layer" title="Permalink to this headline">¶</a></h1>
-  <div class="block"><p>Renders an image as layer.</p><p>Type: <code>image</code></p></div>
-
-
-
-    <h3>Inputs</h3>
+  <h1>
+    Image Layer<a
+      class="headerlink"
+      href="#Image Layer"
+      title="Permalink to this headline"
+      >¶</a
+    >
+  </h1>
+  <div class="block"><p>Renders an image as layer.</p><p>Type: <code>image</code></p></div>    
+  <h3>Inputs</h3>
+   
   <dl>
-    <dt>
-      <code>baseURL</code>  required
-    </dt>
-    <dd>
-      <div class="block">The base URL for the image file.  Used for making request.</div>
-    </dd>
+    <dt><code>baseURL</code> required</dt>
+    <dd><div class="block">The base URL for the image file.  Used for making request.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>extent</code>  required
-    </dt>
-    <dd>
-      <div class="block">The extent of the image.  Used for placing image on map.</div>
-    </dd>
+    <dt><code>extent</code> required</dt>
+    <dd><div class="block">The extent of the image.  Used for placing image on map.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>failOnError</code>  
-    </dt>
-    <dd>
-      <div class="block">Fail if a tile return an error.</div>
-    </dd>
+    <dt><code>failOnError</code> </dt>
+    <dd><div class="block">Fail if a tile return an error.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>name</code>  
-    </dt>
-    <dd>
-      <div class="block">The name of the layer.</div>
-    </dd>
+    <dt><code>name</code> </dt>
+    <dd><div class="block">The name of the layer.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>opacity</code>  
-    </dt>
-    <dd>
-      <div class="block">The opacity of the image.</div>
-    </dd>
+    <dt><code>opacity</code> </dt>
+    <dd><div class="block">The opacity of the image.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>style</code>  
-    </dt>
-    <dd>
-      <div class="block">The styles to apply to the image.</div>
-    </dd>
+    <dt><code>style</code> </dt>
+    <dd><div class="block">The styles to apply to the image.</div></dd>
   </dl>
-
-</div>
+    </div>
 <div class="section" id="Osm Layer">
-  <h1>Osm Layer<a class="headerlink" href="#Osm Layer" title="Permalink to this headline">¶</a></h1>
+  <h1>
+    Osm Layer<a
+      class="headerlink"
+      href="#Osm Layer"
+      title="Permalink to this headline"
+      >¶</a
+    >
+  </h1>
   <div class="block"><p>Renders OpenStreetMap or other tiled layers.</p><p>Type: <code>osm</code></p>
- </div>
-
+ </div> 
   <div class="admonition note examples">
     <p class="first admonition-title">Example</p>
     <p class="last">
-        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/print_osm_new_york_EPSG_3857" target="_blank" class="fa fa-book">&nbsp;print_osm_new_york_EPSG_3857</a>&nbsp;
+      <a
+        href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/print_osm_new_york_EPSG_3857"
+        target="_blank"
+        class="fa fa-book"
+        >&nbsp;print_osm_new_york_EPSG_3857</a
+      >&nbsp; 
     </p>
   </div>
-
-
-    <h3>Inputs</h3>
+     
+  <h3>Inputs</h3>
+   
   <dl>
-    <dt>
-      <code>baseURL</code>  required
-    </dt>
-    <dd>
-      <div class="block">The URL used for the tile requests.
+    <dt><code>baseURL</code> required</dt>
+    <dd><div class="block">The URL used for the tile requests.
  <p>Supported formats:</p><ul><li>The base part of the URL, for example 'http://tile.openstreetmap.org'. This results in an URL
  like 'http://tile.openstreetmap.org/12/123/456.png'.</li><li>An URL template with the placeholders '{x}', '{y}' or '{-y}', and '{z}'. For example:
  'http://tile.openstreetmap.org/{z}/{x}/{y}.png'. <br clear="none"></br> The placeholder '{-y}' provides support for OSGeo
  TMS tiles.
- </li></ul></div>
-    </dd>
+ </li></ul></div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>customParams</code>  
-    </dt>
-    <dd>
-      <div class="block">Custom query parameters to use when making http requests. <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/tiled/osm/OsmLayerParam.html#customParams"><code>customParams</code></a>.
+    <dt><code>customParams</code> </dt>
+    <dd><div class="block">Custom query parameters to use when making http requests. <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/tiled/osm/OsmLayerParam.html#customParams"><code>customParams</code></a>.
 
  The json should look something like:
- <div class="highlight"><pre> {<br>     "param1Name": "value",<br>     "param2Name": ["value1", "value2"]<br> }</pre></div></div>
-    </dd>
+ <div class="highlight"><pre> {<br>     "param1Name": "value",<br>     "param2Name": ["value1", "value2"]<br> }</pre></div></div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>dpi</code>  
-    </dt>
-    <dd>
-      <div class="block">The DPI of the OSM tiles.</div>
-    </dd>
+    <dt><code>dpi</code> </dt>
+    <dd><div class="block">The DPI of the OSM tiles.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>failOnError</code>  
-    </dt>
-    <dd>
-      <div class="block">Fail if a tile return an error.</div>
-    </dd>
+    <dt><code>failOnError</code> </dt>
+    <dd><div class="block">Fail if a tile return an error.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>imageExtension</code>  
-    </dt>
-    <dd>
-      <div class="block">The image extension.  for example png, jpeg, etc...</div>
-    </dd>
+    <dt><code>imageExtension</code> </dt>
+    <dd><div class="block">The image extension.  for example png, jpeg, etc...</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>maxExtent</code>  
-    </dt>
-    <dd>
-      <div class="block">The maximum extent of the osm layer. Must have 4 coordinates, minX, minY, maxX, maxY
- <p>Default: [-20037508.34, -20037508.34, 20037508.34, 20037508.34]</p></div>
-    </dd>
+    <dt><code>maxExtent</code> </dt>
+    <dd><div class="block">The maximum extent of the osm layer. Must have 4 coordinates, minX, minY, maxX, maxY
+ <p>Default: [-20037508.34, -20037508.34, 20037508.34, 20037508.34]</p></div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>name</code>  
-    </dt>
-    <dd>
-      <div class="block">The name of the layer.</div>
-    </dd>
+    <dt><code>name</code> </dt>
+    <dd><div class="block">The name of the layer.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>opacity</code>  
-    </dt>
-    <dd>
-      <div class="block">The opacity of the image.</div>
-    </dd>
+    <dt><code>opacity</code> </dt>
+    <dd><div class="block">The opacity of the image.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>rasterStyle</code>  
-    </dt>
-    <dd>
-      <div class="block">The name of the style (in Configuration or Template) to use when drawing the layer to the map.  This is
+    <dt><code>rasterStyle</code> </dt>
+    <dd><div class="block">The name of the style (in Configuration or Template) to use when drawing the layer to the map.  This is
  separate from the style in that it indicates how to draw the map.  It allows one to apply any of the
- SLD raster styling.</div>
-    </dd>
+ SLD raster styling.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>resolutionTolerance</code>  
-    </dt>
-    <dd>
-      <div class="block">The amount of difference between a resolution and a target resolution to consider the two equal.  The
- value is a value from 0-1.</div>
-    </dd>
+    <dt><code>resolutionTolerance</code> </dt>
+    <dd><div class="block">The amount of difference between a resolution and a target resolution to consider the two equal.  The
+ value is a value from 0-1.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>resolutions</code>  
-    </dt>
-    <dd>
-      <div class="block">The allowed resolutions for this layer.</div>
-    </dd>
+    <dt><code>resolutions</code> </dt>
+    <dd><div class="block">The allowed resolutions for this layer.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>tileSize</code>  
-    </dt>
-    <dd>
-      <div class="block">The size of each tile.  Must have 2 values: width, height
- <p>Default: [256, 256]</p></div>
-    </dd>
+    <dt><code>tileSize</code> </dt>
+    <dd><div class="block">The size of each tile.  Must have 2 values: width, height
+ <p>Default: [256, 256]</p></div></dd>
   </dl>
-
-</div>
+    </div>
 <div class="section" id="Tiled Wms Layer">
-  <h1>Tiled Wms Layer<a class="headerlink" href="#Tiled Wms Layer" title="Permalink to this headline">¶</a></h1>
+  <h1>
+    Tiled Wms Layer<a
+      class="headerlink"
+      href="#Tiled Wms Layer"
+      title="Permalink to this headline"
+      >¶</a
+    >
+  </h1>
   <div class="block"><p>Renders tiled WMS layers.</p><p>Type: <code>tiledwms</code></p>
- </div>
-
+ </div> 
   <div class="admonition note examples">
     <p class="first admonition-title">Example</p>
     <p class="last">
-        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/printtiledwms" target="_blank" class="fa fa-book">&nbsp;printtiledwms</a>&nbsp;
+      <a
+        href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/printtiledwms"
+        target="_blank"
+        class="fa fa-book"
+        >&nbsp;printtiledwms</a
+      >&nbsp; 
     </p>
   </div>
-
-
-    <h3>Inputs</h3>
+     
+  <h3>Inputs</h3>
+   
   <dl>
-    <dt>
-      <code>baseURL</code>  required
-    </dt>
-    <dd>
-      <div class="block">The base URL for the WMS.  Used for making WMS requests.</div>
-    </dd>
+    <dt><code>baseURL</code> required</dt>
+    <dd><div class="block">The base URL for the WMS.  Used for making WMS requests.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>customParams</code>  
-    </dt>
-    <dd>
-      <div class="block">Custom query parameters to use when making http requests.  These are related to <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/tiled/AbstractWMXLayerParams.html#mergeableParams"><code>mergeableParams</code></a> except they are the parameters that will prevent two layers from the same server from
+    <dt><code>customParams</code> </dt>
+    <dd><div class="block">Custom query parameters to use when making http requests.  These are related to <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/tiled/AbstractWMXLayerParams.html#mergeableParams"><code>mergeableParams</code></a> except they are the parameters that will prevent two layers from the same server from
  being merged into a single request with both layers. See <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/tiled/AbstractWMXLayerParams.html#mergeableParams"><code>mergeableParams</code></a> for a more detailed
  example of the difference between <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/tiled/AbstractWMXLayerParams.html#mergeableParams"><code>mergeableParams</code></a> and <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/tiled/AbstractWMXLayerParams.html#customParams"><code>customParams</code></a>.
 
  The json should look something like:
- <div class="highlight"><pre> {<br>     "param1Name": "value",<br>     "param2Name": ["value1", "value2"]<br> }</pre></div></div>
-    </dd>
+ <div class="highlight"><pre> {<br>     "param1Name": "value",<br>     "param2Name": ["value1", "value2"]<br> }</pre></div></div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>failOnError</code>  
-    </dt>
-    <dd>
-      <div class="block">Fail if a tile return an error.</div>
-    </dd>
+    <dt><code>failOnError</code> </dt>
+    <dd><div class="block">Fail if a tile return an error.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>imageFormat</code>  
-    </dt>
-    <dd>
-      <div class="block">The format of the image. for example image/png, image/jpeg, etc...</div>
-    </dd>
+    <dt><code>imageFormat</code> </dt>
+    <dd><div class="block">The format of the image. for example image/png, image/jpeg, etc...</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>layers</code>  required
-    </dt>
-    <dd>
-      <div class="block">The wms layer to request in the GetMap request.  The order is important.  It is the order that they
+    <dt><code>layers</code> required</dt>
+    <dd><div class="block">The wms layer to request in the GetMap request.  The order is important.  It is the order that they
  will appear in the request.
 
  As with the WMS specification, the first layer will be the first layer drawn on the map (the
  bottom/base layer) of the map.  This means that layer at position 0 in the array will covered by layer
- 1 (where not transparent) and so on.</div>
-    </dd>
+ 1 (where not transparent) and so on.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>mergeableParams</code>  
-    </dt>
-    <dd>
-      <div class="block">Custom query parameters that can be merged if multiple layers are merged together into a single
+    <dt><code>mergeableParams</code> </dt>
+    <dd><div class="block">Custom query parameters that can be merged if multiple layers are merged together into a single
  request.
 
  The json should look something like:
@@ -909,112 +827,91 @@ other attributes in that they have attribute values.</p>
  be merged.
 
  Compare that to DPI parameter (for QGIS wms mapserver).  if two layers have different DPI then the
- layers cannot be merged.  In this case the DPI should <em>NOT</em> be one of the <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/tiled/AbstractWMXLayerParams.html#mergeableParams"><code>mergeableParams</code></a> it should be one of the <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/tiled/AbstractWMXLayerParams.html#customParams"><code>customParams</code></a>.</div>
-    </dd>
+ layers cannot be merged.  In this case the DPI should <em>NOT</em> be one of the <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/tiled/AbstractWMXLayerParams.html#mergeableParams"><code>mergeableParams</code></a> it should be one of the <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/tiled/AbstractWMXLayerParams.html#customParams"><code>customParams</code></a>.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>method</code>  
-    </dt>
-    <dd>
-      <div class="block">The HTTP verb to use for fetching the images. Can be either "GET" (the default) or "POST".
+    <dt><code>method</code> </dt>
+    <dd><div class="block">The HTTP verb to use for fetching the images. Can be either "GET" (the default) or "POST".
 
  In case of "POST", the parameters are send in the body of the request using an
  "application/x-www-form-urlencoded" content type. This can be used when the parameters are too long.
- Tested only with GeoServer.</div>
-    </dd>
+ Tested only with GeoServer.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>name</code>  
-    </dt>
-    <dd>
-      <div class="block">The name of the layer.</div>
-    </dd>
+    <dt><code>name</code> </dt>
+    <dd><div class="block">The name of the layer.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>opacity</code>  
-    </dt>
-    <dd>
-      <div class="block">The opacity of the image.</div>
-    </dd>
+    <dt><code>opacity</code> </dt>
+    <dd><div class="block">The opacity of the image.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>rasterStyle</code>  
-    </dt>
-    <dd>
-      <div class="block">The name of the style (in Configuration or Template) to use when drawing the layer to the map.  This is
+    <dt><code>rasterStyle</code> </dt>
+    <dd><div class="block">The name of the style (in Configuration or Template) to use when drawing the layer to the map.  This is
  separate from the style in that it indicates how to draw the map.  It allows one to apply any of the
- SLD raster styling.</div>
-    </dd>
+ SLD raster styling.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>serverType</code>  
-    </dt>
-    <dd>
-      <div class="block">The server type ("mapserver", "geoserver" or "qgisserver"). By specifying the server type vendor
- specific parameters (like for the DPI value) can be used when making the request.</div>
-    </dd>
+    <dt><code>serverType</code> </dt>
+    <dd><div class="block">The server type ("mapserver", "geoserver" or "qgisserver"). By specifying the server type vendor
+ specific parameters (like for the DPI value) can be used when making the request.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>styles</code>  
-    </dt>
-    <dd>
-      <div class="block">The styles to apply to the layers.  If this is defined there should be the same number as the layers
- and the style are applied to the layer in the <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/image/wms/WmsLayerParam.html#layers"><code>layers</code></a> field.</div>
-    </dd>
+    <dt><code>styles</code> </dt>
+    <dd><div class="block">The styles to apply to the layers.  If this is defined there should be the same number as the layers
+ and the style are applied to the layer in the <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/image/wms/WmsLayerParam.html#layers"><code>layers</code></a> field.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>tileSize</code>  required
-    </dt>
-    <dd>
-      <div class="block">A two element array of integers indicating the x and y size of each tile.</div>
-    </dd>
+    <dt><code>tileSize</code> required</dt>
+    <dd><div class="block">A two element array of integers indicating the x and y size of each tile.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>useNativeAngle</code>  
-    </dt>
-    <dd>
-      <div class="block">If true transform the map angle to customParams.angle for GeoServer, and customParams.map_angle for
- MapServer.</div>
-    </dd>
+    <dt><code>useNativeAngle</code> </dt>
+    <dd><div class="block">If true transform the map angle to customParams.angle for GeoServer, and customParams.map_angle for
+ MapServer.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>version</code>  
-    </dt>
-    <dd>
-      <div class="block">The WMS version to use when making requests.</div>
-    </dd>
+    <dt><code>version</code> </dt>
+    <dd><div class="block">The WMS version to use when making requests.</div></dd>
   </dl>
-
-</div>
+    </div>
 <div class="section" id="WMTS Layer">
-  <h1>WMTS Layer<a class="headerlink" href="#WMTS Layer" title="Permalink to this headline">¶</a></h1>
+  <h1>
+    WMTS Layer<a
+      class="headerlink"
+      href="#WMTS Layer"
+      title="Permalink to this headline"
+      >¶</a
+    >
+  </h1>
   <div class="block"><p>Renders WMTS layers.</p><p>Type: <code>wmts</code></p>
- </div>
-
+ </div> 
   <div class="admonition note examples">
     <p class="first admonition-title">Example</p>
     <p class="last">
-        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/printwmts_tyger_ny_EPSG_3857" target="_blank" class="fa fa-book">&nbsp;printwmts_tyger_ny_EPSG_3857</a>&nbsp;
+      <a
+        href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/printwmts_tyger_ny_EPSG_3857"
+        target="_blank"
+        class="fa fa-book"
+        >&nbsp;printwmts_tyger_ny_EPSG_3857</a
+      >&nbsp; 
     </p>
   </div>
-
-
-    <h3>Inputs</h3>
+     
+  <h3>Inputs</h3>
+   
   <dl>
-    <dt>
-      <code>baseURL</code>  required
-    </dt>
-    <dd>
-      <div class="block">The ‘ResourceURL’ available in the WMTS capabilities.
+    <dt><code>baseURL</code> required</dt>
+    <dd><div class="block">The ‘ResourceURL’ available in the WMTS capabilities.
 
  Example (for <code>requestEncoding: "KVP"</code>):
  <div class="highlight"><pre> baseUrl: "http://domain.com/wmts"</pre></div>
@@ -1022,92 +919,65 @@ other attributes in that they have attribute values.</p>
  Example (for <code>requestEncoding: "REST"</code>):
  <div class="highlight"><pre> baseUrl: "http://domain.com/wmts/roads/{TileMatrixSet}/{TileMatrix}/{TileCol}/{TileRow}.png"</pre></div>
  The following URL template variables are replaced:
- <ul><li>{Layer}</li><li>{style}</li><li>{TileMatrixSet}</li><li>{TileMatrix}</li><li>{TileRow}</li><li>{TileCol}</li><li>{[DIMENSION.IDENTIFIER]}</li></ul></div>
-    </dd>
+ <ul><li>{Layer}</li><li>{style}</li><li>{TileMatrixSet}</li><li>{TileMatrix}</li><li>{TileRow}</li><li>{TileCol}</li><li>{[DIMENSION.IDENTIFIER]}</li></ul></div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>customParams</code>  
-    </dt>
-    <dd>
-      <div class="block">Custom query parameters to use when making http requests.  These are related to <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/tiled/AbstractWMXLayerParams.html#mergeableParams"><code>mergeableParams</code></a> except they are the parameters that will prevent two layers from the same server from
+    <dt><code>customParams</code> </dt>
+    <dd><div class="block">Custom query parameters to use when making http requests.  These are related to <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/tiled/AbstractWMXLayerParams.html#mergeableParams"><code>mergeableParams</code></a> except they are the parameters that will prevent two layers from the same server from
  being merged into a single request with both layers. See <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/tiled/AbstractWMXLayerParams.html#mergeableParams"><code>mergeableParams</code></a> for a more detailed
  example of the difference between <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/tiled/AbstractWMXLayerParams.html#mergeableParams"><code>mergeableParams</code></a> and <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/tiled/AbstractWMXLayerParams.html#customParams"><code>customParams</code></a>.
 
  The json should look something like:
- <div class="highlight"><pre> {<br>     "param1Name": "value",<br>     "param2Name": ["value1", "value2"]<br> }</pre></div></div>
-    </dd>
+ <div class="highlight"><pre> {<br>     "param1Name": "value",<br>     "param2Name": ["value1", "value2"]<br> }</pre></div></div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>dimensionParams</code>  
-    </dt>
-    <dd>
-      <div class="block">Dictionary of dimensions name (Must be uppercase) => value.</div>
-    </dd>
+    <dt><code>dimensionParams</code> </dt>
+    <dd><div class="block">Dictionary of dimensions name (Must be uppercase) => value.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>dimensions</code>  
-    </dt>
-    <dd>
-      <div class="block">The "sample" dimensions or image color bands to retrieve.
+    <dt><code>dimensions</code> </dt>
+    <dd><div class="block">The "sample" dimensions or image color bands to retrieve.
 
  This can be null, if so then the default dimensions will be returned. If specified they must be
  dimensions supported by the server.
 
- These are keys to the <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/tiled/wmts/WMTSLayerParam.html#dimensionParams"><code>dimensionParams</code></a>.</div>
-    </dd>
+ These are keys to the <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/tiled/wmts/WMTSLayerParam.html#dimensionParams"><code>dimensionParams</code></a>.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>failOnError</code>  
-    </dt>
-    <dd>
-      <div class="block">Fail if a tile return an error.</div>
-    </dd>
+    <dt><code>failOnError</code> </dt>
+    <dd><div class="block">Fail if a tile return an error.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>imageFormat</code>  
-    </dt>
-    <dd>
-      <div class="block">The format of the image. for example image/png, image/jpeg, etc...</div>
-    </dd>
+    <dt><code>imageFormat</code> </dt>
+    <dd><div class="block">The format of the image. for example image/png, image/jpeg, etc...</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>layer</code>  required
-    </dt>
-    <dd>
-      <div class="block">The layer name.</div>
-    </dd>
+    <dt><code>layer</code> required</dt>
+    <dd><div class="block">The layer name.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>matrices</code>  required
-    </dt>
-    <dd>
-      <div class="block">Array of matrix ids.
+    <dt><code>matrices</code> required</dt>
+    <dd><div class="block">Array of matrix ids.
 
  Example:
- <div class="highlight"><pre> [{<br>   "identifier": "0",<br>   "matrixSize": [1, 1],<br>   "scaleDenominator": 4000,<br>   "tileSize": [256, 256],<br>   "topLeftCorner": [420000, 350000]<br>   }, ...]</pre></div></div>
-    </dd>
+ <div class="highlight"><pre> [{<br>   "identifier": "0",<br>   "matrixSize": [1, 1],<br>   "scaleDenominator": 4000,<br>   "tileSize": [256, 256],<br>   "topLeftCorner": [420000, 350000]<br>   }, ...]</pre></div></div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>matrixSet</code>  required
-    </dt>
-    <dd>
-      <div class="block">Reference/Identifier to a tileMatrixSet and limits.</div>
-    </dd>
+    <dt><code>matrixSet</code> required</dt>
+    <dd><div class="block">Reference/Identifier to a tileMatrixSet and limits.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>mergeableParams</code>  
-    </dt>
-    <dd>
-      <div class="block">Custom query parameters that can be merged if multiple layers are merged together into a single
+    <dt><code>mergeableParams</code> </dt>
+    <dd><div class="block">Custom query parameters that can be merged if multiple layers are merged together into a single
  request.
 
  The json should look something like:
@@ -1118,132 +988,109 @@ other attributes in that they have attribute values.</p>
  be merged.
 
  Compare that to DPI parameter (for QGIS wms mapserver).  if two layers have different DPI then the
- layers cannot be merged.  In this case the DPI should <em>NOT</em> be one of the <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/tiled/AbstractWMXLayerParams.html#mergeableParams"><code>mergeableParams</code></a> it should be one of the <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/tiled/AbstractWMXLayerParams.html#customParams"><code>customParams</code></a>.</div>
-    </dd>
+ layers cannot be merged.  In this case the DPI should <em>NOT</em> be one of the <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/tiled/AbstractWMXLayerParams.html#mergeableParams"><code>mergeableParams</code></a> it should be one of the <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/tiled/AbstractWMXLayerParams.html#customParams"><code>customParams</code></a>.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>name</code>  
-    </dt>
-    <dd>
-      <div class="block">The name of the layer.</div>
-    </dd>
+    <dt><code>name</code> </dt>
+    <dd><div class="block">The name of the layer.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>opacity</code>  
-    </dt>
-    <dd>
-      <div class="block">The opacity of the image.</div>
-    </dd>
+    <dt><code>opacity</code> </dt>
+    <dd><div class="block">The opacity of the image.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>rasterStyle</code>  
-    </dt>
-    <dd>
-      <div class="block">The name of the style (in Configuration or Template) to use when drawing the layer to the map.  This is
+    <dt><code>rasterStyle</code> </dt>
+    <dd><div class="block">The name of the style (in Configuration or Template) to use when drawing the layer to the map.  This is
  separate from the style in that it indicates how to draw the map.  It allows one to apply any of the
- SLD raster styling.</div>
-    </dd>
+ SLD raster styling.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>requestEncoding</code>  
-    </dt>
-    <dd>
-      <div class="block">The way to make the requests. Either <code>KVP</code> or <code>REST</code> (default).</div>
-    </dd>
+    <dt><code>requestEncoding</code> </dt>
+    <dd><div class="block">The way to make the requests. Either <code>KVP</code> or <code>REST</code> (default).</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>style</code>  
-    </dt>
-    <dd>
-      <div class="block">The style name (for styles on the WMTS server).</div>
-    </dd>
+    <dt><code>style</code> </dt>
+    <dd><div class="block">The style name (for styles on the WMTS server).</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>version</code>  
-    </dt>
-    <dd>
-      <div class="block">The WMTS protocol version to use.</div>
-    </dd>
+    <dt><code>version</code> </dt>
+    <dd><div class="block">The WMTS protocol version to use.</div></dd>
   </dl>
-
-</div>
+    </div>
 <div class="section" id="Wms Layer">
-  <h1>Wms Layer<a class="headerlink" href="#Wms Layer" title="Permalink to this headline">¶</a></h1>
+  <h1>
+    Wms Layer<a
+      class="headerlink"
+      href="#Wms Layer"
+      title="Permalink to this headline"
+      >¶</a
+    >
+  </h1>
   <div class="block"><p>Renders WMS layers as single image.</p><p>Type: <code>wms</code></p>
- </div>
-
+ </div> 
   <div class="admonition note examples">
     <p class="first admonition-title">Example</p>
     <p class="last">
-        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/printwms_tyger_ny_EPSG_3857" target="_blank" class="fa fa-book">&nbsp;printwms_tyger_ny_EPSG_3857</a>&nbsp;
-        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/printwms_UsaPopulation_EPSG_4326" target="_blank" class="fa fa-book">&nbsp;printwms_UsaPopulation_EPSG_4326</a>&nbsp;
+      <a
+        href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/printwms_tyger_ny_EPSG_3857"
+        target="_blank"
+        class="fa fa-book"
+        >&nbsp;printwms_tyger_ny_EPSG_3857</a
+      >&nbsp;       <a
+        href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/printwms_UsaPopulation_EPSG_4326"
+        target="_blank"
+        class="fa fa-book"
+        >&nbsp;printwms_UsaPopulation_EPSG_4326</a
+      >&nbsp; 
     </p>
   </div>
-
-
-    <h3>Inputs</h3>
+     
+  <h3>Inputs</h3>
+   
   <dl>
-    <dt>
-      <code>baseURL</code>  required
-    </dt>
-    <dd>
-      <div class="block">The base URL for the WMS.  Used for making WMS requests.</div>
-    </dd>
+    <dt><code>baseURL</code> required</dt>
+    <dd><div class="block">The base URL for the WMS.  Used for making WMS requests.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>customParams</code>  
-    </dt>
-    <dd>
-      <div class="block">Custom query parameters to use when making http requests.  These are related to <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/tiled/AbstractWMXLayerParams.html#mergeableParams"><code>mergeableParams</code></a> except they are the parameters that will prevent two layers from the same server from
+    <dt><code>customParams</code> </dt>
+    <dd><div class="block">Custom query parameters to use when making http requests.  These are related to <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/tiled/AbstractWMXLayerParams.html#mergeableParams"><code>mergeableParams</code></a> except they are the parameters that will prevent two layers from the same server from
  being merged into a single request with both layers. See <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/tiled/AbstractWMXLayerParams.html#mergeableParams"><code>mergeableParams</code></a> for a more detailed
  example of the difference between <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/tiled/AbstractWMXLayerParams.html#mergeableParams"><code>mergeableParams</code></a> and <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/tiled/AbstractWMXLayerParams.html#customParams"><code>customParams</code></a>.
 
  The json should look something like:
- <div class="highlight"><pre> {<br>     "param1Name": "value",<br>     "param2Name": ["value1", "value2"]<br> }</pre></div></div>
-    </dd>
+ <div class="highlight"><pre> {<br>     "param1Name": "value",<br>     "param2Name": ["value1", "value2"]<br> }</pre></div></div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>failOnError</code>  
-    </dt>
-    <dd>
-      <div class="block">Fail if a tile return an error.</div>
-    </dd>
+    <dt><code>failOnError</code> </dt>
+    <dd><div class="block">Fail if a tile return an error.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>imageFormat</code>  
-    </dt>
-    <dd>
-      <div class="block">The format of the image. for example image/png, image/jpeg, etc...</div>
-    </dd>
+    <dt><code>imageFormat</code> </dt>
+    <dd><div class="block">The format of the image. for example image/png, image/jpeg, etc...</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>layers</code>  required
-    </dt>
-    <dd>
-      <div class="block">The wms layer to request in the GetMap request.  The order is important.  It is the order that they
+    <dt><code>layers</code> required</dt>
+    <dd><div class="block">The wms layer to request in the GetMap request.  The order is important.  It is the order that they
  will appear in the request.
 
  As with the WMS specification, the first layer will be the first layer drawn on the map (the
  bottom/base layer) of the map.  This means that layer at position 0 in the array will covered by layer
- 1 (where not transparent) and so on.</div>
-    </dd>
+ 1 (where not transparent) and so on.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>mergeableParams</code>  
-    </dt>
-    <dd>
-      <div class="block">Custom query parameters that can be merged if multiple layers are merged together into a single
+    <dt><code>mergeableParams</code> </dt>
+    <dd><div class="block">Custom query parameters that can be merged if multiple layers are merged together into a single
  request.
 
  The json should look something like:
@@ -1254,127 +1101,110 @@ other attributes in that they have attribute values.</p>
  be merged.
 
  Compare that to DPI parameter (for QGIS wms mapserver).  if two layers have different DPI then the
- layers cannot be merged.  In this case the DPI should <em>NOT</em> be one of the <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/tiled/AbstractWMXLayerParams.html#mergeableParams"><code>mergeableParams</code></a> it should be one of the <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/tiled/AbstractWMXLayerParams.html#customParams"><code>customParams</code></a>.</div>
-    </dd>
+ layers cannot be merged.  In this case the DPI should <em>NOT</em> be one of the <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/tiled/AbstractWMXLayerParams.html#mergeableParams"><code>mergeableParams</code></a> it should be one of the <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/tiled/AbstractWMXLayerParams.html#customParams"><code>customParams</code></a>.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>method</code>  
-    </dt>
-    <dd>
-      <div class="block">The HTTP verb to use for fetching the images. Can be either "GET" (the default) or "POST".
+    <dt><code>method</code> </dt>
+    <dd><div class="block">The HTTP verb to use for fetching the images. Can be either "GET" (the default) or "POST".
 
  In case of "POST", the parameters are send in the body of the request using an
  "application/x-www-form-urlencoded" content type. This can be used when the parameters are too long.
- Tested only with GeoServer.</div>
-    </dd>
+ Tested only with GeoServer.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>name</code>  
-    </dt>
-    <dd>
-      <div class="block">The name of the layer.</div>
-    </dd>
+    <dt><code>name</code> </dt>
+    <dd><div class="block">The name of the layer.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>opacity</code>  
-    </dt>
-    <dd>
-      <div class="block">The opacity of the image.</div>
-    </dd>
+    <dt><code>opacity</code> </dt>
+    <dd><div class="block">The opacity of the image.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>rasterStyle</code>  
-    </dt>
-    <dd>
-      <div class="block">The name of the style (in Configuration or Template) to use when drawing the layer to the map.  This is
+    <dt><code>rasterStyle</code> </dt>
+    <dd><div class="block">The name of the style (in Configuration or Template) to use when drawing the layer to the map.  This is
  separate from the style in that it indicates how to draw the map.  It allows one to apply any of the
- SLD raster styling.</div>
-    </dd>
+ SLD raster styling.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>serverType</code>  
-    </dt>
-    <dd>
-      <div class="block">The server type ("mapserver", "geoserver" or "qgisserver"). By specifying the server type vendor
- specific parameters (like for the DPI value) can be used when making the request.</div>
-    </dd>
+    <dt><code>serverType</code> </dt>
+    <dd><div class="block">The server type ("mapserver", "geoserver" or "qgisserver"). By specifying the server type vendor
+ specific parameters (like for the DPI value) can be used when making the request.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>styles</code>  
-    </dt>
-    <dd>
-      <div class="block">The styles to apply to the layers.  If this is defined there should be the same number as the layers
- and the style are applied to the layer in the <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/image/wms/WmsLayerParam.html#layers"><code>layers</code></a> field.</div>
-    </dd>
+    <dt><code>styles</code> </dt>
+    <dd><div class="block">The styles to apply to the layers.  If this is defined there should be the same number as the layers
+ and the style are applied to the layer in the <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/map/image/wms/WmsLayerParam.html#layers"><code>layers</code></a> field.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>useNativeAngle</code>  
-    </dt>
-    <dd>
-      <div class="block">If true transform the map angle to customParams.angle for GeoServer, and customParams.map_angle for
- MapServer.</div>
-    </dd>
+    <dt><code>useNativeAngle</code> </dt>
+    <dd><div class="block">If true transform the map angle to customParams.angle for GeoServer, and customParams.map_angle for
+ MapServer.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>version</code>  
-    </dt>
-    <dd>
-      <div class="block">The WMS version to use when making requests.</div>
-    </dd>
+    <dt><code>version</code> </dt>
+    <dd><div class="block">The WMS version to use when making requests.</div></dd>
   </dl>
+    </div>
 
-</div>
+              </div>
+            </div>
+            <footer>
+              <hr />
 
-
-
-
-           </div>
+              <div role="contentinfo">
+                <p>
+                  <a
+                    href="http://www.camptocamp.com/geospatial/"
+                    target="_blank"
+                    >Camptocamp</a
+                  >
+                  <br />
+                  <span class="commit">
+                    Revision
+                    <code
+                      ><a
+                        href="https://github.com/mapfish/mapfish-print/commit/313c4136cd078ccf09e5a3159d4ee43c9f19842e"
+                        target="_blank"
+                        >313c4136</a
+                      ></code
+                    >.
+                  </span>
+                </p>
+              </div>
+              Theme based on a
+              <a href="https://github.com/snide/sphinx_rtd_theme">template</a>
+              provided by <a href="https://readthedocs.org">Read the Docs</a>.
+            </footer>
           </div>
-          <footer>
-
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        <a href="http://www.camptocamp.com/geospatial/" target="_blank">Camptocamp</a> <br>
-        <span class="commit">
-          Revision <code><a href="https://github.com/mapfish/mapfish-print/commit/67ed5f31735141534c59739ea885061584d6547e" target="_blank">67ed5f31</a></code>.
-        </span>
-
-
-    </p>
-  </div>
-  Theme based on a <a href="https://github.com/snide/sphinx_rtd_theme">template</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-
-</footer>
-
         </div>
-      </div>
+      </section>
+    </div>
 
-    </section>
-
-  </div>
-
-
-
-      <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.3.0/jquery-migrate.min.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.10.2/underscore-min.js"></script>
-      <script type="text/javascript" src="js/theme.js"></script>
-      <script type="text/javascript">
-        jQuery(function () {
-            SphinxRtdTheme.StickyNav.enable();
-        });
-      </script>
-
-</body>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.3.0/jquery-migrate.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.10.2/underscore-min.js"
+    ></script>
+    <script type="text/javascript" src="js/theme.js"></script>
+    <script type="text/javascript">
+      jQuery(function () {
+        SphinxRtdTheme.StickyNav.enable();
+      });
+    </script>
+  </body>
 </html>

@@ -1,154 +1,241 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="utf-8">
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>MapFish Print 3 Documentation - Configuration</title>
+    <title>MapFish Print 3 Documentation - Configuration</title>
 
     <link rel="stylesheet" href="css/sphinx_rtd_theme.css" type="text/css" />
-    <link rel="stylesheet" href="css/readthedocs-doc-embed.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="css/readthedocs-doc-embed.css"
+      type="text/css"
+    />
     <link rel="stylesheet" href="css/custom.css" type="text/css" />
+  </head>
 
-</head>
-
-<body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-
-
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
-
+  <body class="wy-body-for-nav" role="document">
+    <div class="wy-grid-for-nav">
+      <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+        <div class="wy-side-scroll">
+          <div class="wy-side-nav-search">
             <a href="index.html" class="icon icon-home"> MapFish Print 3</a>
-        </div>
+          </div>
 
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-
-
-
-                <ul class="current">
-<li class="toctree-l1 ">
-  <a class="reference internal " href="index.html">Introduction</a>
-</li>
-<li class="toctree-l1 ">
-  <a class="reference internal " href="jasperreports.html">JasperReports</a>
-</li>
-<li class="toctree-l1 ">
-  <a class="reference internal " href="api.html">Web API</a>
-</li>
-<li class="toctree-l1 ">
-  <a class="reference internal " href="attributes.html">Attributes</a>
-  
-</li>
-<li class="toctree-l1 current">
-  <a class="reference internal current" href="configuration.html">Configuration</a>
-  <ul>
-  <li class="toctree-l2"><a class="reference internal" href="#!acceptAll">!acceptAll</a></li>
-  <li class="toctree-l2"><a class="reference internal" href="#!alwaysAllowedAssertion">!alwaysAllowedAssertion</a></li>
-  <li class="toctree-l2"><a class="reference internal" href="#!andAssertion">!andAssertion</a></li>
-  <li class="toctree-l2"><a class="reference internal" href="#!certificateStore">!certificateStore</a></li>
-  <li class="toctree-l2"><a class="reference internal" href="#!configuration">!configuration</a></li>
-  <li class="toctree-l2"><a class="reference internal" href="#!credential">!credential</a></li>
-  <li class="toctree-l2"><a class="reference internal" href="#!dnsMatch">!dnsMatch</a></li>
-  <li class="toctree-l2"><a class="reference internal" href="#!hostnameMatch">!hostnameMatch</a></li>
-  <li class="toctree-l2"><a class="reference internal" href="#!ipMatch">!ipMatch</a></li>
-  <li class="toctree-l2"><a class="reference internal" href="#!localMatch">!localMatch</a></li>
-  <li class="toctree-l2"><a class="reference internal" href="#!mergeSource">!mergeSource</a></li>
-  <li class="toctree-l2"><a class="reference internal" href="#!pdfConfig">!pdfConfig</a></li>
-  <li class="toctree-l2"><a class="reference internal" href="#!proxy">!proxy</a></li>
-  <li class="toctree-l2"><a class="reference internal" href="#!roleAccessAssertion">!roleAccessAssertion</a></li>
-  <li class="toctree-l2"><a class="reference internal" href="#!s3reportStorage">!s3reportStorage</a></li>
-  <li class="toctree-l2"><a class="reference internal" href="#!smtpConfig">!smtpConfig</a></li>
-  <li class="toctree-l2"><a class="reference internal" href="#!template">!template</a></li>
-  <li class="toctree-l2"><a class="reference internal" href="#!updatePdfConfigUpdate">!updatePdfConfigUpdate</a></li>
-  <li class="toctree-l2"><a class="reference internal" href="#!urlImage">!urlImage</a></li>
-  <li class="toctree-l2"><a class="reference internal" href="#!zoomLevels">!zoomLevels</a></li>
+          <div
+            class="wy-menu wy-menu-vertical"
+            data-spy="affix"
+            role="navigation"
+            aria-label="main navigation"
+          >
+            <ul class="current">
+              <li class="toctree-l1 ">
+                <a
+                  class="reference internal "
+                  href="index.html"
+                  >Introduction</a
+                >
+              </li>
+              <li class="toctree-l1 ">
+                <a
+                  class="reference internal "
+                  href="jasperreports.html"
+                  >JasperReports</a
+                >
+              </li>
+              <li class="toctree-l1 ">
+                <a class="reference internal " href="api.html"
+                  >Web API</a
+                >
+              </li>
+              <li class="toctree-l1 ">
+                <a
+                  class="reference internal "
+                  href="attributes.html"
+                  >Attributes</a
+                >
+                
+              </li>
+              <li class="toctree-l1 current">
+                <a
+                  class="reference internal current"
+                  href="configuration.html"
+                  >Configuration</a
+                >
+                <ul>
+  <li class="toctree-l2">
+    <a class="reference internal" href="#!acceptAll">!acceptAll</a>
+  </li>
+  <li class="toctree-l2">
+    <a class="reference internal" href="#!alwaysAllowedAssertion">!alwaysAllowedAssertion</a>
+  </li>
+  <li class="toctree-l2">
+    <a class="reference internal" href="#!andAssertion">!andAssertion</a>
+  </li>
+  <li class="toctree-l2">
+    <a class="reference internal" href="#!certificateStore">!certificateStore</a>
+  </li>
+  <li class="toctree-l2">
+    <a class="reference internal" href="#!configuration">!configuration</a>
+  </li>
+  <li class="toctree-l2">
+    <a class="reference internal" href="#!credential">!credential</a>
+  </li>
+  <li class="toctree-l2">
+    <a class="reference internal" href="#!dnsMatch">!dnsMatch</a>
+  </li>
+  <li class="toctree-l2">
+    <a class="reference internal" href="#!hostnameMatch">!hostnameMatch</a>
+  </li>
+  <li class="toctree-l2">
+    <a class="reference internal" href="#!ipMatch">!ipMatch</a>
+  </li>
+  <li class="toctree-l2">
+    <a class="reference internal" href="#!localMatch">!localMatch</a>
+  </li>
+  <li class="toctree-l2">
+    <a class="reference internal" href="#!mergeSource">!mergeSource</a>
+  </li>
+  <li class="toctree-l2">
+    <a class="reference internal" href="#!pdfConfig">!pdfConfig</a>
+  </li>
+  <li class="toctree-l2">
+    <a class="reference internal" href="#!proxy">!proxy</a>
+  </li>
+  <li class="toctree-l2">
+    <a class="reference internal" href="#!roleAccessAssertion">!roleAccessAssertion</a>
+  </li>
+  <li class="toctree-l2">
+    <a class="reference internal" href="#!s3reportStorage">!s3reportStorage</a>
+  </li>
+  <li class="toctree-l2">
+    <a class="reference internal" href="#!smtpConfig">!smtpConfig</a>
+  </li>
+  <li class="toctree-l2">
+    <a class="reference internal" href="#!template">!template</a>
+  </li>
+  <li class="toctree-l2">
+    <a class="reference internal" href="#!updatePdfConfigUpdate">!updatePdfConfigUpdate</a>
+  </li>
+  <li class="toctree-l2">
+    <a class="reference internal" href="#!urlImage">!urlImage</a>
+  </li>
+  <li class="toctree-l2">
+    <a class="reference internal" href="#!zoomLevels">!zoomLevels</a>
+  </li>
 </ul>
 
-</li>
-<li class="toctree-l1 ">
-  <a class="reference internal " href="layers.html">Map Layers</a>
-  
-</li>
-<li class="toctree-l1 ">
-  <a class="reference internal " href="processors.html">Processors</a>
-  
-</li>
-<li class="toctree-l1 ">
-  <a class="reference internal " href="fileloaders.html">File-Loaders</a>
-  
-</li>
-<li class="toctree-l1 ">
-  <a class="reference internal " href="outputformats.html">Output Formats</a>
-  
-</li>
-<li class="toctree-l1 ">
-  <a class="reference internal " href="styles.html">Styles</a>
-  
-</li>
-<li class="toctree-l1 ">
-  <a class="reference internal " href="tableimages.html">Images in tables</a>
-</li>
-<li class="toctree-l1 ">
-  <a class="reference internal " href="download.html">Download</a>
-</li>
-<li class="toctree-l1 ">
-  <a class="reference internal " href="docker.html">Docker</a>
-</li>
-</ul>
-
-
-
+              </li>
+              <li class="toctree-l1 ">
+                <a
+                  class="reference internal "
+                  href="layers.html"
+                  >Map Layers</a
+                >
+                
+              </li>
+              <li class="toctree-l1 ">
+                <a
+                  class="reference internal "
+                  href="processors.html"
+                  >Processors</a
+                >
+                
+              </li>
+              <li class="toctree-l1 ">
+                <a
+                  class="reference internal "
+                  href="fileloaders.html"
+                  >File-Loaders</a
+                >
+                
+              </li>
+              <li class="toctree-l1 ">
+                <a
+                  class="reference internal "
+                  href="outputformats.html"
+                  >Output Formats</a
+                >
+                
+              </li>
+              <li class="toctree-l1 ">
+                <a
+                  class="reference internal "
+                  href="styles.html"
+                  >Styles</a
+                >
+                
+              </li>
+              <li class="toctree-l1 ">
+                <a
+                  class="reference internal "
+                  href="tableimages.html"
+                  >Images in tables</a
+                >
+              </li>
+              <li class="toctree-l1 ">
+                <a
+                  class="reference internal "
+                  href="download.html"
+                  >Download</a
+                >
+              </li>
+              <li class="toctree-l1 ">
+                <a
+                  class="reference internal "
+                  href="docker.html"
+                  >Docker</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">MapFish Print 3</a>
       </nav>
 
+      <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+        <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">MapFish Print 3</a>
+        </nav>
 
+        <div class="wy-nav-content">
+          <div class="rst-content">
+            <div role="navigation" aria-label="breadcrumbs navigation">
+              <ul class="wy-breadcrumbs">
+                <li><a href="index.html">Docs</a> &raquo;</li>
 
-      <div class="wy-nav-content">
-        <div class="rst-content">
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-
-    <li>Configuration</li>
-      <li class="wy-breadcrumbs-aside">
-
-
-            <a href="https://github.com/mapfish/mapfish-print" class="fa fa-github"> mapfish/mapfish-print</a>
-
-
-      </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             <h1>Configuration</h1>
-             <div class="section">
-<p>This section lists the available configuration components that can be
-used in the YAML configuration file.</p>
+                <li>Configuration</li>
+                <li class="wy-breadcrumbs-aside">
+                  <a
+                    href="https://github.com/mapfish/mapfish-print"
+                    class="fa fa-github"
+                  >
+                    mapfish/mapfish-print</a
+                  >
+                </li>
+              </ul>
+              <hr />
+            </div>
+            <div
+              role="main"
+              class="document"
+              itemscope="itemscope"
+              itemtype="http://schema.org/Article"
+            >
+              <div itemprop="articleBody">
+                <h1>Configuration</h1>
+                <div class="section"><p>
+  This section lists the available configuration components that can be used in
+  the YAML configuration file.
+</p>
 <p>
   <strong>Example <code>config.yaml</code></strong>
 </p>
-  <div class="highlight-yaml"><div class="highlight"><pre>
+<div class="highlight-yaml">
+  <div class="highlight">
+    <pre>
 throwErrorOnExtraParameters: true
 
 certificateStore: !certificateStore
@@ -164,109 +251,116 @@ proxies:
 
 templates:
   A4 Landscape: !template
-    ...</pre></div></div>
-
+    ...</pre
+    >
+  </div>
+</div>
 </div>
 
 <div class="section" id="!acceptAll">
-  <h1>!acceptAll<a class="headerlink" href="#!acceptAll" title="Permalink to this headline">¶</a></h1>
-  <div class="block">A matcher that always returns true. </div>
-
+  <h1>
+    !acceptAll<a
+      class="headerlink"
+      href="#!acceptAll"
+      title="Permalink to this headline"
+      >¶</a
+    >
+  </h1>
+  <div class="block">A matcher that always returns true. </div> 
   <div class="admonition note examples">
     <p class="first admonition-title">Example</p>
     <p class="last">
-        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/http_processors" target="_blank" class="fa fa-book">&nbsp;http_processors</a>&nbsp;
+      <a
+        href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/http_processors"
+        target="_blank"
+        class="fa fa-book"
+        >&nbsp;http_processors</a
+      >&nbsp; 
     </p>
   </div>
-
-    <h3>Configuration</h3>
+   
+  <h3>Configuration</h3>
+   
   <dl>
-    <dt>
-      <code>reject</code>  
-    </dt>
-    <dd>
-      <div class="block">Reverses the matcher. Instead of accepting an URI when the URI matches, the URI is rejected.</div>
-    </dd>
+    <dt><code>reject</code> </dt>
+    <dd><div class="block">Reverses the matcher. Instead of accepting an URI when the URI matches, the URI is rejected.</div></dd>
   </dl>
-
-
-</div>
+      </div>
 <div class="section" id="!alwaysAllowedAssertion">
-  <h1>!alwaysAllowedAssertion<a class="headerlink" href="#!alwaysAllowedAssertion" title="Permalink to this headline">¶</a></h1>
-  <div class="block">This assertion always allows access.</div>
-
-
-
-
-</div>
+  <h1>
+    !alwaysAllowedAssertion<a
+      class="headerlink"
+      href="#!alwaysAllowedAssertion"
+      title="Permalink to this headline"
+      >¶</a
+    >
+  </h1>
+  <div class="block">This assertion always allows access.</div>       </div>
 <div class="section" id="!andAssertion">
-  <h1>!andAssertion<a class="headerlink" href="#!andAssertion" title="Permalink to this headline">¶</a></h1>
-  <div class="block">An access assertion that throws fails if any of the encapsulated assertions fail.</div>
-
-
-    <h3>Configuration</h3>
+  <h1>
+    !andAssertion<a
+      class="headerlink"
+      href="#!andAssertion"
+      title="Permalink to this headline"
+      >¶</a
+    >
+  </h1>
+  <div class="block">An access assertion that throws fails if any of the encapsulated assertions fail.</div>  
+  <h3>Configuration</h3>
+   
   <dl>
-    <dt>
-      <code>predicates</code>  
-    </dt>
-    <dd>
-      <div class="block">Set all the Predicates/AccessAssertion that have to all pass in order for this assertion to pass.
+    <dt><code>predicates</code> </dt>
+    <dd><div class="block">Set all the Predicates/AccessAssertion that have to all pass in order for this assertion to pass.
  <p>
  An exception is thrown if this method is called more than once.
- </p></div>
-    </dd>
+ </p></div></dd>
   </dl>
-
-
-</div>
+      </div>
 <div class="section" id="!certificateStore">
-  <h1>!certificateStore<a class="headerlink" href="#!certificateStore" title="Permalink to this headline">¶</a></h1>
+  <h1>
+    !certificateStore<a
+      class="headerlink"
+      href="#!certificateStore"
+      title="Permalink to this headline"
+      >¶</a
+    >
+  </h1>
   <div class="block">A configuration object for configuring a custom certificate/trust store.
 
- It is a uri to a java jks keystore file along with the password for unlocking the store.</div>
-
-
-    <h3>Configuration</h3>
+ It is a uri to a java jks keystore file along with the password for unlocking the store.</div>  
+  <h3>Configuration</h3>
+   
   <dl>
-    <dt>
-      <code>configuration</code>  
-    </dt>
-    <dd>
-      <div class="block"><span class="descfrmTypeLabel">Description copied from interface: <code><a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/config/HasConfiguration.html#setConfiguration-org.mapfish.print.config.Configuration-">HasConfiguration</a></code></span></div>
-    </dd>
+    <dt><code>configuration</code> </dt>
+    <dd><div class="block"><span class="descfrmTypeLabel">Description copied from interface: <code><a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/config/HasConfiguration.html#setConfiguration-org.mapfish.print.config.Configuration-">HasConfiguration</a></code></span></div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>password</code>  
-    </dt>
-    <dd>
-      <div class="block">The password for unlocking the certificate store.</div>
-    </dd>
+    <dt><code>password</code> </dt>
+    <dd><div class="block">The password for unlocking the certificate store.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>uri</code>  
-    </dt>
-    <dd>
-      <div class="block">The uri to the certificate store. It is a uri to a java jks keystore file along with the password for
- unlocking the store.</div>
-    </dd>
+    <dt><code>uri</code> </dt>
+    <dd><div class="block">The uri to the certificate store. It is a uri to a java jks keystore file along with the password for
+ unlocking the store.</div></dd>
   </dl>
-
-
-</div>
+      </div>
 <div class="section" id="!configuration">
-  <h1>!configuration<a class="headerlink" href="#!configuration" title="Permalink to this headline">¶</a></h1>
-  <div class="block">The Main Configuration Bean.</div>
-
-
-    <h3>Configuration</h3>
+  <h1>
+    !configuration<a
+      class="headerlink"
+      href="#!configuration"
+      title="Permalink to this headline"
+      >¶</a
+    >
+  </h1>
+  <div class="block">The Main Configuration Bean.</div>  
+  <h3>Configuration</h3>
+   
   <dl>
-    <dt>
-      <code>access</code>  
-    </dt>
-    <dd>
-      <div class="block">The roles required to access this configuration/app.  If empty or not set then it is a
+    <dt><code>access</code> </dt>
+    <dd><div class="block">The roles required to access this configuration/app.  If empty or not set then it is a
  <em>public</em> app.  If there are many roles then a user must have one of the roles in order to
  access the configuration/app.
 
@@ -275,84 +369,60 @@ templates:
  <p>
  Any user without the required role will get an error when trying to access any of the templates and no
  templates will be listed in the capabilities requests.
- </p></div>
-    </dd>
+ </p></div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>allowedReferers</code>  
-    </dt>
-    <dd>
-      <div class="block">The matchers used to authorize the incoming requests in function of the referer. For example:
+    <dt><code>allowedReferers</code> </dt>
+    <dd><div class="block">The matchers used to authorize the incoming requests in function of the referer. For example:
  <div class="highlight"><pre> allowedReferers:<br>   - !hostnameMatch<br>     host: example.com<br>     allowSubDomains: true</pre></div><p>
- By default, the referer is not checked</p></div>
-    </dd>
+ By default, the referer is not checked</p></div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>certificateStore</code>  
-    </dt>
-    <dd>
-      <div class="block">The configuration for locating a custom certificate store.  This is only required if the default
+    <dt><code>certificateStore</code> </dt>
+    <dd><div class="block">The configuration for locating a custom certificate store.  This is only required if the default
  certificate store which ships with all java installations does not contain the certificates needed by
- this server.  Usually it is to accept a self-signed certificate, for example on a test server.</div>
-    </dd>
+ this server.  Usually it is to accept a self-signed certificate, for example on a test server.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>configurationFile</code>  
-    </dt>
-    <dd>
-      <div></div>
-    </dd>
+    <dt><code>configurationFile</code> </dt>
+    <dd><div></div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>credentials</code>  
-    </dt>
-    <dd>
-      <div class="block">Http credentials to be used when making http requests.
+    <dt><code>credentials</code> </dt>
+    <dd><div class="block">Http credentials to be used when making http requests.
  <p>
  If a proxy needs credentials you don't need to configure it here because the proxy configuration object
  also has options for declaring the credentials.
- </p></div>
-    </dd>
+ </p></div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>defaultStyle</code>  
-    </dt>
-    <dd>
-      <div class="block">Set the default styles.  the case of the keys are not important.  The retrieval will be case
- insensitive.</div>
-    </dd>
+    <dt><code>defaultStyle</code> </dt>
+    <dd><div class="block">Set the default styles.  the case of the keys are not important.  The retrieval will be case
+ insensitive.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>defaultToSvg</code>  
-    </dt>
-    <dd>
-      <div class="block">If true then all vector layers (and other parts of the system that can be either SVG or Bitmap, like
+    <dt><code>defaultToSvg</code> </dt>
+    <dd><div class="block">If true then all vector layers (and other parts of the system that can be either SVG or Bitmap, like
  scalebar) will be rendered as SVG (unless layer specifically indicates useSvg as false).
  <p>
  The default is false.
- </p></div>
-    </dd>
+ </p></div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>fileLoaderManager</code>  
-    </dt>
-    <dd>
-      <div class="block">Set file loader manager.</div>
-    </dd>
+    <dt><code>fileLoaderManager</code> </dt>
+    <dd><div class="block">Set file loader manager.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>jdbcDrivers</code>  
-    </dt>
-    <dd>
-      <div class="block">Set the JDBC drivers that are required to connect to the databases in the configuration.  JDBC drivers
+    <dt><code>jdbcDrivers</code> </dt>
+    <dd><div class="block">Set the JDBC drivers that are required to connect to the databases in the configuration.  JDBC drivers
  are needed (for example) when database sources are used in templates.  For example if in one of the
  template you have:
 
@@ -362,23 +432,17 @@ templates:
  </p><div class="highlight"><pre>     jdbcDrivers: [org.postgresql.Driver]</pre></div><p>
  or
 
- </p><div class="highlight"><pre>     jdbcDrivers:<br>       - org.postgresql.Driver</pre></div></div>
-    </dd>
+ </p><div class="highlight"><pre>     jdbcDrivers:<br>       - org.postgresql.Driver</pre></div></div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>opaqueTileErrorColor</code>  
-    </dt>
-    <dd>
-      <div class="block">Color used for tiles in error on opaque layers.</div>
-    </dd>
+    <dt><code>opaqueTileErrorColor</code> </dt>
+    <dd><div class="block">Color used for tiles in error on opaque layers.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>outputFilename</code>  
-    </dt>
-    <dd>
-      <div class="block">The default output file name of the report.  This can be overridden by <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/config/Template.html#setOutputFilename-java.lang.String-"><code>Template.setOutputFilename(String)</code></a> and the outputFilename parameter in the
+    <dt><code>outputFilename</code> </dt>
+    <dd><div class="block">The default output file name of the report.  This can be overridden by <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/config/Template.html#setOutputFilename-java.lang.String-"><code>Template.setOutputFilename(String)</code></a> and the outputFilename parameter in the
  request JSON.
  <p>
  This can be a string and can also have a date section in the string that will be filled when the report
@@ -391,774 +455,652 @@ templates:
  Example: <code>outputFilename: print-${dd-MM-yyyy}</code> should output:
  <code>print-22-11-2014.pdf</code></p><p>
  Note: the suffix will be appended to the end of the name.
- </p></div>
-    </dd>
+ </p></div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>pdfConfig</code>  
-    </dt>
-    <dd>
-      <div class="block">Configure various properties related to the reports generated as PDFs.</div>
-    </dd>
+    <dt><code>pdfConfig</code> </dt>
+    <dd><div class="block">Configure various properties related to the reports generated as PDFs.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>proxies</code>  
-    </dt>
-    <dd>
-      <div class="block">Configuration for proxying http requests.  Each proxy can be configured with authentication and with
+    <dt><code>proxies</code> </dt>
+    <dd><div class="block">Configuration for proxying http requests.  Each proxy can be configured with authentication and with
  the uris that they apply to.
 
- See <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/http/HttpProxy.html" title="class in org.mapfish.print.http"><code>HttpProxy</code></a> for details on how to configure them.</div>
-    </dd>
+ See <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/http/HttpProxy.html" title="class in org.mapfish.print.http"><code>HttpProxy</code></a> for details on how to configure them.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>resourceBundle</code>  
-    </dt>
-    <dd>
-      <div class="block">Set the resource bundle name.</div>
-    </dd>
+    <dt><code>resourceBundle</code> </dt>
+    <dd><div class="block">Set the resource bundle name.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>smtp</code>  
-    </dt>
-    <dd>
-      <div></div>
-    </dd>
+    <dt><code>smtp</code> </dt>
+    <dd><div></div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>styles</code>  
-    </dt>
-    <dd>
-      <div class="block">Set the named styles defined in the configuration for this.</div>
-    </dd>
+    <dt><code>styles</code> </dt>
+    <dd><div class="block">Set the named styles defined in the configuration for this.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>templates</code>  
-    </dt>
-    <dd>
-      <div class="block">Set the configuration of the named template.</div>
-    </dd>
+    <dt><code>templates</code> </dt>
+    <dd><div class="block">Set the configuration of the named template.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>throwErrorOnExtraParameters</code>  
-    </dt>
-    <dd>
-      <div class="block">If true and the request JSON has extra parameters in the layers definition, exceptions will be thrown.
- Otherwise the information will be logged.</div>
-    </dd>
+    <dt><code>throwErrorOnExtraParameters</code> </dt>
+    <dd><div class="block">If true and the request JSON has extra parameters in the layers definition, exceptions will be thrown.
+ Otherwise the information will be logged.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>transparentTileErrorColor</code>  
-    </dt>
-    <dd>
-      <div class="block">Color used for tiles in error on transparent layers.</div>
-    </dd>
+    <dt><code>transparentTileErrorColor</code> </dt>
+    <dd><div class="block">Color used for tiles in error on transparent layers.</div></dd>
   </dl>
-
-
-</div>
+      </div>
 <div class="section" id="!credential">
-  <h1>!credential<a class="headerlink" href="#!credential" title="Permalink to this headline">¶</a></h1>
+  <h1>
+    !credential<a
+      class="headerlink"
+      href="#!credential"
+      title="Permalink to this headline"
+      >¶</a
+    >
+  </h1>
   <div class="block">Represents a set of credentials to use for an http request.  These can be configured in the Configuration
  yaml file.
 
  <p><em>Note: proxies are also HttpCredentials and when searching for credentials, the proxies will also be
- searched for credentials.</em></p></div>
-
-
-    <h3>Configuration</h3>
+ searched for credentials.</em></p></div>  
+  <h3>Configuration</h3>
+   
   <dl>
-    <dt>
-      <code>matchers</code>  
-    </dt>
-    <dd>
-      <div class="block">Matchers are used to choose which requests the credentials apply to.</div>
-    </dd>
+    <dt><code>matchers</code> </dt>
+    <dd><div class="block">Matchers are used to choose which requests the credentials apply to.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>password</code>  
-    </dt>
-    <dd>
-      <div class="block">The password for authenticating with the credentials.
+    <dt><code>password</code> </dt>
+    <dd><div class="block">The password for authenticating with the credentials.
  <p>
  This is optional
- </p></div>
-    </dd>
+ </p></div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>username</code>  
-    </dt>
-    <dd>
-      <div class="block">The username for authenticating with the credentials.
+    <dt><code>username</code> </dt>
+    <dd><div class="block">The username for authenticating with the credentials.
  <p>
  This is optional
- </p></div>
-    </dd>
+ </p></div></dd>
   </dl>
-
-
-</div>
+      </div>
 <div class="section" id="!dnsMatch">
-  <h1>!dnsMatch<a class="headerlink" href="#!dnsMatch" title="Permalink to this headline">¶</a></h1>
+  <h1>
+    !dnsMatch<a
+      class="headerlink"
+      href="#!dnsMatch"
+      title="Permalink to this headline"
+      >¶</a
+    >
+  </h1>
   <div class="block">Allows to check that a given URL matches a DNS address (textual format). The actual comparison is performed
  on numerical IP addresses. The configured DNS host address is transformed into numerical IP addresses
  during application startup. The urls to be compared are transformed during the print processing.
- <p>Example 1: Accept any www.camptocamp.com url</p><div class="highlight"><pre>     - !dnsMatch<br>       host : www.camptocamp.com</pre></div><p>Example 2: Accept any www.camptocamp.com url (port == -1 accepts any port)</p><div class="highlight"><pre>     - !dnsMatch<br>       host : www.camptocamp.com<br>       port : -1</pre></div><p>Example 3: Accept any www.camptocamp.com url on port 80 only</p><div class="highlight"><pre>     - !dnsMatch<br>       host : www.camptocamp.com<br>       port : 80</pre></div>
+ <p>Example 1: Accept any www.camptocamp.com url</p><div class="highlight"><pre>     - !dnsMatch<br>       host: www.camptocamp.com</pre></div><p>Example 2: Accept any www.camptocamp.com url (port == -1 accepts any port)</p><div class="highlight"><pre>     - !dnsMatch<br>       host: www.camptocamp.com<br>       port: -1</pre></div><p>Example 3: Accept any www.camptocamp.com url on port 80 only</p><div class="highlight"><pre>     - !dnsMatch<br>       host: www.camptocamp.com<br>       port: 80</pre></div>
 
  Example 4: Accept www.camptocamp.com urls with paths that start with /print/.
  <p>
  If the regular expression give does not start with / then it will be added because all paths start with /
- </p><div class="highlight"><pre>     - !dnsMatch<br>       host : www.camptocamp.com<br>       pathRegex : /print/.+</pre></div>
- </div>
-
+ </p><div class="highlight"><pre>     - !dnsMatch<br>       host: www.camptocamp.com<br>       pathRegex: /print/.+</pre></div>
+ </div> 
   <div class="admonition note examples">
     <p class="first admonition-title">Example</p>
     <p class="last">
-        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/http_processors" target="_blank" class="fa fa-book">&nbsp;http_processors</a>&nbsp;
+      <a
+        href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/http_processors"
+        target="_blank"
+        class="fa fa-book"
+        >&nbsp;http_processors</a
+      >&nbsp; 
     </p>
   </div>
-
-    <h3>Configuration</h3>
+   
+  <h3>Configuration</h3>
+   
   <dl>
-    <dt>
-      <code>host</code>  
-    </dt>
-    <dd>
-      <div class="block">Set the host.</div>
-    </dd>
+    <dt><code>host</code> </dt>
+    <dd><div class="block">Set the host.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>pathRegex</code>  
-    </dt>
-    <dd>
-      <div class="block">The regular expression used to verify the path of the uri as is expected.  All paths start with /.
+    <dt><code>pathRegex</code> </dt>
+    <dd><div class="block">The regular expression used to verify the path of the uri as is expected.  All paths start with /.
  <p>
  The regular expression used are the ones supported by java:
  <a shape="rect" href="http://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html">
  http://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html
- </a></p></div>
-    </dd>
+ </a></p></div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>port</code>  
-    </dt>
-    <dd>
-      <div></div>
-    </dd>
+    <dt><code>port</code> </dt>
+    <dd><div></div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>reject</code>  
-    </dt>
-    <dd>
-      <div class="block">Reverses the matcher. Instead of accepting an URI when the URI matches, the URI is rejected.</div>
-    </dd>
+    <dt><code>reject</code> </dt>
+    <dd><div class="block">Reverses the matcher. Instead of accepting an URI when the URI matches, the URI is rejected.</div></dd>
   </dl>
-
-
-</div>
+      </div>
 <div class="section" id="!hostnameMatch">
-  <h1>!hostnameMatch<a class="headerlink" href="#!hostnameMatch" title="Permalink to this headline">¶</a></h1>
+  <h1>
+    !hostnameMatch<a
+      class="headerlink"
+      href="#!hostnameMatch"
+      title="Permalink to this headline"
+      >¶</a
+    >
+  </h1>
   <div class="block">Allows to check that a given URL matches a hostname literally (textual match).
 
- <p>Example 1: Accept any www.camptocamp.com url</p><div class="highlight"><pre>     - !hostnameMatch<br>       host : www.camptocamp.com</pre></div><p>Example 2: Accept any www.camptocamp.com url (port == -1 accepts any port)</p><div class="highlight"><pre>     - !hostnameMatch<br>       host : www.camptocamp.com<br>       port : -1</pre></div><p>Example 3: Accept any www.camptocamp.com url on port 80 only</p><div class="highlight"><pre>     - !hostnameMatch<br>       host : www.camptocamp.com<br>       port : 80</pre></div>
+ <p>Example 1: Accept any www.camptocamp.com url</p><div class="highlight"><pre>     - !hostnameMatch<br>       host: www.camptocamp.com</pre></div><p>Example 2: Accept any www.camptocamp.com url (port == -1 accepts any port)</p><div class="highlight"><pre>     - !hostnameMatch<br>       host: www.camptocamp.com<br>       port: -1</pre></div><p>Example 3: Accept any www.camptocamp.com url on port 80 only</p><div class="highlight"><pre>     - !hostnameMatch<br>       host: www.camptocamp.com<br>       port: 80</pre></div>
 
  Example 4: Accept www.camptocamp.com urls with paths that start with /print/.
  <p>
  If the regular expression give does not start with / then it will be added because all paths start with /
- </p><div class="highlight"><pre>     - !hostnameMatch<br>       host : www.camptocamp.com<br>       pathRegex : /print/.+</pre></div></div>
-
-
-    <h3>Configuration</h3>
+ </p><div class="highlight"><pre>     - !hostnameMatch<br>       host: www.camptocamp.com<br>       pathRegex: /print/.+</pre></div></div>  
+  <h3>Configuration</h3>
+   
   <dl>
-    <dt>
-      <code>allowSubDomains</code>  
-    </dt>
-    <dd>
-      <div class="block">Set if sub-domains are allowed.</div>
-    </dd>
+    <dt><code>allowSubDomains</code> </dt>
+    <dd><div class="block">Set if sub-domains are allowed.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>host</code>  
-    </dt>
-    <dd>
-      <div class="block">Set the host.</div>
-    </dd>
+    <dt><code>host</code> </dt>
+    <dd><div class="block">Set the host.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>pathRegex</code>  
-    </dt>
-    <dd>
-      <div class="block">The regular expression used to verify the path of the uri as is expected.  All paths start with /.
+    <dt><code>pathRegex</code> </dt>
+    <dd><div class="block">The regular expression used to verify the path of the uri as is expected.  All paths start with /.
  <p>
  The regular expression used are the ones supported by java:
  <a shape="rect" href="http://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html">
  http://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html
- </a></p></div>
-    </dd>
+ </a></p></div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>port</code>  
-    </dt>
-    <dd>
-      <div></div>
-    </dd>
+    <dt><code>port</code> </dt>
+    <dd><div></div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>reject</code>  
-    </dt>
-    <dd>
-      <div class="block">Reverses the matcher. Instead of accepting an URI when the URI matches, the URI is rejected.</div>
-    </dd>
+    <dt><code>reject</code> </dt>
+    <dd><div class="block">Reverses the matcher. Instead of accepting an URI when the URI matches, the URI is rejected.</div></dd>
   </dl>
-
-
-</div>
+      </div>
 <div class="section" id="!ipMatch">
-  <h1>!ipMatch<a class="headerlink" href="#!ipMatch" title="Permalink to this headline">¶</a></h1>
+  <h1>
+    !ipMatch<a
+      class="headerlink"
+      href="#!ipMatch"
+      title="Permalink to this headline"
+      >¶</a
+    >
+  </h1>
   <div class="block">Compares ip address string and mask string by using <code>InetAddress</code> comparison.
- <p>Example 1: accept any uri whose host matches the ip of www.camptocamp.com</p><div class="highlight"><pre>     - !ipMatch<br>       ip : www.camptocamp.com</pre></div><p>Example 2: accept any uri whose host ip starts with 192.1</p><div class="highlight"><pre>     - !ipMatch<br>       ip : 192.1.0.0<br>       mask : 255.255.0.0</pre></div><p>Example 3: accept any uri whose host ip starts with 192.1 and restricts to port 80</p><div class="highlight"><pre>     - !ipMatch<br>       ip : 192.1.0.0<br>       mask : 255.255.0.0<br>       port : 80</pre></div><p>Example 4: accept any uri whose host ip starts with 192.1 and and allows any port (-1 is any port)</p><div class="highlight"><pre>     - !ipMatch<br>       ip : 192.1.0.0<br>       mask : 255.255.0.0<br>       port : -1</pre></div><p>Example 5: accept any uri whose host ip starts with 192.1 and restricts to paths that start with
- /print/</p><div class="highlight"><pre>     - !ipMatch<br>       ip : 192.1.0.0<br>       mask : 255.255.0.0<br>       pathRegex : /print/.+</pre></div>
- </div>
-
+ <p>Example 1: accept any uri whose host matches the ip of www.camptocamp.com</p><div class="highlight"><pre>     - !ipMatch<br>       ip: www.camptocamp.com</pre></div><p>Example 2: accept any uri whose host ip starts with 192.1</p><div class="highlight"><pre>     - !ipMatch<br>       ip: 192.1.0.0<br>       mask: 255.255.0.0</pre></div><p>Example 3: accept any uri whose host ip starts with 192.1 and restricts to port 80</p><div class="highlight"><pre>     - !ipMatch<br>       ip: 192.1.0.0<br>       mask: 255.255.0.0<br>       port: 80</pre></div><p>Example 4: accept any uri whose host ip starts with 192.1 and and allows any port (-1 is any port)</p><div class="highlight"><pre>     - !ipMatch<br>       ip: 192.1.0.0<br>       mask: 255.255.0.0<br>       port: -1</pre></div><p>Example 5: accept any uri whose host ip starts with 192.1 and restricts to paths that start with
+ /print/</p><div class="highlight"><pre>     - !ipMatch<br>       ip: 192.1.0.0<br>       mask: 255.255.0.0<br>       pathRegex: /print/.+</pre></div>
+ </div> 
   <div class="admonition note examples">
     <p class="first admonition-title">Example</p>
     <p class="last">
-        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/http_processors" target="_blank" class="fa fa-book">&nbsp;http_processors</a>&nbsp;
+      <a
+        href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/http_processors"
+        target="_blank"
+        class="fa fa-book"
+        >&nbsp;http_processors</a
+      >&nbsp; 
     </p>
   </div>
-
-    <h3>Configuration</h3>
+   
+  <h3>Configuration</h3>
+   
   <dl>
-    <dt>
-      <code>ip</code>  
-    </dt>
-    <dd>
-      <div class="block">Set the allowed ip address for this matcher.</div>
-    </dd>
+    <dt><code>ip</code> </dt>
+    <dd><div class="block">Set the allowed ip address for this matcher.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>mask</code>  
-    </dt>
-    <dd>
-      <div class="block">Set the Mask to apply to the ip address obtained from the URI that is being tested.</div>
-    </dd>
+    <dt><code>mask</code> </dt>
+    <dd><div class="block">Set the Mask to apply to the ip address obtained from the URI that is being tested.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>pathRegex</code>  
-    </dt>
-    <dd>
-      <div class="block">The regular expression used to verify the path of the uri as is expected.  All paths start with /.
+    <dt><code>pathRegex</code> </dt>
+    <dd><div class="block">The regular expression used to verify the path of the uri as is expected.  All paths start with /.
  <p>
  The regular expression used are the ones supported by java:
  <a shape="rect" href="http://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html">
  http://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html
- </a></p></div>
-    </dd>
+ </a></p></div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>port</code>  
-    </dt>
-    <dd>
-      <div></div>
-    </dd>
+    <dt><code>port</code> </dt>
+    <dd><div></div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>reject</code>  
-    </dt>
-    <dd>
-      <div class="block">Reverses the matcher. Instead of accepting an URI when the URI matches, the URI is rejected.</div>
-    </dd>
+    <dt><code>reject</code> </dt>
+    <dd><div class="block">Reverses the matcher. Instead of accepting an URI when the URI matches, the URI is rejected.</div></dd>
   </dl>
-
-
-</div>
+      </div>
 <div class="section" id="!localMatch">
-  <h1>!localMatch<a class="headerlink" href="#!localMatch" title="Permalink to this headline">¶</a></h1>
+  <h1>
+    !localMatch<a
+      class="headerlink"
+      href="#!localMatch"
+      title="Permalink to this headline"
+      >¶</a
+    >
+  </h1>
   <div class="block">Allows to check that a given URL is served by one of the local network interface or one of its aliases.
- <p>Example 1: Accept any localhost url</p><div class="highlight"><pre>     - localMatch {}</pre></div><p>Example 2: Accept any localhost url (port == -1 accepts any port)</p><div class="highlight"><pre>     - localMatch<br>       port : -1</pre></div><p>Example 3: Accept any localhost url on port 80 only</p><div class="highlight"><pre>     - localMatch<br>       port : 80</pre></div><p>Example 4: Accept localhost urls with paths that start with /print/.</p><p>
+ <p>Example 1: Accept any localhost url</p><div class="highlight"><pre>     - localMatch {}</pre></div><p>Example 2: Accept any localhost url (port == -1 accepts any port)</p><div class="highlight"><pre>     - localMatch<br>       port: -1</pre></div><p>Example 3: Accept any localhost url on port 80 only</p><div class="highlight"><pre>     - localMatch<br>       port: 80</pre></div><p>Example 4: Accept localhost urls with paths that start with /print/.</p><p>
  If the regular expression given does not start with / then it will be added because all paths start with
  /.
- </p><div class="highlight"><pre>     - localMatch<br>       pathRegex : /print/.+</pre></div>
- </div>
-
+ </p><div class="highlight"><pre>     - localMatch<br>       pathRegex: /print/.+</pre></div>
+ </div> 
   <div class="admonition note examples">
     <p class="first admonition-title">Example</p>
     <p class="last">
-        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/http_processors" target="_blank" class="fa fa-book">&nbsp;http_processors</a>&nbsp;
+      <a
+        href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/http_processors"
+        target="_blank"
+        class="fa fa-book"
+        >&nbsp;http_processors</a
+      >&nbsp; 
     </p>
   </div>
-
-    <h3>Configuration</h3>
+   
+  <h3>Configuration</h3>
+   
   <dl>
-    <dt>
-      <code>pathRegex</code>  
-    </dt>
-    <dd>
-      <div class="block">The regular expression used to verify the path of the uri as is expected.  All paths start with /.
+    <dt><code>pathRegex</code> </dt>
+    <dd><div class="block">The regular expression used to verify the path of the uri as is expected.  All paths start with /.
  <p>
  The regular expression used are the ones supported by java:
  <a shape="rect" href="http://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html">
  http://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html
- </a></p></div>
-    </dd>
+ </a></p></div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>port</code>  
-    </dt>
-    <dd>
-      <div></div>
-    </dd>
+    <dt><code>port</code> </dt>
+    <dd><div></div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>reject</code>  
-    </dt>
-    <dd>
-      <div class="block">Reverses the matcher. Instead of accepting an URI when the URI matches, the URI is rejected.</div>
-    </dd>
+    <dt><code>reject</code> </dt>
+    <dd><div class="block">Reverses the matcher. Instead of accepting an URI when the URI matches, the URI is rejected.</div></dd>
   </dl>
-
-
-</div>
+      </div>
 <div class="section" id="!mergeSource">
-  <h1>!mergeSource<a class="headerlink" href="#!mergeSource" title="Permalink to this headline">¶</a></h1>
+  <h1>
+    !mergeSource<a
+      class="headerlink"
+      href="#!mergeSource"
+      title="Permalink to this headline"
+      >¶</a
+    >
+  </h1>
   <div class="block"><p>Describes the objects used as sources for a merged data source
  (see <a shape="rect" href="processors.html#!mergeDataSources">!mergeDataSources</a> processor).</p>
- </div>
-
+ </div> 
   <div class="admonition note examples">
     <p class="first admonition-title">Example</p>
     <p class="last">
-        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/merged_datasource" target="_blank" class="fa fa-book">&nbsp;merged_datasource</a>&nbsp;
+      <a
+        href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/merged_datasource"
+        target="_blank"
+        class="fa fa-book"
+        >&nbsp;merged_datasource</a
+      >&nbsp; 
     </p>
   </div>
-
-    <h3>Configuration</h3>
+   
+  <h3>Configuration</h3>
+   
   <dl>
-    <dt>
-      <code>fields</code>  
-    </dt>
-    <dd>
-      <div class="block">The names of each field in the DataSource.  See
+    <dt><code>fields</code> </dt>
+    <dd><div class="block">The names of each field in the DataSource.  See
  <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/jasper/MergeDataSourceProcessor.SourceType.html" title="enum in org.mapfish.print.processor.jasper"><code>MergeDataSourceProcessor.SourceType</code></a>
- for instructions on how to declare the fields</div>
-    </dd>
+ for instructions on how to declare the fields</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>key</code>  
-    </dt>
-    <dd>
-      <div class="block">The key to use when looking for the object among the attributes and the processor output values.</div>
-    </dd>
+    <dt><code>key</code> </dt>
+    <dd><div class="block">The key to use when looking for the object among the attributes and the processor output values.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>type</code>  
-    </dt>
-    <dd>
-      <div class="block">The type of source.  See
+    <dt><code>type</code> </dt>
+    <dd><div class="block">The type of source.  See
  <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/jasper/MergeDataSourceProcessor.SourceType.html" title="enum in org.mapfish.print.processor.jasper"><code>MergeDataSourceProcessor.SourceType</code></a>
- for the options.</div>
-    </dd>
+ for the options.</div></dd>
   </dl>
-
-
-</div>
+      </div>
 <div class="section" id="!pdfConfig">
-  <h1>!pdfConfig<a class="headerlink" href="#!pdfConfig" title="Permalink to this headline">¶</a></h1>
+  <h1>
+    !pdfConfig<a
+      class="headerlink"
+      href="#!pdfConfig"
+      title="Permalink to this headline"
+      >¶</a
+    >
+  </h1>
   <div class="block"><p>A Configuration object for containing metadata that will be embedded in the PDF and parameters to use
  when encoding the PDF.
  </p><p>Naturally this only applies to reports that are exported as PDFs.</p>
- </div>
-
+ </div> 
   <div class="admonition note examples">
     <p class="first admonition-title">Example</p>
     <p class="last">
-        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/config_aliases_defaults" target="_blank" class="fa fa-book">&nbsp;config_aliases_defaults</a>&nbsp;
-        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/verboseExample" target="_blank" class="fa fa-book">&nbsp;verboseExample</a>&nbsp;
+      <a
+        href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/config_aliases_defaults"
+        target="_blank"
+        class="fa fa-book"
+        >&nbsp;config_aliases_defaults</a
+      >&nbsp;       <a
+        href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/verboseExample"
+        target="_blank"
+        class="fa fa-book"
+        >&nbsp;verboseExample</a
+      >&nbsp; 
     </p>
   </div>
-
-    <h3>Configuration</h3>
+   
+  <h3>Configuration</h3>
+   
   <dl>
-    <dt>
-      <code>author</code>  
-    </dt>
-    <dd>
-      <div class="block">Set the author of the PDF.</div>
-    </dd>
+    <dt><code>author</code> </dt>
+    <dd><div class="block">Set the author of the PDF.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>compressed</code>  
-    </dt>
-    <dd>
-      <div class="block">If this property is set to true then the resulting PDF will be a compressed PDF. By default the PDF is
- not compressed.</div>
-    </dd>
+    <dt><code>compressed</code> </dt>
+    <dd><div class="block">If this property is set to true then the resulting PDF will be a compressed PDF. By default the PDF is
+ not compressed.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>creator</code>  
-    </dt>
-    <dd>
-      <div class="block">Set the creator of the PDF.</div>
-    </dd>
+    <dt><code>creator</code> </dt>
+    <dd><div class="block">Set the creator of the PDF.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>keywords</code>  
-    </dt>
-    <dd>
-      <div class="block">The keywords to include in the PDF metadata.</div>
-    </dd>
+    <dt><code>keywords</code> </dt>
+    <dd><div class="block">The keywords to include in the PDF metadata.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>subject</code>  
-    </dt>
-    <dd>
-      <div class="block">Set the subject of the PDF.</div>
-    </dd>
+    <dt><code>subject</code> </dt>
+    <dd><div class="block">Set the subject of the PDF.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>title</code>  
-    </dt>
-    <dd>
-      <div class="block">Set the title of the PDF.</div>
-    </dd>
+    <dt><code>title</code> </dt>
+    <dd><div class="block">Set the title of the PDF.</div></dd>
   </dl>
-
-
-</div>
+      </div>
 <div class="section" id="!proxy">
-  <h1>!proxy<a class="headerlink" href="#!proxy" title="Permalink to this headline">¶</a></h1>
+  <h1>
+    !proxy<a
+      class="headerlink"
+      href="#!proxy"
+      title="Permalink to this headline"
+      >¶</a
+    >
+  </h1>
   <div class="block">This configuration object configures the proxies to be used by the system. This is configured as one of the
  root elements of the config.yaml
 
- <p>Example - Proxy all requests except localhost and www.camptocamp.org:</p><div class="highlight"><pre> proxies:<br>   - !proxy<br>     scheme: http<br>     host: proxy.host.com<br>     port: 8888<br>     username: username<br>     password: xyzpassword<br>     matchers:<br>       - !localMatch<br>         reject: true<br>       - !dnsMatch<br>         host: www.camptocamp.org<br>         reject: true<br>       - !acceptAll {}</pre></div></div>
-
-
-    <h3>Configuration</h3>
+ <p>Example - Proxy all requests except localhost and www.camptocamp.org:</p><div class="highlight"><pre> proxies:<br>   - !proxy<br>     scheme: http<br>     host: proxy.host.com<br>     port: 8888<br>     username: username<br>     password: xyzpassword<br>     matchers:<br>       - !localMatch<br>         reject: true<br>       - !dnsMatch<br>         host: www.camptocamp.org<br>         reject: true<br>       - !acceptAll {}</pre></div></div>  
+  <h3>Configuration</h3>
+   
   <dl>
-    <dt>
-      <code>host</code>  
-    </dt>
-    <dd>
-      <div class="block">The host of the proxy.  Can be a hostname or ip address.
+    <dt><code>host</code> </dt>
+    <dd><div class="block">The host of the proxy.  Can be a hostname or ip address.
  <p>
  This is required.
- </p></div>
-    </dd>
+ </p></div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>matchers</code>  
-    </dt>
-    <dd>
-      <div class="block">Matchers are used to choose which requests this proxy applies to.</div>
-    </dd>
+    <dt><code>matchers</code> </dt>
+    <dd><div class="block">Matchers are used to choose which requests this proxy applies to.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>password</code>  
-    </dt>
-    <dd>
-      <div class="block">The password for authenticating with the proxy.
+    <dt><code>password</code> </dt>
+    <dd><div class="block">The password for authenticating with the proxy.
  <p>
  This is optional
- </p></div>
-    </dd>
+ </p></div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>port</code>  
-    </dt>
-    <dd>
-      <div class="block">The host of the proxy.  Can be a hostname or ip address.
+    <dt><code>port</code> </dt>
+    <dd><div class="block">The host of the proxy.  Can be a hostname or ip address.
  <p>
  This is optional.  The default value is 80.
- </p></div>
-    </dd>
+ </p></div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>scheme</code>  
-    </dt>
-    <dd>
-      <div class="block">The scheme (http, https) of the proxy.
+    <dt><code>scheme</code> </dt>
+    <dd><div class="block">The scheme (http, https) of the proxy.
  <p>
  This is optional, default is http if no username and https if there is a password
- </p></div>
-    </dd>
+ </p></div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>username</code>  
-    </dt>
-    <dd>
-      <div class="block">The username for authenticating with the proxy.
+    <dt><code>username</code> </dt>
+    <dd><div class="block">The username for authenticating with the proxy.
  <p>
  This is optional
- </p></div>
-    </dd>
+ </p></div></dd>
   </dl>
-
-
-</div>
+      </div>
 <div class="section" id="!roleAccessAssertion">
-  <h1>!roleAccessAssertion<a class="headerlink" href="#!roleAccessAssertion" title="Permalink to this headline">¶</a></h1>
-  <div class="block">An access assertion that verifies that the current user has the required roles.</div>
-
-
-    <h3>Configuration</h3>
+  <h1>
+    !roleAccessAssertion<a
+      class="headerlink"
+      href="#!roleAccessAssertion"
+      title="Permalink to this headline"
+      >¶</a
+    >
+  </h1>
+  <div class="block">An access assertion that verifies that the current user has the required roles.</div>  
+  <h3>Configuration</h3>
+   
   <dl>
-    <dt>
-      <code>requiredRoles</code>  
-    </dt>
-    <dd>
-      <div class="block">Set the roles required to allow access.  If not roles then the user must be logged in but does not have
+    <dt><code>requiredRoles</code> </dt>
+    <dd><div class="block">Set the roles required to allow access.  If not roles then the user must be logged in but does not have
  to have any particular role.
  <p>
  This method may only be called once, any subsequent calls will result in errors.
- </p></div>
-    </dd>
+ </p></div></dd>
   </dl>
-
-
-</div>
+      </div>
 <div class="section" id="!s3reportStorage">
-  <h1>!s3reportStorage<a class="headerlink" href="#!s3reportStorage" title="Permalink to this headline">¶</a></h1>
+  <h1>
+    !s3reportStorage<a
+      class="headerlink"
+      href="#!s3reportStorage"
+      title="Permalink to this headline"
+      >¶</a
+    >
+  </h1>
   <div class="block">Configuration for storing the reports in a S3 compatible storage.
  <p>
  By default, authentication is done using the <code>DefaultAWSCredentialsProviderChain</code> which uses
- Environment Variables, Java System Properties, Credential profiles file, ...</p></div>
-
-
-    <h3>Configuration</h3>
+ Environment Variables, Java System Properties, Credential profiles file, ...</p></div>  
+  <h3>Configuration</h3>
+   
   <dl>
-    <dt>
-      <code>accessKey</code>  
-    </dt>
-    <dd>
-      <div class="block">To set the access key.</div>
-    </dd>
+    <dt><code>accessKey</code> </dt>
+    <dd><div class="block">To set the access key.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>bucket</code>  
-    </dt>
-    <dd>
-      <div class="block">The S3 bucket to use.</div>
-    </dd>
+    <dt><code>bucket</code> </dt>
+    <dd><div class="block">The S3 bucket to use.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>endpointUrl</code>  
-    </dt>
-    <dd>
-      <div class="block">To override the endpoint URL (for non-Amazon, S3 compatible servers).</div>
-    </dd>
+    <dt><code>endpointUrl</code> </dt>
+    <dd><div class="block">To override the endpoint URL (for non-Amazon, S3 compatible servers).</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>prefix</code>  
-    </dt>
-    <dd>
-      <div class="block">The key prefix to use.</div>
-    </dd>
+    <dt><code>prefix</code> </dt>
+    <dd><div class="block">The key prefix to use.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>region</code>  
-    </dt>
-    <dd>
-      <div class="block">To set the region to use.</div>
-    </dd>
+    <dt><code>region</code> </dt>
+    <dd><div class="block">To set the region to use.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>retentionDays</code>  
-    </dt>
-    <dd>
-      <div class="block">The number of day the reports must be kept.
+    <dt><code>retentionDays</code> </dt>
+    <dd><div class="block">The number of day the reports must be kept.
  <p>
  Passed this delay, they will be deleted and the links included in the corresponding emails will become
- invalid. Defaults to 7 days.</p></div>
-    </dd>
+ invalid. Defaults to 7 days.</p></div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>secretKey</code>  
-    </dt>
-    <dd>
-      <div class="block">To set the secret key.</div>
-    </dd>
+    <dt><code>secretKey</code> </dt>
+    <dd><div class="block">To set the secret key.</div></dd>
   </dl>
-
-
-</div>
+      </div>
 <div class="section" id="!smtpConfig">
-  <h1>!smtpConfig<a class="headerlink" href="#!smtpConfig" title="Permalink to this headline">¶</a></h1>
+  <h1>
+    !smtpConfig<a
+      class="headerlink"
+      href="#!smtpConfig"
+      title="Permalink to this headline"
+      >¶</a
+    >
+  </h1>
   <div class="block">Email sending configuration.
  <p>
- This configuration is needed only if reports are to be sent to the user by email.</p></div>
-
-
-    <h3>Configuration</h3>
+ This configuration is needed only if reports are to be sent to the user by email.</p></div>  
+  <h3>Configuration</h3>
+   
   <dl>
-    <dt>
-      <code>body</code>  
-    </dt>
-    <dd>
-      <div class="block">The default email body.
+    <dt><code>body</code> </dt>
+    <dd><div class="block">The default email body.
  <br clear="none"></br>
  This can be changed by the <code>smtp</code>.<code>body</code> property in the request.
  <p>
  If you have setup a storage, you must put a "{url}" marker where the URL to fetch the report should be
- put.</p></div>
-    </dd>
+ put.</p></div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>errorBody</code>  
-    </dt>
-    <dd>
-      <div class="block">The default email body in case of error.
+    <dt><code>errorBody</code> </dt>
+    <dd><div class="block">The default email body in case of error.
  <br clear="none"></br>
  This can be changed by the <code>smtp</code>.<code>body</code> property in the request.
  <p>
- The error message can be places in the text using a "{message}" marker.</p></div>
-    </dd>
+ The error message can be places in the text using a "{message}" marker.</p></div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>errorSubject</code>  
-    </dt>
-    <dd>
-      <div class="block">The default email subject in case of error.
+    <dt><code>errorSubject</code> </dt>
+    <dd><div class="block">The default email subject in case of error.
  <br clear="none"></br>
- This can be changed by the <code>smtp</code>.<code>errorSubject</code> property in the request.</div>
-    </dd>
+ This can be changed by the <code>smtp</code>.<code>errorSubject</code> property in the request.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>fromAddress</code>  
-    </dt>
-    <dd>
-      <div class="block">The email address used as "From:" in every email.</div>
-    </dd>
+    <dt><code>fromAddress</code> </dt>
+    <dd><div class="block">The email address used as "From:" in every email.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>host</code>  
-    </dt>
-    <dd>
-      <div class="block">The SMTP server hostname.</div>
-    </dd>
+    <dt><code>host</code> </dt>
+    <dd><div class="block">The SMTP server hostname.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>password</code>  
-    </dt>
-    <dd>
-      <div class="block">If auth is needed, the password.</div>
-    </dd>
+    <dt><code>password</code> </dt>
+    <dd><div class="block">If auth is needed, the password.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>port</code>  
-    </dt>
-    <dd>
-      <div class="block">The TCP port of the SMTP server.</div>
-    </dd>
+    <dt><code>port</code> </dt>
+    <dd><div class="block">The TCP port of the SMTP server.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>ssl</code>  
-    </dt>
-    <dd>
-      <div class="block">True for enabling SSL.
+    <dt><code>ssl</code> </dt>
+    <dd><div class="block">True for enabling SSL.
  <br clear="none"></br>
- Cannot be enabled at the same time as <code>starttls</code></div>
-    </dd>
+ Cannot be enabled at the same time as <code>starttls</code></div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>starttls</code>  
-    </dt>
-    <dd>
-      <div class="block">True to use STARTTLS.</div>
-    </dd>
+    <dt><code>starttls</code> </dt>
+    <dd><div class="block">True to use STARTTLS.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>storage</code>  
-    </dt>
-    <dd>
-      <div class="block">The report storage facility to use.
+    <dt><code>storage</code> </dt>
+    <dd><div class="block">The report storage facility to use.
  <br clear="none"></br>
  By default, attaches the report in an email. But, for big files, this is not practical. This can be
- used to configure a storage.</div>
-    </dd>
+ used to configure a storage.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>subject</code>  
-    </dt>
-    <dd>
-      <div class="block">The default email subject.
+    <dt><code>subject</code> </dt>
+    <dd><div class="block">The default email subject.
  <br clear="none"></br>
- This can be changed by the <code>smtp</code>.<code>subject</code> property in the request.</div>
-    </dd>
+ This can be changed by the <code>smtp</code>.<code>subject</code> property in the request.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>username</code>  
-    </dt>
-    <dd>
-      <div class="block">If auth is needed, the username.</div>
-    </dd>
+    <dt><code>username</code> </dt>
+    <dd><div class="block">If auth is needed, the username.</div></dd>
   </dl>
-
-
-</div>
+      </div>
 <div class="section" id="!template">
-  <h1>!template<a class="headerlink" href="#!template" title="Permalink to this headline">¶</a></h1>
-  <div class="block">Represents a report template configuration.</div>
-
-
-    <h3>Configuration</h3>
+  <h1>
+    !template<a
+      class="headerlink"
+      href="#!template"
+      title="Permalink to this headline"
+      >¶</a
+    >
+  </h1>
+  <div class="block">Represents a report template configuration.</div>  
+  <h3>Configuration</h3>
+   
   <dl>
-    <dt>
-      <code>access</code>  
-    </dt>
-    <dd>
-      <div class="block">The roles required to access this template.  If empty or not set then it is a <em>public</em> template.
+    <dt><code>access</code> </dt>
+    <dd><div class="block">The roles required to access this template.  If empty or not set then it is a <em>public</em> template.
  If there are many roles then a user must have one of the roles in order to access the template.
 
  The security (how authentication/authorization is done) is configured in the
@@ -1166,85 +1108,58 @@ templates:
  <p>
  Any user without the required role will get an error when trying to access the template and the
  template will not be visible in the capabilities requests.
- </p></div>
-    </dd>
+ </p></div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>allowTransparency</code>  
-    </dt>
-    <dd>
-      <div class="block">If set to false (defaults to true), the generated maps, scalebar and north arrow will not contain any
+    <dt><code>allowTransparency</code> </dt>
+    <dd><div class="block">If set to false (defaults to true), the generated maps, scalebar and north arrow will not contain any
  transparent images.
  <p>
  This is needed in case you want to output PDF/A-1a reports.
  </p><p>
  If you don't allow transparency, all layers are merged into a single JPEG layer at the requested
- resolution: WMTS tiles will be downscaled and vector layers will be rendered as bitmaps.</p></div>
-    </dd>
+ resolution: WMTS tiles will be downscaled and vector layers will be rendered as bitmaps.</p></div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>attributes</code>  
-    </dt>
-    <dd>
-      <div class="block">Set the attributes for this template.</div>
-    </dd>
+    <dt><code>attributes</code> </dt>
+    <dd><div class="block">Set the attributes for this template.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>configuration</code>  
-    </dt>
-    <dd>
-      <div class="block"><span class="descfrmTypeLabel">Description copied from interface: <code><a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/config/HasConfiguration.html#setConfiguration-org.mapfish.print.config.Configuration-">HasConfiguration</a></code></span></div>
-    </dd>
+    <dt><code>configuration</code> </dt>
+    <dd><div class="block"><span class="descfrmTypeLabel">Description copied from interface: <code><a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/config/HasConfiguration.html#setConfiguration-org.mapfish.print.config.Configuration-">HasConfiguration</a></code></span></div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>jdbcDrivers</code>  
-    </dt>
-    <dd>
-      <div></div>
-    </dd>
+    <dt><code>jdbcDrivers</code> </dt>
+    <dd><div></div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>jdbcPassword</code>  
-    </dt>
-    <dd>
-      <div></div>
-    </dd>
+    <dt><code>jdbcPassword</code> </dt>
+    <dd><div></div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>jdbcUrl</code>  
-    </dt>
-    <dd>
-      <div></div>
-    </dd>
+    <dt><code>jdbcUrl</code> </dt>
+    <dd><div></div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>jdbcUser</code>  
-    </dt>
-    <dd>
-      <div></div>
-    </dd>
+    <dt><code>jdbcUser</code> </dt>
+    <dd><div></div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>mapExport</code>  
-    </dt>
-    <dd>
-      <div></div>
-    </dd>
+    <dt><code>mapExport</code> </dt>
+    <dd><div></div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>outputFilename</code>  
-    </dt>
-    <dd>
-      <div class="block">The default output file name of the report (takes precedence over <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/config/Configuration.html#setOutputFilename-java.lang.String-"><code>Configuration.setOutputFilename(String)</code></a>).  This can be overridden by the outputFilename parameter in
+    <dt><code>outputFilename</code> </dt>
+    <dd><div class="block">The default output file name of the report (takes precedence over <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/config/Configuration.html#setOutputFilename-java.lang.String-"><code>Configuration.setOutputFilename(String)</code></a>).  This can be overridden by the outputFilename parameter in
  the request JSON.
  <p>
  This can be a string and can also have a date section in the string that will be filled when the report
@@ -1257,195 +1172,198 @@ templates:
  Example: <code>outputFilename: print-${dd-MM-yyyy}</code> should output:
  <code>print-22-11-2014.pdf</code></p><p>
  Note: the suffix will be appended to the end of the name.
- </p></div>
-    </dd>
+ </p></div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>pdfConfig</code>  
-    </dt>
-    <dd>
-      <div class="block">Configure various properties related to the reports generated as PDFs.</div>
-    </dd>
+    <dt><code>pdfConfig</code> </dt>
+    <dd><div class="block">Configure various properties related to the reports generated as PDFs.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>processors</code>  
-    </dt>
-    <dd>
-      <div class="block">Set the normal processors.</div>
-    </dd>
+    <dt><code>processors</code> </dt>
+    <dd><div class="block">Set the normal processors.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>reportTemplate</code>  
-    </dt>
-    <dd>
-      <div></div>
-    </dd>
+    <dt><code>reportTemplate</code> </dt>
+    <dd><div></div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>styles</code>  
-    </dt>
-    <dd>
-      <div class="block">Set the named styles defined in the configuration for this.</div>
-    </dd>
+    <dt><code>styles</code> </dt>
+    <dd><div class="block">Set the named styles defined in the configuration for this.</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>tableData</code>  
-    </dt>
-    <dd>
-      <div class="block">Set the key of the data that is the datasource for the main table in the report.</div>
-    </dd>
+    <dt><code>tableData</code> </dt>
+    <dd><div class="block">Set the key of the data that is the datasource for the main table in the report.</div></dd>
   </dl>
-
-
-</div>
+      </div>
 <div class="section" id="!updatePdfConfigUpdate">
-  <h1>!updatePdfConfigUpdate<a class="headerlink" href="#!updatePdfConfigUpdate" title="Permalink to this headline">¶</a></h1>
+  <h1>
+    !updatePdfConfigUpdate<a
+      class="headerlink"
+      href="#!updatePdfConfigUpdate"
+      title="Permalink to this headline"
+      >¶</a
+    >
+  </h1>
   <div class="block"><p>The object that defines how to update the <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/config/PDFConfig.html" title="class in org.mapfish.print.config"><code>PDFConfig</code></a>
  (see <a shape="rect" href="processors.html#!updatePdfConfig">!updatePdfConfig</a> processor).
- </p></div>
-
+ </p></div> 
   <div class="admonition note examples">
     <p class="first admonition-title">Example</p>
     <p class="last">
-        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/updatePdfMetadata" target="_blank" class="fa fa-book">&nbsp;updatePdfMetadata</a>&nbsp;
+      <a
+        href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/updatePdfMetadata"
+        target="_blank"
+        class="fa fa-book"
+        >&nbsp;updatePdfMetadata</a
+      >&nbsp; 
     </p>
   </div>
-
-    <h3>Configuration</h3>
+   
+  <h3>Configuration</h3>
+   
   <dl>
-    <dt>
-      <code>format</code>  
-    </dt>
-    <dd>
-      <div class="block">The replacement format.  It is a printf style format.  The documentation is in the Formatter class
+    <dt><code>format</code> </dt>
+    <dd><div class="block">The replacement format.  It is a printf style format.  The documentation is in the Formatter class
  (just google/bing java.util.Formatter).
 
- Example: "Report for %s"</div>
-    </dd>
+ Example: "Report for %s"</div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>valueKey</code>  
-    </dt>
-    <dd>
-      <div class="block">The key to use to look up the value in the values object.  It can be a path that can reach into
+    <dt><code>valueKey</code> </dt>
+    <dd><div class="block">The key to use to look up the value in the values object.  It can be a path that can reach into
  nested objects.
 
  Examples 1 a simple lookup key: "key" Example 2 a path.  First part (before .) is the lookup key,
- the second part is the field name to load: "key.fieldName"</div>
-    </dd>
+ the second part is the field name to load: "key.fieldName"</div></dd>
   </dl>
-
-
-</div>
+      </div>
 <div class="section" id="!urlImage">
-  <h1>!urlImage<a class="headerlink" href="#!urlImage" title="Permalink to this headline">¶</a></h1>
+  <h1>
+    !urlImage<a
+      class="headerlink"
+      href="#!urlImage"
+      title="Permalink to this headline"
+      >¶</a
+    >
+  </h1>
   <div class="block"><p>Interprets text in a table cell as an image URL.</p><p>See also: <a shape="rect" href="tableimages.html">Configuration of tables with HTML images</a></p>
- </div>
-
+ </div> 
   <div class="admonition note examples">
     <p class="first admonition-title">Example</p>
     <p class="last">
-        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/datasource_many_dynamictables_legend" target="_blank" class="fa fa-book">&nbsp;datasource_many_dynamictables_legend</a>&nbsp;
+      <a
+        href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/datasource_many_dynamictables_legend"
+        target="_blank"
+        class="fa fa-book"
+        >&nbsp;datasource_many_dynamictables_legend</a
+      >&nbsp; 
     </p>
   </div>
-
-    <h3>Configuration</h3>
+   
+  <h3>Configuration</h3>
+   
   <dl>
-    <dt>
-      <code>urlExtractor</code>  
-    </dt>
-    <dd>
-      <div class="block">Sets the RegExp pattern to use for extracting the url from the text.  By default the whole string is
+    <dt><code>urlExtractor</code> </dt>
+    <dd><div class="block">Sets the RegExp pattern to use for extracting the url from the text.  By default the whole string is
  used.
  <p>
- For example: <code>.*&img src="([^"]+)".*</code></p></div>
-    </dd>
+ For example: <code>.*&img src="([^"]+)".*</code></p></div></dd>
   </dl>
+  
   <dl>
-    <dt>
-      <code>urlGroup</code>  
-    </dt>
-    <dd>
-      <div class="block">Select the group in the regular expression that contains the url.</div>
-    </dd>
+    <dt><code>urlGroup</code> </dt>
+    <dd><div class="block">Select the group in the regular expression that contains the url.</div></dd>
   </dl>
-
-
-</div>
+      </div>
 <div class="section" id="!zoomLevels">
-  <h1>!zoomLevels<a class="headerlink" href="#!zoomLevels" title="Permalink to this headline">¶</a></h1>
+  <h1>
+    !zoomLevels<a
+      class="headerlink"
+      href="#!zoomLevels"
+      title="Permalink to this headline"
+      >¶</a
+    >
+  </h1>
   <div class="block"><p>Encapsulates a sorted set of scale denominators representing the allowed scales.</p><p>The scales are sorted from largest to smallest and the index starts at 0,
  where 0 is the largest scale (most zoomed out).</p><div class="highlight"><pre>   map: !map<br>     zoomLevels: !zoomLevels<br>        scales: [5000, 10000, 25000, 50000, 100000, 500000]</pre></div>
- </div>
-
+ </div> 
   <div class="admonition note examples">
     <p class="first admonition-title">Example</p>
     <p class="last">
-        <a href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/datasource_many_dynamictables_legend" target="_blank" class="fa fa-book">&nbsp;datasource_many_dynamictables_legend</a>&nbsp;
+      <a
+        href="https://github.com/mapfish/mapfish-print/tree/master/examples/src/test/resources/examples/datasource_many_dynamictables_legend"
+        target="_blank"
+        class="fa fa-book"
+        >&nbsp;datasource_many_dynamictables_legend</a
+      >&nbsp; 
     </p>
   </div>
-
-    <h3>Configuration</h3>
+   
+  <h3>Configuration</h3>
+   
   <dl>
-    <dt>
-      <code>scales</code>  
-    </dt>
-    <dd>
-      <div class="block">Set the scales (sorts from largest to smallest).</div>
-    </dd>
+    <dt><code>scales</code> </dt>
+    <dd><div class="block">Set the scales (sorts from largest to smallest).</div></dd>
   </dl>
-
-
-</div>
-
-
-
-
-           </div>
-          </div>
-          <footer>
-
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        <a href="http://www.camptocamp.com/geospatial/" target="_blank">Camptocamp</a> <br>
-        <span class="commit">
-          Revision <code><a href="https://github.com/mapfish/mapfish-print/commit/67ed5f31735141534c59739ea885061584d6547e" target="_blank">67ed5f31</a></code>.
-        </span>
-
-
-    </p>
-  </div>
-  Theme based on a <a href="https://github.com/snide/sphinx_rtd_theme">template</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-
-</footer>
-
-        </div>
       </div>
 
-    </section>
+              </div>
+            </div>
+            <footer>
+              <hr />
 
-  </div>
+              <div role="contentinfo">
+                <p>
+                  <a
+                    href="http://www.camptocamp.com/geospatial/"
+                    target="_blank"
+                    >Camptocamp</a
+                  >
+                  <br />
+                  <span class="commit">
+                    Revision
+                    <code
+                      ><a
+                        href="https://github.com/mapfish/mapfish-print/commit/313c4136cd078ccf09e5a3159d4ee43c9f19842e"
+                        target="_blank"
+                        >313c4136</a
+                      ></code
+                    >.
+                  </span>
+                </p>
+              </div>
+              Theme based on a
+              <a href="https://github.com/snide/sphinx_rtd_theme">template</a>
+              provided by <a href="https://readthedocs.org">Read the Docs</a>.
+            </footer>
+          </div>
+        </div>
+      </section>
+    </div>
 
-
-
-      <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.3.0/jquery-migrate.min.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.10.2/underscore-min.js"></script>
-      <script type="text/javascript" src="js/theme.js"></script>
-      <script type="text/javascript">
-        jQuery(function () {
-            SphinxRtdTheme.StickyNav.enable();
-        });
-      </script>
-
-</body>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.3.0/jquery-migrate.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.10.2/underscore-min.js"
+    ></script>
+    <script type="text/javascript" src="js/theme.js"></script>
+    <script type="text/javascript">
+      jQuery(function () {
+        SphinxRtdTheme.StickyNav.enable();
+      });
+    </script>
+  </body>
 </html>
