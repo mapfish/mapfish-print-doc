@@ -1112,17 +1112,6 @@ templates:
   </dl>
   
   <dl>
-    <dt><code>allowTransparency</code> </dt>
-    <dd><div class="block">If set to false (defaults to true), the generated maps, scalebar and north arrow will not contain any
- transparent images.
- <p>
- This is needed in case you want to output PDF/A-1a reports.
- </p><p>
- If you don't allow transparency, all layers are merged into a single JPEG layer at the requested
- resolution: WMTS tiles will be downscaled and vector layers will be rendered as bitmaps.</p></div></dd>
-  </dl>
-  
-  <dl>
     <dt><code>attributes</code> </dt>
     <dd><div class="block">Set the attributes for this template.</div></dd>
   </dl>
@@ -1173,6 +1162,17 @@ templates:
  <code>print-22-11-2014.pdf</code></p><p>
  Note: the suffix will be appended to the end of the name.
  </p></div></dd>
+  </dl>
+  
+  <dl>
+    <dt><code>pdfA</code> </dt>
+    <dd><div class="block">If set to true (defaults to false), the generated maps, scalebar and north arrow will not contain any
+ transparent images.
+ <p>
+ This is needed in case you want to output PDF/A-1a reports.
+ </p><p>
+ In pdfA mode, all layers are merged into a single JPEG layer at the requested
+ resolution: WMTS tiles will be downscaled and vector layers will be rendered as bitmaps.</p></div></dd>
   </dl>
   
   <dl>
@@ -1330,9 +1330,9 @@ templates:
                     Revision
                     <code
                       ><a
-                        href="https://github.com/mapfish/mapfish-print/commit/2b50054fa8f0b7062895822549eb6fa934da3ce3"
+                        href="https://github.com/mapfish/mapfish-print/commit/2bce19d699113a1a879b977d7b5cdcae2cecdace"
                         target="_blank"
-                        >2b50054f</a
+                        >2bce19d6</a
                       ></code
                     >.
                   </span>
