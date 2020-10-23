@@ -317,15 +317,15 @@ templates:
  </p><p>
  For example consider the case where the report should contain multiple tables or charts but the number of
  reports may change depending on the request.  In this case the client will post a datasource attribute json
- object containing an array of all the table attribute objects.  The <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/jasper/DataSourceProcessor.html" title="class in org.mapfish.print.processor.jasper"><code>DataSourceProcessor</code></a> will process the datasource attribute and create a
+ object containing an array of all the table attribute objects.  The <a shape="rect" href="../processor/jasper/DataSourceProcessor.html" title="class in org.mapfish.print.processor.jasper"><code>DataSourceProcessor</code></a> will process the datasource attribute and create a
  Jasper datasource that contains all the tables.
  </p><p>
  This datasource must be used in tandem with the
- <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/jasper/DataSourceProcessor.html" title="class in org.mapfish.print.processor.jasper"><code>DataSourceProcessor</code></a>
+ <a shape="rect" href="../processor/jasper/DataSourceProcessor.html" title="class in org.mapfish.print.processor.jasper"><code>DataSourceProcessor</code></a>
  processor (see <a shape="rect" href="processors.html#!createDataSource">!createDataSource</a> processor).
  </p><p>
  The json data of this attribute is special since it represents an array of attributes, each element in the
- array must contain all of the attributes required to satisfy the processors in the <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/jasper/DataSourceProcessor.html" title="class in org.mapfish.print.processor.jasper"><code>DataSourceProcessor</code></a>.
+ array must contain all of the attributes required to satisfy the processors in the <a shape="rect" href="../processor/jasper/DataSourceProcessor.html" title="class in org.mapfish.print.processor.jasper"><code>DataSourceProcessor</code></a>.
  </p><p>
  Example configuration:
  </p><div class="highlight"><pre> datasource: !datasource<br>   table: !table<br>   map: !map<br>     width: 200<br>     height: 100</pre></div><p>
@@ -470,7 +470,7 @@ templates:
       >¶</a
     >
   </h1>
-  <div class="block">Objects needed by the <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/jasper/LegendProcessor.html" title="class in org.mapfish.print.processor.jasper"><code>LegendProcessor</code></a> (see
+  <div class="block">Objects needed by the <a shape="rect" href="../processor/jasper/LegendProcessor.html" title="class in org.mapfish.print.processor.jasper"><code>LegendProcessor</code></a> (see
  <a shape="rect" href="processors.html#!prepareLegend">!prepareLegend</a> processor).
  </div> 
   <div class="admonition note examples">
@@ -528,7 +528,7 @@ templates:
       >¶</a
     >
   </h1>
-  <div class="block"><p>The attributes for <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/map/CreateMapProcessor.html" title="class in org.mapfish.print.processor.map"><code>CreateMapProcessor</code></a> (see
+  <div class="block"><p>The attributes for <a shape="rect" href="../../processor/map/CreateMapProcessor.html" title="class in org.mapfish.print.processor.map"><code>CreateMapProcessor</code></a> (see
  <a shape="rect" href="processors.html#!createMap">!createMap</a> processor).</p>
  </div> 
   <div class="admonition note examples">
@@ -724,7 +724,7 @@ templates:
       >¶</a
     >
   </h1>
-  <div class="block"><p>The attributes for <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/map/CreateNorthArrowProcessor.html" title="class in org.mapfish.print.processor.map"><code>CreateNorthArrowProcessor</code></a> (see
+  <div class="block"><p>The attributes for <a shape="rect" href="../processor/map/CreateNorthArrowProcessor.html" title="class in org.mapfish.print.processor.map"><code>CreateNorthArrowProcessor</code></a> (see
  <a shape="rect" href="processors.html#!createNorthArrow">!createNorthArrow</a> processor).</p>
  </div> 
   <div class="admonition note examples">
@@ -1021,7 +1021,7 @@ templates:
  part of the report one can easily see where in the complete map the sub-map fits, even without
  looking at the labelling.
  <p>
- For options see: <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/attribute/map/AreaOfInterest.AoiDisplay.html" title="enum in org.mapfish.print.attribute.map"><code>AreaOfInterest.AoiDisplay</code></a></p><p>
+ For options see: <a shape="rect" href="AreaOfInterest.AoiDisplay.html" title="enum in org.mapfish.print.attribute.map"><code>AreaOfInterest.AoiDisplay</code></a></p><p>
  By default the rendering in the <a shape="rect" href="index.html#/attributes?location=!map">map attribute's</a>
  area of interest will be used
  </p></div></dd>
@@ -1058,7 +1058,7 @@ templates:
       >¶</a
     >
   </h1>
-  <div class="block"><p>The attributes for <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/map/scalebar/CreateScalebarProcessor.html" title="class in org.mapfish.print.processor.map.scalebar"><code>CreateScalebarProcessor</code></a> (see
+  <div class="block"><p>The attributes for <a shape="rect" href="../processor/map/scalebar/CreateScalebarProcessor.html" title="class in org.mapfish.print.processor.map.scalebar"><code>CreateScalebarProcessor</code></a> (see
  <a shape="rect" href="processors.html#!createScalebar">!createScalebar</a> processor).</p>
  </div> 
   <div class="admonition note examples">
@@ -1196,7 +1196,7 @@ templates:
   
   <dl>
     <dt><code>renderAsSvg</code> </dt>
-    <dd><div class="block">Indicates if the scalebar graphic is rendered as SVG (will default to <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/config/Configuration.html#defaultToSvg"><code>Configuration.defaultToSvg</code></a>).</div></dd>
+    <dd><div class="block">Indicates if the scalebar graphic is rendered as SVG (will default to <a shape="rect" href="../config/Configuration.html#defaultToSvg"><code>Configuration.defaultToSvg</code></a>).</div></dd>
   </dl>
   
   <dl>
@@ -1239,7 +1239,7 @@ templates:
       >¶</a
     >
   </h1>
-  <div class="block"><p>The attributes for the <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/map/AddStaticLayersProcessor.html" title="class in org.mapfish.print.processor.map"><code>AddStaticLayersProcessor</code></a> (see
+  <div class="block"><p>The attributes for the <a shape="rect" href="../../processor/map/AddStaticLayersProcessor.html" title="class in org.mapfish.print.processor.map"><code>AddStaticLayersProcessor</code></a> (see
  <a shape="rect" href="processors.html#!addBackgroundLayers">!addBackgroundLayers</a> and
  <a shape="rect" href="processors.html#!addOverlayLayers">!addOverlayLayers</a> processor) which adds the layers in this
  attribute to the layers in the map.  The typical use is to add the background or overlay layers as the
@@ -1274,7 +1274,7 @@ templates:
   <dl>
     <dt><code>layers</code> required</dt>
     <dd><div class="block">An array of layers (the same as for
- <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/attribute/map/MapAttribute.MapAttributeValues.html#layers"><code>MapAttribute.MapAttributeValues.layers</code></a>).
+ <a shape="rect" href="MapAttribute.MapAttributeValues.html#layers"><code>MapAttribute.MapAttributeValues.layers</code></a>).
  <p>
  These layers will be added to the map.</p></div></dd>
   </dl>
@@ -1389,7 +1389,7 @@ templates:
       >¶</a
     >
   </h1>
-  <div class="block"><p>The attributes for <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/jasper/TableProcessor.html" title="class in org.mapfish.print.processor.jasper"><code>TableProcessor</code></a> (see
+  <div class="block"><p>The attributes for <a shape="rect" href="../processor/jasper/TableProcessor.html" title="class in org.mapfish.print.processor.jasper"><code>TableProcessor</code></a> (see
  <a shape="rect" href="processors.html#!prepareTable">!prepareTable</a> processor).</p>
  </div> 
   <div class="admonition note examples">
@@ -1451,9 +1451,9 @@ templates:
                     Revision
                     <code
                       ><a
-                        href="https://github.com/mapfish/mapfish-print/commit/742329a7b5a83dc992c6954f1230b9e8c0b2a0d7"
+                        href="https://github.com/mapfish/mapfish-print/commit/8c28f378642679b7d60799803617a295ce334d73"
                         target="_blank"
-                        >742329a7</a
+                        >8c28f378</a
                       ></code
                     >.
                   </span>

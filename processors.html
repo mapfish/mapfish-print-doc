@@ -350,7 +350,7 @@ Or if the there are multiple mappings that need to be made :
   
   <dl>
     <dt><code>position</code> </dt>
-    <dd><div class="block">Set the position enumeration which indicates where the layers should be added to the map: <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/map/AddStaticLayersProcessor.StaticLayerPosition.html" title="enum in org.mapfish.print.processor.map"><code>AddStaticLayersProcessor.StaticLayerPosition</code></a>.</div></dd>
+    <dd><div class="block">Set the position enumeration which indicates where the layers should be added to the map: <a shape="rect" href="AddStaticLayersProcessor.StaticLayerPosition.html" title="enum in org.mapfish.print.processor.map"><code>AddStaticLayersProcessor.StaticLayerPosition</code></a>.</div></dd>
   </dl>
   
   <dl>
@@ -380,7 +380,7 @@ Or if the there are multiple mappings that need to be made :
       >¶</a
     >
   </h1>
-  <div class="block"><p>This processor allows adding static headers to an http request.</p><p>Example: add a Cookie header with multiple header values and add header2 with only one value</p><div class="highlight"><pre> - !addHeaders<br>   headers:<br>     Cookie: [cookie-value, cookie-value2]<br>     Header2: header2-value</pre></div><p>Can be applied conditionally using matchers, like in <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/http/RestrictUrisProcessor.html" title="class in org.mapfish.print.processor.http"><code>RestrictUrisProcessor</code></a>
+  <div class="block"><p>This processor allows adding static headers to an http request.</p><p>Example: add a Cookie header with multiple header values and add header2 with only one value</p><div class="highlight"><pre> - !addHeaders<br>   headers:<br>     Cookie: [cookie-value, cookie-value2]<br>     Header2: header2-value</pre></div><p>Can be applied conditionally using matchers, like in <a shape="rect" href="RestrictUrisProcessor.html" title="class in org.mapfish.print.processor.http"><code>RestrictUrisProcessor</code></a>
  (<a shape="rect" href="processors.html#!restrictUris">!restrictUris</a>
  ).</p> </div> 
   <div class="admonition note examples">
@@ -500,7 +500,7 @@ Or if the there are multiple mappings that need to be made :
   
   <dl>
     <dt><code>position</code> </dt>
-    <dd><div class="block">Set the position enumeration which indicates where the layers should be added to the map: <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/map/AddStaticLayersProcessor.StaticLayerPosition.html" title="enum in org.mapfish.print.processor.map"><code>AddStaticLayersProcessor.StaticLayerPosition</code></a>.</div></dd>
+    <dd><div class="block">Set the position enumeration which indicates where the layers should be added to the map: <a shape="rect" href="AddStaticLayersProcessor.StaticLayerPosition.html" title="enum in org.mapfish.print.processor.map"><code>AddStaticLayersProcessor.StaticLayerPosition</code></a>.</div></dd>
   </dl>
   
   <dl>
@@ -530,8 +530,8 @@ Or if the there are multiple mappings that need to be made :
       >¶</a
     >
   </h1>
-  <div class="block"><p>A processor that wraps several <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/http/AbstractClientHttpRequestFactoryProcessor.html" title="class in org.mapfish.print.processor.http"><code>AbstractClientHttpRequestFactoryProcessor</code></a>s.</p><p>
- This makes it more convenient to configure multiple processors that modify <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/http/MfClientHttpRequestFactory.html" title="interface in org.mapfish.print.http"><code>MfClientHttpRequestFactory</code></a> objects.
+  <div class="block"><p>A processor that wraps several <a shape="rect" href="AbstractClientHttpRequestFactoryProcessor.html" title="class in org.mapfish.print.processor.http"><code>AbstractClientHttpRequestFactoryProcessor</code></a>s.</p><p>
+ This makes it more convenient to configure multiple processors that modify <a shape="rect" href="../../http/MfClientHttpRequestFactory.html" title="interface in org.mapfish.print.http"><code>MfClientHttpRequestFactory</code></a> objects.
  </p><p>
  Consider the case where you need to:
  </p><ul><li>Restrict allowed URIS using the !restrictUris processor</li><li>Forward all headers from print request to all requests using !forwardHeaders</li><li>Change the url using the !mapUri processor</li></ul><p>
@@ -612,13 +612,13 @@ Or if the there are multiple mappings that need to be made :
     >
   </h1>
   <div class="block"><p>A processor that will process a
- <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/attribute/DataSourceAttribute.DataSourceAttributeValue.html" title="class in org.mapfish.print.attribute"><code>DataSourceAttribute.DataSourceAttributeValue</code></a> and construct a single
+ <a shape="rect" href="../../attribute/DataSourceAttribute.DataSourceAttributeValue.html" title="class in org.mapfish.print.attribute"><code>DataSourceAttribute.DataSourceAttributeValue</code></a> and construct a single
  Jasper DataSource from the input values in the
- <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/attribute/DataSourceAttribute.DataSourceAttributeValue.html" title="class in org.mapfish.print.attribute"><code>DataSourceAttribute.DataSourceAttributeValue</code></a>
- input object.</p><p>The <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/attribute/DataSourceAttribute.DataSourceAttributeValue.html" title="class in org.mapfish.print.attribute"><code>DataSourceAttribute.DataSourceAttributeValue</code></a> has an array of
+ <a shape="rect" href="../../attribute/DataSourceAttribute.DataSourceAttributeValue.html" title="class in org.mapfish.print.attribute"><code>DataSourceAttribute.DataSourceAttributeValue</code></a>
+ input object.</p><p>The <a shape="rect" href="../../attribute/DataSourceAttribute.DataSourceAttributeValue.html" title="class in org.mapfish.print.attribute"><code>DataSourceAttribute.DataSourceAttributeValue</code></a> has an array of
  maps, each map in the array equates to a row in the Jasper DataSource.</p><p>The DataSourceProcessor can be configured with processors which will be used
  to transform each map in the input array before constructing the final DataSource row.</p><p>For example, each map in the array could be
- <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/attribute/map/MapAttribute.MapAttributeValues.html" title="class in org.mapfish.print.attribute.map"><code>MapAttribute.MapAttributeValues</code></a> and the DataSourceProcessor could
+ <a shape="rect" href="../../attribute/map/MapAttribute.MapAttributeValues.html" title="class in org.mapfish.print.attribute.map"><code>MapAttribute.MapAttributeValues</code></a> and the DataSourceProcessor could
  be configured with !createMap processor.  In this scenario each element in the array would be transformed
  by the !createMap processor and thus each row of the resulting DataSource will contain the map subreport
  created by the !createMap processor.</p><p>An additional point to remember is that (as with the normal execution) in addition to the output of
@@ -671,7 +671,7 @@ Or if the there are multiple mappings that need to be made :
   
   <dl>
     <dt><code>processors</code> </dt>
-    <dd><div class="block">All the processors that will executed for each value retrieved from the <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/output/Values.html" title="class in org.mapfish.print.output"><code>Values</code></a> object with the datasource name.  All output values from the processor
+    <dd><div class="block">All the processors that will executed for each value retrieved from the <a shape="rect" href="../../output/Values.html" title="class in org.mapfish.print.output"><code>Values</code></a> object with the datasource name.  All output values from the processor
  graph will be the datasource values.
 
  <p>
@@ -684,7 +684,7 @@ Or if the there are multiple mappings that need to be made :
   <dl>
     <dt><code>reportKey</code> </dt>
     <dd><div class="block">The key/name to use when putting the path to the compiled subreport in each row of the datasource. This
- is required if <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/jasper/DataSourceProcessor.html#reportTemplate"><code>reportTemplate</code></a> has been set.  The path to the compiled subreport will be added
+ is required if <a shape="rect" href="#reportTemplate"><code>reportTemplate</code></a> has been set.  The path to the compiled subreport will be added
  to each row in the datasource with this value as the key.  This allows the containing report to
  reference the subreport in each row.</div></dd>
   </dl>
@@ -1011,7 +1011,7 @@ Or if the there are multiple mappings that need to be made :
       >¶</a
     >
   </h1>
-  <div class="block">Processor to create overview maps. Internally <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/map/CreateMapProcessor.html" title="class in org.mapfish.print.processor.map"><code>CreateMapProcessor</code></a> is used.
+  <div class="block">Processor to create overview maps. Internally <a shape="rect" href="CreateMapProcessor.html" title="class in org.mapfish.print.processor.map"><code>CreateMapProcessor</code></a> is used.
 
  Example Configuration:
  <div class="highlight"><pre> attributes:<br>    ...<br>    overviewMap: !overviewMap<br>      width: 300<br>      height: 200<br>      maxDpi: 400<br> processors:<br>    ...<br>    - !createOverviewMap<br>      outputMapper:<br>        layerGraphics: overviewMapLayerGraphics</pre></div><strong>Features:</strong>
@@ -1298,7 +1298,7 @@ Or if the there are multiple mappings that need to be made :
   </h1>
   <div class="block"><p>This processor forwards all the headers from the print request (from the Mapfish Print client) to each
  http request made for the particular print job. All headers can be forwarded (if forwardAll is set to true)
- or the specific headers to forward can be specified.</p><p>Example 1: Forward all headers from print request</p><div class="highlight"><pre> - !forwardHeaders<br>   all: true</pre></div><p>Example 2: Forward specific headers (header1 and header2 will be forwarded)</p><div class="highlight"><pre> - !forwardHeaders<br>   headers: [header1, header2]</pre></div><p>Can be applied conditionally using matchers, like in <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/http/RestrictUrisProcessor.html" title="class in org.mapfish.print.processor.http"><code>RestrictUrisProcessor</code></a>
+ or the specific headers to forward can be specified.</p><p>Example 1: Forward all headers from print request</p><div class="highlight"><pre> - !forwardHeaders<br>   all: true</pre></div><p>Example 2: Forward specific headers (header1 and header2 will be forwarded)</p><div class="highlight"><pre> - !forwardHeaders<br>   headers: [header1, header2]</pre></div><p>Can be applied conditionally using matchers, like in <a shape="rect" href="RestrictUrisProcessor.html" title="class in org.mapfish.print.processor.http"><code>RestrictUrisProcessor</code></a>
  (<a shape="rect" href="processors.html#!restrictUris">!restrictUris</a>
  ).</p> </div> 
   <div class="admonition note examples">
@@ -1381,9 +1381,9 @@ Or if the there are multiple mappings that need to be made :
       >¶</a
     >
   </h1>
-  <div class="block"><p>This processor maps uris submitted to the <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/http/MfClientHttpRequestFactory.html" title="interface in org.mapfish.print.http"><code>MfClientHttpRequestFactory</code></a> to
+  <div class="block"><p>This processor maps uris submitted to the <a shape="rect" href="../../http/MfClientHttpRequestFactory.html" title="interface in org.mapfish.print.http"><code>MfClientHttpRequestFactory</code></a> to
  a modified uri as specified by the mapping parameter.</p><p>Example: change the hostname of all requests that are http requests and have the hostname: myhost.com
- to localhost instead of myhost.com</p><div class="highlight"><pre> - !mapUri<br>   mapping: {(http)://myhost.com(.*): "$1://localhost$2"}</pre></div><p>Can be applied conditionally using matchers, like in <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/http/RestrictUrisProcessor.html" title="class in org.mapfish.print.processor.http"><code>RestrictUrisProcessor</code></a>
+ to localhost instead of myhost.com</p><div class="highlight"><pre> - !mapUri<br>   mapping: {(http)://myhost.com(.*): "$1://localhost$2"}</pre></div><p>Can be applied conditionally using matchers, like in <a shape="rect" href="RestrictUrisProcessor.html" title="class in org.mapfish.print.processor.http"><code>RestrictUrisProcessor</code></a>
  (<a shape="rect" href="processors.html#!restrictUris">!restrictUris</a>
  ).</p> </div> 
   <div class="admonition note examples">
@@ -1514,9 +1514,9 @@ Or if the there are multiple mappings that need to be made :
     <dt><code>sources</code> </dt>
     <dd><div class="block"><p>The <em>source</em> to add to the merged DataSource.</p><p>Each <em>source</em> indicates if it should be treated
  as a datasource or as a single item to add to the merged DataSource. If the source indicates that it is
- a <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/jasper/MergeDataSourceProcessor.SourceType.html#DATASOURCE"><code>MergeDataSourceProcessor.SourceType.DATASOURCE</code></a> the object
+ a <a shape="rect" href="MergeDataSourceProcessor.SourceType.html#DATASOURCE"><code>MergeDataSourceProcessor.SourceType.DATASOURCE</code></a> the object
  each row in the datasource will be used to form a row in the merged DataSource.  If the source type is
- <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/jasper/MergeDataSourceProcessor.SourceType.html#SINGLE"><code>MergeDataSourceProcessor.SourceType.SINGLE</code></a> the object will
+ <a shape="rect" href="MergeDataSourceProcessor.SourceType.html#SINGLE"><code>MergeDataSourceProcessor.SourceType.SINGLE</code></a> the object will
  be a single row even if it is in fact a DataSource.</p><p>See also: <a shape="rect" href="configuration.html#!mergeSource">!mergeSource</a></p></div></dd>
   </dl>
    
@@ -1897,7 +1897,7 @@ Or if the there are multiple mappings that need to be made :
    
   <dl>
     <dt><code>configuration</code> </dt>
-    <dd><div class="block"><span class="descfrmTypeLabel">Description copied from interface: <code><a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/config/HasConfiguration.html#setConfiguration-org.mapfish.print.config.Configuration-">HasConfiguration</a></code></span></div></dd>
+    <dd><div class="block"><span class="descfrmTypeLabel">Description copied from interface: <code><a shape="rect" href="../../config/HasConfiguration.html#setConfiguration(org.mapfish.print.config.Configuration)">HasConfiguration</a></code></span></div></dd>
   </dl>
   
   <dl>
@@ -2291,12 +2291,12 @@ Or if the there are multiple mappings that need to be made :
       >¶</a
     >
   </h1>
-  <div class="block"><p>This processor allows the dynamic configuration of the <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/config/PDFConfig.html" title="class in org.mapfish.print.config"><code>PDFConfig</code></a>
+  <div class="block"><p>This processor allows the dynamic configuration of the <a shape="rect" href="../config/PDFConfig.html" title="class in org.mapfish.print.config"><code>PDFConfig</code></a>
  object by obtaining data from attributes.  For example the title and author could be string attributes
- posted from the client, this processor would update the <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/config/PDFConfig.html" title="class in org.mapfish.print.config"><code>PDFConfig</code></a> object
+ posted from the client, this processor would update the <a shape="rect" href="../config/PDFConfig.html" title="class in org.mapfish.print.config"><code>PDFConfig</code></a> object
  with the attribute data allowing per report PDF metadata.
  </p><p>
- Note: The <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/config/PDFConfig.html" title="class in org.mapfish.print.config"><code>PDFConfig</code></a> can also be configured in the config.yaml either at
+ Note: The <a shape="rect" href="../config/PDFConfig.html" title="class in org.mapfish.print.config"><code>PDFConfig</code></a> can also be configured in the config.yaml either at
  the config or template level.
  </p><p>See also: <a shape="rect" href="attributes.html#!updatePdfConfigUpdate">!updatePdfConfigUpdate</a> attribute</p>
  </div> 
@@ -2344,7 +2344,7 @@ Or if the there are multiple mappings that need to be made :
   
   <dl>
     <dt><code>updates</code> </dt>
-    <dd><div class="block">The pdf metadata property -> attribute name map.  The keys must be one of the values in <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/config/PDFConfig.html" title="class in org.mapfish.print.config"><code>PDFConfig</code></a> and the values must be the name of the attribute to obtain the the
+    <dd><div class="block">The pdf metadata property -> attribute name map.  The keys must be one of the values in <a shape="rect" href="../config/PDFConfig.html" title="class in org.mapfish.print.config"><code>PDFConfig</code></a> and the values must be the name of the attribute to obtain the the
  data from.  Example Configuration:
 
  <div class="highlight"><pre> processors:<br>   - !updatePdfConfig<br>     updates:<br>       title: "titleAttribute"<br>       subject: "subjectAttribute"</pre></div>
@@ -2386,7 +2386,7 @@ Or if the there are multiple mappings that need to be made :
   </h1>
   <div class="block">This processor maps https requests to http requests for certain hosts. The port number can also be mapped
  since that is usually required.
- <p>Example: </p><div class="highlight"><pre> - !useHttpForHttps<br>   hosts: [localhost, www.camptocamp.com]<br>   portMapping:<br>     443: 80<br>     8443: 8080</pre></div><p>Can be applied conditionally using matchers, like in <a shape="rect" target="javadocsTab" href="javadoc/org/mapfish/print/processor/http/RestrictUrisProcessor.html" title="class in org.mapfish.print.processor.http"><code>RestrictUrisProcessor</code></a>
+ <p>Example: </p><div class="highlight"><pre> - !useHttpForHttps<br>   hosts: [localhost, www.camptocamp.com]<br>   portMapping:<br>     443: 80<br>     8443: 8080</pre></div><p>Can be applied conditionally using matchers, like in <a shape="rect" href="RestrictUrisProcessor.html" title="class in org.mapfish.print.processor.http"><code>RestrictUrisProcessor</code></a>
  (<a shape="rect" href="processors.html#!restrictUris">!restrictUris</a>
  ).</p> </div> 
   <div class="admonition note examples">
@@ -2474,9 +2474,9 @@ Or if the there are multiple mappings that need to be made :
                     Revision
                     <code
                       ><a
-                        href="https://github.com/mapfish/mapfish-print/commit/742329a7b5a83dc992c6954f1230b9e8c0b2a0d7"
+                        href="https://github.com/mapfish/mapfish-print/commit/8c28f378642679b7d60799803617a295ce334d73"
                         target="_blank"
-                        >742329a7</a
+                        >8c28f378</a
                       ></code
                     >.
                   </span>
