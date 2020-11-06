@@ -239,9 +239,65 @@ extends <a href="BaseMapServlet.html" title="class in org.mapfish.print.servlet"
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static java.lang.String</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#JSON_OUTPUT_FONT_FAMILY">JSON_OUTPUT_FONT_FAMILY</a></span></code></th>
+<td class="colLast">
+<div class="block">The JSON key in the request spec that contains the java font family name.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#JSON_OUTPUT_FONTCONFIG">JSON_OUTPUT_FONTCONFIG</a></span></code></th>
+<td class="colLast">
+<div class="block">The JSON key in the request spec that contains the font families names.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#JSON_OUTPUT_FONTCONFIG_FAMILIES">JSON_OUTPUT_FONTCONFIG_FAMILIES</a></span></code></th>
+<td class="colLast">
+<div class="block">The JSON key in the request spec that contains the font families names.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#JSON_OUTPUT_FONTCONFIG_NAME">JSON_OUTPUT_FONTCONFIG_NAME</a></span></code></th>
+<td class="colLast">
+<div class="block">The JSON key in the request spec that contains the font name.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#JSON_OUTPUT_FONTCONFIG_STYLES">JSON_OUTPUT_FONTCONFIG_STYLES</a></span></code></th>
+<td class="colLast">
+<div class="block">The JSON key in the request spec that contains the font styles.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#JSON_OUTPUT_FONTCONFIG_WEIGHT">JSON_OUTPUT_FONTCONFIG_WEIGHT</a></span></code></th>
+<td class="colLast">
+<div class="block">The JSON key in the request spec that contains the font weight.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#JSON_OUTPUT_FONTS">JSON_OUTPUT_FONTS</a></span></code></th>
+<td class="colLast">
+<div class="block">The JSON key in the request spec that contains the font config fonts.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#JSON_OUTPUT_FORMAT">JSON_OUTPUT_FORMAT</a></span></code></th>
 <td class="colLast">
 <div class="block">The JSON key in the request spec that contains the outputFormat.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#JSON_OUTPUT_JASPERREPORT_FONTS">JSON_OUTPUT_JASPERREPORT_FONTS</a></span></code></th>
+<td class="colLast">
+<div class="block">The JSON key in the request spec that contains the Jasper report fonts.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -494,8 +550,8 @@ extends <a href="BaseMapServlet.html" title="class in org.mapfish.print.servlet"
 </td>
 </tr>
 <tr id="i16" class="altColor">
-<td class="colFirst"><code>java.lang.String</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#listAvailableFonts()">listAvailableFonts</a></span>()</code></th>
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#listAvailableFonts(javax.servlet.http.HttpServletResponse)">listAvailableFonts</a></span>&#8203;(javax.servlet.http.HttpServletResponse&nbsp;response)</code></th>
 <td class="colLast">
 <div class="block">List the available fonts on the system.</div>
 </td>
@@ -827,7 +883,7 @@ extends <a href="BaseMapServlet.html" title="class in org.mapfish.print.servlet"
 <a id="JSON_REQUEST_HEADERS">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>JSON_REQUEST_HEADERS</h4>
 <pre>public static final&nbsp;java.lang.String JSON_REQUEST_HEADERS</pre>
@@ -838,6 +894,118 @@ extends <a href="BaseMapServlet.html" title="class in org.mapfish.print.servlet"
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#org.mapfish.print.servlet.MapPrinterServlet.JSON_REQUEST_HEADERS">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a id="JSON_OUTPUT_JASPERREPORT_FONTS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>JSON_OUTPUT_JASPERREPORT_FONTS</h4>
+<pre>public static final&nbsp;java.lang.String JSON_OUTPUT_JASPERREPORT_FONTS</pre>
+<div class="block">The JSON key in the request spec that contains the Jasper report fonts.</div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#org.mapfish.print.servlet.MapPrinterServlet.JSON_OUTPUT_JASPERREPORT_FONTS">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a id="JSON_OUTPUT_FONTS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>JSON_OUTPUT_FONTS</h4>
+<pre>public static final&nbsp;java.lang.String JSON_OUTPUT_FONTS</pre>
+<div class="block">The JSON key in the request spec that contains the font config fonts.</div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#org.mapfish.print.servlet.MapPrinterServlet.JSON_OUTPUT_FONTS">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a id="JSON_OUTPUT_FONT_FAMILY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>JSON_OUTPUT_FONT_FAMILY</h4>
+<pre>public static final&nbsp;java.lang.String JSON_OUTPUT_FONT_FAMILY</pre>
+<div class="block">The JSON key in the request spec that contains the java font family name.</div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#org.mapfish.print.servlet.MapPrinterServlet.JSON_OUTPUT_FONT_FAMILY">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a id="JSON_OUTPUT_FONTCONFIG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>JSON_OUTPUT_FONTCONFIG</h4>
+<pre>public static final&nbsp;java.lang.String JSON_OUTPUT_FONTCONFIG</pre>
+<div class="block">The JSON key in the request spec that contains the font families names.</div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#org.mapfish.print.servlet.MapPrinterServlet.JSON_OUTPUT_FONTCONFIG">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a id="JSON_OUTPUT_FONTCONFIG_FAMILIES">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>JSON_OUTPUT_FONTCONFIG_FAMILIES</h4>
+<pre>public static final&nbsp;java.lang.String JSON_OUTPUT_FONTCONFIG_FAMILIES</pre>
+<div class="block">The JSON key in the request spec that contains the font families names.</div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#org.mapfish.print.servlet.MapPrinterServlet.JSON_OUTPUT_FONTCONFIG_FAMILIES">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a id="JSON_OUTPUT_FONTCONFIG_NAME">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>JSON_OUTPUT_FONTCONFIG_NAME</h4>
+<pre>public static final&nbsp;java.lang.String JSON_OUTPUT_FONTCONFIG_NAME</pre>
+<div class="block">The JSON key in the request spec that contains the font name.</div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#org.mapfish.print.servlet.MapPrinterServlet.JSON_OUTPUT_FONTCONFIG_NAME">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a id="JSON_OUTPUT_FONTCONFIG_STYLES">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>JSON_OUTPUT_FONTCONFIG_STYLES</h4>
+<pre>public static final&nbsp;java.lang.String JSON_OUTPUT_FONTCONFIG_STYLES</pre>
+<div class="block">The JSON key in the request spec that contains the font styles.</div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#org.mapfish.print.servlet.MapPrinterServlet.JSON_OUTPUT_FONTCONFIG_STYLES">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a id="JSON_OUTPUT_FONTCONFIG_WEIGHT">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>JSON_OUTPUT_FONTCONFIG_WEIGHT</h4>
+<pre>public static final&nbsp;java.lang.String JSON_OUTPUT_FONTCONFIG_WEIGHT</pre>
+<div class="block">The JSON key in the request spec that contains the font weight.</div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#org.mapfish.print.servlet.MapPrinterServlet.JSON_OUTPUT_FONTCONFIG_WEIGHT">Constant Field Values</a></dd>
 </dl>
 </li>
 </ul>
@@ -1289,20 +1457,18 @@ public final&nbsp;void&nbsp;getExampleRequest&#8203;(@PathVariable
 </dl>
 </li>
 </ul>
-<a id="listAvailableFonts()">
+<a id="listAvailableFonts(javax.servlet.http.HttpServletResponse)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>listAvailableFonts</h4>
 <pre class="methodSignature">@RequestMapping("/fonts")
-@ResponseBody
-public final&nbsp;java.lang.String&nbsp;listAvailableFonts()</pre>
+public final&nbsp;void&nbsp;listAvailableFonts&#8203;(javax.servlet.http.HttpServletResponse&nbsp;response)</pre>
 <div class="block">List the available fonts on the system.</div>
 <dl>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>the list of available fonts in the system.  The result is a JSON Array that just lists the font
-         family names available.</dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>response</code> - the response object</dd>
 </dl>
 </li>
 </ul>

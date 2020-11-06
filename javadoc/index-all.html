@@ -2157,6 +2157,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>
 <div class="block">Fail if a tile return an error.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="org/mapfish/print/FontTools.FontConfigDescription.html#family">family</a></span> - Variable in class org.mapfish.print.<a href="org/mapfish/print/FontTools.FontConfigDescription.html" title="class in org.mapfish.print">FontTools.FontConfigDescription</a></dt>
+<dd>
+<div class="block">The font families.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="org/mapfish/print/map/style/SLDParserPlugin.ErrorHandler.html#fatalError(org.xml.sax.SAXParseException)">fatalError(SAXParseException)</a></span> - Method in class org.mapfish.print.map.style.<a href="org/mapfish/print/map/style/SLDParserPlugin.ErrorHandler.html" title="class in org.mapfish.print.map.style">SLDParserPlugin.ErrorHandler</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org/mapfish/print/map/geotools/FeatureLayer.html" title="class in org.mapfish.print.map.geotools"><span class="typeNameLink">FeatureLayer</span></a> - Class in <a href="org/mapfish/print/map/geotools/package-summary.html">org.mapfish.print.map.geotools</a></dt>
@@ -2305,10 +2309,16 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>
 <div class="block">Configuration for the font of the grid labels.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="org/mapfish/print/FontTools.html#FONT_FAMILIES">FONT_FAMILIES</a></span> - Static variable in class org.mapfish.print.<a href="org/mapfish/print/FontTools.html" title="class in org.mapfish.print">FontTools</a></dt>
+<dd>
+<div class="block">List of java font families.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="org/mapfish/print/attribute/ScalebarAttribute.ScalebarAttributeValues.html#fontColor">fontColor</a></span> - Variable in class org.mapfish.print.attribute.<a href="org/mapfish/print/attribute/ScalebarAttribute.ScalebarAttributeValues.html" title="class in org.mapfish.print.attribute">ScalebarAttribute.ScalebarAttributeValues</a></dt>
 <dd>
 <div class="block">The font color of the labels (default: black).</div>
 </dd>
+<dt><span class="memberNameLink"><a href="org/mapfish/print/FontTools.FontConfigDescription.html#%3Cinit%3E()">FontConfigDescription()</a></span> - Constructor for class org.mapfish.print.<a href="org/mapfish/print/FontTools.FontConfigDescription.html" title="class in org.mapfish.print">FontTools.FontConfigDescription</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/mapfish/print/servlet/MapPrinterServlet.html#FONTS_URL">FONTS_URL</a></span> - Static variable in class org.mapfish.print.servlet.<a href="org/mapfish/print/servlet/MapPrinterServlet.html" title="class in org.mapfish.print.servlet">MapPrinterServlet</a></dt>
 <dd>
 <div class="block">The url path to get the list of fonts available to geotools.</div>
@@ -2320,6 +2330,14 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dt><a href="org/mapfish/print/map/geotools/grid/FontStyle.html" title="enum in org.mapfish.print.map.geotools.grid"><span class="typeNameLink">FontStyle</span></a> - Enum in <a href="org/mapfish/print/map/geotools/grid/package-summary.html">org.mapfish.print.map.geotools.grid</a></dt>
 <dd>
 <div class="block">Enumeration of all the allowed font styles.</div>
+</dd>
+<dt><a href="org/mapfish/print/FontTools.html" title="class in org.mapfish.print"><span class="typeNameLink">FontTools</span></a> - Class in <a href="org/mapfish/print/package-summary.html">org.mapfish.print</a></dt>
+<dd>
+<div class="block">Tools function to get java fonts families and interface font config.</div>
+</dd>
+<dt><a href="org/mapfish/print/FontTools.FontConfigDescription.html" title="class in org.mapfish.print"><span class="typeNameLink">FontTools.FontConfigDescription</span></a> - Class in <a href="org/mapfish/print/package-summary.html">org.mapfish.print</a></dt>
+<dd>
+<div class="block">Description of font get from font config.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/mapfish/print/map/geotools/AbstractFeatureSourceLayerPlugin.html#forkJoinPool">forkJoinPool</a></span> - Variable in class org.mapfish.print.map.geotools.<a href="org/mapfish/print/map/geotools/AbstractFeatureSourceLayerPlugin.html" title="class in org.mapfish.print.map.geotools">AbstractFeatureSourceLayerPlugin</a></dt>
 <dd>
@@ -5150,9 +5168,41 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>
 <div class="block">Name of attribute in the client config json.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="org/mapfish/print/servlet/MapPrinterServlet.html#JSON_OUTPUT_FONT_FAMILY">JSON_OUTPUT_FONT_FAMILY</a></span> - Static variable in class org.mapfish.print.servlet.<a href="org/mapfish/print/servlet/MapPrinterServlet.html" title="class in org.mapfish.print.servlet">MapPrinterServlet</a></dt>
+<dd>
+<div class="block">The JSON key in the request spec that contains the java font family name.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/mapfish/print/servlet/MapPrinterServlet.html#JSON_OUTPUT_FONTCONFIG">JSON_OUTPUT_FONTCONFIG</a></span> - Static variable in class org.mapfish.print.servlet.<a href="org/mapfish/print/servlet/MapPrinterServlet.html" title="class in org.mapfish.print.servlet">MapPrinterServlet</a></dt>
+<dd>
+<div class="block">The JSON key in the request spec that contains the font families names.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/mapfish/print/servlet/MapPrinterServlet.html#JSON_OUTPUT_FONTCONFIG_FAMILIES">JSON_OUTPUT_FONTCONFIG_FAMILIES</a></span> - Static variable in class org.mapfish.print.servlet.<a href="org/mapfish/print/servlet/MapPrinterServlet.html" title="class in org.mapfish.print.servlet">MapPrinterServlet</a></dt>
+<dd>
+<div class="block">The JSON key in the request spec that contains the font families names.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/mapfish/print/servlet/MapPrinterServlet.html#JSON_OUTPUT_FONTCONFIG_NAME">JSON_OUTPUT_FONTCONFIG_NAME</a></span> - Static variable in class org.mapfish.print.servlet.<a href="org/mapfish/print/servlet/MapPrinterServlet.html" title="class in org.mapfish.print.servlet">MapPrinterServlet</a></dt>
+<dd>
+<div class="block">The JSON key in the request spec that contains the font name.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/mapfish/print/servlet/MapPrinterServlet.html#JSON_OUTPUT_FONTCONFIG_STYLES">JSON_OUTPUT_FONTCONFIG_STYLES</a></span> - Static variable in class org.mapfish.print.servlet.<a href="org/mapfish/print/servlet/MapPrinterServlet.html" title="class in org.mapfish.print.servlet">MapPrinterServlet</a></dt>
+<dd>
+<div class="block">The JSON key in the request spec that contains the font styles.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/mapfish/print/servlet/MapPrinterServlet.html#JSON_OUTPUT_FONTCONFIG_WEIGHT">JSON_OUTPUT_FONTCONFIG_WEIGHT</a></span> - Static variable in class org.mapfish.print.servlet.<a href="org/mapfish/print/servlet/MapPrinterServlet.html" title="class in org.mapfish.print.servlet">MapPrinterServlet</a></dt>
+<dd>
+<div class="block">The JSON key in the request spec that contains the font weight.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/mapfish/print/servlet/MapPrinterServlet.html#JSON_OUTPUT_FONTS">JSON_OUTPUT_FONTS</a></span> - Static variable in class org.mapfish.print.servlet.<a href="org/mapfish/print/servlet/MapPrinterServlet.html" title="class in org.mapfish.print.servlet">MapPrinterServlet</a></dt>
+<dd>
+<div class="block">The JSON key in the request spec that contains the font config fonts.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="org/mapfish/print/servlet/MapPrinterServlet.html#JSON_OUTPUT_FORMAT">JSON_OUTPUT_FORMAT</a></span> - Static variable in class org.mapfish.print.servlet.<a href="org/mapfish/print/servlet/MapPrinterServlet.html" title="class in org.mapfish.print.servlet">MapPrinterServlet</a></dt>
 <dd>
 <div class="block">The JSON key in the request spec that contains the outputFormat.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/mapfish/print/servlet/MapPrinterServlet.html#JSON_OUTPUT_JASPERREPORT_FONTS">JSON_OUTPUT_JASPERREPORT_FONTS</a></span> - Static variable in class org.mapfish.print.servlet.<a href="org/mapfish/print/servlet/MapPrinterServlet.html" title="class in org.mapfish.print.servlet">MapPrinterServlet</a></dt>
+<dd>
+<div class="block">The JSON key in the request spec that contains the Jasper report fonts.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/mapfish/print/servlet/MapPrinterServlet.html#JSON_PRINT_JOB_REF">JSON_PRINT_JOB_REF</a></span> - Static variable in class org.mapfish.print.servlet.<a href="org/mapfish/print/servlet/MapPrinterServlet.html" title="class in org.mapfish.print.servlet">MapPrinterServlet</a></dt>
 <dd>
@@ -5381,9 +5431,13 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>
 <div class="block">To get (in JSON) the information about the available formats and CO.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="org/mapfish/print/servlet/MapPrinterServlet.html#listAvailableFonts()">listAvailableFonts()</a></span> - Method in class org.mapfish.print.servlet.<a href="org/mapfish/print/servlet/MapPrinterServlet.html" title="class in org.mapfish.print.servlet">MapPrinterServlet</a></dt>
+<dt><span class="memberNameLink"><a href="org/mapfish/print/servlet/MapPrinterServlet.html#listAvailableFonts(javax.servlet.http.HttpServletResponse)">listAvailableFonts(HttpServletResponse)</a></span> - Method in class org.mapfish.print.servlet.<a href="org/mapfish/print/servlet/MapPrinterServlet.html" title="class in org.mapfish.print.servlet">MapPrinterServlet</a></dt>
 <dd>
 <div class="block">List the available fonts on the system.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/mapfish/print/FontTools.html#listFontConfigFonts(java.lang.String)">listFontConfigFonts(String)</a></span> - Static method in class org.mapfish.print.<a href="org/mapfish/print/FontTools.html" title="class in org.mapfish.print">FontTools</a></dt>
+<dd>
+<div class="block">Get matched font from a font familly name.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/mapfish/print/map/geotools/FeatureSourceSupplier.html#load(org.mapfish.print.http.MfClientHttpRequestFactory,org.mapfish.print.attribute.map.MapfishMapContext)">load(MfClientHttpRequestFactory, MapfishMapContext)</a></span> - Method in interface org.mapfish.print.map.geotools.<a href="org/mapfish/print/map/geotools/FeatureSourceSupplier.html" title="interface in org.mapfish.print.map.geotools">FeatureSourceSupplier</a></dt>
 <dd>
@@ -5940,6 +5994,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dt><span class="memberNameLink"><a href="org/mapfish/print/attribute/LegendAttribute.LegendAttributeValue.html#name">name</a></span> - Variable in class org.mapfish.print.attribute.<a href="org/mapfish/print/attribute/LegendAttribute.LegendAttributeValue.html" title="class in org.mapfish.print.attribute">LegendAttribute.LegendAttributeValue</a></dt>
 <dd>
 <div class="block">Name of the legend class.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/mapfish/print/FontTools.FontConfigDescription.html#name">name</a></span> - Variable in class org.mapfish.print.<a href="org/mapfish/print/FontTools.FontConfigDescription.html" title="class in org.mapfish.print">FontTools.FontConfigDescription</a></dt>
+<dd>
+<div class="block">The font name.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/mapfish/print/map/AbstractLayerParams.html#name">name</a></span> - Variable in class org.mapfish.print.map.<a href="org/mapfish/print/map/AbstractLayerParams.html" title="class in org.mapfish.print.map">AbstractLayerParams</a></dt>
 <dd>
@@ -8760,6 +8818,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>
 <div class="block">The style string.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="org/mapfish/print/FontTools.FontConfigDescription.html#style">style</a></span> - Variable in class org.mapfish.print.<a href="org/mapfish/print/FontTools.FontConfigDescription.html" title="class in org.mapfish.print">FontTools.FontConfigDescription</a></dt>
+<dd>
+<div class="block">The font style.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="org/mapfish/print/map/geotools/AbstractVectorLayerParam.html#style">style</a></span> - Variable in class org.mapfish.print.map.geotools.<a href="org/mapfish/print/map/geotools/AbstractVectorLayerParam.html" title="class in org.mapfish.print.map.geotools">AbstractVectorLayerParam</a></dt>
 <dd>
 <div class="block">The style name of a style to apply to the features during rendering.</div>
@@ -9806,6 +9868,10 @@ the order they are declared.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/mapfish/print/map/style/SLDParserPlugin.ErrorHandler.html#warning(org.xml.sax.SAXParseException)">warning(SAXParseException)</a></span> - Method in class org.mapfish.print.map.style.<a href="org/mapfish/print/map/style/SLDParserPlugin.ErrorHandler.html" title="class in org.mapfish.print.map.style">SLDParserPlugin.ErrorHandler</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/mapfish/print/FontTools.FontConfigDescription.html#weight">weight</a></span> - Variable in class org.mapfish.print.<a href="org/mapfish/print/FontTools.FontConfigDescription.html" title="class in org.mapfish.print">FontTools.FontConfigDescription</a></dt>
+<dd>
+<div class="block">CSS like font weight.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="org/mapfish/print/attribute/map/GenericMapAttribute.GenericMapAttributeValues.html#width">width</a></span> - Variable in class org.mapfish.print.attribute.map.<a href="org/mapfish/print/attribute/map/GenericMapAttribute.GenericMapAttributeValues.html" title="class in org.mapfish.print.attribute.map">GenericMapAttribute.GenericMapAttributeValues</a></dt>
 <dd>
 <div class="block">The width of the map.</div>
