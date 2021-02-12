@@ -27,7 +27,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10,"i2":6,"i3":10,"i4":10,"i5":6,"i6":6,"i7":6,"i8":6};
+var data = {"i0":10,"i1":10,"i2":6,"i3":10,"i4":10,"i5":6,"i6":10,"i7":10,"i8":6,"i9":6,"i10":6};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -264,13 +264,27 @@ extends java.lang.Object</pre>
 </td>
 </tr>
 <tr id="i6" class="altColor">
+<td class="colFirst"><code>int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTileBufferHeight()">getTileBufferHeight</a></span>()</code></th>
+<td class="colLast">
+<div class="block">Obtain the buffer height for meta tiling.</div>
+</td>
+</tr>
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code>int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTileBufferWidth()">getTileBufferWidth</a></span>()</code></th>
+<td class="colLast">
+<div class="block">Obtain the buffer width for meta tiling.</div>
+</td>
+</tr>
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>protected abstract org.geotools.geometry.jts.ReferencedEnvelope</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTileCacheBounds()">getTileCacheBounds</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Return the full bounds of the tileCache.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>abstract org.springframework.http.client.ClientHttpRequest</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTileRequest(org.mapfish.print.http.MfClientHttpRequestFactory,java.lang.String,org.geotools.geometry.jts.ReferencedEnvelope,java.awt.Dimension,int,int)">getTileRequest</a></span>&#8203;(<a href="../../http/MfClientHttpRequestFactory.html" title="interface in org.mapfish.print.http">MfClientHttpRequestFactory</a>&nbsp;httpRequestFactory,
               java.lang.String&nbsp;commonUrl,
@@ -282,7 +296,7 @@ extends java.lang.Object</pre>
 <div class="block">Create the http request for loading the image at the indicated area and the indicated size.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>abstract java.awt.Dimension</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTileSize()">getTileSize</a></span>()</code></th>
 <td class="colLast">
@@ -447,6 +461,26 @@ public abstract&nbsp;org.springframework.http.client.ClientHttpRequest&nbsp;getT
 <h4>getTileSize</h4>
 <pre class="methodSignature">public abstract&nbsp;java.awt.Dimension&nbsp;getTileSize()</pre>
 <div class="block">Obtain the image tile size of the tiles that will be loaded from the server.</div>
+</li>
+</ul>
+<a id="getTileBufferWidth()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getTileBufferWidth</h4>
+<pre class="methodSignature">public&nbsp;int&nbsp;getTileBufferWidth()</pre>
+<div class="block">Obtain the buffer width for meta tiling.</div>
+</li>
+</ul>
+<a id="getTileBufferHeight()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getTileBufferHeight</h4>
+<pre class="methodSignature">public&nbsp;int&nbsp;getTileBufferHeight()</pre>
+<div class="block">Obtain the buffer height for meta tiling.</div>
 </li>
 </ul>
 <a id="getTileCacheBounds()">

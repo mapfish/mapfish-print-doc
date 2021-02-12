@@ -212,8 +212,10 @@ extends <a href="../AbstractTiledLayer.html" title="class in org.mapfish.print.m
 </td>
 </tr>
 <tr class="rowColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(org.mapfish.print.map.image.wms.WmsLayer,java.awt.Dimension)">TiledWmsLayer</a></span>&#8203;(<a href="../../image/wms/WmsLayer.html" title="class in org.mapfish.print.map.image.wms">WmsLayer</a>&nbsp;wmsLayer,
-             java.awt.Dimension&nbsp;tileSize)</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(org.mapfish.print.map.image.wms.WmsLayer,java.awt.Dimension,int,int)">TiledWmsLayer</a></span>&#8203;(<a href="../../image/wms/WmsLayer.html" title="class in org.mapfish.print.map.image.wms">WmsLayer</a>&nbsp;wmsLayer,
+             java.awt.Dimension&nbsp;tileSize,
+             int&nbsp;tileBufferWidth,
+             int&nbsp;tileBufferHeight)</code></th>
 <td class="colLast">
 <div class="block">Create a copy of the given WmsLayer, but tiled.</div>
 </td>
@@ -324,19 +326,23 @@ extends <a href="../AbstractTiledLayer.html" title="class in org.mapfish.print.m
 </dl>
 </li>
 </ul>
-<a id="&lt;init&gt;(org.mapfish.print.map.image.wms.WmsLayer,java.awt.Dimension)">
+<a id="&lt;init&gt;(org.mapfish.print.map.image.wms.WmsLayer,java.awt.Dimension,int,int)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>TiledWmsLayer</h4>
 <pre>public&nbsp;TiledWmsLayer&#8203;(<a href="../../image/wms/WmsLayer.html" title="class in org.mapfish.print.map.image.wms">WmsLayer</a>&nbsp;wmsLayer,
-                     java.awt.Dimension&nbsp;tileSize)</pre>
+                     java.awt.Dimension&nbsp;tileSize,
+                     int&nbsp;tileBufferWidth,
+                     int&nbsp;tileBufferHeight)</pre>
 <div class="block">Create a copy of the given WmsLayer, but tiled.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>wmsLayer</code> - The source layer</dd>
 <dd><code>tileSize</code> - The size of the tiles</dd>
+<dd><code>tileBufferWidth</code> - The width of the the buffer tile for meta tile</dd>
+<dd><code>tileBufferHeight</code> - The height of the the buffer tile for meta tile</dd>
 </dl>
 </li>
 </ul>

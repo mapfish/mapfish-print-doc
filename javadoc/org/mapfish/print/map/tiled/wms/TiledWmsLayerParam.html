@@ -27,7 +27,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10};
+var data = {"i0":10,"i1":10,"i2":10,"i3":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -197,6 +197,13 @@ extends <a href="../../image/wms/WmsLayerParam.html" title="class in org.mapfish
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>int[]</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#tileBufferSize">tileBufferSize</a></span></code></th>
+<td class="colLast">
+<div class="block">A two element array of integers indicating the width and height tile buffer.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>int[]</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#tileSize">tileSize</a></span></code></th>
 <td class="colLast">
 <div class="block">A two element array of integers indicating the x and y size of each tile.</div>
@@ -254,8 +261,10 @@ extends <a href="../../image/wms/WmsLayerParam.html" title="class in org.mapfish
 </td>
 </tr>
 <tr class="rowColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(org.mapfish.print.map.image.wms.WmsLayerParam,java.awt.Dimension)">TiledWmsLayerParam</a></span>&#8203;(<a href="../../image/wms/WmsLayerParam.html" title="class in org.mapfish.print.map.image.wms">WmsLayerParam</a>&nbsp;params,
-                  java.awt.Dimension&nbsp;tileSize)</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(org.mapfish.print.map.image.wms.WmsLayerParam,java.awt.Dimension,int,int)">TiledWmsLayerParam</a></span>&#8203;(<a href="../../image/wms/WmsLayerParam.html" title="class in org.mapfish.print.map.image.wms">WmsLayerParam</a>&nbsp;params,
+                  java.awt.Dimension&nbsp;tileSize,
+                  int&nbsp;tileBufferWidth,
+                  int&nbsp;tileBufferHeight)</code></th>
 <td class="colLast">
 <div class="block">Convert WmsLayerParam into it's tiled equivalent.</div>
 </td>
@@ -279,11 +288,21 @@ extends <a href="../../image/wms/WmsLayerParam.html" title="class in org.mapfish
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTileBufferHeight()">getTileBufferHeight</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code>int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTileBufferWidth()">getTileBufferWidth</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>java.awt.Dimension</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTileSize()">getTileSize</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#postConstruct()">postConstruct</a></span>()</code></th>
 <td class="colLast">
@@ -331,11 +350,21 @@ extends <a href="../../image/wms/WmsLayerParam.html" title="class in org.mapfish
 <a id="tileSize">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>tileSize</h4>
 <pre>public&nbsp;int[] tileSize</pre>
 <div class="block">A two element array of integers indicating the x and y size of each tile.</div>
+</li>
+</ul>
+<a id="tileBufferSize">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>tileBufferSize</h4>
+<pre>public&nbsp;int[] tileBufferSize</pre>
+<div class="block">A two element array of integers indicating the width and height tile buffer.</div>
 </li>
 </ul>
 </li>
@@ -358,19 +387,23 @@ extends <a href="../../image/wms/WmsLayerParam.html" title="class in org.mapfish
 <div class="block">Constructor.</div>
 </li>
 </ul>
-<a id="&lt;init&gt;(org.mapfish.print.map.image.wms.WmsLayerParam,java.awt.Dimension)">
+<a id="&lt;init&gt;(org.mapfish.print.map.image.wms.WmsLayerParam,java.awt.Dimension,int,int)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>TiledWmsLayerParam</h4>
 <pre>public&nbsp;TiledWmsLayerParam&#8203;(<a href="../../image/wms/WmsLayerParam.html" title="class in org.mapfish.print.map.image.wms">WmsLayerParam</a>&nbsp;params,
-                          java.awt.Dimension&nbsp;tileSize)</pre>
+                          java.awt.Dimension&nbsp;tileSize,
+                          int&nbsp;tileBufferWidth,
+                          int&nbsp;tileBufferHeight)</pre>
 <div class="block">Convert WmsLayerParam into it's tiled equivalent.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>params</code> - the WMS parameters to convert</dd>
 <dd><code>tileSize</code> - The size of the tiles</dd>
+<dd><code>tileBufferWidth</code> - The width of the the buffer tile for meta tile</dd>
+<dd><code>tileBufferHeight</code> - The height of the the buffer tile for meta tile</dd>
 </dl>
 </li>
 </ul>
@@ -405,10 +438,28 @@ extends <a href="../../image/wms/WmsLayerParam.html" title="class in org.mapfish
 <a id="getTileSize()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>getTileSize</h4>
 <pre class="methodSignature">public&nbsp;java.awt.Dimension&nbsp;getTileSize()</pre>
+</li>
+</ul>
+<a id="getTileBufferWidth()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getTileBufferWidth</h4>
+<pre class="methodSignature">public&nbsp;int&nbsp;getTileBufferWidth()</pre>
+</li>
+</ul>
+<a id="getTileBufferHeight()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getTileBufferHeight</h4>
+<pre class="methodSignature">public&nbsp;int&nbsp;getTileBufferHeight()</pre>
 </li>
 </ul>
 </li>
