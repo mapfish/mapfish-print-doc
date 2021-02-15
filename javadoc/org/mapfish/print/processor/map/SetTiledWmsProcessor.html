@@ -27,7 +27,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10};
+var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -306,6 +306,16 @@ extends <a href="../AbstractProcessor.html" title="class in org.mapfish.print.pr
 <div class="block">Set the maximum width in pixels.</div>
 </td>
 </tr>
+<tr id="i6" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setTileBufferHeight(int)">setTileBufferHeight</a></span>&#8203;(int&nbsp;tileBufferHeight)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setTileBufferWidth(int)">setTileBufferWidth</a></span>&#8203;(int&nbsp;tileBufferWidth)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
 </table>
 <ul class="blockList">
 <li class="blockList"><a id="methods.inherited.from.class.org.mapfish.print.processor.AbstractProcessor">
@@ -495,7 +505,7 @@ extends <a href="../AbstractProcessor.html" title="class in org.mapfish.print.pr
 <a id="setMatchers(java.util.List)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>setMatchers</h4>
 <pre class="methodSignature">public final&nbsp;void&nbsp;setMatchers&#8203;(java.util.List&lt;? extends <a href="../http/matcher/URIMatcher.html" title="interface in org.mapfish.print.processor.http.matcher">URIMatcher</a>&gt;&nbsp;matchers)</pre>
@@ -510,6 +520,32 @@ extends <a href="../AbstractProcessor.html" title="class in org.mapfish.print.pr
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>matchers</code> - the list of matcher to use to check if a url is permitted</dd>
+</dl>
+</li>
+</ul>
+<a id="setTileBufferWidth(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setTileBufferWidth</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;setTileBufferWidth&#8203;(int&nbsp;tileBufferWidth)</pre>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>tileBufferWidth</code> - the tileBufferWidth to set</dd>
+</dl>
+</li>
+</ul>
+<a id="setTileBufferHeight(int)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>setTileBufferHeight</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;setTileBufferHeight&#8203;(int&nbsp;tileBufferHeight)</pre>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>tileBufferHeight</code> - the tileBufferHeight to set</dd>
 </dl>
 </li>
 </ul>
