@@ -8,11 +8,7 @@
     <title>MapFish Print 3 Documentation - Configuration of tables with HTML images</title>
 
     <link rel="stylesheet" href="css/sphinx_rtd_theme.css" type="text/css" />
-    <link
-      rel="stylesheet"
-      href="css/readthedocs-doc-embed.css"
-      type="text/css"
-    />
+    <link rel="stylesheet" href="css/readthedocs-doc-embed.css" type="text/css" />
     <link rel="stylesheet" href="css/custom.css" type="text/css" />
   </head>
 
@@ -32,100 +28,70 @@
           >
             <ul class="current">
               <li class="toctree-l1 ">
-                <a
-                  class="reference internal "
-                  href="index.html"
-                  >Introduction</a
-                >
+                <a class="reference internal " href="index.html">Introduction</a>
               </li>
+
               <li class="toctree-l1 ">
-                <a
-                  class="reference internal "
-                  href="jasperreports.html"
+                <a class="reference internal " href="jasperreports.html"
                   >JasperReports</a
                 >
               </li>
+
               <li class="toctree-l1 ">
-                <a class="reference internal " href="api.html"
-                  >Web API</a
-                >
+                <a class="reference internal " href="api.html">Web API</a>
               </li>
+
               <li class="toctree-l1 ">
-                <a
-                  class="reference internal "
-                  href="attributes.html"
-                  >Attributes</a
-                >
+                <a class="reference internal " href="attributes.html">Attributes</a>
                 
               </li>
+
               <li class="toctree-l1 ">
-                <a
-                  class="reference internal "
-                  href="configuration.html"
+                <a class="reference internal " href="configuration.html"
                   >Configuration</a
                 >
                 
               </li>
+
               <li class="toctree-l1 ">
-                <a
-                  class="reference internal "
-                  href="layers.html"
-                  >Map Layers</a
-                >
+                <a class="reference internal " href="layers.html">Map Layers</a>
                 
               </li>
+
               <li class="toctree-l1 ">
-                <a
-                  class="reference internal "
-                  href="processors.html"
-                  >Processors</a
-                >
+                <a class="reference internal " href="processors.html">Processors</a>
                 
               </li>
+
               <li class="toctree-l1 ">
-                <a
-                  class="reference internal "
-                  href="fileloaders.html"
-                  >File-Loaders</a
-                >
+                <a class="reference internal " href="fileloaders.html">File-Loaders</a>
                 
               </li>
+
               <li class="toctree-l1 ">
-                <a
-                  class="reference internal "
-                  href="outputformats.html"
+                <a class="reference internal " href="outputformats.html"
                   >Output Formats</a
                 >
                 
               </li>
+
               <li class="toctree-l1 ">
-                <a
-                  class="reference internal "
-                  href="styles.html"
-                  >Styles</a
-                >
+                <a class="reference internal " href="styles.html">Styles</a>
                 
               </li>
+
               <li class="toctree-l1 current">
-                <a
-                  class="reference internal current"
-                  href="tableimages.html"
+                <a class="reference internal current" href="tableimages.html"
                   >Images in tables</a
                 >
               </li>
+
               <li class="toctree-l1 ">
-                <a
-                  class="reference internal "
-                  href="download.html"
-                  >Download</a
-                >
+                <a class="reference internal " href="download.html">Download</a>
               </li>
+
               <li class="toctree-l1 ">
-                <a
-                  class="reference internal "
-                  href="docker.html"
-                  >Docker</a
-                >
+                <a class="reference internal " href="docker.html">Docker</a>
               </li>
             </ul>
           </div>
@@ -146,51 +112,47 @@
 
                 <li>Configuration of tables with HTML images</li>
                 <li class="wy-breadcrumbs-aside">
-                  <a
-                    href="https://github.com/mapfish/mapfish-print"
-                    class="fa fa-github"
-                  >
+                  <a href="https://github.com/mapfish/mapfish-print" class="fa fa-github">
                     mapfish/mapfish-print</a
                   >
                 </li>
               </ul>
+
               <hr />
             </div>
-            <div
-              role="main"
-              class="document"
-              itemscope="itemscope"
-              itemtype="http://schema.org/Article"
-            >
+            <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
               <div itemprop="articleBody">
                 <h1>Configuration of tables with HTML images</h1>
                 <div class="section"><p>
-    This section explains how to add one or multiple images to a table subreport.<br/>
-    In a first step a table needs to be configured. For this, the processor
-    <a href="processors.html#!prepareTable">!prepareTable</a> is used. The column containing the image needs
-    to be defined which is done using:
+  This section explains how to add one or multiple images to a table subreport.<br />
+  In a first step a table needs to be configured. For this, the processor
+  <a href="processors.html#!prepareTable">!prepareTable</a> is used. The column containing the image needs to
+  be defined which is done using:
 </p>
-    <div class="highlight"><pre>
+<div class="highlight">
+  <pre>
         ...
         icon: !urlImage
               urlExtractor: (.*)                # Use regular expression (regex) to retrieve the URL of the image in the text of the icon column.
               urlGroup: 1
        ...
-    </pre></div>
+    </pre
+  >
+</div>
 <p>
-    The source column may contain more text than just the URL of the image. For this reason a regex
-    expression, passed to <a href="configuration.html#!urlImage">urlExtractor</a>, is used to filter
-    out the URL.
+  The source column may contain more text than just the URL of the image. For this reason a regex expression,
+  passed to <a href="configuration.html#!urlImage">urlExtractor</a>, is used to filter out the URL.
 </p>
 <p>
-    The following example shows a configuration of a table where the column with the title "icon" contains
-    the URL to the image. For GeoMapFish applications the column name depends on the title that is used in
-    the interface and therefore can be the translation of the underlying database column name (if a database
-    is used).<br/>
-    In the example below all columns from the original table are included in the printed table
-    without formatting.
+  The following example shows a configuration of a table where the column with the title "icon" contains the
+  URL to the image. For GeoMapFish applications the column name depends on the title that is used in the
+  interface and therefore can be the translation of the underlying database column name (if a database is
+  used).<br />
+  In the example below all columns from the original table are included in the printed table without
+  formatting.
 </p>
-    <div class="highlight"><pre>
+<div class="highlight">
+  <pre>
        ...
         - !prepareTable
           dynamic: true
@@ -199,23 +161,25 @@
               urlExtractor: (.*)                # Use Regex expression to retrieve the URL of the image in the text of the icon column.
               urlGroup: 1
        ...
-    </pre></div>
-<p>
-    To add formatting styles to the printed table there are two possibilities:
-    <ol>
-        <li>
-            To add a subreport in form of a JasperReport template containing all of the columns that are to
-            be included in the printed report. This requires the dynamic flag in the processor !prepareTable
-            to be false.
-        </li>
-        <li>
-            Use the styling from a subreport template but generate the columns dynamically. In this case
-            the JasperReports template (table_a4_portrait.jrxml) must contain one element. An example for
-            this type of configuration is given below.
-        </li>
-    </ol>
-</p>
-    <div class="highlight"><pre>
+    </pre
+  >
+</div>
+<p>To add formatting styles to the printed table there are two possibilities:</p>
+<ol>
+  <li>
+    To add a subreport in form of a JasperReport template containing all of the columns that are to be
+    included in the printed report. This requires the dynamic flag in the processor !prepareTable to be false.
+  </li>
+
+  <li>
+    Use the styling from a subreport template but generate the columns dynamically. In this case the
+    JasperReports template (table_a4_portrait.jrxml) must contain one element. An example for this type of
+    configuration is given below.
+  </li>
+</ol>
+
+<div class="highlight">
+  <pre>
        ...
         - !prepareTable
              excludeColumns:
@@ -234,20 +198,23 @@
                  urlExtractor: (.*)                     # Use Regex expression to retrieve the URL of the image in the text of the icon column.
                  urlGroup: 1
        ...
-    </pre></div>
+    </pre
+  >
+</div>
 <p>
-    For the case that multiple columns with different titles contain images each column has to be configured
-    in the config.yaml. Below is an example where two columns <code>Icon</code> and <code>Image</code>
-    contain images. The columns can be in the same table  and/or they can be in different tables. This means
-    if two columns <code>Icon</code> and <code>Image</code> are configured to contain images (as in the
-    example below), it is possible to have two tables, one table with the column <code>Icon</code> and
-    the other table with the columns <code>Icon</code> and <code>Image</code>. In the print all tree
-    columns contain images in the print.<br/>
+  For the case that multiple columns with different titles contain images each column has to be configured in
+  the config.yaml. Below is an example where two columns <code>Icon</code> and <code>Image</code> contain
+  images. The columns can be in the same table and/or they can be in different tables. This means if two
+  columns <code>Icon</code> and <code>Image</code> are configured to contain images (as in the example below),
+  it is possible to have two tables, one table with the column <code>Icon</code> and the other table with the
+  columns <code>Icon</code> and <code>Image</code>. In the print all tree columns contain images in the
+  print.<br />
 </p>
 <p>
-   <code>config.yaml</code>
+  <code>config.yaml</code>
 </p>
-   <div class="highlight"><pre>
+<div class="highlight">
+  <pre>
        ...
        - !prepareTable
              excludeColumns:
@@ -265,11 +232,14 @@
                  urlExtractor: (.*)
                  urlGroup: 1
        ...
-   </pre></div>
+   </pre
+  >
+</div>
 <p>
-   <code>table_a4_portrait.jrxml</code>
+  <code>table_a4_portrait.jrxml</code>
 </p>
-   <div class="highlight"><pre>
+<div class="highlight">
+  <pre>
        ...
         &lt;detail&gt;
                 &lt;band height="20"&gt;
@@ -280,11 +250,11 @@
                 &lt;/band&gt;
         &lt;/detail&gt;
        ...
-   </pre></div>
-<p>
-   The resulting output of the above configuration is shown in the figure below.
-</p>
-<img src="./images/image_table.png" width="800">
+   </pre
+  >
+</div>
+<p>The resulting output of the above configuration is shown in the figure below.</p>
+<img src="./images/image_table.png" width="800" />
 </div>
 
 
@@ -295,19 +265,15 @@
 
               <div role="contentinfo">
                 <p>
-                  <a
-                    href="https://www.camptocamp.com/geospatial_solutions"
-                    target="_blank"
-                    >Camptocamp</a
-                  >
+                  <a href="https://www.camptocamp.com/geospatial_solutions" target="_blank">Camptocamp</a>
                   <br />
                   <span class="commit">
                     Revision
                     <code
                       ><a
-                        href="https://github.com/mapfish/mapfish-print/commit/51b1e037f20091d27ba23205dc2e3a5ece80d882"
+                        href="https://github.com/mapfish/mapfish-print/commit/68161f4a34326736c64cdaa27bf9500fca762320"
                         target="_blank"
-                        >51b1e037</a
+                        >68161f4a</a
                       ></code
                     >.
                   </span>
@@ -322,10 +288,7 @@
       </section>
     </div>
 
-    <script
-      type="text/javascript"
-      src="https://code.jquery.com/jquery-3.5.1.min.js"
-    ></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.3.0/jquery-migrate.min.js"
