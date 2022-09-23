@@ -238,7 +238,7 @@
  strokeWidth]</li><li>longdash - translates to dash array: [4 * strokeWidth, 2 * strokeWidth]</li><li>longdashdot - translates to dash array: [5 * strokeWidth, 2 * strokeWidth, 0.1, 2 *
  strokeWidth]</li><li>{string containing spaces to delimit array elements} - Example: [1 2 3 1 2]</li></ul></li><li><strong>strokeDashoffset</strong> - (line, point, polygon) A number representing where to start the dash.
  </li><li><strong>fontColor</strong> (ECQL) - (text) the color of the text drawn</li><li><strong>fontFamily</strong> (ECQL) - (text) the font of the text drawn</li><li><strong>fontSize</strong> (ECQL) - (text) the font size of the text drawn</li><li><strong>fontStyle</strong> (ECQL) - (text) the font style of the text drawn</li><li><strong>fontWeight</strong> (ECQL) - (text) the font weight of the text drawn</li><li><strong>haloColor</strong> (ECQL) - (text) the color of the halo around the text</li><li><strong>haloOpacity</strong> (ECQL) - (text) the opacity of the halo around the text</li><li><strong>haloRadius</strong> (ECQL) - (text) the radius of the halo around the text</li><li><strong>label</strong> (ECQL) - (text) the expression used to create the label e.  See the
- section on labelling for more details
+ section on labeling for more details
  </li><li><strong>labelAlign</strong> - (Point Placement) the indicator of how to align the text with
  respect to the geometry. This property must have 2 characters, the x-align and the y-align.
  <p>
@@ -255,8 +255,8 @@
  labelAnchorPointX/Y or labelAlign will be respected, since they are both ways of defining the anchor
  Point</li><li><strong>labelPerpendicularOffset</strong> (ECQL) - (Line Placement) If this property is defined
  it will be assumed that the geometry is a line and this property defines how far from the center of the
- line the label should be drawn.</li></ul><h2 id="labels">Labelling: <a shape="rect" href="#labels" class="headerlink">¶</a></h2><p>
- Labelling in this style format is done by defining a text symbolizer ("type": "text").  All text
+ line the label should be drawn.</li></ul><h2 id="labels">Labeling: <a shape="rect" href="#labels" class="headerlink">¶</a></h2><p>
+ Labeling in this style format is done by defining a text symbolizer ("type": "text").  All text
  symbolizers consist of:
  </p><ul><li><a shape="rect" href="#labelproperties">Label Property</a></li><li><a shape="rect" href="#haloproperties">Halo Properties</a></li><li><a shape="rect" href="#otherproperties">Font/weight/style/color/opacity</a></li><li><a shape="rect" href="#placementproperties">Placement Properties</a></li><li><a shape="rect" href="#vendoroptions">Vendor Options</a></li></ul><h3 id="labelproperties">Label Property <a shape="rect" href="#labelproperties" class="headerlink">¶</a></h3><p>
  The label property defines what label will be drawn for a given feature.  The value is either a string
@@ -305,7 +305,7 @@
  </li><li><strong>goodnessOfFit</strong> (90): Sets the percentage of the label that must sit inside the
  geometry to allow drawing the label. Works only on polygons.
  </li><li><strong>group</strong> (false): If true, geometries with the same labels are grouped and considered
- a single entity to be labelled. This allows to avoid or control repeated labels.
+ a single entity to be labeled. This allows to avoid or control repeated labels.
  </li><li><strong>maxDisplacement</strong> (400): The distance, in pixel, a label can be displaced from its
  natural position in an attempt to find a position that does not conflict with already drawn labels.
  </li><li><strong>spaceAround</strong> (50): The minimum distance between two labels, in pixels.</li></ul><p>Example</p><div class="highlight"><pre> {<br>   "version": "2",<br>   "*": {<br>     "symbolizers": [{<br>       "type": "text",<br>       "fontColor": "#000000",<br>       "label": "[name]",<br>       "goodnessOfFit": 0.1,<br>       "spaceAround": 10<br>     }<br>   ]}<br> }</pre></div><p>For more information, please refer to the
@@ -334,9 +334,9 @@
                     Revision
                     <code
                       ><a
-                        href="https://github.com/mapfish/mapfish-print/commit/f160baa84f1705901c7bd8fedc0d513d93f4ff6f"
+                        href="https://github.com/mapfish/mapfish-print/commit/513f091222d750ffd53a033bf848019a0e1874f0"
                         target="_blank"
-                        >f160baa8</a
+                        >513f0912</a
                       ></code
                     >.
                   </span>
