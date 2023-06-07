@@ -5,6 +5,7 @@ org.mapfish.print.cli
 org.mapfish.print.config
 org.mapfish.print.config.access
 org.mapfish.print.http
+org.mapfish.print.jasperreports
 org.mapfish.print.map
 org.mapfish.print.map.geotools
 org.mapfish.print.map.geotools.function
