@@ -282,9 +282,15 @@ Or if the there are multiple mappings that need to be made :
 
 <div class="section" id="!addBackgroundLayers">
   <h1>!addBackgroundLayers<a class="headerlink" href="#!addBackgroundLayers" title="Permalink to this headline">¶</a></h1>
-  <div class="block"><p>This processor adds the configured set of layers to the map.</p><p>This is useful when all maps should have a default set of background layers or overlays
- added to those that the client sends for printing.</p><p>This can simplify the client so the client only needs to be concerned with the data layers.</p><p>See also: <a shape="rect" href="attributes.html#!staticLayers">!staticLayers</a> attribute</p>
- </div> 
+  <div class="block">This processor adds the configured set of layers to the map.
+
+ <p>This is useful when all maps should have a default set of background layers or overlays added
+ to those that the client sends for printing.
+
+ </p><p>This can simplify the client so the client only needs to be concerned with the data layers.
+
+ </p><p>See also: <a shape="rect" href="attributes.html#!staticLayers">!staticLayers</a> attribute
+ </p></div> 
   <div class="admonition note examples">
     <p class="first admonition-title">Example</p>
     <p class="last">
@@ -306,35 +312,40 @@ Or if the there are multiple mappings that need to be made :
    
   <dl>
     <dt><code>inputMapper</code> </dt>
-    <dd><div class="block"><p>The input mapper. See "Processors" to know more. Example:</p><div class="highlight"><pre> inputMapper: {attributeName: defaultInputParamName}</pre></div></div></dd>
+    <dd><div class="block">The input mapper. See "Processors" to know more. Example:
+
+ <div class="highlight"><pre> inputMapper: {attributeName: defaultInputParamName}</pre></div></div></dd>
   </dl>
   
   <dl>
     <dt><code>inputPrefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each input value.  This provides a simple way to make all input values have
- unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each input value. This provides a simple way to make all input values
+ have unique values.</div></dd>
   </dl>
   
   <dl>
     <dt><code>outputMapper</code> </dt>
-    <dd><div class="block"><p>The output mapper. See "Processors" to know more. Example:</p><div class="highlight"><pre> outputMapper: {defaultOutputName: templateParamName}</pre></div></div></dd>
+    <dd><div class="block">The output mapper. See "Processors" to know more. Example:
+
+ <div class="highlight"><pre> outputMapper: {defaultOutputName: templateParamName}</pre></div></div></dd>
   </dl>
   
   <dl>
     <dt><code>outputPrefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each output value.  This provides a simple way to make all output values have
- unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each output value. This provides a simple way to make all output values
+ have unique values.</div></dd>
   </dl>
   
   <dl>
     <dt><code>position</code> </dt>
-    <dd><div class="block">Set the position enumeration which indicates where the layers should be added to the map: <a shape="rect" href="AddStaticLayersProcessor.StaticLayerPosition.html" title="enum in org.mapfish.print.processor.map"><code>AddStaticLayersProcessor.StaticLayerPosition</code></a>.</div></dd>
+    <dd><div class="block">Set the position enumeration which indicates where the layers should be added to the map:
+ <a shape="rect" href="AddStaticLayersProcessor.StaticLayerPosition.html" title="enum in org.mapfish.print.processor.map"><code>AddStaticLayersProcessor.StaticLayerPosition</code></a>.</div></dd>
   </dl>
   
   <dl>
     <dt><code>prefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each value.  This provides a simple way to make all input and output values
- have unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each value. This provides a simple way to make all input and output
+ values have unique values.</div></dd>
   </dl>
    
   <h3>Inputs</h3>
@@ -351,9 +362,11 @@ Or if the there are multiple mappings that need to be made :
     </div>
 <div class="section" id="!addHeaders">
   <h1>!addHeaders<a class="headerlink" href="#!addHeaders" title="Permalink to this headline">¶</a></h1>
-  <div class="block"><p>This processor allows adding static headers to an http request.</p><p>Example: add a Cookie header with multiple header values and add header2 with only one value</p><div class="highlight"><pre> - !addHeaders<br>   headers:<br>     Cookie: [cookie-value, cookie-value2]<br>     Header2: header2-value</pre></div><p>Can be applied conditionally using matchers, like in <a shape="rect" href="RestrictUrisProcessor.html" title="class in org.mapfish.print.processor.http"><code>RestrictUrisProcessor</code></a>
- (<a shape="rect" href="processors.html#!restrictUris">!restrictUris</a>
- ).</p> </div> 
+  <div class="block">This processor allows adding static headers to an http request.
+
+ <p>Example: add a Cookie header with multiple header values and add header2 with only one value
+
+ </p><div class="highlight"><pre> - !addHeaders<br>   headers:<br>     Cookie: [cookie-value, cookie-value2]<br>     Header2: header2-value</pre></div><p>Can be applied conditionally using matchers, like in <a shape="rect" href="RestrictUrisProcessor.html" title="class in org.mapfish.print.processor.http"><code>RestrictUrisProcessor</code></a> (<a shape="rect" href="processors.html#!restrictUris">!restrictUris</a> ). </p></div> 
   <div class="admonition note examples">
     <p class="first admonition-title">Example</p>
     <p class="last">
@@ -370,57 +383,69 @@ Or if the there are multiple mappings that need to be made :
    
   <dl>
     <dt><code>headers</code> </dt>
-    <dd><div class="block">A map of the header key value pairs.  Keys are strings and values are either list of strings or a
- string.</div></dd>
+    <dd><div class="block">A map of the header key value pairs. Keys are strings and values are either list of strings or
+ a string.</div></dd>
   </dl>
   
   <dl>
     <dt><code>inputMapper</code> </dt>
-    <dd><div class="block"><p>The input mapper. See "Processors" to know more. Example:</p><div class="highlight"><pre> inputMapper: {attributeName: defaultInputParamName}</pre></div></div></dd>
+    <dd><div class="block">The input mapper. See "Processors" to know more. Example:
+
+ <div class="highlight"><pre> inputMapper: {attributeName: defaultInputParamName}</pre></div></div></dd>
   </dl>
   
   <dl>
     <dt><code>inputPrefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each input value.  This provides a simple way to make all input values have
- unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each input value. This provides a simple way to make all input values
+ have unique values.</div></dd>
   </dl>
   
   <dl>
     <dt><code>matchers</code> </dt>
-    <dd><div class="block">The matchers used to select the urls that are going to be modified by the processor. For example:
+    <dd><div class="block">The matchers used to select the urls that are going to be modified by the processor. For
+ example:
+
  <div class="highlight"><pre> - !restrictUris<br>   matchers:<br>     - !localMatch<br>       dummy: true<br>     - !ipMatch<br>     ip: www.camptocamp.org<br>     - !dnsMatch<br>       host: mapfish-geoportal.demo-camptocamp.com<br>       port: 80<br>     - !dnsMatch<br>       host: labs.metacarta.com<br>       port: 80<br>     - !dnsMatch<br>       host: terraservice.net<br>       port: 80<br>     - !dnsMatch<br>       host: tile.openstreetmap.org<br>       port: 80<br>     - !dnsMatch<br>       host: www.geocat.ch<br>       port: 80</pre></div></div></dd>
   </dl>
   
   <dl>
     <dt><code>outputMapper</code> </dt>
-    <dd><div class="block"><p>The output mapper. See "Processors" to know more. Example:</p><div class="highlight"><pre> outputMapper: {defaultOutputName: templateParamName}</pre></div></div></dd>
+    <dd><div class="block">The output mapper. See "Processors" to know more. Example:
+
+ <div class="highlight"><pre> outputMapper: {defaultOutputName: templateParamName}</pre></div></div></dd>
   </dl>
   
   <dl>
     <dt><code>outputPrefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each output value.  This provides a simple way to make all output values have
- unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each output value. This provides a simple way to make all output values
+ have unique values.</div></dd>
   </dl>
   
   <dl>
     <dt><code>prefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each value.  This provides a simple way to make all input and output values
- have unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each value. This provides a simple way to make all input and output
+ values have unique values.</div></dd>
   </dl>
    
   <h3>Inputs</h3>
    
   <dl>
     <dt><code>clientHttpRequestFactoryProvider</code> required</dt>
-    <dd><div class="block">The object for creating requests.  There should always be an instance in the values object so it does
- not need to be created.</div></dd>
+    <dd><div class="block">The object for creating requests. There should always be an instance in the values object so it
+ does not need to be created.</div></dd>
   </dl>
     </div>
 <div class="section" id="!addOverlayLayers">
   <h1>!addOverlayLayers<a class="headerlink" href="#!addOverlayLayers" title="Permalink to this headline">¶</a></h1>
-  <div class="block"><p>This processor adds the configured set of layers to the map.</p><p>This is useful when all maps should have a default set of background layers or overlays
- added to those that the client sends for printing.</p><p>This can simplify the client so the client only needs to be concerned with the data layers.</p><p>See also: <a shape="rect" href="attributes.html#!staticLayers">!staticLayers</a> attribute</p>
- </div> 
+  <div class="block">This processor adds the configured set of layers to the map.
+
+ <p>This is useful when all maps should have a default set of background layers or overlays added
+ to those that the client sends for printing.
+
+ </p><p>This can simplify the client so the client only needs to be concerned with the data layers.
+
+ </p><p>See also: <a shape="rect" href="attributes.html#!staticLayers">!staticLayers</a> attribute
+ </p></div> 
   <div class="admonition note examples">
     <p class="first admonition-title">Example</p>
     <p class="last">
@@ -442,35 +467,40 @@ Or if the there are multiple mappings that need to be made :
    
   <dl>
     <dt><code>inputMapper</code> </dt>
-    <dd><div class="block"><p>The input mapper. See "Processors" to know more. Example:</p><div class="highlight"><pre> inputMapper: {attributeName: defaultInputParamName}</pre></div></div></dd>
+    <dd><div class="block">The input mapper. See "Processors" to know more. Example:
+
+ <div class="highlight"><pre> inputMapper: {attributeName: defaultInputParamName}</pre></div></div></dd>
   </dl>
   
   <dl>
     <dt><code>inputPrefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each input value.  This provides a simple way to make all input values have
- unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each input value. This provides a simple way to make all input values
+ have unique values.</div></dd>
   </dl>
   
   <dl>
     <dt><code>outputMapper</code> </dt>
-    <dd><div class="block"><p>The output mapper. See "Processors" to know more. Example:</p><div class="highlight"><pre> outputMapper: {defaultOutputName: templateParamName}</pre></div></div></dd>
+    <dd><div class="block">The output mapper. See "Processors" to know more. Example:
+
+ <div class="highlight"><pre> outputMapper: {defaultOutputName: templateParamName}</pre></div></div></dd>
   </dl>
   
   <dl>
     <dt><code>outputPrefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each output value.  This provides a simple way to make all output values have
- unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each output value. This provides a simple way to make all output values
+ have unique values.</div></dd>
   </dl>
   
   <dl>
     <dt><code>position</code> </dt>
-    <dd><div class="block">Set the position enumeration which indicates where the layers should be added to the map: <a shape="rect" href="AddStaticLayersProcessor.StaticLayerPosition.html" title="enum in org.mapfish.print.processor.map"><code>AddStaticLayersProcessor.StaticLayerPosition</code></a>.</div></dd>
+    <dd><div class="block">Set the position enumeration which indicates where the layers should be added to the map:
+ <a shape="rect" href="AddStaticLayersProcessor.StaticLayerPosition.html" title="enum in org.mapfish.print.processor.map"><code>AddStaticLayersProcessor.StaticLayerPosition</code></a>.</div></dd>
   </dl>
   
   <dl>
     <dt><code>prefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each value.  This provides a simple way to make all input and output values
- have unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each value. This provides a simple way to make all input and output
+ values have unique values.</div></dd>
   </dl>
    
   <h3>Inputs</h3>
@@ -487,17 +517,23 @@ Or if the there are multiple mappings that need to be made :
     </div>
 <div class="section" id="!configureHttpRequests">
   <h1>!configureHttpRequests<a class="headerlink" href="#!configureHttpRequests" title="Permalink to this headline">¶</a></h1>
-  <div class="block"><p>A processor that wraps several <a shape="rect" href="AbstractClientHttpRequestFactoryProcessor.html" title="class in org.mapfish.print.processor.http"><code>AbstractClientHttpRequestFactoryProcessor</code></a>s.</p><p>
- This makes it more convenient to configure multiple processors that modify <a shape="rect" href="../../http/MfClientHttpRequestFactory.html" title="interface in org.mapfish.print.http"><code>MfClientHttpRequestFactory</code></a> objects.
- </p><p>
- Consider the case where you need to:
- </p><ul><li>Restrict allowed URIS using the !restrictUris processor</li><li>Forward all headers from print request to all requests using !forwardHeaders</li><li>Change the url using the !mapUri processor</li></ul><p>
- In this case the !mapUri processor must execute before the !restrictUris processor but it is difficult to
- enforce this, the inputMapping and outputMapping must be carefully designed in order to do it.  The
- following should work but compare it with the example below:
- </p><div class="highlight"><pre> - !mapUri<br>   mapping:<br>     (http)://localhost(.*): "$1://127.0.0.1$2"<br>   outputMapper: {clientHttpRequestFactoryProvider: clientHttpRequestFactoryMapped}<br> - !forwardHeaders<br>   all: true<br>   inputMapper: {clientHttpRequestFactoryMapped :clientHttpRequestFactoryProvider}<br>   outputMapper: {clientHttpRequestFactoryProvider: clientHttpRequestFactoryWithHeaders}<br> - !restrictUris<br>   matchers: [!localMatch {}]<br>   inputMapper: {clientHttpRequestFactoryWithHeaders:clientHttpRequestFactoryProvider}<br>     </pre></div><p>
- The recommended way to write the above configuration is as follows:
+  <div class="block">A processor that wraps several <a shape="rect" href="AbstractClientHttpRequestFactoryProcessor.html" title="class in org.mapfish.print.processor.http"><code>AbstractClientHttpRequestFactoryProcessor</code></a>s.
+
+ <p>This makes it more convenient to configure multiple processors that modify <a shape="rect" href="../../http/MfClientHttpRequestFactory.html" title="interface in org.mapfish.print.http"><code>MfClientHttpRequestFactory</code></a> objects.
+
+ </p><p>Consider the case where you need to:
+
+ </p><ul><li>Restrict allowed URIS using the !restrictUris processor
+   </li><li>Forward all headers from print request to all requests using !forwardHeaders
+   </li><li>Change the url using the !mapUri processor
+ </li></ul><p>In this case the !mapUri processor must execute before the !restrictUris processor but it is
+ difficult to enforce this, the inputMapping and outputMapping must be carefully designed in order
+ to do it. The following should work but compare it with the example below:
+
+ </p><div class="highlight"><pre> - !mapUri<br>   mapping:<br>     (http)://localhost(.*): "$1://127.0.0.1$2"<br>   outputMapper: {clientHttpRequestFactoryProvider: clientHttpRequestFactoryMapped}<br> - !forwardHeaders<br>   all: true<br>   inputMapper: {clientHttpRequestFactoryMapped :clientHttpRequestFactoryProvider}<br>   outputMapper: {clientHttpRequestFactoryProvider: clientHttpRequestFactoryWithHeaders}<br> - !restrictUris<br>   matchers: [!localMatch {}]<br>   inputMapper: {clientHttpRequestFactoryWithHeaders:clientHttpRequestFactoryProvider}<br>     </pre></div><p>The recommended way to write the above configuration is as follows:
+
  </p><div class="highlight"><pre> - !configureHttpRequests<br>   httpProcessors:<br>     - !mapUri<br>       mapping:<br>         (http)://localhost(.*): "$1://127.0.0.1$2"<br>     - !forwardHeaders<br>       all: true<br>     - !restrictUris<br>       matchers: [!localMatch {}]</pre></div>
+
  </div> 
   <div class="admonition note examples">
     <p class="first admonition-title">Example</p>
@@ -520,38 +556,42 @@ Or if the there are multiple mappings that need to be made :
   
   <dl>
     <dt><code>inputMapper</code> </dt>
-    <dd><div class="block"><p>The input mapper. See "Processors" to know more. Example:</p><div class="highlight"><pre> inputMapper: {attributeName: defaultInputParamName}</pre></div></div></dd>
+    <dd><div class="block">The input mapper. See "Processors" to know more. Example:
+
+ <div class="highlight"><pre> inputMapper: {attributeName: defaultInputParamName}</pre></div></div></dd>
   </dl>
   
   <dl>
     <dt><code>inputPrefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each input value.  This provides a simple way to make all input values have
- unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each input value. This provides a simple way to make all input values
+ have unique values.</div></dd>
   </dl>
   
   <dl>
     <dt><code>outputMapper</code> </dt>
-    <dd><div class="block"><p>The output mapper. See "Processors" to know more. Example:</p><div class="highlight"><pre> outputMapper: {defaultOutputName: templateParamName}</pre></div></div></dd>
+    <dd><div class="block">The output mapper. See "Processors" to know more. Example:
+
+ <div class="highlight"><pre> outputMapper: {defaultOutputName: templateParamName}</pre></div></div></dd>
   </dl>
   
   <dl>
     <dt><code>outputPrefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each output value.  This provides a simple way to make all output values have
- unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each output value. This provides a simple way to make all output values
+ have unique values.</div></dd>
   </dl>
   
   <dl>
     <dt><code>prefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each value.  This provides a simple way to make all input and output values
- have unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each value. This provides a simple way to make all input and output
+ values have unique values.</div></dd>
   </dl>
    
   <h3>Inputs</h3>
    
   <dl>
     <dt><code>clientHttpRequestFactoryProvider</code> required</dt>
-    <dd><div class="block">The object for creating requests.  There should always be an instance in the values object so it does
- not need to be created.</div></dd>
+    <dd><div class="block">The object for creating requests. There should always be an instance in the values object so it
+ does not need to be created.</div></dd>
   </dl>
   
   <dl>
@@ -561,29 +601,41 @@ Or if the there are multiple mappings that need to be made :
     </div>
 <div class="section" id="!createDataSource">
   <h1>!createDataSource<a class="headerlink" href="#!createDataSource" title="Permalink to this headline">¶</a></h1>
-  <div class="block"><p>A processor that will process a
- <a shape="rect" href="../../attribute/DataSourceAttribute.DataSourceAttributeValue.html" title="class in org.mapfish.print.attribute"><code>DataSourceAttribute.DataSourceAttributeValue</code></a> and construct a single
- Jasper DataSource from the input values in the
- <a shape="rect" href="../../attribute/DataSourceAttribute.DataSourceAttributeValue.html" title="class in org.mapfish.print.attribute"><code>DataSourceAttribute.DataSourceAttributeValue</code></a>
- input object.</p><p>The <a shape="rect" href="../../attribute/DataSourceAttribute.DataSourceAttributeValue.html" title="class in org.mapfish.print.attribute"><code>DataSourceAttribute.DataSourceAttributeValue</code></a> has an array of
- maps, each map in the array equates to a row in the Jasper DataSource.</p><p>The DataSourceProcessor can be configured with processors which will be used
- to transform each map in the input array before constructing the final DataSource row.</p><p>For example, each map in the array could be
- <a shape="rect" href="../../attribute/map/MapAttribute.MapAttributeValues.html" title="class in org.mapfish.print.attribute.map"><code>MapAttribute.MapAttributeValues</code></a> and the DataSourceProcessor could
- be configured with !createMap processor.  In this scenario each element in the array would be transformed
- by the !createMap processor and thus each row of the resulting DataSource will contain the map subreport
- created by the !createMap processor.</p><p>An additional point to remember is that (as with the normal execution) in addition to the output of
- the processors, the attributes in the input map will also be columns in the row.  This means that the
- jasper report that makes use of the resulting DataSource will have access to both the results of the
- processor as well as the input values (unless overwritten by the processor output).</p><p>If the reportKey is defined (and reportTemplate) then a the reportTemplate jrxml file will be
- compiled (as required by all jrxml files) and an additional column will be added to each row [reportKey] :
- [compiled reportTemplate File]</p><p>If reportKey is defined the reportTemplate must also be defined (and vice-versa).</p><p>See also: <a shape="rect" href="attributes.html#!datasource">!datasource</a> attribute</p>
+  <div class="block">A processor that will process a <a shape="rect" href="../../attribute/DataSourceAttribute.DataSourceAttributeValue.html" title="class in org.mapfish.print.attribute"><code>DataSourceAttribute.DataSourceAttributeValue</code></a> and construct a single
+ Jasper DataSource from the input values in the <a shape="rect" href="../../attribute/DataSourceAttribute.DataSourceAttributeValue.html" title="class in org.mapfish.print.attribute"><code>DataSourceAttribute.DataSourceAttributeValue</code></a> input object.
+
+ <p>The <a shape="rect" href="../../attribute/DataSourceAttribute.DataSourceAttributeValue.html" title="class in org.mapfish.print.attribute"><code>DataSourceAttribute.DataSourceAttributeValue</code></a> has an
+ array of maps, each map in the array equates to a row in the Jasper DataSource.
+
+ </p><p>The DataSourceProcessor can be configured with processors which will be used to transform each
+ map in the input array before constructing the final DataSource row.
+
+ </p><p>For example, each map in the array could be <a shape="rect" href="../../attribute/map/MapAttribute.MapAttributeValues.html" title="class in org.mapfish.print.attribute.map"><code>MapAttribute.MapAttributeValues</code></a> and the DataSourceProcessor
+ could be configured with !createMap processor. In this scenario each element in the array would
+ be transformed by the !createMap processor and thus each row of the resulting DataSource will
+ contain the map subreport created by the !createMap processor.
+
+ </p><p>An additional point to remember is that (as with the normal execution) in addition to the
+ output of the processors, the attributes in the input map will also be columns in the row. This
+ means that the jasper report that makes use of the resulting DataSource will have access to both
+ the results of the processor as well as the input values (unless overwritten by the processor
+ output).
+
+ </p><p>If the reportKey is defined (and reportTemplate) then a the reportTemplate jrxml file will be
+ compiled (as required by all jrxml files) and an additional column will be added to each row
+ [reportKey] : [compiled reportTemplate File]
+
+ </p><p>If reportKey is defined the reportTemplate must also be defined (and vice-versa).
+
+ </p><p>See also: <a shape="rect" href="attributes.html#!datasource">!datasource</a> attribute
  [[examples=verboseExample,datasource_dynamic_tables,datasource_many_dynamictables_legend,
- datasource_multiple_maps,customDynamicReport,report]]</div>  
+ datasource_multiple_maps,customDynamicReport,report]]</p></div>  
   <h3>Configuration</h3>
    
   <dl>
     <dt><code>attributes</code> </dt>
-    <dd><div class="block">All the attributes needed either by the processors for each datasource row or by the jasper template.</div></dd>
+    <dd><div class="block">All the attributes needed either by the processors for each datasource row or by the jasper
+ template.</div></dd>
   </dl>
   
   <dl>
@@ -593,76 +645,78 @@ Or if the there are multiple mappings that need to be made :
   
   <dl>
     <dt><code>inputMapper</code> </dt>
-    <dd><div class="block"><p>The input mapper. See "Processors" to know more. Example:</p><div class="highlight"><pre> inputMapper: {attributeName: defaultInputParamName}</pre></div></div></dd>
+    <dd><div class="block">The input mapper. See "Processors" to know more. Example:
+
+ <div class="highlight"><pre> inputMapper: {attributeName: defaultInputParamName}</pre></div></div></dd>
   </dl>
   
   <dl>
     <dt><code>inputPrefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each input value.  This provides a simple way to make all input values have
- unique values.</div></dd>
-  </dl>
-  
-  <dl>
-    <dt><code>outputMapper</code> </dt>
-    <dd><div class="block"><p>The output mapper. See "Processors" to know more. Example:</p><div class="highlight"><pre> outputMapper: {defaultOutputName: templateParamName}</pre></div></div></dd>
-  </dl>
-  
-  <dl>
-    <dt><code>outputPrefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each output value.  This provides a simple way to make all output values have
- unique values.</div></dd>
-  </dl>
-  
-  <dl>
-    <dt><code>prefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each value.  This provides a simple way to make all input and output values
+    <dd><div class="block">The prefix to apply to each input value. This provides a simple way to make all input values
  have unique values.</div></dd>
   </dl>
   
   <dl>
-    <dt><code>processors</code> </dt>
-    <dd><div class="block">All the processors that will executed for each value retrieved from the <a shape="rect" href="../../output/Values.html" title="class in org.mapfish.print.output"><code>Values</code></a> object with the datasource name.  All output values from the processor
- graph will be the datasource values.
+    <dt><code>outputMapper</code> </dt>
+    <dd><div class="block">The output mapper. See "Processors" to know more. Example:
 
- <p>
- Each value retrieved from values with the datasource name will be the input of the processor graph and
- all the output values for that execution will be the values of a single row in the datasource. The
- Jasper template can use any of the values in its detail band.
- </p></div></dd>
+ <div class="highlight"><pre> outputMapper: {defaultOutputName: templateParamName}</pre></div></div></dd>
+  </dl>
+  
+  <dl>
+    <dt><code>outputPrefix</code> </dt>
+    <dd><div class="block">The prefix to apply to each output value. This provides a simple way to make all output values
+ have unique values.</div></dd>
+  </dl>
+  
+  <dl>
+    <dt><code>prefix</code> </dt>
+    <dd><div class="block">The prefix to apply to each value. This provides a simple way to make all input and output
+ values have unique values.</div></dd>
+  </dl>
+  
+  <dl>
+    <dt><code>processors</code> </dt>
+    <dd><div class="block">All the processors that will executed for each value retrieved from the <a shape="rect" href="../../output/Values.html" title="class in org.mapfish.print.output"><code>Values</code></a> object with the datasource name. All output values from the
+ processor graph will be the datasource values.
+
+ <p>Each value retrieved from values with the datasource name will be the input of the processor
+ graph and all the output values for that execution will be the values of a single row in the
+ datasource. The Jasper template can use any of the values in its detail band.</p></div></dd>
   </dl>
   
   <dl>
     <dt><code>reportKey</code> </dt>
-    <dd><div class="block">The key/name to use when putting the path to the compiled subreport in each row of the datasource. This
- is required if <a shape="rect" href="#reportTemplate"><code>reportTemplate</code></a> has been set.  The path to the compiled subreport will be added
- to each row in the datasource with this value as the key.  This allows the containing report to
- reference the subreport in each row.</div></dd>
+    <dd><div class="block">The key/name to use when putting the path to the compiled subreport in each row of the
+ datasource. This is required if <a shape="rect" href="#reportTemplate"><code>reportTemplate</code></a> has been set. The path to the compiled
+ subreport will be added to each row in the datasource with this value as the key. This allows
+ the containing report to reference the subreport in each row.</div></dd>
   </dl>
   
   <dl>
     <dt><code>reportTemplate</code> </dt>
-    <dd><div class="block">The path to the report template used to render each row of the data.  This is only required if a
+    <dd><div class="block">The path to the report template used to render each row of the data. This is only required if a
  subreport needs to be compiled and is referenced in the containing report's detail section.
- <p>
- The path should be relative to the configuration directory
- </p></div></dd>
+
+ <p>The path should be relative to the configuration directory</p></div></dd>
   </dl>
    
   <h3>Inputs</h3>
    
   <dl>
     <dt><code>datasource</code> required</dt>
-    <dd><div class="block">The data that will be processed by this processor in order to create a Jasper DataSource object.</div></dd>
+    <dd><div class="block">The data that will be processed by this processor in order to create a Jasper DataSource
+ object.</div></dd>
   </dl>
   
   <dl>
     <dt><code>template</code> required</dt>
-    <dd><div class="block">The values object with all values.  This is required in order to run sub-processor graph</div></dd>
+    <dd><div class="block">The values object with all values. This is required in order to run sub-processor graph</div></dd>
   </dl>
   
   <dl>
     <dt><code>values</code> required</dt>
-    <dd><div class="block">The values object with all values.  This is required in order to run sub-processor graph</div></dd>
+    <dd><div class="block">The values object with all values. This is required in order to run sub-processor graph</div></dd>
   </dl>
    
   <h3>Outputs</h3>
@@ -674,9 +728,9 @@ Or if the there are multiple mappings that need to be made :
 </div>
 <div class="section" id="!createMap">
   <h1>!createMap<a class="headerlink" href="#!createMap" title="Permalink to this headline">¶</a></h1>
-  <div class="block"><p>A processor to render a map that can be embedded as a sub-report into a JasperReports
- template.</p><p>See also: <a shape="rect" href="attributes.html#!map">!map</a> attribute</p>
- </div> 
+  <div class="block">A processor to render a map that can be embedded as a sub-report into a JasperReports template.
+
+ <p>See also: <a shape="rect" href="attributes.html#!map">!map</a> attribute </p></div> 
   <div class="admonition note examples">
     <p class="first admonition-title">Example</p>
     <p class="last">
@@ -693,38 +747,42 @@ Or if the there are multiple mappings that need to be made :
    
   <dl>
     <dt><code>inputMapper</code> </dt>
-    <dd><div class="block"><p>The input mapper. See "Processors" to know more. Example:</p><div class="highlight"><pre> inputMapper: {attributeName: defaultInputParamName}</pre></div></div></dd>
+    <dd><div class="block">The input mapper. See "Processors" to know more. Example:
+
+ <div class="highlight"><pre> inputMapper: {attributeName: defaultInputParamName}</pre></div></div></dd>
   </dl>
   
   <dl>
     <dt><code>inputPrefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each input value.  This provides a simple way to make all input values have
- unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each input value. This provides a simple way to make all input values
+ have unique values.</div></dd>
   </dl>
   
   <dl>
     <dt><code>outputMapper</code> </dt>
-    <dd><div class="block"><p>The output mapper. See "Processors" to know more. Example:</p><div class="highlight"><pre> outputMapper: {defaultOutputName: templateParamName}</pre></div></div></dd>
+    <dd><div class="block">The output mapper. See "Processors" to know more. Example:
+
+ <div class="highlight"><pre> outputMapper: {defaultOutputName: templateParamName}</pre></div></div></dd>
   </dl>
   
   <dl>
     <dt><code>outputPrefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each output value.  This provides a simple way to make all output values have
- unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each output value. This provides a simple way to make all output values
+ have unique values.</div></dd>
   </dl>
   
   <dl>
     <dt><code>prefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each value.  This provides a simple way to make all input and output values
- have unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each value. This provides a simple way to make all input and output
+ values have unique values.</div></dd>
   </dl>
    
   <h3>Inputs</h3>
    
   <dl>
     <dt><code>clientHttpRequestFactoryProvider</code> required</dt>
-    <dd><div class="block">A factory for making http requests.  This is added to the values by the framework and therefore
- does not need to be set in configuration</div></dd>
+    <dd><div class="block">A factory for making http requests. This is added to the values by the framework and
+ therefore does not need to be set in configuration</div></dd>
   </dl>
   
   <dl>
@@ -766,18 +824,23 @@ Or if the there are multiple mappings that need to be made :
 </div>
 <div class="section" id="!createMapPages">
   <h1>!createMapPages<a class="headerlink" href="#!createMapPages" title="Permalink to this headline">¶</a></h1>
-  <div class="block"><p>Processor used to display a map on multiple pages.</p><p>
- This processor will take the defined <a shape="rect" href="attributes.html#!map">map attribute</a> and using the
- geometry defined in the
- <a shape="rect" href="attributes.html#!map">map attribute's</a> area of interest, will create an Iterable<Values>
- each of which contains:
- </p><ul><li>a new definition of a <a shape="rect" href="attributes.html#!map">map attribute</a></li><li>name value which is a string that roughly describes which part of the main map this sub-map is</li><li>left value which is the name of the sub-map to the left of the current map</li><li>right value which is the name of the sub-map to the right of the current map</li><li>top value which is the name of the sub-map to the top of the current map</li><li>bottom value which is the name of the sub-map to the bottom of the current map</li></ul><p>
- The iterable of values can be consumed by a
- <a shape="rect" href="processors.html#!createDataSource">!createDataSource</a>
- processor and as a result be put in the report (or one of the sub-reports) table.  One must be careful as
- this can result in truly giant reports.
- </p><p>See also: <a shape="rect" href="attributes.html#!paging">!paging</a> attribute</p>
- </div> 
+  <div class="block">Processor used to display a map on multiple pages.
+
+ <p>This processor will take the defined <a shape="rect" href="attributes.html#!map">map attribute</a> and
+ using the geometry defined in the <a shape="rect" href="attributes.html#!map">map attribute's</a> area of
+ interest, will create an Iterable<Values> each of which contains:
+
+ </p><ul><li>a new definition of a <a shape="rect" href="attributes.html#!map">map attribute</a></li><li>name value which is a string that roughly describes which part of the main map this sub-map
+       is
+   </li><li>left value which is the name of the sub-map to the left of the current map
+   </li><li>right value which is the name of the sub-map to the right of the current map
+   </li><li>top value which is the name of the sub-map to the top of the current map
+   </li><li>bottom value which is the name of the sub-map to the bottom of the current map
+ </li></ul><p>The iterable of values can be consumed by a <a shape="rect" href="processors.html#!createDataSource">!createDataSource</a> processor and as a result be put
+ in the report (or one of the sub-reports) table. One must be careful as this can result in truly
+ giant reports.
+
+ </p><p>See also: <a shape="rect" href="attributes.html#!paging">!paging</a> attribute </p></div> 
   <div class="admonition note examples">
     <p class="first admonition-title">Example</p>
     <p class="last">
@@ -794,30 +857,34 @@ Or if the there are multiple mappings that need to be made :
    
   <dl>
     <dt><code>inputMapper</code> </dt>
-    <dd><div class="block"><p>The input mapper. See "Processors" to know more. Example:</p><div class="highlight"><pre> inputMapper: {attributeName: defaultInputParamName}</pre></div></div></dd>
+    <dd><div class="block">The input mapper. See "Processors" to know more. Example:
+
+ <div class="highlight"><pre> inputMapper: {attributeName: defaultInputParamName}</pre></div></div></dd>
   </dl>
   
   <dl>
     <dt><code>inputPrefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each input value.  This provides a simple way to make all input values have
- unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each input value. This provides a simple way to make all input values
+ have unique values.</div></dd>
   </dl>
   
   <dl>
     <dt><code>outputMapper</code> </dt>
-    <dd><div class="block"><p>The output mapper. See "Processors" to know more. Example:</p><div class="highlight"><pre> outputMapper: {defaultOutputName: templateParamName}</pre></div></div></dd>
+    <dd><div class="block">The output mapper. See "Processors" to know more. Example:
+
+ <div class="highlight"><pre> outputMapper: {defaultOutputName: templateParamName}</pre></div></div></dd>
   </dl>
   
   <dl>
     <dt><code>outputPrefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each output value.  This provides a simple way to make all output values have
- unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each output value. This provides a simple way to make all output values
+ have unique values.</div></dd>
   </dl>
   
   <dl>
     <dt><code>prefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each value.  This provides a simple way to make all input and output values
- have unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each value. This provides a simple way to make all input and output
+ values have unique values.</div></dd>
   </dl>
    
   <h3>Inputs</h3>
@@ -829,8 +896,8 @@ Or if the there are multiple mappings that need to be made :
   
   <dl>
     <dt><code>paging</code> required</dt>
-    <dd><div class="block">Attributes that define how each page/sub-map will be generated.  It defines the scale and how to
- render the area of interest, etc...</div></dd>
+    <dd><div class="block">Attributes that define how each page/sub-map will be generated. It defines the scale and how
+ to render the area of interest, etc...</div></dd>
   </dl>
    
   <h3>Outputs</h3>
@@ -842,9 +909,14 @@ Or if the there are multiple mappings that need to be made :
 </div>
 <div class="section" id="!createNorthArrow">
   <h1>!createNorthArrow<a class="headerlink" href="#!createNorthArrow" title="Permalink to this headline">¶</a></h1>
-  <div class="block"><p>Processor to create a north-arrow for a map.</p><p>The north-arrow is rotated according to the rotation
- of the associated map.</p><p>Example configuration:</p><div class="highlight"><pre> attributes:<br>   ...<br>   northArrow: !northArrow<br>     size: 50<br>     default:<br>       graphic: "file://NorthArrow_10.svg"<br><br> processors:<br> ...<br>   - !createNorthArrow {}</pre></div><p>See also: <a shape="rect" href="attributes.html#!northArrow">!northArrow</a> attribute</p>
- </div> 
+  <div class="block">Processor to create a north-arrow for a map.
+
+ <p>The north-arrow is rotated according to the rotation of the associated map.
+
+ </p><p>Example configuration:
+
+ </p><div class="highlight"><pre> attributes:<br>   ...<br>   northArrow: !northArrow<br>     size: 50<br>     default:<br>       graphic: "file://NorthArrow_10.svg"<br><br> processors:<br> ...<br>   - !createNorthArrow {}</pre></div><p>See also: <a shape="rect" href="attributes.html#!northArrow">!northArrow</a> attribute
+ </p></div> 
   <div class="admonition note examples">
     <p class="first admonition-title">Example</p>
     <p class="last">
@@ -866,30 +938,34 @@ Or if the there are multiple mappings that need to be made :
    
   <dl>
     <dt><code>inputMapper</code> </dt>
-    <dd><div class="block"><p>The input mapper. See "Processors" to know more. Example:</p><div class="highlight"><pre> inputMapper: {attributeName: defaultInputParamName}</pre></div></div></dd>
+    <dd><div class="block">The input mapper. See "Processors" to know more. Example:
+
+ <div class="highlight"><pre> inputMapper: {attributeName: defaultInputParamName}</pre></div></div></dd>
   </dl>
   
   <dl>
     <dt><code>inputPrefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each input value.  This provides a simple way to make all input values have
- unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each input value. This provides a simple way to make all input values
+ have unique values.</div></dd>
   </dl>
   
   <dl>
     <dt><code>outputMapper</code> </dt>
-    <dd><div class="block"><p>The output mapper. See "Processors" to know more. Example:</p><div class="highlight"><pre> outputMapper: {defaultOutputName: templateParamName}</pre></div></div></dd>
+    <dd><div class="block">The output mapper. See "Processors" to know more. Example:
+
+ <div class="highlight"><pre> outputMapper: {defaultOutputName: templateParamName}</pre></div></div></dd>
   </dl>
   
   <dl>
     <dt><code>outputPrefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each output value.  This provides a simple way to make all output values have
- unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each output value. This provides a simple way to make all output values
+ have unique values.</div></dd>
   </dl>
   
   <dl>
     <dt><code>prefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each value.  This provides a simple way to make all input and output values
- have unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each value. This provides a simple way to make all input and output
+ values have unique values.</div></dd>
   </dl>
    
   <h3>Inputs</h3>
@@ -935,15 +1011,17 @@ Or if the there are multiple mappings that need to be made :
   <h1>!createOverviewMap<a class="headerlink" href="#!createOverviewMap" title="Permalink to this headline">¶</a></h1>
   <div class="block">Processor to create overview maps. Internally <a shape="rect" href="CreateMapProcessor.html" title="class in org.mapfish.print.processor.map"><code>CreateMapProcessor</code></a> is used.
 
- Example Configuration:
- <div class="highlight"><pre> attributes:<br>    ...<br>    overviewMap: !overviewMap<br>      width: 300<br>      height: 200<br>      maxDpi: 400<br> processors:<br>    ...<br>    - !createOverviewMap<br>      outputMapper:<br>        layerGraphics: overviewMapLayerGraphics</pre></div><strong>Features:</strong>
+ <p>Example Configuration:
 
- The attribute overviewMap allows to overwrite all properties of the main map, for example to use different
- layers. The overview map can have a different rotation than the main map. For example the main map is
- rotated and the overview map faces north. But the overview map can also be rotated.
+ </p><div class="highlight"><pre> attributes:<br>    ...<br>    overviewMap: !overviewMap<br>      width: 300<br>      height: 200<br>      maxDpi: 400<br> processors:<br>    ...<br>    - !createOverviewMap<br>      outputMapper:<br>        layerGraphics: overviewMapLayerGraphics</pre></div><strong>Features:</strong><p>The attribute overviewMap allows to overwrite all properties of the main map, for example to
+ use different layers. The overview map can have a different rotation than the main map. For
+ example the main map is rotated and the overview map faces north. But the overview map can also
+ be rotated.
 
- <p>The style of the bbox rectangle can be changed by setting the <code>style</code> property.</p><p>See also: <a shape="rect" href="attributes.html#!overviewMap">!overviewMap</a> attribute</p>
- </div> 
+ </p><p>The style of the bbox rectangle can be changed by setting the <code>style</code> property.
+
+ </p><p>See also: <a shape="rect" href="attributes.html#!overviewMap">!overviewMap</a> attribute
+ </p></div> 
   <div class="admonition note examples">
     <p class="first admonition-title">Example</p>
     <p class="last">
@@ -965,38 +1043,42 @@ Or if the there are multiple mappings that need to be made :
    
   <dl>
     <dt><code>inputMapper</code> </dt>
-    <dd><div class="block"><p>The input mapper. See "Processors" to know more. Example:</p><div class="highlight"><pre> inputMapper: {attributeName: defaultInputParamName}</pre></div></div></dd>
+    <dd><div class="block">The input mapper. See "Processors" to know more. Example:
+
+ <div class="highlight"><pre> inputMapper: {attributeName: defaultInputParamName}</pre></div></div></dd>
   </dl>
   
   <dl>
     <dt><code>inputPrefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each input value.  This provides a simple way to make all input values have
- unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each input value. This provides a simple way to make all input values
+ have unique values.</div></dd>
   </dl>
   
   <dl>
     <dt><code>outputMapper</code> </dt>
-    <dd><div class="block"><p>The output mapper. See "Processors" to know more. Example:</p><div class="highlight"><pre> outputMapper: {defaultOutputName: templateParamName}</pre></div></div></dd>
+    <dd><div class="block">The output mapper. See "Processors" to know more. Example:
+
+ <div class="highlight"><pre> outputMapper: {defaultOutputName: templateParamName}</pre></div></div></dd>
   </dl>
   
   <dl>
     <dt><code>outputPrefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each output value.  This provides a simple way to make all output values have
- unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each output value. This provides a simple way to make all output values
+ have unique values.</div></dd>
   </dl>
   
   <dl>
     <dt><code>prefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each value.  This provides a simple way to make all input and output values
- have unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each value. This provides a simple way to make all input and output
+ values have unique values.</div></dd>
   </dl>
    
   <h3>Inputs</h3>
    
   <dl>
     <dt><code>clientHttpRequestFactoryProvider</code> required</dt>
-    <dd><div class="block">A factory for making http requests.  This is added to the values by the framework and therefore
- does not need to be set in configuration</div></dd>
+    <dd><div class="block">A factory for making http requests. This is added to the values by the framework and
+ therefore does not need to be set in configuration</div></dd>
   </dl>
   
   <dl>
@@ -1038,8 +1120,10 @@ Or if the there are multiple mappings that need to be made :
 </div>
 <div class="section" id="!createScalebar">
   <h1>!createScalebar<a class="headerlink" href="#!createScalebar" title="Permalink to this headline">¶</a></h1>
-  <div class="block"><p>Processor to create a scalebar for a map.</p><p>See also: <a shape="rect" href="attributes.html#!scalebar">!scalebar</a> attribute</p>
- </div> 
+  <div class="block">Processor to create a scalebar for a map.
+
+ <p>See also: <a shape="rect" href="attributes.html#!scalebar">!scalebar</a> attribute
+ </p></div> 
   <div class="admonition note examples">
     <p class="first admonition-title">Example</p>
     <p class="last">
@@ -1066,30 +1150,34 @@ Or if the there are multiple mappings that need to be made :
    
   <dl>
     <dt><code>inputMapper</code> </dt>
-    <dd><div class="block"><p>The input mapper. See "Processors" to know more. Example:</p><div class="highlight"><pre> inputMapper: {attributeName: defaultInputParamName}</pre></div></div></dd>
+    <dd><div class="block">The input mapper. See "Processors" to know more. Example:
+
+ <div class="highlight"><pre> inputMapper: {attributeName: defaultInputParamName}</pre></div></div></dd>
   </dl>
   
   <dl>
     <dt><code>inputPrefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each input value.  This provides a simple way to make all input values have
- unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each input value. This provides a simple way to make all input values
+ have unique values.</div></dd>
   </dl>
   
   <dl>
     <dt><code>outputMapper</code> </dt>
-    <dd><div class="block"><p>The output mapper. See "Processors" to know more. Example:</p><div class="highlight"><pre> outputMapper: {defaultOutputName: templateParamName}</pre></div></div></dd>
+    <dd><div class="block">The output mapper. See "Processors" to know more. Example:
+
+ <div class="highlight"><pre> outputMapper: {defaultOutputName: templateParamName}</pre></div></div></dd>
   </dl>
   
   <dl>
     <dt><code>outputPrefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each output value.  This provides a simple way to make all output values have
- unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each output value. This provides a simple way to make all output values
+ have unique values.</div></dd>
   </dl>
   
   <dl>
     <dt><code>prefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each value.  This provides a simple way to make all input and output values
- have unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each value. This provides a simple way to make all input and output
+ values have unique values.</div></dd>
   </dl>
    
   <h3>Inputs</h3>
@@ -1129,48 +1217,53 @@ Or if the there are multiple mappings that need to be made :
 <div class="section" id="!dateFormat">
   <h1>!dateFormat<a class="headerlink" href="#!dateFormat" title="Permalink to this headline">¶</a></h1>
   <div class="block">A processor that creates a date formatter that can be used in Jasper.
- <p>
- Example Configuration:
- </p><div class="highlight"><pre> attributes:<br>   ...<br>   timezone: !string<br>     default: PST<br> processors:<br>   ...<br>   - !dateFormat<br>     pattern: "EEEEE dd MMMMM yyyy HH:mm"</pre></div><p>
- Will take into account the "lang" field, if passed in the request:
- </p><div class="highlight"><pre> {<br>   "lang": "fr_CH",<br>   "attributes": {<br>      ...<br>      "timezone": "CET"<br>   },<br>   ...<br> }</pre></div><p>
- In your template, you can use it like that:
+
+ <p>Example Configuration:
+
+ </p><div class="highlight"><pre> attributes:<br>   ...<br>   timezone: !string<br>     default: PST<br> processors:<br>   ...<br>   - !dateFormat<br>     pattern: "EEEEE dd MMMMM yyyy HH:mm"</pre></div><p>Will take into account the "lang" field, if passed in the request:
+
+ </p><div class="highlight"><pre> {<br>   "lang": "fr_CH",<br>   "attributes": {<br>      ...<br>      "timezone": "CET"<br>   },<br>   ...<br> }</pre></div><p>In your template, you can use it like that:
+
  </p><div class="highlight"><pre> <jasperReport><br>   <parameter name="dateFormat" class="java.text.DateFormat"/><br>   ...<br>   <textField><br>     ...<br>     <textFieldExpression>$P{dateFormat}.format(TODAY())</textFieldExpression><br>   </textField><br> </jasperReport></pre></div></div>  
   <h3>Configuration</h3>
    
   <dl>
     <dt><code>inputMapper</code> </dt>
-    <dd><div class="block"><p>The input mapper. See "Processors" to know more. Example:</p><div class="highlight"><pre> inputMapper: {attributeName: defaultInputParamName}</pre></div></div></dd>
+    <dd><div class="block">The input mapper. See "Processors" to know more. Example:
+
+ <div class="highlight"><pre> inputMapper: {attributeName: defaultInputParamName}</pre></div></div></dd>
   </dl>
   
   <dl>
     <dt><code>inputPrefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each input value.  This provides a simple way to make all input values have
- unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each input value. This provides a simple way to make all input values
+ have unique values.</div></dd>
   </dl>
   
   <dl>
     <dt><code>outputMapper</code> </dt>
-    <dd><div class="block"><p>The output mapper. See "Processors" to know more. Example:</p><div class="highlight"><pre> outputMapper: {defaultOutputName: templateParamName}</pre></div></div></dd>
+    <dd><div class="block">The output mapper. See "Processors" to know more. Example:
+
+ <div class="highlight"><pre> outputMapper: {defaultOutputName: templateParamName}</pre></div></div></dd>
   </dl>
   
   <dl>
     <dt><code>outputPrefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each output value.  This provides a simple way to make all output values have
- unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each output value. This provides a simple way to make all output values
+ have unique values.</div></dd>
   </dl>
   
   <dl>
     <dt><code>pattern</code> </dt>
     <dd><div class="block">The pattern to use to format dates.
- <p>
- See https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html</p></div></dd>
+
+ <p>See https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html</p></div></dd>
   </dl>
   
   <dl>
     <dt><code>prefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each value.  This provides a simple way to make all input and output values
- have unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each value. This provides a simple way to make all input and output
+ values have unique values.</div></dd>
   </dl>
    
   <h3>Inputs</h3>
@@ -1183,9 +1276,9 @@ Or if the there are multiple mappings that need to be made :
   <dl>
     <dt><code>timezone</code> </dt>
     <dd><div class="block">The timezone to use.
- <p>
- Either an abbreviation such as "CET", a full name such as "Europe/Zurich", or a custom ID such as
- "GMT-8:00". Defaults to the OS timezone.</p></div></dd>
+
+ <p>Either an abbreviation such as "CET", a full name such as "Europe/Zurich", or a custom ID
+ such as "GMT-8:00". Defaults to the OS timezone.</p></div></dd>
   </dl>
    
   <h3>Outputs</h3>
@@ -1197,11 +1290,15 @@ Or if the there are multiple mappings that need to be made :
 </div>
 <div class="section" id="!forwardHeaders">
   <h1>!forwardHeaders<a class="headerlink" href="#!forwardHeaders" title="Permalink to this headline">¶</a></h1>
-  <div class="block"><p>This processor forwards all the headers from the print request (from the Mapfish Print client) to each
- http request made for the particular print job. All headers can be forwarded (if forwardAll is set to true)
- or the specific headers to forward can be specified.</p><p>Example 1: Forward all headers from print request</p><div class="highlight"><pre> - !forwardHeaders<br>   all: true</pre></div><p>Example 2: Forward specific headers (header1 and header2 will be forwarded)</p><div class="highlight"><pre> - !forwardHeaders<br>   headers: [header1, header2]</pre></div><p>Can be applied conditionally using matchers, like in <a shape="rect" href="RestrictUrisProcessor.html" title="class in org.mapfish.print.processor.http"><code>RestrictUrisProcessor</code></a>
- (<a shape="rect" href="processors.html#!restrictUris">!restrictUris</a>
- ).</p> </div> 
+  <div class="block">This processor forwards all the headers from the print request (from the Mapfish Print client) to
+ each http request made for the particular print job. All headers can be forwarded (if forwardAll
+ is set to true) or the specific headers to forward can be specified.
+
+ <p>Example 1: Forward all headers from print request
+
+ </p><div class="highlight"><pre> - !forwardHeaders<br>   all: true</pre></div><p>Example 2: Forward specific headers (header1 and header2 will be forwarded)
+
+ </p><div class="highlight"><pre> - !forwardHeaders<br>   headers: [header1, header2]</pre></div><p>Can be applied conditionally using matchers, like in <a shape="rect" href="RestrictUrisProcessor.html" title="class in org.mapfish.print.processor.http"><code>RestrictUrisProcessor</code></a> (<a shape="rect" href="processors.html#!restrictUris">!restrictUris</a> ). </p></div> 
   <div class="admonition note examples">
     <p class="first admonition-title">Example</p>
     <p class="last">
@@ -1218,54 +1315,61 @@ Or if the there are multiple mappings that need to be made :
    
   <dl>
     <dt><code>all</code> </dt>
-    <dd><div class="block">If set to true then all headers are forwarded.  If this is true headers should be empty (or undefined)</div></dd>
+    <dd><div class="block">If set to true then all headers are forwarded. If this is true headers should be empty (or
+ undefined)</div></dd>
   </dl>
   
   <dl>
     <dt><code>headers</code> </dt>
-    <dd><div class="block">Set the header names to forward from the request.  Should not be defined if all is set to true</div></dd>
+    <dd><div class="block">Set the header names to forward from the request. Should not be defined if all is set to true</div></dd>
   </dl>
   
   <dl>
     <dt><code>inputMapper</code> </dt>
-    <dd><div class="block"><p>The input mapper. See "Processors" to know more. Example:</p><div class="highlight"><pre> inputMapper: {attributeName: defaultInputParamName}</pre></div></div></dd>
+    <dd><div class="block">The input mapper. See "Processors" to know more. Example:
+
+ <div class="highlight"><pre> inputMapper: {attributeName: defaultInputParamName}</pre></div></div></dd>
   </dl>
   
   <dl>
     <dt><code>inputPrefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each input value.  This provides a simple way to make all input values have
- unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each input value. This provides a simple way to make all input values
+ have unique values.</div></dd>
   </dl>
   
   <dl>
     <dt><code>matchers</code> </dt>
-    <dd><div class="block">The matchers used to select the urls that are going to be modified by the processor. For example:
+    <dd><div class="block">The matchers used to select the urls that are going to be modified by the processor. For
+ example:
+
  <div class="highlight"><pre> - !restrictUris<br>   matchers:<br>     - !localMatch<br>       dummy: true<br>     - !ipMatch<br>     ip: www.camptocamp.org<br>     - !dnsMatch<br>       host: mapfish-geoportal.demo-camptocamp.com<br>       port: 80<br>     - !dnsMatch<br>       host: labs.metacarta.com<br>       port: 80<br>     - !dnsMatch<br>       host: terraservice.net<br>       port: 80<br>     - !dnsMatch<br>       host: tile.openstreetmap.org<br>       port: 80<br>     - !dnsMatch<br>       host: www.geocat.ch<br>       port: 80</pre></div></div></dd>
   </dl>
   
   <dl>
     <dt><code>outputMapper</code> </dt>
-    <dd><div class="block"><p>The output mapper. See "Processors" to know more. Example:</p><div class="highlight"><pre> outputMapper: {defaultOutputName: templateParamName}</pre></div></div></dd>
+    <dd><div class="block">The output mapper. See "Processors" to know more. Example:
+
+ <div class="highlight"><pre> outputMapper: {defaultOutputName: templateParamName}</pre></div></div></dd>
   </dl>
   
   <dl>
     <dt><code>outputPrefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each output value.  This provides a simple way to make all output values have
- unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each output value. This provides a simple way to make all output values
+ have unique values.</div></dd>
   </dl>
   
   <dl>
     <dt><code>prefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each value.  This provides a simple way to make all input and output values
- have unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each value. This provides a simple way to make all input and output
+ values have unique values.</div></dd>
   </dl>
    
   <h3>Inputs</h3>
    
   <dl>
     <dt><code>clientHttpRequestFactoryProvider</code> required</dt>
-    <dd><div class="block">The object for creating requests.  There should always be an instance in the values object so it does
- not need to be created.</div></dd>
+    <dd><div class="block">The object for creating requests. There should always be an instance in the values object so it
+ does not need to be created.</div></dd>
   </dl>
   
   <dl>
@@ -1275,11 +1379,13 @@ Or if the there are multiple mappings that need to be made :
     </div>
 <div class="section" id="!mapUri">
   <h1>!mapUri<a class="headerlink" href="#!mapUri" title="Permalink to this headline">¶</a></h1>
-  <div class="block"><p>This processor maps uris submitted to the <a shape="rect" href="../../http/MfClientHttpRequestFactory.html" title="interface in org.mapfish.print.http"><code>MfClientHttpRequestFactory</code></a> to
- a modified uri as specified by the mapping parameter.</p><p>Example: change the hostname of all requests that are http requests and have the hostname: myhost.com
- to localhost instead of myhost.com</p><div class="highlight"><pre> - !mapUri<br>   mapping: {(http)://myhost.com(.*): "$1://localhost$2"}</pre></div><p>Can be applied conditionally using matchers, like in <a shape="rect" href="RestrictUrisProcessor.html" title="class in org.mapfish.print.processor.http"><code>RestrictUrisProcessor</code></a>
- (<a shape="rect" href="processors.html#!restrictUris">!restrictUris</a>
- ).</p> </div> 
+  <div class="block">This processor maps uris submitted to the <a shape="rect" href="../../http/MfClientHttpRequestFactory.html" title="interface in org.mapfish.print.http"><code>MfClientHttpRequestFactory</code></a> to a modified uri as specified by the mapping
+ parameter.
+
+ <p>Example: change the hostname of all requests that are http requests and have the hostname:
+ myhost.com to localhost instead of myhost.com
+
+ </p><div class="highlight"><pre> - !mapUri<br>   mapping: {(http)://myhost.com(.*): "$1://localhost$2"}</pre></div><p>Can be applied conditionally using matchers, like in <a shape="rect" href="RestrictUrisProcessor.html" title="class in org.mapfish.print.processor.http"><code>RestrictUrisProcessor</code></a> (<a shape="rect" href="processors.html#!restrictUris">!restrictUris</a> ). </p></div> 
   <div class="admonition note examples">
     <p class="first admonition-title">Example</p>
     <p class="last">
@@ -1296,65 +1402,71 @@ Or if the there are multiple mappings that need to be made :
    
   <dl>
     <dt><code>inputMapper</code> </dt>
-    <dd><div class="block"><p>The input mapper. See "Processors" to know more. Example:</p><div class="highlight"><pre> inputMapper: {attributeName: defaultInputParamName}</pre></div></div></dd>
+    <dd><div class="block">The input mapper. See "Processors" to know more. Example:
+
+ <div class="highlight"><pre> inputMapper: {attributeName: defaultInputParamName}</pre></div></div></dd>
   </dl>
   
   <dl>
     <dt><code>inputPrefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each input value.  This provides a simple way to make all input values have
- unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each input value. This provides a simple way to make all input values
+ have unique values.</div></dd>
   </dl>
   
   <dl>
     <dt><code>mapping</code> </dt>
     <dd><div class="block">Set the uri mappings.
- <p>
- The key is a regular expression that must match uri's string form. The value will be used for the
- replacement.</p></div></dd>
+
+ <p>The key is a regular expression that must match uri's string form. The value will be used
+ for the replacement.</p></div></dd>
   </dl>
   
   <dl>
     <dt><code>matchers</code> </dt>
-    <dd><div class="block">The matchers used to select the urls that are going to be modified by the processor. For example:
+    <dd><div class="block">The matchers used to select the urls that are going to be modified by the processor. For
+ example:
+
  <div class="highlight"><pre> - !restrictUris<br>   matchers:<br>     - !localMatch<br>       dummy: true<br>     - !ipMatch<br>     ip: www.camptocamp.org<br>     - !dnsMatch<br>       host: mapfish-geoportal.demo-camptocamp.com<br>       port: 80<br>     - !dnsMatch<br>       host: labs.metacarta.com<br>       port: 80<br>     - !dnsMatch<br>       host: terraservice.net<br>       port: 80<br>     - !dnsMatch<br>       host: tile.openstreetmap.org<br>       port: 80<br>     - !dnsMatch<br>       host: www.geocat.ch<br>       port: 80</pre></div></div></dd>
   </dl>
   
   <dl>
     <dt><code>outputMapper</code> </dt>
-    <dd><div class="block"><p>The output mapper. See "Processors" to know more. Example:</p><div class="highlight"><pre> outputMapper: {defaultOutputName: templateParamName}</pre></div></div></dd>
+    <dd><div class="block">The output mapper. See "Processors" to know more. Example:
+
+ <div class="highlight"><pre> outputMapper: {defaultOutputName: templateParamName}</pre></div></div></dd>
   </dl>
   
   <dl>
     <dt><code>outputPrefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each output value.  This provides a simple way to make all output values have
- unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each output value. This provides a simple way to make all output values
+ have unique values.</div></dd>
   </dl>
   
   <dl>
     <dt><code>prefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each value.  This provides a simple way to make all input and output values
- have unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each value. This provides a simple way to make all input and output
+ values have unique values.</div></dd>
   </dl>
    
   <h3>Inputs</h3>
    
   <dl>
     <dt><code>clientHttpRequestFactoryProvider</code> required</dt>
-    <dd><div class="block">The object for creating requests.  There should always be an instance in the values object so it does
- not need to be created.</div></dd>
+    <dd><div class="block">The object for creating requests. There should always be an instance in the values object so it
+ does not need to be created.</div></dd>
   </dl>
     </div>
 <div class="section" id="!mergeDataSources">
   <h1>!mergeDataSources<a class="headerlink" href="#!mergeDataSources" title="Permalink to this headline">¶</a></h1>
-  <div class="block"><p>This processor combines DataSources and individual processor outputs (or attribute values) into a
- single DataSource which can be used in a jasper report's detail section.</p><p>
- An example use case is where we might have zero or many of tables and zero or many legends.  You can
- configure the template with a detail section that contains a subreport, the name of which is a field in the
- DataSources and the DataSources for the sub-template another field.  Then you can merge the legend and the
- tables into a single DataSources.  This way the report will nicely expand depending on if you have a legend
- and how many tables you have in your report.
- </p>
- </div> 
+  <div class="block">This processor combines DataSources and individual processor outputs (or attribute values) into a
+ single DataSource which can be used in a jasper report's detail section.
+
+ <p>An example use case is where we might have zero or many of tables and zero or many legends.
+ You can configure the template with a detail section that contains a subreport, the name of which
+ is a field in the DataSources and the DataSources for the sub-template another field. Then you
+ can merge the legend and the tables into a single DataSources. This way the report will nicely
+ expand depending on if you have a legend and how many tables you have in your report.
+ </p></div> 
   <div class="admonition note examples">
     <p class="first admonition-title">Example</p>
     <p class="last">
@@ -1371,40 +1483,47 @@ Or if the there are multiple mappings that need to be made :
    
   <dl>
     <dt><code>inputMapper</code> </dt>
-    <dd><div class="block"><p>The input mapper. See "Processors" to know more. Example:</p><div class="highlight"><pre> inputMapper: {attributeName: defaultInputParamName}</pre></div></div></dd>
+    <dd><div class="block">The input mapper. See "Processors" to know more. Example:
+
+ <div class="highlight"><pre> inputMapper: {attributeName: defaultInputParamName}</pre></div></div></dd>
   </dl>
   
   <dl>
     <dt><code>inputPrefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each input value.  This provides a simple way to make all input values have
- unique values.</div></dd>
-  </dl>
-  
-  <dl>
-    <dt><code>outputMapper</code> </dt>
-    <dd><div class="block"><p>The output mapper. See "Processors" to know more. Example:</p><div class="highlight"><pre> outputMapper: {defaultOutputName: templateParamName}</pre></div></div></dd>
-  </dl>
-  
-  <dl>
-    <dt><code>outputPrefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each output value.  This provides a simple way to make all output values have
- unique values.</div></dd>
-  </dl>
-  
-  <dl>
-    <dt><code>prefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each value.  This provides a simple way to make all input and output values
+    <dd><div class="block">The prefix to apply to each input value. This provides a simple way to make all input values
  have unique values.</div></dd>
   </dl>
   
   <dl>
+    <dt><code>outputMapper</code> </dt>
+    <dd><div class="block">The output mapper. See "Processors" to know more. Example:
+
+ <div class="highlight"><pre> outputMapper: {defaultOutputName: templateParamName}</pre></div></div></dd>
+  </dl>
+  
+  <dl>
+    <dt><code>outputPrefix</code> </dt>
+    <dd><div class="block">The prefix to apply to each output value. This provides a simple way to make all output values
+ have unique values.</div></dd>
+  </dl>
+  
+  <dl>
+    <dt><code>prefix</code> </dt>
+    <dd><div class="block">The prefix to apply to each value. This provides a simple way to make all input and output
+ values have unique values.</div></dd>
+  </dl>
+  
+  <dl>
     <dt><code>sources</code> </dt>
-    <dd><div class="block"><p>The <em>source</em> to add to the merged DataSource.</p><p>Each <em>source</em> indicates if it should be treated
- as a datasource or as a single item to add to the merged DataSource. If the source indicates that it is
- a <a shape="rect" href="MergeDataSourceProcessor.SourceType.html#DATASOURCE"><code>MergeDataSourceProcessor.SourceType.DATASOURCE</code></a> the object
- each row in the datasource will be used to form a row in the merged DataSource.  If the source type is
- <a shape="rect" href="MergeDataSourceProcessor.SourceType.html#SINGLE"><code>MergeDataSourceProcessor.SourceType.SINGLE</code></a> the object will
- be a single row even if it is in fact a DataSource.</p><p>See also: <a shape="rect" href="configuration.html#!mergeSource">!mergeSource</a></p></div></dd>
+    <dd><div class="block">The <em>source</em> to add to the merged DataSource.
+
+ <p>Each <em>source</em> indicates if it should be treated as a datasource or as a single item
+ to add to the merged DataSource. If the source indicates that it is a <a shape="rect" href="MergeDataSourceProcessor.SourceType.html#DATASOURCE"><code>MergeDataSourceProcessor.SourceType.DATASOURCE</code></a> the object
+ each row in the datasource will be used to form a row in the merged DataSource. If the source
+ type is <a shape="rect" href="MergeDataSourceProcessor.SourceType.html#SINGLE"><code>MergeDataSourceProcessor.SourceType.SINGLE</code></a>
+ the object will be a single row even if it is in fact a DataSource.
+
+ </p><p>See also: <a shape="rect" href="configuration.html#!mergeSource">!mergeSource</a></p></div></dd>
   </dl>
    
   <h3>Inputs</h3>
@@ -1423,8 +1542,10 @@ Or if the there are multiple mappings that need to be made :
 </div>
 <div class="section" id="!prepareLegend">
   <h1>!prepareLegend<a class="headerlink" href="#!prepareLegend" title="Permalink to this headline">¶</a></h1>
-  <div class="block"><p>Create a legend.</p><p>See also: <a shape="rect" href="attributes.html#!legend">!legend</a> attribute</p>
- </div> 
+  <div class="block">Create a legend.
+
+ <p>See also: <a shape="rect" href="attributes.html#!legend">!legend</a> attribute
+ </p></div> 
   <div class="admonition note examples">
     <p class="first admonition-title">Example</p>
     <p class="last">
@@ -1456,37 +1577,42 @@ Or if the there are multiple mappings that need to be made :
   
   <dl>
     <dt><code>inputMapper</code> </dt>
-    <dd><div class="block"><p>The input mapper. See "Processors" to know more. Example:</p><div class="highlight"><pre> inputMapper: {attributeName: defaultInputParamName}</pre></div></div></dd>
+    <dd><div class="block">The input mapper. See "Processors" to know more. Example:
+
+ <div class="highlight"><pre> inputMapper: {attributeName: defaultInputParamName}</pre></div></div></dd>
   </dl>
   
   <dl>
     <dt><code>inputPrefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each input value.  This provides a simple way to make all input values have
- unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each input value. This provides a simple way to make all input values
+ have unique values.</div></dd>
   </dl>
   
   <dl>
     <dt><code>maxWidth</code> </dt>
-    <dd><div class="block">The maximum width in pixels for the legend graphics. If this parameter is set, the legend graphics are
- cropped or scaled to the given maximum width. In this case a sub-report is created containing the
- graphic. For reference see the example [[examples=legend_cropped,legend_scaled]].</div></dd>
+    <dd><div class="block">The maximum width in pixels for the legend graphics. If this parameter is set, the legend
+ graphics are cropped or scaled to the given maximum width. In this case a sub-report is created
+ containing the graphic. For reference see the example
+ [[examples=legend_cropped,legend_scaled]].</div></dd>
   </dl>
   
   <dl>
     <dt><code>outputMapper</code> </dt>
-    <dd><div class="block"><p>The output mapper. See "Processors" to know more. Example:</p><div class="highlight"><pre> outputMapper: {defaultOutputName: templateParamName}</pre></div></div></dd>
+    <dd><div class="block">The output mapper. See "Processors" to know more. Example:
+
+ <div class="highlight"><pre> outputMapper: {defaultOutputName: templateParamName}</pre></div></div></dd>
   </dl>
   
   <dl>
     <dt><code>outputPrefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each output value.  This provides a simple way to make all output values have
- unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each output value. This provides a simple way to make all output values
+ have unique values.</div></dd>
   </dl>
   
   <dl>
     <dt><code>prefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each value.  This provides a simple way to make all input and output values
- have unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each value. This provides a simple way to make all input and output
+ values have unique values.</div></dd>
   </dl>
   
   <dl>
@@ -1504,8 +1630,8 @@ Or if the there are multiple mappings that need to be made :
    
   <dl>
     <dt><code>clientHttpRequestFactoryProvider</code> required</dt>
-    <dd><div class="block">A factory for making http requests.  This is added to the values by the framework and therefore
- does not need to be set in configuration</div></dd>
+    <dd><div class="block">A factory for making http requests. This is added to the values by the framework and
+ therefore does not need to be set in configuration</div></dd>
   </dl>
   
   <dl>
@@ -1542,8 +1668,10 @@ Or if the there are multiple mappings that need to be made :
 </div>
 <div class="section" id="!prepareTable">
   <h1>!prepareTable<a class="headerlink" href="#!prepareTable" title="Permalink to this headline">¶</a></h1>
-  <div class="block"><p>A processor for generating a table.</p><p>See also: <a shape="rect" href="attributes.html#!table">!table</a> attribute</p>
- </div> 
+  <div class="block">A processor for generating a table.
+
+ <p>See also: <a shape="rect" href="attributes.html#!table">!table</a> attribute
+ </p></div> 
   <div class="admonition note examples">
     <p class="first admonition-title">Example</p>
     <p class="last">
@@ -1570,36 +1698,37 @@ Or if the there are multiple mappings that need to be made :
    
   <dl>
     <dt><code>columns</code> </dt>
-    <dd><div class="block">Set strategies for converting the textual representation of each column to some other object (image,
- other text, etc...).
+    <dd><div class="block">Set strategies for converting the textual representation of each column to some other object
+ (image, other text, etc...).
 
- Note: The type returned by the column converter must match the type in the jasper template.</div></dd>
+ <p>Note: The type returned by the column converter must match the type in the jasper template.</p></div></dd>
   </dl>
   
   <dl>
     <dt><code>converters</code> </dt>
-    <dd><div class="block">Set strategies for converting the textual representation of each cell to some other object (image,
- other text, etc...).
+    <dd><div class="block">Set strategies for converting the textual representation of each cell to some other object
+ (image, other text, etc...).
 
- This is similar to the converters specified for a particular column. The difference is that these
- converters are applied to every cell of the table (except for the cells of those columns that are
- assigned a specific converter).</div></dd>
+ <p>This is similar to the converters specified for a particular column. The difference is that
+ these converters are applied to every cell of the table (except for the cells of those columns
+ that are assigned a specific converter).</p></div></dd>
   </dl>
   
   <dl>
     <dt><code>detailStyle</code> </dt>
-    <dd><div class="block">The id of the style to apply to the all columns in the table detail section except first and last
- columns.  This value is will be used as a default if either firstDetailStyle or lastDetailStyle is not
- defined.  This is required if dynamic is true and is not permitted if dynamic is false.
- <p>
- The style must be a style element in the jasperTemplate.
- </p></div></dd>
+    <dd><div class="block">The id of the style to apply to the all columns in the table detail section except first and
+ last columns. This value is will be used as a default if either firstDetailStyle or
+ lastDetailStyle is not defined. This is required if dynamic is true and is not permitted if
+ dynamic is false.
+
+ <p>The style must be a style element in the jasperTemplate.</p></div></dd>
   </dl>
   
   <dl>
     <dt><code>dynamic</code> </dt>
-    <dd><div class="block">If true then the JasperReport template will be generated dynamically based on the columns in the table
- attribute.
+    <dd><div class="block">If true then the JasperReport template will be generated dynamically based on the columns in
+ the table attribute.
+
  <p>Default: false</p></div></dd>
   </dl>
   
@@ -1610,70 +1739,67 @@ Or if the there are multiple mappings that need to be made :
   
   <dl>
     <dt><code>firstDetailStyle</code> </dt>
-    <dd><div class="block">The id of the style to apply to the first column in the table detail section.  This is optional.
- <p>
- The style must be a style element in the jasperTemplate.
- </p></div></dd>
+    <dd><div class="block">The id of the style to apply to the first column in the table detail section. This is optional.
+
+ <p>The style must be a style element in the jasperTemplate.</p></div></dd>
   </dl>
   
   <dl>
     <dt><code>firstHeaderStyle</code> </dt>
-    <dd><div class="block">The id of the style to apply to the first column in the table header.  This is optional.
- <p>
- The style must be a style element in the jasperTemplate.
- </p></div></dd>
+    <dd><div class="block">The id of the style to apply to the first column in the table header. This is optional.
+
+ <p>The style must be a style element in the jasperTemplate.</p></div></dd>
   </dl>
   
   <dl>
     <dt><code>headerStyle</code> </dt>
-    <dd><div class="block">The id of the style to apply to the all columns in the table header except first and last columns. This
- value is will be used as a default if either firstHeaderStyle or lastHeaderStyle is not defined. This
- is required if dynamic is true and is not permitted if dynamic is false.
- <p>
- The style must be a style element in the jasperTemplate.
- </p></div></dd>
+    <dd><div class="block">The id of the style to apply to the all columns in the table header except first and last
+ columns. This value is will be used as a default if either firstHeaderStyle or lastHeaderStyle
+ is not defined. This is required if dynamic is true and is not permitted if dynamic is false.
+
+ <p>The style must be a style element in the jasperTemplate.</p></div></dd>
   </dl>
   
   <dl>
     <dt><code>inputMapper</code> </dt>
-    <dd><div class="block"><p>The input mapper. See "Processors" to know more. Example:</p><div class="highlight"><pre> inputMapper: {attributeName: defaultInputParamName}</pre></div></div></dd>
+    <dd><div class="block">The input mapper. See "Processors" to know more. Example:
+
+ <div class="highlight"><pre> inputMapper: {attributeName: defaultInputParamName}</pre></div></div></dd>
   </dl>
   
   <dl>
     <dt><code>inputPrefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each input value.  This provides a simple way to make all input values have
- unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each input value. This provides a simple way to make all input values
+ have unique values.</div></dd>
   </dl>
   
   <dl>
     <dt><code>jasperTemplate</code> </dt>
-    <dd><div class="block">The path to the JasperReports template that contains the template for the sub-report. If dynamic is
- false then the template will be used without any changes. It will simply be compiled and used as is.
- <p>
- If dynamic is true then the template will be used to obtain the column styles and the size of the
- subreport and to get the position of the first header and field element. The actual field and column
- definitions will be dynamically generated from the table data that is provided.
- </p>
- This may be null if dynamic is false.  If it is null then the main template will likely use the
- generated table datasource directly as its datasource for use in its detail section and the table will
- be directly in the main template's detail section.  Or a later processor may use the table's datasource
- in someway.</div></dd>
+    <dd><div class="block">The path to the JasperReports template that contains the template for the sub-report. If
+ dynamic is false then the template will be used without any changes. It will simply be compiled
+ and used as is.
+
+ <p>If dynamic is true then the template will be used to obtain the column styles and the size
+ of the subreport and to get the position of the first header and field element. The actual
+ field and column definitions will be dynamically generated from the table data that is
+ provided. This may be null if dynamic is false. If it is null then the main template will
+ likely use the generated table datasource directly as its datasource for use in its detail
+ section and the table will be directly in the main template's detail section. Or a later
+ processor may use the table's datasource in someway.</p></div></dd>
   </dl>
   
   <dl>
     <dt><code>lastDetailStyle</code> </dt>
-    <dd><div class="block">The id of the style to apply to the last column in the table detail section.  This is optional.
- <p>
- The style must be a style element in the jasperTemplate.
- </p></div></dd>
+    <dd><div class="block">The id of the style to apply to the last column in the table detail section. This is optional.
+
+ <p>The style must be a style element in the jasperTemplate.</p></div></dd>
   </dl>
   
   <dl>
     <dt><code>lastHeaderStyle</code> </dt>
-    <dd><div class="block">The id of the style to apply to the last column in the table header.  This is optional.
- <p>
- The style must be a style element in the jasperTemplate.
- </p></div></dd>
+    <dd><div class="block">The id of the style to apply to the last column in the table header. This is optional.
+
+ <p>The style must be a style element in the jasperTemplate.</p></div></dd>
   </dl>
   
   <dl>
@@ -1683,19 +1809,21 @@ Or if the there are multiple mappings that need to be made :
   
   <dl>
     <dt><code>outputMapper</code> </dt>
-    <dd><div class="block"><p>The output mapper. See "Processors" to know more. Example:</p><div class="highlight"><pre> outputMapper: {defaultOutputName: templateParamName}</pre></div></div></dd>
+    <dd><div class="block">The output mapper. See "Processors" to know more. Example:
+
+ <div class="highlight"><pre> outputMapper: {defaultOutputName: templateParamName}</pre></div></div></dd>
   </dl>
   
   <dl>
     <dt><code>outputPrefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each output value.  This provides a simple way to make all output values have
- unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each output value. This provides a simple way to make all output values
+ have unique values.</div></dd>
   </dl>
   
   <dl>
     <dt><code>prefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each value.  This provides a simple way to make all input and output values
- have unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each value. This provides a simple way to make all input and output
+ values have unique values.</div></dd>
   </dl>
   
   <dl>
@@ -1707,8 +1835,8 @@ Or if the there are multiple mappings that need to be made :
    
   <dl>
     <dt><code>clientHttpRequestFactoryProvider</code> required</dt>
-    <dd><div class="block">A factory for making http requests.  This is added to the values by the framework and therefore
- does not need to be set in configuration</div></dd>
+    <dd><div class="block">A factory for making http requests. This is added to the values by the framework and
+ therefore does not need to be set in configuration</div></dd>
   </dl>
   
   <dl>
@@ -1740,12 +1868,17 @@ Or if the there are multiple mappings that need to be made :
 
   <dl>
     <dt><code>tableSubReport</code> required</dt>
-    <dd><div class="block">The path to the generated sub-report.  If dynamic is false then this will be null.</div></dd>
+    <dd><div class="block">The path to the generated sub-report. If dynamic is false then this will be null.</div></dd>
   </dl>
 </div>
 <div class="section" id="!reportBuilder">
   <h1>!reportBuilder<a class="headerlink" href="#!reportBuilder" title="Permalink to this headline">¶</a></h1>
-  <div class="block"><p>A processor that actually compiles a JasperReport template file.</p><p>Example</p><div class="highlight"><pre>     processors:<br>         - !reportBuilder # compile all reports in current directory<br>               directory: '.'</pre></div>
+  <div class="block">A processor that actually compiles a JasperReport template file.
+
+ <p>Example
+
+ </p><div class="highlight"><pre>     processors:<br>         - !reportBuilder # compile all reports in current directory<br>               directory: '.'</pre></div>
+
  </div> 
   <div class="admonition note examples">
     <p class="first admonition-title">Example</p>
@@ -1774,50 +1907,55 @@ Or if the there are multiple mappings that need to be made :
   
   <dl>
     <dt><code>inputMapper</code> </dt>
-    <dd><div class="block"><p>The input mapper. See "Processors" to know more. Example:</p><div class="highlight"><pre> inputMapper: {attributeName: defaultInputParamName}</pre></div></div></dd>
+    <dd><div class="block">The input mapper. See "Processors" to know more. Example:
+
+ <div class="highlight"><pre> inputMapper: {attributeName: defaultInputParamName}</pre></div></div></dd>
   </dl>
   
   <dl>
     <dt><code>inputPrefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each input value.  This provides a simple way to make all input values have
- unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each input value. This provides a simple way to make all input values
+ have unique values.</div></dd>
   </dl>
   
   <dl>
     <dt><code>outputMapper</code> </dt>
-    <dd><div class="block"><p>The output mapper. See "Processors" to know more. Example:</p><div class="highlight"><pre> outputMapper: {defaultOutputName: templateParamName}</pre></div></div></dd>
+    <dd><div class="block">The output mapper. See "Processors" to know more. Example:
+
+ <div class="highlight"><pre> outputMapper: {defaultOutputName: templateParamName}</pre></div></div></dd>
   </dl>
   
   <dl>
     <dt><code>outputPrefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each output value.  This provides a simple way to make all output values have
- unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each output value. This provides a simple way to make all output values
+ have unique values.</div></dd>
   </dl>
   
   <dl>
     <dt><code>prefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each value.  This provides a simple way to make all input and output values
- have unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each value. This provides a simple way to make all input and output
+ values have unique values.</div></dd>
   </dl>
       </div>
 <div class="section" id="!restrictUris">
   <h1>!restrictUris<a class="headerlink" href="#!restrictUris" title="Permalink to this headline">¶</a></h1>
-  <div class="block"><p>This processor check urls against a set of url matchers to see if the request should be allowed or
- rejected.</p><p>
- Usage of processor is as follows:
- </p><div class="highlight"><pre> - !restrictUris<br>   matchers:<br>     - !localMatch {}<br>     - !ipMatch<br>       ip: www.camptocamp.org<br>     - !dnsMatch<br>       host: mapfish-geoportal.demo-camptocamp.com<br>       port: 80<br>     - !dnsMatch<br>       host: labs.metacarta.com<br>       port: 80<br>     - !dnsMatch<br>       host: terraservice.net<br>       port: 80<br>     - !dnsMatch<br>       host: tile.openstreetmap.org<br>       port: 80<br>     - !dnsMatch<br>       host: www.geocat.ch<br>       port: 80</pre></div><p>
- By default a matcher allows the URL, but it can be setup to reject the URL (by setting reject to true). The
- first matcher that matches will be the one picking the final outcome. If no matcher matches, the URI is
- rejected. So, for example, you can allow every URLs apart from the internal URLs like that:
- </p><div class="highlight"><pre> - !restrictUris<br>   matchers:<br>     - !ipMatch<br>       ip: 192.178.0.0<br>       mask: 255.255.0.0<br>       reject: true<br>     - !acceptAll</pre></div><p>
- If the Print service is in your DMZ and needs to allow access to any WMS server, it is strongly recommended
- to have a configuration like the previous one in order to avoid having the Print service being used as a
- proxy to access your internal servers.
+  <div class="block">This processor check urls against a set of url matchers to see if the request should be allowed
+ or rejected.
+
+ <p>Usage of processor is as follows:
+
+ </p><div class="highlight"><pre> - !restrictUris<br>   matchers:<br>     - !localMatch {}<br>     - !ipMatch<br>       ip: www.camptocamp.org<br>     - !dnsMatch<br>       host: mapfish-geoportal.demo-camptocamp.com<br>       port: 80<br>     - !dnsMatch<br>       host: labs.metacarta.com<br>       port: 80<br>     - !dnsMatch<br>       host: terraservice.net<br>       port: 80<br>     - !dnsMatch<br>       host: tile.openstreetmap.org<br>       port: 80<br>     - !dnsMatch<br>       host: www.geocat.ch<br>       port: 80</pre></div><p>By default a matcher allows the URL, but it can be setup to reject the URL (by setting reject
+ to true). The first matcher that matches will be the one picking the final outcome. If no matcher
+ matches, the URI is rejected. So, for example, you can allow every URLs apart from the internal
+ URLs like that:
+
+ </p><div class="highlight"><pre> - !restrictUris<br>   matchers:<br>     - !ipMatch<br>       ip: 192.178.0.0<br>       mask: 255.255.0.0<br>       reject: true<br>     - !acceptAll</pre></div><p>If the Print service is in your DMZ and needs to allow access to any WMS server, it is
+ strongly recommended to have a configuration like the previous one in order to avoid having the
+ Print service being used as a proxy to access your internal servers.
+
  </p><p><strong>Note:</strong> if this class is part of a CompositeClientHttpRequestFactoryProcessor
- (!configureHttpRequests) then it should be the last one so that the checks are done after all changes to
- the URIs
- </p>
- </div> 
+ (!configureHttpRequests) then it should be the last one so that the checks are done after all
+ changes to the URIs </p></div> 
   <div class="admonition note examples">
     <p class="first admonition-title">Example</p>
     <p class="last">
@@ -1834,50 +1972,55 @@ Or if the there are multiple mappings that need to be made :
    
   <dl>
     <dt><code>inputMapper</code> </dt>
-    <dd><div class="block"><p>The input mapper. See "Processors" to know more. Example:</p><div class="highlight"><pre> inputMapper: {attributeName: defaultInputParamName}</pre></div></div></dd>
+    <dd><div class="block">The input mapper. See "Processors" to know more. Example:
+
+ <div class="highlight"><pre> inputMapper: {attributeName: defaultInputParamName}</pre></div></div></dd>
   </dl>
   
   <dl>
     <dt><code>inputPrefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each input value.  This provides a simple way to make all input values have
- unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each input value. This provides a simple way to make all input values
+ have unique values.</div></dd>
   </dl>
   
   <dl>
     <dt><code>matchers</code> </dt>
-    <dd><div class="block">The matchers used to select the urls that are going to be modified by the processor. For example:
+    <dd><div class="block">The matchers used to select the urls that are going to be modified by the processor. For
+ example:
+
  <div class="highlight"><pre> - !restrictUris<br>   matchers:<br>     - !localMatch<br>       dummy: true<br>     - !ipMatch<br>     ip: www.camptocamp.org<br>     - !dnsMatch<br>       host: mapfish-geoportal.demo-camptocamp.com<br>       port: 80<br>     - !dnsMatch<br>       host: labs.metacarta.com<br>       port: 80<br>     - !dnsMatch<br>       host: terraservice.net<br>       port: 80<br>     - !dnsMatch<br>       host: tile.openstreetmap.org<br>       port: 80<br>     - !dnsMatch<br>       host: www.geocat.ch<br>       port: 80</pre></div></div></dd>
   </dl>
   
   <dl>
     <dt><code>outputMapper</code> </dt>
-    <dd><div class="block"><p>The output mapper. See "Processors" to know more. Example:</p><div class="highlight"><pre> outputMapper: {defaultOutputName: templateParamName}</pre></div></div></dd>
+    <dd><div class="block">The output mapper. See "Processors" to know more. Example:
+
+ <div class="highlight"><pre> outputMapper: {defaultOutputName: templateParamName}</pre></div></div></dd>
   </dl>
   
   <dl>
     <dt><code>outputPrefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each output value.  This provides a simple way to make all output values have
- unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each output value. This provides a simple way to make all output values
+ have unique values.</div></dd>
   </dl>
   
   <dl>
     <dt><code>prefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each value.  This provides a simple way to make all input and output values
- have unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each value. This provides a simple way to make all input and output
+ values have unique values.</div></dd>
   </dl>
    
   <h3>Inputs</h3>
    
   <dl>
     <dt><code>clientHttpRequestFactoryProvider</code> required</dt>
-    <dd><div class="block">The object for creating requests.  There should always be an instance in the values object so it does
- not need to be created.</div></dd>
+    <dd><div class="block">The object for creating requests. There should always be an instance in the values object so it
+ does not need to be created.</div></dd>
   </dl>
     </div>
 <div class="section" id="!setFeatures">
   <h1>!setFeatures<a class="headerlink" href="#!setFeatures" title="Permalink to this headline">¶</a></h1>
-  <div class="block"><p>Processor to set features on vector layers.</p>
- </div> 
+  <div class="block">Processor to set features on vector layers. </div> 
   <div class="admonition note examples">
     <p class="first admonition-title">Example</p>
     <p class="last">
@@ -1894,30 +2037,34 @@ Or if the there are multiple mappings that need to be made :
    
   <dl>
     <dt><code>inputMapper</code> </dt>
-    <dd><div class="block"><p>The input mapper. See "Processors" to know more. Example:</p><div class="highlight"><pre> inputMapper: {attributeName: defaultInputParamName}</pre></div></div></dd>
+    <dd><div class="block">The input mapper. See "Processors" to know more. Example:
+
+ <div class="highlight"><pre> inputMapper: {attributeName: defaultInputParamName}</pre></div></div></dd>
   </dl>
   
   <dl>
     <dt><code>inputPrefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each input value.  This provides a simple way to make all input values have
- unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each input value. This provides a simple way to make all input values
+ have unique values.</div></dd>
   </dl>
   
   <dl>
     <dt><code>outputMapper</code> </dt>
-    <dd><div class="block"><p>The output mapper. See "Processors" to know more. Example:</p><div class="highlight"><pre> outputMapper: {defaultOutputName: templateParamName}</pre></div></div></dd>
+    <dd><div class="block">The output mapper. See "Processors" to know more. Example:
+
+ <div class="highlight"><pre> outputMapper: {defaultOutputName: templateParamName}</pre></div></div></dd>
   </dl>
   
   <dl>
     <dt><code>outputPrefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each output value.  This provides a simple way to make all output values have
- unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each output value. This provides a simple way to make all output values
+ have unique values.</div></dd>
   </dl>
   
   <dl>
     <dt><code>prefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each value.  This provides a simple way to make all input and output values
- have unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each value. This provides a simple way to make all input and output
+ values have unique values.</div></dd>
   </dl>
    
   <h3>Inputs</h3>
@@ -1939,8 +2086,7 @@ Or if the there are multiple mappings that need to be made :
     </div>
 <div class="section" id="!setStyle">
   <h1>!setStyle<a class="headerlink" href="#!setStyle" title="Permalink to this headline">¶</a></h1>
-  <div class="block"><p>Processor to set a style on vector layers from the attributes.</p>
- </div> 
+  <div class="block">Processor to set a style on vector layers from the attributes. </div> 
   <div class="admonition note examples">
     <p class="first admonition-title">Example</p>
     <p class="last">
@@ -1957,38 +2103,42 @@ Or if the there are multiple mappings that need to be made :
    
   <dl>
     <dt><code>inputMapper</code> </dt>
-    <dd><div class="block"><p>The input mapper. See "Processors" to know more. Example:</p><div class="highlight"><pre> inputMapper: {attributeName: defaultInputParamName}</pre></div></div></dd>
+    <dd><div class="block">The input mapper. See "Processors" to know more. Example:
+
+ <div class="highlight"><pre> inputMapper: {attributeName: defaultInputParamName}</pre></div></div></dd>
   </dl>
   
   <dl>
     <dt><code>inputPrefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each input value.  This provides a simple way to make all input values have
- unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each input value. This provides a simple way to make all input values
+ have unique values.</div></dd>
   </dl>
   
   <dl>
     <dt><code>outputMapper</code> </dt>
-    <dd><div class="block"><p>The output mapper. See "Processors" to know more. Example:</p><div class="highlight"><pre> outputMapper: {defaultOutputName: templateParamName}</pre></div></div></dd>
+    <dd><div class="block">The output mapper. See "Processors" to know more. Example:
+
+ <div class="highlight"><pre> outputMapper: {defaultOutputName: templateParamName}</pre></div></div></dd>
   </dl>
   
   <dl>
     <dt><code>outputPrefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each output value.  This provides a simple way to make all output values have
- unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each output value. This provides a simple way to make all output values
+ have unique values.</div></dd>
   </dl>
   
   <dl>
     <dt><code>prefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each value.  This provides a simple way to make all input and output values
- have unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each value. This provides a simple way to make all input and output
+ values have unique values.</div></dd>
   </dl>
    
   <h3>Inputs</h3>
    
   <dl>
     <dt><code>clientHttpRequestFactoryProvider</code> required</dt>
-    <dd><div class="block">A factory for making http requests.  This is added to the values by the framework and therefore
- does not need to be set in configuration</div></dd>
+    <dd><div class="block">A factory for making http requests. This is added to the values by the framework and
+ therefore does not need to be set in configuration</div></dd>
   </dl>
   
   <dl>
@@ -2008,24 +2158,30 @@ Or if the there are multiple mappings that need to be made :
     </div>
 <div class="section" id="!setTiledWms">
   <h1>!setTiledWms<a class="headerlink" href="#!setTiledWms" title="Permalink to this headline">¶</a></h1>
-  <div class="block"><p>Processor that transforms WMS layers that are too big into tiled WMS layers.</p><p>This processor will reduce the given max tile size to best match the dimensions of the map. This is
- to reduce the amount of extra data that is fetched from the WMS server.</p></div>  
+  <div class="block">Processor that transforms WMS layers that are too big into tiled WMS layers.
+
+ <p>This processor will reduce the given max tile size to best match the dimensions of the map.
+ This is to reduce the amount of extra data that is fetched from the WMS server.</p></div>  
   <h3>Configuration</h3>
    
   <dl>
     <dt><code>inputMapper</code> </dt>
-    <dd><div class="block"><p>The input mapper. See "Processors" to know more. Example:</p><div class="highlight"><pre> inputMapper: {attributeName: defaultInputParamName}</pre></div></div></dd>
+    <dd><div class="block">The input mapper. See "Processors" to know more. Example:
+
+ <div class="highlight"><pre> inputMapper: {attributeName: defaultInputParamName}</pre></div></div></dd>
   </dl>
   
   <dl>
     <dt><code>inputPrefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each input value.  This provides a simple way to make all input values have
- unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each input value. This provides a simple way to make all input values
+ have unique values.</div></dd>
   </dl>
   
   <dl>
     <dt><code>matchers</code> </dt>
-    <dd><div class="block">The matchers used to select the WMS urls that are going to be modified by the processor. For example:
+    <dd><div class="block">The matchers used to select the WMS urls that are going to be modified by the processor. For
+ example:
+
  <div class="highlight"><pre> - !restrictUris<br>   matchers:<br>     - !dnsMatch<br>       host: labs.metacarta.com<br>       port: 80</pre></div></div></dd>
   </dl>
   
@@ -2041,19 +2197,21 @@ Or if the there are multiple mappings that need to be made :
   
   <dl>
     <dt><code>outputMapper</code> </dt>
-    <dd><div class="block"><p>The output mapper. See "Processors" to know more. Example:</p><div class="highlight"><pre> outputMapper: {defaultOutputName: templateParamName}</pre></div></div></dd>
+    <dd><div class="block">The output mapper. See "Processors" to know more. Example:
+
+ <div class="highlight"><pre> outputMapper: {defaultOutputName: templateParamName}</pre></div></div></dd>
   </dl>
   
   <dl>
     <dt><code>outputPrefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each output value.  This provides a simple way to make all output values have
- unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each output value. This provides a simple way to make all output values
+ have unique values.</div></dd>
   </dl>
   
   <dl>
     <dt><code>prefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each value.  This provides a simple way to make all input and output values
- have unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each value. This provides a simple way to make all input and output
+ values have unique values.</div></dd>
   </dl>
   
   <dl>
@@ -2075,29 +2233,33 @@ Or if the there are multiple mappings that need to be made :
     </div>
 <div class="section" id="!setWmsCustomParam">
   <h1>!setWmsCustomParam<a class="headerlink" href="#!setWmsCustomParam" title="Permalink to this headline">¶</a></h1>
-  <div class="block"><p>Processor to set a param on WMS layers.</p></div>  
+  <div class="block">Processor to set a param on WMS layers.</div>  
   <h3>Configuration</h3>
    
   <dl>
     <dt><code>inputMapper</code> </dt>
-    <dd><div class="block"><p>The input mapper. See "Processors" to know more. Example:</p><div class="highlight"><pre> inputMapper: {attributeName: defaultInputParamName}</pre></div></div></dd>
+    <dd><div class="block">The input mapper. See "Processors" to know more. Example:
+
+ <div class="highlight"><pre> inputMapper: {attributeName: defaultInputParamName}</pre></div></div></dd>
   </dl>
   
   <dl>
     <dt><code>inputPrefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each input value.  This provides a simple way to make all input values have
- unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each input value. This provides a simple way to make all input values
+ have unique values.</div></dd>
   </dl>
   
   <dl>
     <dt><code>outputMapper</code> </dt>
-    <dd><div class="block"><p>The output mapper. See "Processors" to know more. Example:</p><div class="highlight"><pre> outputMapper: {defaultOutputName: templateParamName}</pre></div></div></dd>
+    <dd><div class="block">The output mapper. See "Processors" to know more. Example:
+
+ <div class="highlight"><pre> outputMapper: {defaultOutputName: templateParamName}</pre></div></div></dd>
   </dl>
   
   <dl>
     <dt><code>outputPrefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each output value.  This provides a simple way to make all output values have
- unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each output value. This provides a simple way to make all output values
+ have unique values.</div></dd>
   </dl>
   
   <dl>
@@ -2107,8 +2269,8 @@ Or if the there are multiple mappings that need to be made :
   
   <dl>
     <dt><code>prefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each value.  This provides a simple way to make all input and output values
- have unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each value. This provides a simple way to make all input and output
+ values have unique values.</div></dd>
   </dl>
    
   <h3>Inputs</h3>
@@ -2125,15 +2287,16 @@ Or if the there are multiple mappings that need to be made :
     </div>
 <div class="section" id="!updatePdfConfig">
   <h1>!updatePdfConfig<a class="headerlink" href="#!updatePdfConfig" title="Permalink to this headline">¶</a></h1>
-  <div class="block"><p>This processor allows the dynamic configuration of the <a shape="rect" href="../config/PDFConfig.html" title="class in org.mapfish.print.config"><code>PDFConfig</code></a>
- object by obtaining data from attributes.  For example the title and author could be string attributes
- posted from the client, this processor would update the <a shape="rect" href="../config/PDFConfig.html" title="class in org.mapfish.print.config"><code>PDFConfig</code></a> object
- with the attribute data allowing per report PDF metadata.
- </p><p>
- Note: The <a shape="rect" href="../config/PDFConfig.html" title="class in org.mapfish.print.config"><code>PDFConfig</code></a> can also be configured in the config.yaml either at
- the config or template level.
- </p><p>See also: <a shape="rect" href="attributes.html#!updatePdfConfigUpdate">!updatePdfConfigUpdate</a> attribute</p>
- </div> 
+  <div class="block">This processor allows the dynamic configuration of the <a shape="rect" href="../config/PDFConfig.html" title="class in org.mapfish.print.config"><code>PDFConfig</code></a>
+ object by obtaining data from attributes. For example the title and author could be string
+ attributes posted from the client, this processor would update the <a shape="rect" href="../config/PDFConfig.html" title="class in org.mapfish.print.config"><code>PDFConfig</code></a> object with the attribute data allowing per report PDF
+ metadata.
+
+ <p>Note: The <a shape="rect" href="../config/PDFConfig.html" title="class in org.mapfish.print.config"><code>PDFConfig</code></a> can also be configured in the config.yaml
+ either at the config or template level.
+
+ </p><p>See also: <a shape="rect" href="attributes.html#!updatePdfConfigUpdate">!updatePdfConfigUpdate</a>
+ attribute </p></div> 
   <div class="admonition note examples">
     <p class="first admonition-title">Example</p>
     <p class="last">
@@ -2150,50 +2313,57 @@ Or if the there are multiple mappings that need to be made :
    
   <dl>
     <dt><code>inputMapper</code> </dt>
-    <dd><div class="block"><p>The input mapper. See "Processors" to know more. Example:</p><div class="highlight"><pre> inputMapper: {attributeName: defaultInputParamName}</pre></div></div></dd>
+    <dd><div class="block">The input mapper. See "Processors" to know more. Example:
+
+ <div class="highlight"><pre> inputMapper: {attributeName: defaultInputParamName}</pre></div></div></dd>
   </dl>
   
   <dl>
     <dt><code>inputPrefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each input value.  This provides a simple way to make all input values have
- unique values.</div></dd>
-  </dl>
-  
-  <dl>
-    <dt><code>outputMapper</code> </dt>
-    <dd><div class="block"><p>The output mapper. See "Processors" to know more. Example:</p><div class="highlight"><pre> outputMapper: {defaultOutputName: templateParamName}</pre></div></div></dd>
-  </dl>
-  
-  <dl>
-    <dt><code>outputPrefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each output value.  This provides a simple way to make all output values have
- unique values.</div></dd>
-  </dl>
-  
-  <dl>
-    <dt><code>prefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each value.  This provides a simple way to make all input and output values
+    <dd><div class="block">The prefix to apply to each input value. This provides a simple way to make all input values
  have unique values.</div></dd>
   </dl>
   
   <dl>
+    <dt><code>outputMapper</code> </dt>
+    <dd><div class="block">The output mapper. See "Processors" to know more. Example:
+
+ <div class="highlight"><pre> outputMapper: {defaultOutputName: templateParamName}</pre></div></div></dd>
+  </dl>
+  
+  <dl>
+    <dt><code>outputPrefix</code> </dt>
+    <dd><div class="block">The prefix to apply to each output value. This provides a simple way to make all output values
+ have unique values.</div></dd>
+  </dl>
+  
+  <dl>
+    <dt><code>prefix</code> </dt>
+    <dd><div class="block">The prefix to apply to each value. This provides a simple way to make all input and output
+ values have unique values.</div></dd>
+  </dl>
+  
+  <dl>
     <dt><code>updates</code> </dt>
-    <dd><div class="block">The pdf metadata property -> attribute name map.  The keys must be one of the values in <a shape="rect" href="../config/PDFConfig.html" title="class in org.mapfish.print.config"><code>PDFConfig</code></a> and the values must be the name of the attribute to obtain the the
- data from.  Example Configuration:
+    <dd><div class="block">The pdf metadata property -> attribute name map. The keys must be one of the values in
+ <a shape="rect" href="../config/PDFConfig.html" title="class in org.mapfish.print.config"><code>PDFConfig</code></a> and the values must be the name of the attribute to
+ obtain the the data from. Example Configuration:
 
  <div class="highlight"><pre> processors:<br>   - !updatePdfConfig<br>     updates:<br>       title: "titleAttribute"<br>       subject: "subjectAttribute"</pre></div>
 
- The type of the attribute must be of the correct type, for example title mus be a string, keywords must
- be an array of strings, compress must be a boolean.
+ The type of the attribute must be of the correct type, for example title mus be a string,
+ keywords must be an array of strings, compress must be a boolean.
 
- If the value is within the attribute output object then you can use dot separators for each level. For
- example suppose there is a custom attribute: myconfig, if and it has a property title then the
- configuration would be:
- <div class="highlight"><pre> processors:<br>   - updatePdfConfig<br>     updates: {title: :myconfig.title"}</pre></div>
+ <p>If the value is within the attribute output object then you can use dot separators for each
+ level. For example suppose there is a custom attribute: myconfig, if and it has a property
+ title then the configuration would be:
 
- For more power a "format" can be defined.  The format is a printf style format string which will be
- called with a single value that is identified by the value key/path.  In this case the short hand key:
- value can't be used instead it is as follows:
+ </p><div class="highlight"><pre> processors:<br>   - updatePdfConfig<br>     updates: {title: :myconfig.title"}</pre></div>
+
+ For more power a "format" can be defined. The format is a printf style format string which will
+ be called with a single value that is identified by the value key/path. In this case the short
+ hand key: value can't be used instead it is as follows:
+
  <div class="highlight"><pre>   - updatePdfConfig<br>     updates:<br>       title: !updatePdfConfigUpdate<br>          valueKey: "myconfig.title"<br>          format: "Print Report %s"</pre></div></div></dd>
   </dl>
    
@@ -2211,11 +2381,12 @@ Or if the there are multiple mappings that need to be made :
     </div>
 <div class="section" id="!useHttpForHttps">
   <h1>!useHttpForHttps<a class="headerlink" href="#!useHttpForHttps" title="Permalink to this headline">¶</a></h1>
-  <div class="block">This processor maps https requests to http requests for certain hosts. The port number can also be mapped
- since that is usually required.
- <p>Example: </p><div class="highlight"><pre> - !useHttpForHttps<br>   hosts: [localhost, www.camptocamp.com]<br>   portMapping:<br>     443: 80<br>     8443: 8080</pre></div><p>Can be applied conditionally using matchers, like in <a shape="rect" href="RestrictUrisProcessor.html" title="class in org.mapfish.print.processor.http"><code>RestrictUrisProcessor</code></a>
- (<a shape="rect" href="processors.html#!restrictUris">!restrictUris</a>
- ).</p> </div> 
+  <div class="block">This processor maps https requests to http requests for certain hosts. The port number can also
+ be mapped since that is usually required.
+
+ <p>Example:
+
+ </p><div class="highlight"><pre> - !useHttpForHttps<br>   hosts: [localhost, www.camptocamp.com]<br>   portMapping:<br>     443: 80<br>     8443: 8080</pre></div><p>Can be applied conditionally using matchers, like in <a shape="rect" href="RestrictUrisProcessor.html" title="class in org.mapfish.print.processor.http"><code>RestrictUrisProcessor</code></a> (<a shape="rect" href="processors.html#!restrictUris">!restrictUris</a> ). </p></div> 
   <div class="admonition note examples">
     <p class="first admonition-title">Example</p>
     <p class="last">
@@ -2233,35 +2404,44 @@ Or if the there are multiple mappings that need to be made :
   <dl>
     <dt><code>hosts</code> </dt>
     <dd><div class="block">Set the patterns to use for selecting the hosts to apply the https -> http mapping to.
- <ul><li>If the host starts and ends with / then it is compiled as a regular expression</li><li>Otherwise the hosts must exactly match</li></ul></div></dd>
+
+ <ul><li>If the host starts and ends with / then it is compiled as a regular expression
+   </li><li>Otherwise the hosts must exactly match
+ </li></ul></div></dd>
   </dl>
   
   <dl>
     <dt><code>inputMapper</code> </dt>
-    <dd><div class="block"><p>The input mapper. See "Processors" to know more. Example:</p><div class="highlight"><pre> inputMapper: {attributeName: defaultInputParamName}</pre></div></div></dd>
+    <dd><div class="block">The input mapper. See "Processors" to know more. Example:
+
+ <div class="highlight"><pre> inputMapper: {attributeName: defaultInputParamName}</pre></div></div></dd>
   </dl>
   
   <dl>
     <dt><code>inputPrefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each input value.  This provides a simple way to make all input values have
- unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each input value. This provides a simple way to make all input values
+ have unique values.</div></dd>
   </dl>
   
   <dl>
     <dt><code>matchers</code> </dt>
-    <dd><div class="block">The matchers used to select the urls that are going to be modified by the processor. For example:
+    <dd><div class="block">The matchers used to select the urls that are going to be modified by the processor. For
+ example:
+
  <div class="highlight"><pre> - !restrictUris<br>   matchers:<br>     - !localMatch<br>       dummy: true<br>     - !ipMatch<br>     ip: www.camptocamp.org<br>     - !dnsMatch<br>       host: mapfish-geoportal.demo-camptocamp.com<br>       port: 80<br>     - !dnsMatch<br>       host: labs.metacarta.com<br>       port: 80<br>     - !dnsMatch<br>       host: terraservice.net<br>       port: 80<br>     - !dnsMatch<br>       host: tile.openstreetmap.org<br>       port: 80<br>     - !dnsMatch<br>       host: www.geocat.ch<br>       port: 80</pre></div></div></dd>
   </dl>
   
   <dl>
     <dt><code>outputMapper</code> </dt>
-    <dd><div class="block"><p>The output mapper. See "Processors" to know more. Example:</p><div class="highlight"><pre> outputMapper: {defaultOutputName: templateParamName}</pre></div></div></dd>
+    <dd><div class="block">The output mapper. See "Processors" to know more. Example:
+
+ <div class="highlight"><pre> outputMapper: {defaultOutputName: templateParamName}</pre></div></div></dd>
   </dl>
   
   <dl>
     <dt><code>outputPrefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each output value.  This provides a simple way to make all output values have
- unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each output value. This provides a simple way to make all output values
+ have unique values.</div></dd>
   </dl>
   
   <dl>
@@ -2271,16 +2451,16 @@ Or if the there are multiple mappings that need to be made :
   
   <dl>
     <dt><code>prefix</code> </dt>
-    <dd><div class="block">The prefix to apply to each value.  This provides a simple way to make all input and output values
- have unique values.</div></dd>
+    <dd><div class="block">The prefix to apply to each value. This provides a simple way to make all input and output
+ values have unique values.</div></dd>
   </dl>
    
   <h3>Inputs</h3>
    
   <dl>
     <dt><code>clientHttpRequestFactoryProvider</code> required</dt>
-    <dd><div class="block">The object for creating requests.  There should always be an instance in the values object so it does
- not need to be created.</div></dd>
+    <dd><div class="block">The object for creating requests. There should always be an instance in the values object so it
+ does not need to be created.</div></dd>
   </dl>
     </div>
 
@@ -2297,9 +2477,9 @@ Or if the there are multiple mappings that need to be made :
                     Revision
                     <code
                       ><a
-                        href="https://github.com/mapfish/mapfish-print/commit/f233c5e5b7c35d8648b08ef55bc90f318e0f2620"
+                        href="https://github.com/mapfish/mapfish-print/commit/d099aa2a6272edc3b9ffbaf0c3abff080ba59029"
                         target="_blank"
-                        >f233c5e5</a
+                        >d099aa2a</a
                       ></code
                     >.
                   </span>

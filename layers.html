@@ -200,8 +200,10 @@
 
 <div class="section" id="Geo Json Layer">
   <h1>Geo Json Layer<a class="headerlink" href="#Geo Json Layer" title="Permalink to this headline">¶</a></h1>
-  <div class="block"><p>Renders GeoJSON layers.</p><p>Type: <code>geojson</code></p>
- </div> 
+  <div class="block">Renders GeoJSON layers.
+
+ <p>Type: <code>geojson</code>
+ </p></div> 
   <div class="admonition note examples">
     <p class="first admonition-title">Example</p>
     <p class="last">
@@ -242,7 +244,8 @@
     <dt><code>geoJson</code> </dt>
     <dd><div class="block">A geojson formatted string or url to the geoJson or the raw GeoJSON data.
 
- The url can be a file url, however if it is it must be relative to the configuration directory.</div></dd>
+ <p>The url can be a file url, however if it is it must be relative to the configuration
+ directory.</p></div></dd>
   </dl>
   
   <dl>
@@ -259,20 +262,22 @@
     <dt><code>renderAsSvg</code> </dt>
     <dd><div class="block">Indicates if the layer is rendered as SVG.
 
- (will default to <a shape="rect" href="../../config/Configuration.html#defaultToSvg"><code>Configuration.defaultToSvg</code></a>).</div></dd>
+ <p>(will default to <a shape="rect" href="../../config/Configuration.html#defaultToSvg"><code>Configuration.defaultToSvg</code></a>).</p></div></dd>
   </dl>
   
   <dl>
     <dt><code>style</code> </dt>
-    <dd><div class="block">The style name of a style to apply to the features during rendering.  The style name must map to a
- style in the template or the configuration objects.
+    <dd><div class="block">The style name of a style to apply to the features during rendering. The style name must map to
+ a style in the template or the configuration objects.
 
- If no style is defined then the default style for the geometry type will be used.</div></dd>
+ <p>If no style is defined then the default style for the geometry type will be used.</p></div></dd>
   </dl>
     </div>
 <div class="section" id="Geotiff Layer">
   <h1>Geotiff Layer<a class="headerlink" href="#Geotiff Layer" title="Permalink to this headline">¶</a></h1>
-  <div class="block"><p>Renders a GeoTIFF image as layer.</p><p>Type: <code>geotiff</code></p></div>    
+  <div class="block">Renders a GeoTIFF image as layer.
+
+ <p>Type: <code>geotiff</code></p></div>    
   <h3>Inputs</h3>
    
   <dl>
@@ -297,13 +302,15 @@
   
   <dl>
     <dt><code>url</code> required</dt>
-    <dd><div class="block">The url of the geotiff.  It can be a file but if it is the file must be contained within the config
- directory.</div></dd>
+    <dd><div class="block">The url of the geotiff. It can be a file but if it is the file must be contained within the
+ config directory.</div></dd>
   </dl>
     </div>
 <div class="section" id="Gml Layer">
   <h1>Gml Layer<a class="headerlink" href="#Gml Layer" title="Permalink to this headline">¶</a></h1>
-  <div class="block"><p>Renders GML layers.</p><p>Type: <code>gml</code></p></div>  
+  <div class="block">Renders GML layers.
+
+ <p>Type: <code>gml</code></p></div>  
   <h3>Configuration</h3>
    
   <dl>
@@ -332,28 +339,30 @@
     <dt><code>renderAsSvg</code> </dt>
     <dd><div class="block">Indicates if the layer is rendered as SVG.
 
- (will default to <a shape="rect" href="../../config/Configuration.html#defaultToSvg"><code>Configuration.defaultToSvg</code></a>).</div></dd>
+ <p>(will default to <a shape="rect" href="../../config/Configuration.html#defaultToSvg"><code>Configuration.defaultToSvg</code></a>).</p></div></dd>
   </dl>
   
   <dl>
     <dt><code>style</code> </dt>
-    <dd><div class="block">The style name of a style to apply to the features during rendering.  The style name must map to a
- style in the template or the configuration objects.
+    <dd><div class="block">The style name of a style to apply to the features during rendering. The style name must map to
+ a style in the template or the configuration objects.
 
- If no style is defined then the default style for the geometry type will be used.</div></dd>
+ <p>If no style is defined then the default style for the geometry type will be used.</p></div></dd>
   </dl>
   
   <dl>
     <dt><code>url</code> required</dt>
     <dd><div class="block">A url to the gml or the raw Gml data.
 
- The url can be a file url, however if it is it must be relative to the configuration directory.</div></dd>
+ <p>The url can be a file url, however if it is it must be relative to the configuration
+ directory.</p></div></dd>
   </dl>
     </div>
 <div class="section" id="Grid Layer">
   <h1>Grid Layer<a class="headerlink" href="#Grid Layer" title="Permalink to this headline">¶</a></h1>
-  <div class="block"><p>A layer which is a spatial grid of lines on the map.</p><p>Type: <code>grid</code></p>
- </div> 
+  <div class="block">A layer which is a spatial grid of lines on the map.
+
+ <p>Type: <code>grid</code> </p></div> 
   <div class="admonition note examples">
     <p class="first admonition-title">Example</p>
     <p class="last">
@@ -382,37 +391,37 @@
   
   <dl>
     <dt><code>font</code> </dt>
-    <dd><div class="block">Configuration for the font of the grid labels.  The default is the default system font.</div></dd>
+    <dd><div class="block">Configuration for the font of the grid labels. The default is the default system font.</div></dd>
   </dl>
   
   <dl>
     <dt><code>formatDecimalSeparator</code> </dt>
-    <dd><div class="block">The character used to separate the decimal part (for example ","). This parameter is only used if
- <code>valueFormat</code> is used. The default is the character of the default locale.</div></dd>
+    <dd><div class="block">The character used to separate the decimal part (for example ","). This parameter is only used
+ if <code>valueFormat</code> is used. The default is the character of the default locale.</div></dd>
   </dl>
   
   <dl>
     <dt><code>formatGroupingSeparator</code> </dt>
-    <dd><div class="block">The character used for the thousands separator (for example "'"). This parameter is only used if
- <code>valueFormat</code> is used. The default is the character of the default locale.</div></dd>
+    <dd><div class="block">The character used for the thousands separator (for example "'"). This parameter is only used
+ if <code>valueFormat</code> is used. The default is the character of the default locale.</div></dd>
   </dl>
   
   <dl>
     <dt><code>gridColor</code> </dt>
-    <dd><div class="block">The color of the grid points or lines.  Default is gray (<a shape="rect" href="#DEFAULT_GRID_COLOR">"gray"</a>)</div></dd>
+    <dd><div class="block">The color of the grid points or lines. Default is gray (<a shape="rect" href="#DEFAULT_GRID_COLOR">"gray"</a>)</div></dd>
   </dl>
   
   <dl>
     <dt><code>gridType</code> </dt>
     <dd><div class="block">The type of grid to render.
 
- Can be LINES or POINTS. Default is LINES.</div></dd>
+ <p>Can be LINES or POINTS. Default is LINES.</p></div></dd>
   </dl>
   
   <dl>
     <dt><code>haloColor</code> </dt>
-    <dd><div class="block">The color of the halo around grid label text. The color is defined the same as colors in CSS. Default
- is white (<a shape="rect" href="#DEFAULT_HALO_COLOR">"#FFF"</a>)</div></dd>
+    <dd><div class="block">The color of the halo around grid label text. The color is defined the same as colors in CSS.
+ Default is white (<a shape="rect" href="#DEFAULT_HALO_COLOR">"#FFF"</a>)</div></dd>
   </dl>
   
   <dl>
@@ -422,39 +431,38 @@
   
   <dl>
     <dt><code>horizontalYOffset</code> </dt>
-    <dd><div class="block">Apply an Y offset to horizontal grid line labels, relative to the horizontal grid lines. Defaults to
- 0.</div></dd>
+    <dd><div class="block">Apply an Y offset to horizontal grid line labels, relative to the horizontal grid lines.
+ Defaults to 0.</div></dd>
   </dl>
   
   <dl>
     <dt><code>indent</code> </dt>
-    <dd><div class="block">The number of pixels to indent the grid labels from the end of the map.  The default is <a shape="rect" href="#DEFAULT_INDENT">5</a>.</div></dd>
+    <dd><div class="block">The number of pixels to indent the grid labels from the end of the map. The default is <a shape="rect" href="#DEFAULT_INDENT">5</a>.</div></dd>
   </dl>
   
   <dl>
     <dt><code>labelColor</code> </dt>
-    <dd><div class="block">The color of the grid label text.  Default is dark gray (<a shape="rect" href="#DEFAULT_LABEL_COLOR">"#444"</a>)</div></dd>
+    <dd><div class="block">The color of the grid label text. Default is dark gray (<a shape="rect" href="#DEFAULT_LABEL_COLOR">"#444"</a>)</div></dd>
   </dl>
   
   <dl>
     <dt><code>labelFormat</code> </dt>
-    <dd><div class="block">The formatting string used to format the label (for example "%1.2f %s"). By default the label is
- formatted according to the unit and label value. For the format syntax, see
- <a shape="rect" href="https://docs.oracle.com/javase/7/docs/api/java/util/Formatter.html">java.util.Formatter</a>.
- If <code>labelFormat</code> is set, <code>valueFormat</code>, <code>unitFormat</code> and custom
- separator characters will be ignored.</div></dd>
+    <dd><div class="block">The formatting string used to format the label (for example "%1.2f %s"). By default the label
+ is formatted according to the unit and label value. For the format syntax, see <a shape="rect" href="https://docs.oracle.com/javase/7/docs/api/java/util/Formatter.html">java.util.Formatter</a>.
+ If <code>labelFormat</code> is set, <code>valueFormat</code>, <code>unitFormat</code> and
+ custom separator characters will be ignored.</div></dd>
   </dl>
   
   <dl>
     <dt><code>labelProjection</code> </dt>
-    <dd><div class="block">The projection code to use for the labels.  The value should be the string <code>authority:code</code>
- form identifying the projection.  By default it will be the same projection as the map.</div></dd>
+    <dd><div class="block">The projection code to use for the labels. The value should be the string <code>authority:code<br> </code> form identifying the projection. By default it will be the same projection as the map.</div></dd>
   </dl>
   
   <dl>
     <dt><code>longitudeFirst</code> </dt>
-    <dd><div class="block">By default the normal axis order as specified in EPSG code will be used when parsing projections.
- However the requestor can override this by explicitly declaring that longitude axis is first.</div></dd>
+    <dd><div class="block">By default the normal axis order as specified in EPSG code will be used when parsing
+ projections. However the requestor can override this by explicitly declaring that longitude
+ axis is first.</div></dd>
   </dl>
   
   <dl>
@@ -466,7 +474,7 @@
     <dt><code>numberOfLines</code> required</dt>
     <dd><div class="block">The x,y number of grid lines.
 
- The x is the number of lines that run vertically along the page.</div></dd>
+ <p>The x is the number of lines that run vertically along the page.</p></div></dd>
   </dl>
   
   <dl>
@@ -478,84 +486,82 @@
     <dt><code>origin</code> </dt>
     <dd><div class="block">The x,y point of grid origin.
 
- This is required if <a shape="rect" href="#spacing"><code>spacing</code></a> is defined.</div></dd>
+ <p>This is required if <a shape="rect" href="#spacing"><code>spacing</code></a> is defined.</p></div></dd>
   </dl>
   
   <dl>
     <dt><code>pointsInLine</code> </dt>
-    <dd><div class="block">The number of points that will be in the grid line (if the gridType is LINES).  If the line will be
- curved (for certain projections) then the more points the smoother the curve.
+    <dd><div class="block">The number of points that will be in the grid line (if the gridType is LINES). If the line will
+ be curved (for certain projections) then the more points the smoother the curve.
 
- The default number of points is <a shape="rect" href="#DEFAULT_POINTS_IN_GRID_LINE">10000</a>.</div></dd>
+ <p>The default number of points is <a shape="rect" href="#DEFAULT_POINTS_IN_GRID_LINE">10000</a>.</p></div></dd>
   </dl>
   
   <dl>
     <dt><code>renderAsSvg</code> </dt>
     <dd><div class="block">Indicates if the layer is rendered as SVG.
 
- (will default to <a shape="rect" href="../../../config/Configuration.html#defaultToSvg"><code>Configuration.defaultToSvg</code></a>).</div></dd>
+ <p>(will default to <a shape="rect" href="../../../config/Configuration.html#defaultToSvg"><code>Configuration.defaultToSvg</code></a>).</p></div></dd>
   </dl>
   
   <dl>
     <dt><code>rotateLabels</code> </dt>
-    <dd><div class="block">If true (the default), the labels will be rotated to follow the lines they belong to. Otherwise they
- are orientated west to east.</div></dd>
+    <dd><div class="block">If true (the default), the labels will be rotated to follow the lines they belong to. Otherwise
+ they are orientated west to east.</div></dd>
   </dl>
   
   <dl>
     <dt><code>spacing</code> required</dt>
     <dd><div class="block">The x,y spacing between grid lines.
 
- Either <a shape="rect" href="#spacing"><code>spacing</code></a> or <a shape="rect" href="#numberOfLines"><code>numberOfLines</code></a>
-
- If spacing is defined then <a shape="rect" href="#origin"><code>origin</code></a> must also be defined</div></dd>
+ <p>Either <a shape="rect" href="#spacing"><code>spacing</code></a> or <a shape="rect" href="#numberOfLines"><code>numberOfLines</code></a></p><p>If spacing is defined then <a shape="rect" href="#origin"><code>origin</code></a> must also be defined</p></div></dd>
   </dl>
   
   <dl>
     <dt><code>style</code> </dt>
-    <dd><div class="block">The style name of a style to apply to the features during rendering.  The style name must map to a
- style in the template or the configuration objects.
+    <dd><div class="block">The style name of a style to apply to the features during rendering. The style name must map to
+ a style in the template or the configuration objects.
 
- If no style is defined then the default grid style will be used.  The default will depend if the type
- is point or line and will respect <a shape="rect" href="#gridColor"><code>gridColor</code></a> and <a shape="rect" href="#haloColor"><code>haloColor</code></a> and <a shape="rect" href="#haloRadius"><code>haloRadius</code></a>. If
- <a shape="rect" href="#gridType"><code>gridType</code></a> is <a shape="rect" href="GridType.html#POINTS"><code>GridType.POINTS</code></a> then the style will be crosses with a haloRadius sized
- halo around the cross.  If <a shape="rect" href="GridType.html#LINES"><code>GridType.LINES</code></a> then the style will be a dashed line with no halo.</div></dd>
+ <p>If no style is defined then the default grid style will be used. The default will depend if
+ the type is point or line and will respect <a shape="rect" href="#gridColor"><code>gridColor</code></a> and <a shape="rect" href="#haloColor"><code>haloColor</code></a> and <a shape="rect" href="#haloRadius"><code>haloRadius</code></a>. If <a shape="rect" href="#gridType"><code>gridType</code></a> is <a shape="rect" href="GridType.html#POINTS"><code>GridType.POINTS</code></a> then the style will be crosses
+ with a haloRadius sized halo around the cross. If <a shape="rect" href="GridType.html#LINES"><code>GridType.LINES</code></a> then the style will be
+ a dashed line with no halo.</p></div></dd>
   </dl>
   
   <dl>
     <dt><code>unitFormat</code> </dt>
-    <dd><div class="block">The formatting string used to format the unit part of a label (for example " %s"). This parameter is
- ignored if <code>labelFormat</code> is set. <code>valueFormat</code> must be set to use this parameter.
- For the format syntax, see
- <a shape="rect" href="https://docs.oracle.com/javase/7/docs/api/java/util/Formatter.html">java.util.Formatter</a>.</div></dd>
+    <dd><div class="block">The formatting string used to format the unit part of a label (for example " %s"). This
+ parameter is ignored if <code>labelFormat</code> is set. <code>valueFormat</code> must be set
+ to use this parameter. For the format syntax, see <a shape="rect" href="https://docs.oracle.com/javase/7/docs/api/java/util/Formatter.html">java.util.Formatter</a>.</div></dd>
   </dl>
   
   <dl>
     <dt><code>valueFormat</code> </dt>
     <dd><div class="block">The formatting string used to format the decimal part of a label (for example "###,###"). This
- parameter is ignored if <code>labelFormat</code> is set. For the format syntax, see
- <a shape="rect" href="https://docs.oracle.com/javase/tutorial/i18n/format/decimalFormat.html">DecimalFormat</a>.</div></dd>
+ parameter is ignored if <code>labelFormat</code> is set. For the format syntax, see <a shape="rect" href="https://docs.oracle.com/javase/tutorial/i18n/format/decimalFormat.html">DecimalFormat</a>.</div></dd>
   </dl>
   
   <dl>
     <dt><code>verticalXOffset</code> </dt>
-    <dd><div class="block">Apply an X offset to the vertical grid line labels, relative to the vertical grid lines. Defaults to
- 0.</div></dd>
+    <dd><div class="block">Apply an X offset to the vertical grid line labels, relative to the vertical grid lines.
+ Defaults to 0.</div></dd>
   </dl>
     </div>
 <div class="section" id="Image Layer">
   <h1>Image Layer<a class="headerlink" href="#Image Layer" title="Permalink to this headline">¶</a></h1>
-  <div class="block"><p>Renders an image as layer.</p><p>Type: <code>image</code></p></div>    
+  <div class="block">Renders an image as layer.
+
+ <p>Type: <code>image</code></p></div>    
   <h3>Inputs</h3>
    
   <dl>
     <dt><code>baseURL</code> required</dt>
-    <dd><div class="block">The base URL for the image file.  Used for making request.</div></dd>
+    <dd><div class="block">The base URL for the image file. Used for making request.</div></dd>
   </dl>
   
   <dl>
     <dt><code>extent</code> required</dt>
-    <dd><div class="block">The extent of the image.  Used for placing image on map.</div></dd>
+    <dd><div class="block">The extent of the image. Used for placing image on map.</div></dd>
   </dl>
   
   <dl>
@@ -585,8 +591,9 @@
     </div>
 <div class="section" id="Osm Layer">
   <h1>Osm Layer<a class="headerlink" href="#Osm Layer" title="Permalink to this headline">¶</a></h1>
-  <div class="block"><p>Renders OpenStreetMap or other tiled layers.</p><p>Type: <code>osm</code></p>
- </div> 
+  <div class="block">Renders OpenStreetMap or other tiled layers.
+
+ <p>Type: <code>osm</code> </p></div> 
   <div class="admonition note examples">
     <p class="first admonition-title">Example</p>
     <p class="last">
@@ -604,10 +611,14 @@
   <dl>
     <dt><code>baseURL</code> required</dt>
     <dd><div class="block">The URL used for the tile requests.
- <p>Supported formats:</p><ul><li>The base part of the URL, for example 'http://tile.openstreetmap.org'. This results in an URL
- like 'http://tile.openstreetmap.org/12/123/456.png'.</li><li>An URL template with the placeholders '{x}', '{y}' or '{-y}', and '{z}'. For example:
- 'http://tile.openstreetmap.org/{z}/{x}/{y}.png'. <br clear="none"></br> The placeholder '{-y}' provides support for OSGeo
- TMS tiles.
+
+ <p>Supported formats:
+
+ </p><ul><li>The base part of the URL, for example 'http://tile.openstreetmap.org'. This results in an
+       URL like 'http://tile.openstreetmap.org/12/123/456.png'.
+   </li><li>An URL template with the placeholders '{x}', '{y}' or '{-y}', and '{z}'. For example:
+       'http://tile.openstreetmap.org/{z}/{x}/{y}.png'. <br clear="none"></br>
+       The placeholder '{-y}' provides support for OSGeo TMS tiles.
  </li></ul></div></dd>
   </dl>
   
@@ -615,8 +626,9 @@
     <dt><code>customParams</code> </dt>
     <dd><div class="block">Custom query parameters to use when making http requests. <a shape="rect" href="#customParams"><code>customParams</code></a>.
 
- The json should look something like:
- <div class="highlight"><pre> {<br>     "param1Name": "value",<br>     "param2Name": ["value1", "value2"]<br> }</pre></div></div></dd>
+ <p>The json should look something like:
+
+ </p><div class="highlight"><pre> {<br>     "param1Name": "value",<br>     "param2Name": ["value1", "value2"]<br> }</pre></div></div></dd>
   </dl>
   
   <dl>
@@ -631,12 +643,13 @@
   
   <dl>
     <dt><code>imageExtension</code> </dt>
-    <dd><div class="block">The image extension.  for example png, jpeg, etc...</div></dd>
+    <dd><div class="block">The image extension. for example png, jpeg, etc...</div></dd>
   </dl>
   
   <dl>
     <dt><code>maxExtent</code> </dt>
     <dd><div class="block">The maximum extent of the osm layer. Must have 4 coordinates, minX, minY, maxX, maxY
+
  <p>Default: [-20037508.34, -20037508.34, 20037508.34, 20037508.34]</p></div></dd>
   </dl>
   
@@ -652,15 +665,15 @@
   
   <dl>
     <dt><code>rasterStyle</code> </dt>
-    <dd><div class="block">The name of the style (in Configuration or Template) to use when drawing the layer to the map.  This is
- separate from the style in that it indicates how to draw the map.  It allows one to apply any of the
- SLD raster styling.</div></dd>
+    <dd><div class="block">The name of the style (in Configuration or Template) to use when drawing the layer to the map.
+ This is separate from the style in that it indicates how to draw the map. It allows one to
+ apply any of the SLD raster styling.</div></dd>
   </dl>
   
   <dl>
     <dt><code>resolutionTolerance</code> </dt>
-    <dd><div class="block">The amount of difference between a resolution and a target resolution to consider the two equal.  The
- value is a value from 0-1.</div></dd>
+    <dd><div class="block">The amount of difference between a resolution and a target resolution to consider the two
+ equal. The value is a value from 0-1.</div></dd>
   </dl>
   
   <dl>
@@ -670,14 +683,16 @@
   
   <dl>
     <dt><code>tileSize</code> </dt>
-    <dd><div class="block">The size of each tile.  Must have 2 values: width, height
+    <dd><div class="block">The size of each tile. Must have 2 values: width, height
+
  <p>Default: [256, 256]</p></div></dd>
   </dl>
     </div>
 <div class="section" id="Tiled Wms Layer">
   <h1>Tiled Wms Layer<a class="headerlink" href="#Tiled Wms Layer" title="Permalink to this headline">¶</a></h1>
-  <div class="block"><p>Renders tiled WMS layers.</p><p>Type: <code>tiledwms</code></p>
- </div> 
+  <div class="block">Renders tiled WMS layers.
+
+ <p>Type: <code>tiledwms</code> </p></div> 
   <div class="admonition note examples">
     <p class="first admonition-title">Example</p>
     <p class="last">
@@ -694,17 +709,18 @@
    
   <dl>
     <dt><code>baseURL</code> required</dt>
-    <dd><div class="block">The base URL for the WMS.  Used for making WMS requests.</div></dd>
+    <dd><div class="block">The base URL for the WMS. Used for making WMS requests.</div></dd>
   </dl>
   
   <dl>
     <dt><code>customParams</code> </dt>
-    <dd><div class="block">Custom query parameters to use when making http requests.  These are related to <a shape="rect" href="#mergeableParams"><code>mergeableParams</code></a> except they are the parameters that will prevent two layers from the same server from
- being merged into a single request with both layers. See <a shape="rect" href="#mergeableParams"><code>mergeableParams</code></a> for a more detailed
- example of the difference between <a shape="rect" href="#mergeableParams"><code>mergeableParams</code></a> and <a shape="rect" href="#customParams"><code>customParams</code></a>.
+    <dd><div class="block">Custom query parameters to use when making http requests. These are related to <a shape="rect" href="#mergeableParams"><code>mergeableParams</code></a> except they are the parameters that will prevent two layers from the same
+ server from being merged into a single request with both layers. See <a shape="rect" href="#mergeableParams"><code>mergeableParams</code></a>
+ for a more detailed example of the difference between <a shape="rect" href="#mergeableParams"><code>mergeableParams</code></a> and <a shape="rect" href="#customParams"><code>customParams</code></a>.
 
- The json should look something like:
- <div class="highlight"><pre> {<br>     "param1Name": "value",<br>     "param2Name": ["value1", "value2"]<br> }</pre></div></div></dd>
+ <p>The json should look something like:
+
+ </p><div class="highlight"><pre> {<br>     "param1Name": "value",<br>     "param2Name": ["value1", "value2"]<br> }</pre></div></div></dd>
   </dl>
   
   <dl>
@@ -719,12 +735,12 @@
   
   <dl>
     <dt><code>layers</code> required</dt>
-    <dd><div class="block">The wms layer to request in the GetMap request.  The order is important.  It is the order that they
- will appear in the request.
+    <dd><div class="block">The wms layer to request in the GetMap request. The order is important. It is the order that
+ they will appear in the request.
 
- As with the WMS specification, the first layer will be the first layer drawn on the map (the
- bottom/base layer) of the map.  This means that layer at position 0 in the array will covered by layer
- 1 (where not transparent) and so on.</div></dd>
+ <p>As with the WMS specification, the first layer will be the first layer drawn on the map (the
+ bottom/base layer) of the map. This means that layer at position 0 in the array will covered by
+ layer 1 (where not transparent) and so on.</p></div></dd>
   </dl>
   
   <dl>
@@ -732,24 +748,25 @@
     <dd><div class="block">Custom query parameters that can be merged if multiple layers are merged together into a single
  request.
 
- The json should look something like:
- <div class="highlight"><pre> {<br>     "param1Name": "value",<br>     "param2Name": ["value1", "value2"]<br> }</pre></div>
+ <p>The json should look something like:
 
- For example in WMS the style parameter can be merged.  If there are several wms layers that can be
- merged except they have different style parameters they can be merged because the style parameter can
- be merged.
+ </p><div class="highlight"><pre> {<br>     "param1Name": "value",<br>     "param2Name": ["value1", "value2"]<br> }</pre></div>
 
- Compare that to DPI parameter (for QGIS wms mapserver).  if two layers have different DPI then the
- layers cannot be merged.  In this case the DPI should <em>NOT</em> be one of the <a shape="rect" href="#mergeableParams"><code>mergeableParams</code></a> it should be one of the <a shape="rect" href="#customParams"><code>customParams</code></a>.</div></dd>
+ For example in WMS the style parameter can be merged. If there are several wms layers that can
+ be merged except they have different style parameters they can be merged because the style
+ parameter can be merged.
+
+ <p>Compare that to DPI parameter (for QGIS wms mapserver). if two layers have different DPI
+ then the layers cannot be merged. In this case the DPI should <em>NOT</em> be one of the <a shape="rect" href="#mergeableParams"><code>mergeableParams</code></a> it should be one of the <a shape="rect" href="#customParams"><code>customParams</code></a>.</p></div></dd>
   </dl>
   
   <dl>
     <dt><code>method</code> </dt>
     <dd><div class="block">The HTTP verb to use for fetching the images. Can be either "GET" (the default) or "POST".
 
- In case of "POST", the parameters are send in the body of the request using an
- "application/x-www-form-urlencoded" content type. This can be used when the parameters are too long.
- Tested only with GeoServer.</div></dd>
+ <p>In case of "POST", the parameters are send in the body of the request using an
+ "application/x-www-form-urlencoded" content type. This can be used when the parameters are too
+ long. Tested only with GeoServer.</p></div></dd>
   </dl>
   
   <dl>
@@ -764,21 +781,21 @@
   
   <dl>
     <dt><code>rasterStyle</code> </dt>
-    <dd><div class="block">The name of the style (in Configuration or Template) to use when drawing the layer to the map.  This is
- separate from the style in that it indicates how to draw the map.  It allows one to apply any of the
- SLD raster styling.</div></dd>
+    <dd><div class="block">The name of the style (in Configuration or Template) to use when drawing the layer to the map.
+ This is separate from the style in that it indicates how to draw the map. It allows one to
+ apply any of the SLD raster styling.</div></dd>
   </dl>
   
   <dl>
     <dt><code>serverType</code> </dt>
-    <dd><div class="block">The server type ("mapserver", "geoserver" or "qgisserver"). By specifying the server type vendor
- specific parameters (like for the DPI value) can be used when making the request.</div></dd>
+    <dd><div class="block">The server type ("mapserver", "geoserver" or "qgisserver"). By specifying the server type
+ vendor specific parameters (like for the DPI value) can be used when making the request.</div></dd>
   </dl>
   
   <dl>
     <dt><code>styles</code> </dt>
-    <dd><div class="block">The styles to apply to the layers.  If this is defined there should be the same number as the layers
- and the style are applied to the layer in the <a shape="rect" href="#layers"><code>layers</code></a> field.</div></dd>
+    <dd><div class="block">The styles to apply to the layers. If this is defined there should be the same number as the
+ layers and the style are applied to the layer in the <a shape="rect" href="#layers"><code>layers</code></a> field.</div></dd>
   </dl>
   
   <dl>
@@ -803,8 +820,9 @@
     </div>
 <div class="section" id="WMTS Layer">
   <h1>WMTS Layer<a class="headerlink" href="#WMTS Layer" title="Permalink to this headline">¶</a></h1>
-  <div class="block"><p>Renders WMTS layers.</p><p>Type: <code>wmts</code></p>
- </div> 
+  <div class="block">Renders WMTS layers.
+
+ <p>Type: <code>wmts</code> </p></div> 
   <div class="admonition note examples">
     <p class="first admonition-title">Example</p>
     <p class="last">
@@ -823,23 +841,35 @@
     <dt><code>baseURL</code> required</dt>
     <dd><div class="block">The ‘ResourceURL’ available in the WMTS capabilities.
 
- Example (for <code>requestEncoding: "KVP"</code>):
- <div class="highlight"><pre> baseUrl: "http://domain.com/wmts"</pre></div>
+ <p>Example (for <code>requestEncoding: "KVP"</code>):
+
+ </p><div class="highlight"><pre> baseUrl: "http://domain.com/wmts"</pre></div>
 
  Example (for <code>requestEncoding: "REST"</code>):
+
  <div class="highlight"><pre> baseUrl: "http://domain.com/wmts/roads/{TileMatrixSet}/{TileMatrix}/{TileCol}/{TileRow}.png"</pre></div>
+
  The following URL template variables are replaced:
- <ul><li>{Layer}</li><li>{style}</li><li>{TileMatrixSet}</li><li>{TileMatrix}</li><li>{TileRow}</li><li>{TileCol}</li><li>{[DIMENSION.IDENTIFIER]}</li></ul></div></dd>
+
+ <ul><li>{Layer}
+   </li><li>{style}
+   </li><li>{TileMatrixSet}
+   </li><li>{TileMatrix}
+   </li><li>{TileRow}
+   </li><li>{TileCol}
+   </li><li>{[DIMENSION.IDENTIFIER]}
+ </li></ul></div></dd>
   </dl>
   
   <dl>
     <dt><code>customParams</code> </dt>
-    <dd><div class="block">Custom query parameters to use when making http requests.  These are related to <a shape="rect" href="#mergeableParams"><code>mergeableParams</code></a> except they are the parameters that will prevent two layers from the same server from
- being merged into a single request with both layers. See <a shape="rect" href="#mergeableParams"><code>mergeableParams</code></a> for a more detailed
- example of the difference between <a shape="rect" href="#mergeableParams"><code>mergeableParams</code></a> and <a shape="rect" href="#customParams"><code>customParams</code></a>.
+    <dd><div class="block">Custom query parameters to use when making http requests. These are related to <a shape="rect" href="#mergeableParams"><code>mergeableParams</code></a> except they are the parameters that will prevent two layers from the same
+ server from being merged into a single request with both layers. See <a shape="rect" href="#mergeableParams"><code>mergeableParams</code></a>
+ for a more detailed example of the difference between <a shape="rect" href="#mergeableParams"><code>mergeableParams</code></a> and <a shape="rect" href="#customParams"><code>customParams</code></a>.
 
- The json should look something like:
- <div class="highlight"><pre> {<br>     "param1Name": "value",<br>     "param2Name": ["value1", "value2"]<br> }</pre></div></div></dd>
+ <p>The json should look something like:
+
+ </p><div class="highlight"><pre> {<br>     "param1Name": "value",<br>     "param2Name": ["value1", "value2"]<br> }</pre></div></div></dd>
   </dl>
   
   <dl>
@@ -851,10 +881,10 @@
     <dt><code>dimensions</code> </dt>
     <dd><div class="block">The "sample" dimensions or image color bands to retrieve.
 
- This can be null, if so then the default dimensions will be returned. If specified they must be
- dimensions supported by the server.
+ <p>This can be null, if so then the default dimensions will be returned. If specified they must
+ be dimensions supported by the server.
 
- These are keys to the <a shape="rect" href="#dimensionParams"><code>dimensionParams</code></a>.</div></dd>
+ </p><p>These are keys to the <a shape="rect" href="#dimensionParams"><code>dimensionParams</code></a>.</p></div></dd>
   </dl>
   
   <dl>
@@ -876,8 +906,9 @@
     <dt><code>matrices</code> required</dt>
     <dd><div class="block">Array of matrix ids.
 
- Example:
- <div class="highlight"><pre> [{<br>   "identifier": "0",<br>   "matrixSize": [1, 1],<br>   "scaleDenominator": 4000,<br>   "tileSize": [256, 256],<br>   "topLeftCorner": [420000, 350000]<br>   }, ...]</pre></div></div></dd>
+ <p>Example:
+
+ </p><div class="highlight"><pre> [{<br>   "identifier": "0",<br>   "matrixSize": [1, 1],<br>   "scaleDenominator": 4000,<br>   "tileSize": [256, 256],<br>   "topLeftCorner": [420000, 350000]<br>   }, ...]</pre></div></div></dd>
   </dl>
   
   <dl>
@@ -890,15 +921,16 @@
     <dd><div class="block">Custom query parameters that can be merged if multiple layers are merged together into a single
  request.
 
- The json should look something like:
- <div class="highlight"><pre> {<br>     "param1Name": "value",<br>     "param2Name": ["value1", "value2"]<br> }</pre></div>
+ <p>The json should look something like:
 
- For example in WMS the style parameter can be merged.  If there are several wms layers that can be
- merged except they have different style parameters they can be merged because the style parameter can
- be merged.
+ </p><div class="highlight"><pre> {<br>     "param1Name": "value",<br>     "param2Name": ["value1", "value2"]<br> }</pre></div>
 
- Compare that to DPI parameter (for QGIS wms mapserver).  if two layers have different DPI then the
- layers cannot be merged.  In this case the DPI should <em>NOT</em> be one of the <a shape="rect" href="#mergeableParams"><code>mergeableParams</code></a> it should be one of the <a shape="rect" href="#customParams"><code>customParams</code></a>.</div></dd>
+ For example in WMS the style parameter can be merged. If there are several wms layers that can
+ be merged except they have different style parameters they can be merged because the style
+ parameter can be merged.
+
+ <p>Compare that to DPI parameter (for QGIS wms mapserver). if two layers have different DPI
+ then the layers cannot be merged. In this case the DPI should <em>NOT</em> be one of the <a shape="rect" href="#mergeableParams"><code>mergeableParams</code></a> it should be one of the <a shape="rect" href="#customParams"><code>customParams</code></a>.</p></div></dd>
   </dl>
   
   <dl>
@@ -913,9 +945,9 @@
   
   <dl>
     <dt><code>rasterStyle</code> </dt>
-    <dd><div class="block">The name of the style (in Configuration or Template) to use when drawing the layer to the map.  This is
- separate from the style in that it indicates how to draw the map.  It allows one to apply any of the
- SLD raster styling.</div></dd>
+    <dd><div class="block">The name of the style (in Configuration or Template) to use when drawing the layer to the map.
+ This is separate from the style in that it indicates how to draw the map. It allows one to
+ apply any of the SLD raster styling.</div></dd>
   </dl>
   
   <dl>
@@ -935,8 +967,10 @@
     </div>
 <div class="section" id="Wms Layer">
   <h1>Wms Layer<a class="headerlink" href="#Wms Layer" title="Permalink to this headline">¶</a></h1>
-  <div class="block"><p>Renders WMS layers as single image.</p><p>Type: <code>wms</code></p>
- </div> 
+  <div class="block">Renders WMS layers as single image.
+
+ <p>Type: <code>wms</code>
+ </p></div> 
   <div class="admonition note examples">
     <p class="first admonition-title">Example</p>
     <p class="last">
@@ -958,17 +992,18 @@
    
   <dl>
     <dt><code>baseURL</code> required</dt>
-    <dd><div class="block">The base URL for the WMS.  Used for making WMS requests.</div></dd>
+    <dd><div class="block">The base URL for the WMS. Used for making WMS requests.</div></dd>
   </dl>
   
   <dl>
     <dt><code>customParams</code> </dt>
-    <dd><div class="block">Custom query parameters to use when making http requests.  These are related to <a shape="rect" href="#mergeableParams"><code>mergeableParams</code></a> except they are the parameters that will prevent two layers from the same server from
- being merged into a single request with both layers. See <a shape="rect" href="#mergeableParams"><code>mergeableParams</code></a> for a more detailed
- example of the difference between <a shape="rect" href="#mergeableParams"><code>mergeableParams</code></a> and <a shape="rect" href="#customParams"><code>customParams</code></a>.
+    <dd><div class="block">Custom query parameters to use when making http requests. These are related to <a shape="rect" href="#mergeableParams"><code>mergeableParams</code></a> except they are the parameters that will prevent two layers from the same
+ server from being merged into a single request with both layers. See <a shape="rect" href="#mergeableParams"><code>mergeableParams</code></a>
+ for a more detailed example of the difference between <a shape="rect" href="#mergeableParams"><code>mergeableParams</code></a> and <a shape="rect" href="#customParams"><code>customParams</code></a>.
 
- The json should look something like:
- <div class="highlight"><pre> {<br>     "param1Name": "value",<br>     "param2Name": ["value1", "value2"]<br> }</pre></div></div></dd>
+ <p>The json should look something like:
+
+ </p><div class="highlight"><pre> {<br>     "param1Name": "value",<br>     "param2Name": ["value1", "value2"]<br> }</pre></div></div></dd>
   </dl>
   
   <dl>
@@ -983,12 +1018,12 @@
   
   <dl>
     <dt><code>layers</code> required</dt>
-    <dd><div class="block">The wms layer to request in the GetMap request.  The order is important.  It is the order that they
- will appear in the request.
+    <dd><div class="block">The wms layer to request in the GetMap request. The order is important. It is the order that
+ they will appear in the request.
 
- As with the WMS specification, the first layer will be the first layer drawn on the map (the
- bottom/base layer) of the map.  This means that layer at position 0 in the array will covered by layer
- 1 (where not transparent) and so on.</div></dd>
+ <p>As with the WMS specification, the first layer will be the first layer drawn on the map (the
+ bottom/base layer) of the map. This means that layer at position 0 in the array will covered by
+ layer 1 (where not transparent) and so on.</p></div></dd>
   </dl>
   
   <dl>
@@ -996,24 +1031,25 @@
     <dd><div class="block">Custom query parameters that can be merged if multiple layers are merged together into a single
  request.
 
- The json should look something like:
- <div class="highlight"><pre> {<br>     "param1Name": "value",<br>     "param2Name": ["value1", "value2"]<br> }</pre></div>
+ <p>The json should look something like:
 
- For example in WMS the style parameter can be merged.  If there are several wms layers that can be
- merged except they have different style parameters they can be merged because the style parameter can
- be merged.
+ </p><div class="highlight"><pre> {<br>     "param1Name": "value",<br>     "param2Name": ["value1", "value2"]<br> }</pre></div>
 
- Compare that to DPI parameter (for QGIS wms mapserver).  if two layers have different DPI then the
- layers cannot be merged.  In this case the DPI should <em>NOT</em> be one of the <a shape="rect" href="#mergeableParams"><code>mergeableParams</code></a> it should be one of the <a shape="rect" href="#customParams"><code>customParams</code></a>.</div></dd>
+ For example in WMS the style parameter can be merged. If there are several wms layers that can
+ be merged except they have different style parameters they can be merged because the style
+ parameter can be merged.
+
+ <p>Compare that to DPI parameter (for QGIS wms mapserver). if two layers have different DPI
+ then the layers cannot be merged. In this case the DPI should <em>NOT</em> be one of the <a shape="rect" href="#mergeableParams"><code>mergeableParams</code></a> it should be one of the <a shape="rect" href="#customParams"><code>customParams</code></a>.</p></div></dd>
   </dl>
   
   <dl>
     <dt><code>method</code> </dt>
     <dd><div class="block">The HTTP verb to use for fetching the images. Can be either "GET" (the default) or "POST".
 
- In case of "POST", the parameters are send in the body of the request using an
- "application/x-www-form-urlencoded" content type. This can be used when the parameters are too long.
- Tested only with GeoServer.</div></dd>
+ <p>In case of "POST", the parameters are send in the body of the request using an
+ "application/x-www-form-urlencoded" content type. This can be used when the parameters are too
+ long. Tested only with GeoServer.</p></div></dd>
   </dl>
   
   <dl>
@@ -1028,21 +1064,21 @@
   
   <dl>
     <dt><code>rasterStyle</code> </dt>
-    <dd><div class="block">The name of the style (in Configuration or Template) to use when drawing the layer to the map.  This is
- separate from the style in that it indicates how to draw the map.  It allows one to apply any of the
- SLD raster styling.</div></dd>
+    <dd><div class="block">The name of the style (in Configuration or Template) to use when drawing the layer to the map.
+ This is separate from the style in that it indicates how to draw the map. It allows one to
+ apply any of the SLD raster styling.</div></dd>
   </dl>
   
   <dl>
     <dt><code>serverType</code> </dt>
-    <dd><div class="block">The server type ("mapserver", "geoserver" or "qgisserver"). By specifying the server type vendor
- specific parameters (like for the DPI value) can be used when making the request.</div></dd>
+    <dd><div class="block">The server type ("mapserver", "geoserver" or "qgisserver"). By specifying the server type
+ vendor specific parameters (like for the DPI value) can be used when making the request.</div></dd>
   </dl>
   
   <dl>
     <dt><code>styles</code> </dt>
-    <dd><div class="block">The styles to apply to the layers.  If this is defined there should be the same number as the layers
- and the style are applied to the layer in the <a shape="rect" href="#layers"><code>layers</code></a> field.</div></dd>
+    <dd><div class="block">The styles to apply to the layers. If this is defined there should be the same number as the
+ layers and the style are applied to the layer in the <a shape="rect" href="#layers"><code>layers</code></a> field.</div></dd>
   </dl>
   
   <dl>
@@ -1069,9 +1105,9 @@
                     Revision
                     <code
                       ><a
-                        href="https://github.com/mapfish/mapfish-print/commit/f233c5e5b7c35d8648b08ef55bc90f318e0f2620"
+                        href="https://github.com/mapfish/mapfish-print/commit/d099aa2a6272edc3b9ffbaf0c3abff080ba59029"
                         target="_blank"
-                        >f233c5e5</a
+                        >d099aa2a</a
                       ></code
                     >.
                   </span>

@@ -256,8 +256,7 @@ templates:
 
 <div class="section" id="!boolean">
   <h1>!boolean<a class="headerlink" href="#!boolean" title="Permalink to this headline">¶</a></h1>
-  <div class="block"><p>A boolean type attribute.</p>
- </div> 
+  <div class="block">A boolean type attribute. </div> 
   <div class="admonition note examples">
     <p class="first admonition-title">Example</p>
     <p class="last">
@@ -274,44 +273,49 @@ templates:
    
   <dl>
     <dt><code>default</code> </dt>
-    <dd><div class="block"><p>A default value for this attribute. Example:</p><div class="highlight"><pre>     attributes:<br>       title: !boolean<br>         default: True</pre></div></div></dd>
+    <dd><div class="block">A default value for this attribute. Example:
+
+ <div class="highlight"><pre>     attributes:<br>       title: !boolean<br>         default: True</pre></div></div></dd>
   </dl>
       </div>
 <div class="section" id="!datasource">
   <h1>!datasource<a class="headerlink" href="#!datasource" title="Permalink to this headline">¶</a></h1>
-  <div class="block"><p>
- This attribute represents a collection of attributes which can be used as the data source of a Jasper
- report's table/detail section.
- </p><p>
- For example consider the case where the report should contain multiple tables or charts but the number of
- reports may change depending on the request.  In this case the client will post a datasource attribute json
- object containing an array of all the table attribute objects.  The <a shape="rect" href="../processor/jasper/DataSourceProcessor.html" title="class in org.mapfish.print.processor.jasper"><code>DataSourceProcessor</code></a> will process the datasource attribute and create a
- Jasper datasource that contains all the tables.
- </p><p>
- This datasource must be used in tandem with the
- <a shape="rect" href="../processor/jasper/DataSourceProcessor.html" title="class in org.mapfish.print.processor.jasper"><code>DataSourceProcessor</code></a>
- processor (see <a shape="rect" href="processors.html#!createDataSource">!createDataSource</a> processor).
- </p><p>
- The json data of this attribute is special since it represents an array of attributes, each element in the
- array must contain all of the attributes required to satisfy the processors in the <a shape="rect" href="../processor/jasper/DataSourceProcessor.html" title="class in org.mapfish.print.processor.jasper"><code>DataSourceProcessor</code></a>.
- </p><p>
- Example configuration:
- </p><div class="highlight"><pre> datasource: !datasource<br>   table: !table<br>   map: !map<br>     width: 200<br>     height: 100</pre></div><p>
- Example request data:
+  <div class="block">This attribute represents a collection of attributes which can be used as the data source of a
+ Jasper report's table/detail section.
+
+ <p>For example consider the case where the report should contain multiple tables or charts but
+ the number of reports may change depending on the request. In this case the client will post a
+ datasource attribute json object containing an array of all the table attribute objects. The
+ <a shape="rect" href="../processor/jasper/DataSourceProcessor.html" title="class in org.mapfish.print.processor.jasper"><code>DataSourceProcessor</code></a> will process the datasource
+ attribute and create a Jasper datasource that contains all the tables.
+
+ </p><p>This datasource must be used in tandem with the <a shape="rect" href="../processor/jasper/DataSourceProcessor.html" title="class in org.mapfish.print.processor.jasper"><code>DataSourceProcessor</code></a> processor (see <a shape="rect" href="processors.html#!createDataSource">!createDataSource</a> processor).
+
+ </p><p>The json data of this attribute is special since it represents an array of attributes, each
+ element in the array must contain all of the attributes required to satisfy the processors in the
+ <a shape="rect" href="../processor/jasper/DataSourceProcessor.html" title="class in org.mapfish.print.processor.jasper"><code>DataSourceProcessor</code></a>.
+
+ </p><p>Example configuration:
+
+ </p><div class="highlight"><pre> datasource: !datasource<br>   table: !table<br>   map: !map<br>     width: 200<br>     height: 100</pre></div><p>Example request data:
+
  </p><div class="highlight"><pre> datasource: [<br>   {<br>       table: {<br>           ... // normal table attribute data<br>       },<br>       map: {<br>           ... // normal map attribute data<br>       }<br>   }, {<br>       table: {<br>           ... // normal table attribute data<br>       },<br>       map: {<br>           ... // normal map attribute data<br>       }<br>   }<br> ]</pre></div>
+
  [[examples=verboseExample,datasource_dynamic_tables,datasource_many_dynamictables_legend,
  datasource_multiple_maps,customDynamicReport,report]]</div>  
   <h3>Configuration</h3>
    
   <dl>
     <dt><code>attributes</code> </dt>
-    <dd><div class="block">The attributes that are acceptable by this dataSource.  The format is the same as the template
+    <dd><div class="block">The attributes that are acceptable by this dataSource. The format is the same as the template
  attributes section.</div></dd>
   </dl>
   
   <dl>
     <dt><code>default</code> </dt>
-    <dd><div class="block"><p>Default values for this attribute. Example:</p><div class="highlight"><pre>     attributes:<br>       datasource: !datasource<br>         attributes:<br>           name: !string {}<br>           count: !integer {}<br>         default:<br>           - name: "name"<br>           - count: 3</pre></div></div></dd>
+    <dd><div class="block">Default values for this attribute. Example:
+
+ <div class="highlight"><pre>     attributes:<br>       datasource: !datasource<br>         attributes:<br>           name: !string {}<br>           count: !integer {}<br>         default:<br>           - name: "name"<br>           - count: 3</pre></div></div></dd>
   </dl>
       </div>
 <div class="section" id="!features">
@@ -333,7 +337,9 @@ templates:
    
   <dl>
     <dt><code>default</code> </dt>
-    <dd><div class="block"><p>Default values for this attribute. Example:</p><div class="highlight"><pre> attributes:<br>   legend: !legend<br>     default:<br>       name: "Legend"</pre></div></div></dd>
+    <dd><div class="block">Default values for this attribute. Example:
+
+ <div class="highlight"><pre> attributes:<br>   legend: !legend<br>     default:<br>       name: "Legend"</pre></div></div></dd>
   </dl>
    
   <h3>Inputs</h3>
@@ -345,14 +351,14 @@ templates:
   
   <dl>
     <dt><code>longitudeFirst</code> </dt>
-    <dd><div class="block">By default the normal axis order as specified in EPSG code will be used when parsing projections.
- However the requestor can override this by explicitly declaring that longitude axis is first.</div></dd>
+    <dd><div class="block">By default the normal axis order as specified in EPSG code will be used when parsing
+ projections. However the requestor can override this by explicitly declaring that longitude
+ axis is first.</div></dd>
   </dl>
     </div>
 <div class="section" id="!float">
   <h1>!float<a class="headerlink" href="#!float" title="Permalink to this headline">¶</a></h1>
-  <div class="block"><p>A float type attribute.</p>
- </div> 
+  <div class="block">A float type attribute. </div> 
   <div class="admonition note examples">
     <p class="first admonition-title">Example</p>
     <p class="last">
@@ -369,13 +375,14 @@ templates:
    
   <dl>
     <dt><code>default</code> </dt>
-    <dd><div class="block"><p>A default value for this attribute. Example:</p><div class="highlight"><pre>     attributes:<br>       title: !float<br>         default: 4.2</pre></div></div></dd>
+    <dd><div class="block">A default value for this attribute. Example:
+
+ <div class="highlight"><pre>     attributes:<br>       title: !float<br>         default: 4.2</pre></div></div></dd>
   </dl>
       </div>
 <div class="section" id="!integer">
   <h1>!integer<a class="headerlink" href="#!integer" title="Permalink to this headline">¶</a></h1>
-  <div class="block"><p>An integer type attribute.</p>
- </div> 
+  <div class="block">An integer type attribute. </div> 
   <div class="admonition note examples">
     <p class="first admonition-title">Example</p>
     <p class="last">
@@ -392,19 +399,21 @@ templates:
    
   <dl>
     <dt><code>default</code> </dt>
-    <dd><div class="block"><p>A default value for this attribute. Example:</p><div class="highlight"><pre>     attributes:<br>       title: !integer<br>         default: 42</pre></div></div></dd>
+    <dd><div class="block">A default value for this attribute. Example:
+
+ <div class="highlight"><pre>     attributes:<br>       title: !integer<br>         default: 42</pre></div></div></dd>
   </dl>
       </div>
 <div class="section" id="!jsonDatasource">
   <h1>!jsonDatasource<a class="headerlink" href="#!jsonDatasource" title="Permalink to this headline">¶</a></h1>
-  <div class="block">A JSON data source attribute. To be declared as net.sf.jasperreports.engine.data.JsonDataSource in Jasper.
- Accepts only JSON objects at the root. To use it, you must pass it to a sub report like that:
- <div class="highlight"><pre> < subreport><br>     ...<br>     < dataSourceExpression><br>         < ![CDATA[$P{json_attribute}.subDataSource("path.to.list")]]><br>     < /dataSourceExpression><br>     < subreportExpression><![CDATA["subreport_name.jasper"]]>< /subreportExpression><br> < /subreport></pre></div><p>
- The expression given to the subDataSource method must select an array in the JSON structure.</p></div>       </div>
+  <div class="block">A JSON data source attribute. To be declared as net.sf.jasperreports.engine.data.JsonDataSource
+ in Jasper. Accepts only JSON objects at the root. To use it, you must pass it to a sub report
+ like that:
+
+ <div class="highlight"><pre> < subreport><br>     ...<br>     < dataSourceExpression><br>         < ![CDATA[$P{json_attribute}.subDataSource("path.to.list")]]><br>     < /dataSourceExpression><br>     < subreportExpression><![CDATA["subreport_name.jasper"]]>< /subreportExpression><br> < /subreport></pre></div><p>The expression given to the subDataSource method must select an array in the JSON structure.</p></div>       </div>
 <div class="section" id="!legend">
   <h1>!legend<a class="headerlink" href="#!legend" title="Permalink to this headline">¶</a></h1>
-  <div class="block">Objects needed by the <a shape="rect" href="../processor/jasper/LegendProcessor.html" title="class in org.mapfish.print.processor.jasper"><code>LegendProcessor</code></a> (see
- <a shape="rect" href="processors.html#!prepareLegend">!prepareLegend</a> processor).
+  <div class="block">Objects needed by the <a shape="rect" href="../processor/jasper/LegendProcessor.html" title="class in org.mapfish.print.processor.jasper"><code>LegendProcessor</code></a> (see <a shape="rect" href="processors.html#!prepareLegend">!prepareLegend</a> processor).
  </div> 
   <div class="admonition note examples">
     <p class="first admonition-title">Example</p>
@@ -427,7 +436,9 @@ templates:
    
   <dl>
     <dt><code>default</code> </dt>
-    <dd><div class="block"><p>Default values for this attribute. Example:</p><div class="highlight"><pre> attributes:<br>   legend: !legend<br>     default:<br>       name: "Legend"</pre></div></div></dd>
+    <dd><div class="block">Default values for this attribute. Example:
+
+ <div class="highlight"><pre> attributes:<br>   legend: !legend<br>     default:<br>       name: "Legend"</pre></div></div></dd>
   </dl>
    
   <h3>Inputs</h3>
@@ -454,9 +465,7 @@ templates:
     </div>
 <div class="section" id="!map">
   <h1>!map<a class="headerlink" href="#!map" title="Permalink to this headline">¶</a></h1>
-  <div class="block"><p>The attributes for <a shape="rect" href="../../processor/map/CreateMapProcessor.html" title="class in org.mapfish.print.processor.map"><code>CreateMapProcessor</code></a> (see
- <a shape="rect" href="processors.html#!createMap">!createMap</a> processor).</p>
- </div> 
+  <div class="block">The attributes for <a shape="rect" href="../../processor/map/CreateMapProcessor.html" title="class in org.mapfish.print.processor.map"><code>CreateMapProcessor</code></a> (see <a shape="rect" href="processors.html#!createMap">!createMap</a> processor). </div> 
   <div class="admonition note examples">
     <p class="first admonition-title">Example</p>
     <p class="last">
@@ -473,12 +482,15 @@ templates:
    
   <dl>
     <dt><code>default</code> </dt>
-    <dd><div class="block"><p>Default values for this attribute. Example:</p><div class="highlight"><pre> attributes:<br>   legend: !legend<br>     default:<br>       name: "Legend"</pre></div></div></dd>
+    <dd><div class="block">Default values for this attribute. Example:
+
+ <div class="highlight"><pre> attributes:<br>   legend: !legend<br>     default:<br>       name: "Legend"</pre></div></div></dd>
   </dl>
   
   <dl>
     <dt><code>dpiSuggestions</code> </dt>
-    <dd><div class="block">Suggestions for DPI values to use. Typically these are used by the client to create a UI for a user.</div></dd>
+    <dd><div class="block">Suggestions for DPI values to use. Typically these are used by the client to create a UI for a
+ user.</div></dd>
   </dl>
   
   <dl>
@@ -490,8 +502,8 @@ templates:
   <dl>
     <dt><code>maxDpi</code> </dt>
     <dd><div class="block">The maximum DPI allowed for maps.
- <p>
- If a request is made with a higher DPI, the request fails.</p></div></dd>
+
+ <p>If a request is made with a higher DPI, the request fails.</p></div></dd>
   </dl>
   
   <dl>
@@ -506,27 +518,33 @@ templates:
   
   <dl>
     <dt><code>width</code> </dt>
-    <dd><div class="block">The width of the map in pixels. This value should match the width of the sub-report in the JasperReport
- template.</div></dd>
+    <dd><div class="block">The width of the map in pixels. This value should match the width of the sub-report in the
+ JasperReport template.</div></dd>
   </dl>
   
   <dl>
     <dt><code>zoomLevelSnapStrategy</code> </dt>
     <dd><div class="block">The strategy to use to compute the actual zoom level to use.
- <p>
- If you specify this value, you must set the zoomLevels as well.
- </p><p>
- Possible values are:
- </p><ul><li>CLOSEST_LOWER_SCALE_ON_TIE: Find the closest zoom level.  If the targetScale is directly between
- two zoomLevels then the smaller/higher resolution scale will be chosen.</li><li>CLOSEST_HIGHER_SCALE_ON_TIE: Find the closest zoom level.  If the targetScale is directly
- between two zoomLevels then the larger/lower resolution scale will be chosen.</li><li>HIGHER_SCALE: Always choose the zoom-level that is just higher than the target value.</li><li>LOWER_SCALE: Always choose the zoom-level that is just lower than the target value.</li></ul><p></p></div></dd>
+
+ <p>If you specify this value, you must set the zoomLevels as well.
+
+ </p><p>Possible values are:
+
+ </p><ul><li>CLOSEST_LOWER_SCALE_ON_TIE: Find the closest zoom level. If the targetScale is directly
+       between two zoomLevels then the smaller/higher resolution scale will be chosen.
+   </li><li>CLOSEST_HIGHER_SCALE_ON_TIE: Find the closest zoom level. If the targetScale is directly
+       between two zoomLevels then the larger/lower resolution scale will be chosen.
+   </li><li>HIGHER_SCALE: Always choose the zoom-level that is just higher than the target value.
+   </li><li>LOWER_SCALE: Always choose the zoom-level that is just lower than the target value.
+ </li></ul><p></p></div></dd>
   </dl>
   
   <dl>
     <dt><code>zoomLevels</code> </dt>
     <dd><div class="block">The list of Zoom Levels.
- <p>
- Depending on the zoomLevelSnapStrategy, this will be used to compute the actual zoom level of the map.</p></div></dd>
+
+ <p>Depending on the zoomLevelSnapStrategy, this will be used to compute the actual zoom level
+ of the map.</p></div></dd>
   </dl>
   
   <dl>
@@ -537,9 +555,9 @@ templates:
   <dl>
     <dt><code>zoomSnapTolerance</code> </dt>
     <dd><div class="block">The zoom level tolerance.
- <p>
- Used in ZoomLevelSnapStrategy.HIGHER_SCALE and ZoomLevelSnapStrategy.LOWER_SCALE to specify the cutoff
- value.</p></div></dd>
+
+ <p>Used in ZoomLevelSnapStrategy.HIGHER_SCALE and ZoomLevelSnapStrategy.LOWER_SCALE to specify
+ the cutoff value.</p></div></dd>
   </dl>
    
   <h3>Inputs</h3>
@@ -551,14 +569,14 @@ templates:
   
   <dl>
     <dt><code>bbox</code> required</dt>
-    <dd><div class="block">An array of 4 doubles, minX, minY, maxX, maxY.  The bounding box of the map.
+    <dd><div class="block">An array of 4 doubles, minX, minY, maxX, maxY. The bounding box of the map.
 
- Either the bbox or the center + scale must be defined</div></dd>
+ <p>Either the bbox or the center + scale must be defined</p></div></dd>
   </dl>
   
   <dl>
     <dt><code>center</code> required</dt>
-    <dd><div class="block">An array of 2 doubles, (x, y).  The center of the map.</div></dd>
+    <dd><div class="block">An array of 2 doubles, (x, y). The center of the map.</div></dd>
   </dl>
   
   <dl>
@@ -570,11 +588,12 @@ templates:
     <dt><code>dpiSensitiveStyle</code> </dt>
     <dd><div class="block">Should the vector style definitions be adapted to the target DPI resolution? (Default: true)
 
- The style definitions are often optimized for a use with OpenLayers (which uses a DPI value of 72).
- When these styles are used to print with a higher DPI value, lines often look too thin, label are
- too small, etc.
+ <p>The style definitions are often optimized for a use with OpenLayers (which uses a DPI
+ value of 72). When these styles are used to print with a higher DPI value, lines often look
+ too thin, label are too small, etc.
 
- If this property is set to `true`, the style definitions will be scaled to the target DPI value.</div></dd>
+ </p><p>If this property is set to `true`, the style definitions will be scaled to the target DPI
+ value.</p></div></dd>
   </dl>
   
   <dl>
@@ -584,25 +603,25 @@ templates:
   
   <dl>
     <dt><code>layers</code> </dt>
-    <dd><div class="block">The json with all the layer information.  This will be parsed in postConstruct into a list of
+    <dd><div class="block">The json with all the layer information. This will be parsed in postConstruct into a list of
  layers and therefore this field should not normally be accessed.
- <p>
- The first layer in the array will be the top layer in the map.  The last layer in the array will be
- the bottom layer in the map.  There for the last layer will be hidden by the first layer (where not
- transparent).</p></div></dd>
+
+ <p>The first layer in the array will be the top layer in the map. The last layer in the array
+ will be the bottom layer in the map. There for the last layer will be hidden by the first
+ layer (where not transparent).</p></div></dd>
   </dl>
   
   <dl>
     <dt><code>longitudeFirst</code> </dt>
-    <dd><div class="block">By default the normal axis order as specified in EPSG code will be used when parsing projections.
- However the requestor can override this by explicitly declaring that longitude axis is first.</div></dd>
+    <dd><div class="block">By default the normal axis order as specified in EPSG code will be used when parsing
+ projections. However the requestor can override this by explicitly declaring that longitude
+ axis is first.</div></dd>
   </dl>
   
   <dl>
     <dt><code>pdfA</code> </dt>
-    <dd><div class="block">Whether to merge all layers into one.
- This is great to reduce pdf size but needs layers having an imagebufferscaling of 1.
- Also see the pdfA option of the print config.</div></dd>
+    <dd><div class="block">Whether to merge all layers into one. This is great to reduce pdf size but needs layers
+ having an imagebufferscaling of 1. Also see the pdfA option of the print config.</div></dd>
   </dl>
   
   <dl>
@@ -627,8 +646,8 @@ templates:
   
   <dl>
     <dt><code>useNearestScale</code> </dt>
-    <dd><div class="block">Indicates if the map should adjust its scale/zoom level to be equal to one of those defined in the
- configuration file.</div></dd>
+    <dd><div class="block">Indicates if the map should adjust its scale/zoom level to be equal to one of those defined
+ in the configuration file.</div></dd>
   </dl>
   
   <dl>
@@ -643,8 +662,7 @@ templates:
     </div>
 <div class="section" id="!northArrow">
   <h1>!northArrow<a class="headerlink" href="#!northArrow" title="Permalink to this headline">¶</a></h1>
-  <div class="block"><p>The attributes for <a shape="rect" href="../processor/map/CreateNorthArrowProcessor.html" title="class in org.mapfish.print.processor.map"><code>CreateNorthArrowProcessor</code></a> (see
- <a shape="rect" href="processors.html#!createNorthArrow">!createNorthArrow</a> processor).</p>
+  <div class="block">The attributes for <a shape="rect" href="../processor/map/CreateNorthArrowProcessor.html" title="class in org.mapfish.print.processor.map"><code>CreateNorthArrowProcessor</code></a> (see <a shape="rect" href="processors.html#!createNorthArrow">!createNorthArrow</a> processor).
  </div> 
   <div class="admonition note examples">
     <p class="first admonition-title">Example</p>
@@ -672,12 +690,15 @@ templates:
   
   <dl>
     <dt><code>default</code> </dt>
-    <dd><div class="block"><p>Default values for this attribute. Example:</p><div class="highlight"><pre> attributes:<br>   legend: !legend<br>     default:<br>       name: "Legend"</pre></div></div></dd>
+    <dd><div class="block">Default values for this attribute. Example:
+
+ <div class="highlight"><pre> attributes:<br>   legend: !legend<br>     default:<br>       name: "Legend"</pre></div></div></dd>
   </dl>
   
   <dl>
     <dt><code>size</code> </dt>
     <dd><div class="block">The size (width and height) of the north-arrow graphic in the JasperReport template.
+
  <p>The graphic is a square so that the arrow can be rotated properly.</p></div></dd>
   </dl>
    
@@ -691,17 +712,21 @@ templates:
   <dl>
     <dt><code>graphic</code> </dt>
     <dd><div class="block">The path to a graphic to use for the north-arrow.
- <p>It can either be an URL ("http://xyx.com/img/north-arrow.png") or
- a file in the configuration folder ("file://NorthArrow.svg"). Both SVG graphics and raster graphics
- (png, jpeg, tiff, ...) are supported.</p><p>While the resulting graphic used in the JasperReport template is
- a square, this graphic can have an arbitrary aspect ratio. The graphic will be scaled to the output
- size and rotated around its center.</p><p>If no graphic is given, a default north-arrow is used.</p></div></dd>
+
+ <p>It can either be an URL ("http://xyx.com/img/north-arrow.png") or a file in the
+ configuration folder ("file://NorthArrow.svg"). Both SVG graphics and raster graphics (png,
+ jpeg, tiff, ...) are supported.
+
+ </p><p>While the resulting graphic used in the JasperReport template is a square, this graphic
+ can have an arbitrary aspect ratio. The graphic will be scaled to the output size and rotated
+ around its center.
+
+ </p><p>If no graphic is given, a default north-arrow is used.</p></div></dd>
   </dl>
     </div>
 <div class="section" id="!overviewMap">
   <h1>!overviewMap<a class="headerlink" href="#!overviewMap" title="Permalink to this headline">¶</a></h1>
-  <div class="block"><p>The attributes for an overview map (see
- <a shape="rect" href="processors.html#!createOverviewMap">!createOverviewMap</a> processor).</p>
+  <div class="block">The attributes for an overview map (see <a shape="rect" href="processors.html#!createOverviewMap">!createOverviewMap</a> processor).
  </div> 
   <div class="admonition note examples">
     <p class="first admonition-title">Example</p>
@@ -724,12 +749,15 @@ templates:
    
   <dl>
     <dt><code>default</code> </dt>
-    <dd><div class="block"><p>Default values for this attribute. Example:</p><div class="highlight"><pre> attributes:<br>   legend: !legend<br>     default:<br>       name: "Legend"</pre></div></div></dd>
+    <dd><div class="block">Default values for this attribute. Example:
+
+ <div class="highlight"><pre> attributes:<br>   legend: !legend<br>     default:<br>       name: "Legend"</pre></div></div></dd>
   </dl>
   
   <dl>
     <dt><code>dpiSuggestions</code> </dt>
-    <dd><div class="block">Suggestions for DPI values to use. Typically these are used by the client to create a UI for a user.</div></dd>
+    <dd><div class="block">Suggestions for DPI values to use. Typically these are used by the client to create a UI for a
+ user.</div></dd>
   </dl>
   
   <dl>
@@ -741,8 +769,8 @@ templates:
   <dl>
     <dt><code>maxDpi</code> </dt>
     <dd><div class="block">The maximum DPI allowed for maps.
- <p>
- If a request is made with a higher DPI, the request fails.</p></div></dd>
+
+ <p>If a request is made with a higher DPI, the request fails.</p></div></dd>
   </dl>
   
   <dl>
@@ -757,14 +785,14 @@ templates:
   
   <dl>
     <dt><code>style</code> </dt>
-    <dd><div class="block">The style name of a style to apply to the bbox rectangle of the original map during rendering. The
- style name must map to a style in the template or the configuration objects.</div></dd>
+    <dd><div class="block">The style name of a style to apply to the bbox rectangle of the original map during rendering.
+ The style name must map to a style in the template or the configuration objects.</div></dd>
   </dl>
   
   <dl>
     <dt><code>width</code> </dt>
-    <dd><div class="block">The width of the map in pixels. This value should match the width of the sub-report in the JasperReport
- template.</div></dd>
+    <dd><div class="block">The width of the map in pixels. This value should match the width of the sub-report in the
+ JasperReport template.</div></dd>
   </dl>
   
   <dl>
@@ -775,20 +803,26 @@ templates:
   <dl>
     <dt><code>zoomLevelSnapStrategy</code> </dt>
     <dd><div class="block">The strategy to use to compute the actual zoom level to use.
- <p>
- If you specify this value, you must set the zoomLevels as well.
- </p><p>
- Possible values are:
- </p><ul><li>CLOSEST_LOWER_SCALE_ON_TIE: Find the closest zoom level.  If the targetScale is directly between
- two zoomLevels then the smaller/higher resolution scale will be chosen.</li><li>CLOSEST_HIGHER_SCALE_ON_TIE: Find the closest zoom level.  If the targetScale is directly
- between two zoomLevels then the larger/lower resolution scale will be chosen.</li><li>HIGHER_SCALE: Always choose the zoom-level that is just higher than the target value.</li><li>LOWER_SCALE: Always choose the zoom-level that is just lower than the target value.</li></ul><p></p></div></dd>
+
+ <p>If you specify this value, you must set the zoomLevels as well.
+
+ </p><p>Possible values are:
+
+ </p><ul><li>CLOSEST_LOWER_SCALE_ON_TIE: Find the closest zoom level. If the targetScale is directly
+       between two zoomLevels then the smaller/higher resolution scale will be chosen.
+   </li><li>CLOSEST_HIGHER_SCALE_ON_TIE: Find the closest zoom level. If the targetScale is directly
+       between two zoomLevels then the larger/lower resolution scale will be chosen.
+   </li><li>HIGHER_SCALE: Always choose the zoom-level that is just higher than the target value.
+   </li><li>LOWER_SCALE: Always choose the zoom-level that is just lower than the target value.
+ </li></ul><p></p></div></dd>
   </dl>
   
   <dl>
     <dt><code>zoomLevels</code> </dt>
     <dd><div class="block">The list of Zoom Levels.
- <p>
- Depending on the zoomLevelSnapStrategy, this will be used to compute the actual zoom level of the map.</p></div></dd>
+
+ <p>Depending on the zoomLevelSnapStrategy, this will be used to compute the actual zoom level
+ of the map.</p></div></dd>
   </dl>
   
   <dl>
@@ -799,27 +833,27 @@ templates:
   <dl>
     <dt><code>zoomSnapTolerance</code> </dt>
     <dd><div class="block">The zoom level tolerance.
- <p>
- Used in ZoomLevelSnapStrategy.HIGHER_SCALE and ZoomLevelSnapStrategy.LOWER_SCALE to specify the cutoff
- value.</p></div></dd>
+
+ <p>Used in ZoomLevelSnapStrategy.HIGHER_SCALE and ZoomLevelSnapStrategy.LOWER_SCALE to specify
+ the cutoff value.</p></div></dd>
   </dl>
    
   <h3>Inputs</h3>
    
   <dl>
     <dt><code>bbox</code> </dt>
-    <dd><div class="block">An array of 4 doubles, minX, minY, maxX, maxY.  The bounding box of the overview-map.
+    <dd><div class="block">An array of 4 doubles, minX, minY, maxX, maxY. The bounding box of the overview-map.
 
- If a bounding box is given, the overview-map shows a fixed extent. The configuration parameter
- <code>zoomFactor</code> is ignored in this case.</div></dd>
+ <p>If a bounding box is given, the overview-map shows a fixed extent. The configuration
+ parameter <code>zoomFactor</code> is ignored in this case.</p></div></dd>
   </dl>
   
   <dl>
     <dt><code>center</code> </dt>
-    <dd><div class="block">An array of 2 doubles, (x, y).  The center of the overview-map.
+    <dd><div class="block">An array of 2 doubles, (x, y). The center of the overview-map.
 
- If center and scale are given, the overview-map shows a fixed extent. The configuration parameter
- <code>zoomFactor</code> is ignored in this case.</div></dd>
+ <p>If center and scale are given, the overview-map shows a fixed extent. The configuration
+ parameter <code>zoomFactor</code> is ignored in this case.</p></div></dd>
   </dl>
   
   <dl>
@@ -831,11 +865,12 @@ templates:
     <dt><code>dpiSensitiveStyle</code> </dt>
     <dd><div class="block">Should the vector style definitions be adapted to the target DPI resolution? (Default: true)
 
- The style definitions are often optimized for a use with OpenLayers (which uses a DPI value of 72).
- When these styles are used to print with a higher DPI value, lines often look too thin, label are
- too small, etc.
+ <p>The style definitions are often optimized for a use with OpenLayers (which uses a DPI
+ value of 72). When these styles are used to print with a higher DPI value, lines often look
+ too thin, label are too small, etc.
 
- If this property is set to `true`, the style definitions will be scaled to the target DPI value.</div></dd>
+ </p><p>If this property is set to `true`, the style definitions will be scaled to the target DPI
+ value.</p></div></dd>
   </dl>
   
   <dl>
@@ -845,21 +880,21 @@ templates:
   
   <dl>
     <dt><code>layers</code> </dt>
-    <dd><div class="block">The json with all the layer information.  This will be parsed in postConstruct into a list of
+    <dd><div class="block">The json with all the layer information. This will be parsed in postConstruct into a list of
  layers and therefore this field should not normally be accessed.</div></dd>
   </dl>
   
   <dl>
     <dt><code>longitudeFirst</code> </dt>
-    <dd><div class="block">By default the normal axis order as specified in EPSG code will be used when parsing projections.
- However the requestor can override this by explicitly declaring that longitude axis is first.</div></dd>
+    <dd><div class="block">By default the normal axis order as specified in EPSG code will be used when parsing
+ projections. However the requestor can override this by explicitly declaring that longitude
+ axis is first.</div></dd>
   </dl>
   
   <dl>
     <dt><code>pdfA</code> </dt>
-    <dd><div class="block">Whether to merge all layers into one.
- This is great to reduce pdf size but needs layers having an imagebufferscaling of 1.
- Also see the pdfA option of the print config.</div></dd>
+    <dd><div class="block">Whether to merge all layers into one. This is great to reduce pdf size but needs layers
+ having an imagebufferscaling of 1. Also see the pdfA option of the print config.</div></dd>
   </dl>
   
   <dl>
@@ -874,8 +909,7 @@ templates:
   
   <dl>
     <dt><code>scale</code> </dt>
-    <dd><div class="block">If <code>center</code> is defined then this is the scale of the map centered at
- <code>center</code>.</div></dd>
+    <dd><div class="block">If <code>center</code> is defined then this is the scale of the map centered at <code>center<br> </code>.</div></dd>
   </dl>
   
   <dl>
@@ -885,8 +919,8 @@ templates:
   
   <dl>
     <dt><code>useNearestScale</code> </dt>
-    <dd><div class="block">Indicates if the map should adjust its scale/zoom level to be equal to one of those defined in the
- configuration file.</div></dd>
+    <dd><div class="block">Indicates if the map should adjust its scale/zoom level to be equal to one of those defined
+ in the configuration file.</div></dd>
   </dl>
   
   <dl>
@@ -896,8 +930,10 @@ templates:
     </div>
 <div class="section" id="!paging">
   <h1>!paging<a class="headerlink" href="#!paging" title="Permalink to this headline">¶</a></h1>
-  <div class="block"><p>Attribute that defines how a map is displayed across many pages.</p><p>This is used by the <a shape="rect" href="processors.html#!paging">paging processor</a>.</p>
- </div> 
+  <div class="block">Attribute that defines how a map is displayed across many pages.
+
+ <p>This is used by the <a shape="rect" href="processors.html#!paging">paging processor</a>.
+ </p></div> 
   <div class="admonition note examples">
     <p class="first admonition-title">Example</p>
     <p class="last">
@@ -914,39 +950,39 @@ templates:
    
   <dl>
     <dt><code>default</code> </dt>
-    <dd><div class="block"><p>Default values for this attribute. Example:</p><div class="highlight"><pre> attributes:<br>   legend: !legend<br>     default:<br>       name: "Legend"</pre></div></div></dd>
+    <dd><div class="block">Default values for this attribute. Example:
+
+ <div class="highlight"><pre> attributes:<br>   legend: !legend<br>     default:<br>       name: "Legend"</pre></div></div></dd>
   </dl>
    
   <h3>Inputs</h3>
    
   <dl>
     <dt><code>aoiDisplay</code> </dt>
-    <dd><div class="block">Indicates how to render the area of interest on this sub-map. This makes it easier to how the all
- the sub-maps fit together to for the complete map.  Also if the map is rendered as a whole in one
- part of the report one can easily see where in the complete map the sub-map fits, even without
- looking at the labeling.
- <p>
- For options see: <a shape="rect" href="AreaOfInterest.AoiDisplay.html" title="enum in org.mapfish.print.attribute.map"><code>AreaOfInterest.AoiDisplay</code></a></p><p>
- By default the rendering in the <a shape="rect" href="index.html#/attributes?location=!map">map attribute's</a>
- area of interest will be used
- </p></div></dd>
+    <dd><div class="block">Indicates how to render the area of interest on this sub-map. This makes it easier to how the
+ all the sub-maps fit together to for the complete map. Also if the map is rendered as a whole
+ in one part of the report one can easily see where in the complete map the sub-map fits, even
+ without looking at the labeling.
+
+ <p>For options see: <a shape="rect" href="AreaOfInterest.AoiDisplay.html" title="enum in org.mapfish.print.attribute.map"><code>AreaOfInterest.AoiDisplay</code></a></p><p>By default the rendering in the <a shape="rect" href="index.html#/attributes?location=!map">map
+ attribute's</a> area of interest will be used</p></div></dd>
   </dl>
   
   <dl>
     <dt><code>aoiStyle</code> </dt>
-    <dd><div class="block">If this is defined it will override the style used for rendering the Area Of Interest in the main
- <a shape="rect" href="index.html#/attributes?location=!map">map attribute's</a> Area of Interest definition.</div></dd>
+    <dd><div class="block">If this is defined it will override the style used for rendering the Area Of Interest in the
+ main <a shape="rect" href="index.html#/attributes?location=!map">map attribute's</a> Area of Interest
+ definition.</div></dd>
   </dl>
   
   <dl>
     <dt><code>overlap</code> </dt>
     <dd><div class="block">The amount that each page/sub-map should overlap each other.
- <p>
- For example if the value is 1 and the projection of the map is degrees then the overlap will be 1
- degree.
- </p><p>
- The default is to not have any overlap.
- </p></div></dd>
+
+ <p>For example if the value is 1 and the projection of the map is degrees then the overlap
+ will be 1 degree.
+
+ </p><p>The default is to not have any overlap.</p></div></dd>
   </dl>
   
   <dl>
@@ -956,8 +992,8 @@ templates:
     </div>
 <div class="section" id="!scalebar">
   <h1>!scalebar<a class="headerlink" href="#!scalebar" title="Permalink to this headline">¶</a></h1>
-  <div class="block"><p>The attributes for <a shape="rect" href="../processor/map/scalebar/CreateScalebarProcessor.html" title="class in org.mapfish.print.processor.map.scalebar"><code>CreateScalebarProcessor</code></a> (see
- <a shape="rect" href="processors.html#!createScalebar">!createScalebar</a> processor).</p>
+  <div class="block">The attributes for <a shape="rect" href="../processor/map/scalebar/CreateScalebarProcessor.html" title="class in org.mapfish.print.processor.map.scalebar"><code>CreateScalebarProcessor</code></a> (see
+ <a shape="rect" href="processors.html#!createScalebar">!createScalebar</a> processor).
  </div> 
   <div class="admonition note examples">
     <p class="first admonition-title">Example</p>
@@ -990,13 +1026,15 @@ templates:
   
   <dl>
     <dt><code>default</code> </dt>
-    <dd><div class="block"><p>Default values for this attribute. Example:</p><div class="highlight"><pre> attributes:<br>   legend: !legend<br>     default:<br>       name: "Legend"</pre></div></div></dd>
+    <dd><div class="block">Default values for this attribute. Example:
+
+ <div class="highlight"><pre> attributes:<br>   legend: !legend<br>     default:<br>       name: "Legend"</pre></div></div></dd>
   </dl>
   
   <dl>
     <dt><code>height</code> </dt>
-    <dd><div class="block">The height of the scalebar in pixels. This value should match the height of the sub-report in the
- JasperReport template.</div></dd>
+    <dd><div class="block">The height of the scalebar in pixels. This value should match the height of the sub-report in
+ the JasperReport template.</div></dd>
   </dl>
   
   <dl>
@@ -1074,17 +1112,23 @@ templates:
   
   <dl>
     <dt><code>lockUnits</code> </dt>
-    <dd><div class="block">Force that the given unit is used (default: false). For example if the unit is set to meters and
- `lockUnits` is enabled, then meters is always used, even when kilometers would create nicer
- values.</div></dd>
+    <dd><div class="block">Force that the given unit is used (default: false). For example if the unit is set to meters
+ and `lockUnits` is enabled, then meters is always used, even when kilometers would create
+ nicer values.</div></dd>
   </dl>
   
   <dl>
     <dt><code>orientation</code> </dt>
     <dd><div class="block">The scalebar orientation.
 
- <p>Available options:</p><ul><li>"horizontalLabelsBelow" (default): Horizontal scalebar and the labels are shown below the
- bar.</li><li>"horizontalLabelsAbove": Horizontal scalebar and the labels are shown above the bar.</li><li>"verticalLabelsLeft": Vertical scalebar and the labels are shown left of the bar.</li><li>"verticalLabelsRight": Vertical scalebar and the labels are shown right of the bar.</li></ul></div></dd>
+ <p>Available options:
+
+ </p><ul><li>"horizontalLabelsBelow" (default): Horizontal scalebar and the labels are shown below
+       the bar.
+   </li><li>"horizontalLabelsAbove": Horizontal scalebar and the labels are shown above the bar.
+   </li><li>"verticalLabelsLeft": Vertical scalebar and the labels are shown left of the bar.
+   </li><li>"verticalLabelsRight": Vertical scalebar and the labels are shown right of the bar.
+ </li></ul></div></dd>
   </dl>
   
   <dl>
@@ -1100,27 +1144,38 @@ templates:
   <dl>
     <dt><code>subIntervals</code> </dt>
     <dd><div class="block">Should sub-intervals be shown? Default: false
- <p>The main intervals are divided into additional sub-intervals to provide
- visual guidance. The number of sub-intervals depends on the length of an interval.</p></div></dd>
+
+ <p>The main intervals are divided into additional sub-intervals to provide visual guidance.
+ The number of sub-intervals depends on the length of an interval.</p></div></dd>
   </dl>
   
   <dl>
     <dt><code>type</code> </dt>
     <dd><div class="block">The scalebar type.
 
- <p>Available types:</p><ul><li>"line": A simple line with graduations.</li><li>"bar" (default): A thick bar with alternating black and white zones marking the intervals.
- The colors can be customized by changing the properties `color` and `barBgColor`.
- </li><li>"bar_sub": Like "bar", but with little ticks for the labels.</li></ul></div></dd>
+ <p>Available types:
+
+ </p><ul><li>"line": A simple line with graduations.
+   </li><li>"bar" (default): A thick bar with alternating black and white zones marking the
+       intervals. The colors can be customized by changing the properties `color` and
+       `barBgColor`.
+   </li><li>"bar_sub": Like "bar", but with little ticks for the labels.
+ </li></ul></div></dd>
   </dl>
   
   <dl>
     <dt><code>unit</code> </dt>
     <dd><div class="block">The unit to use.
 
- <p>The unit can be any of:</p><ul><li>m (mm, cm, m or km)</li><li>ft (in, ft, yd, mi)</li><li>degrees (min, sec, °)</li></ul><p>If the value is too big or too small, the module will switch to one of the unit in parenthesis
- (the same unit is used for every interval). If this behavior is not desired, the `lockUnits`
- parameter will force the declared unit (or map unit if no unit is declared) to be used for the
- scalebar.</p></div></dd>
+ <p>The unit can be any of:
+
+ </p><ul><li>m (mm, cm, m or km)
+   </li><li>ft (in, ft, yd, mi)
+   </li><li>degrees (min, sec, °)
+ </li></ul><p>If the value is too big or too small, the module will switch to one of the unit in
+ parenthesis (the same unit is used for every interval). If this behavior is not desired, the
+ `lockUnits` parameter will force the declared unit (or map unit if no unit is declared) to be
+ used for the scalebar.</p></div></dd>
   </dl>
   
   <dl>
@@ -1130,12 +1185,10 @@ templates:
     </div>
 <div class="section" id="!staticLayers">
   <h1>!staticLayers<a class="headerlink" href="#!staticLayers" title="Permalink to this headline">¶</a></h1>
-  <div class="block"><p>The attributes for the <a shape="rect" href="../../processor/map/AddStaticLayersProcessor.html" title="class in org.mapfish.print.processor.map"><code>AddStaticLayersProcessor</code></a> (see
- <a shape="rect" href="processors.html#!addBackgroundLayers">!addBackgroundLayers</a> and
- <a shape="rect" href="processors.html#!addOverlayLayers">!addOverlayLayers</a> processor) which adds the layers in this
- attribute to the layers in the map.  The typical use is to add the background or overlay layers as the
- "default" in the config.yaml file if the client desires it can override those values.</p>
- </div> 
+  <div class="block">The attributes for the <a shape="rect" href="../../processor/map/AddStaticLayersProcessor.html" title="class in org.mapfish.print.processor.map"><code>AddStaticLayersProcessor</code></a> (see <a shape="rect" href="processors.html#!addBackgroundLayers">!addBackgroundLayers</a> and <a shape="rect" href="processors.html#!addOverlayLayers">!addOverlayLayers</a> processor) which adds the layers
+ in this attribute to the layers in the map. The typical use is to add the background or overlay
+ layers as the "default" in the config.yaml file if the client desires it can override those
+ values. </div> 
   <div class="admonition note examples">
     <p class="first admonition-title">Example</p>
     <p class="last">
@@ -1157,23 +1210,23 @@ templates:
    
   <dl>
     <dt><code>default</code> </dt>
-    <dd><div class="block"><p>Default values for this attribute. Example:</p><div class="highlight"><pre> attributes:<br>   legend: !legend<br>     default:<br>       name: "Legend"</pre></div></div></dd>
+    <dd><div class="block">Default values for this attribute. Example:
+
+ <div class="highlight"><pre> attributes:<br>   legend: !legend<br>     default:<br>       name: "Legend"</pre></div></div></dd>
   </dl>
    
   <h3>Inputs</h3>
    
   <dl>
     <dt><code>layers</code> required</dt>
-    <dd><div class="block">An array of layers (the same as for
- <a shape="rect" href="MapAttribute.MapAttributeValues.html#layers"><code>MapAttribute.MapAttributeValues.layers</code></a>).
- <p>
- These layers will be added to the map.</p></div></dd>
+    <dd><div class="block">An array of layers (the same as for <a shape="rect" href="MapAttribute.MapAttributeValues.html#layers"><code>MapAttribute.MapAttributeValues.layers</code></a>).
+
+ <p>These layers will be added to the map.</p></div></dd>
   </dl>
     </div>
 <div class="section" id="!string">
   <h1>!string<a class="headerlink" href="#!string" title="Permalink to this headline">¶</a></h1>
-  <div class="block"><p>Attribute that reads a string from the request data.</p>
- </div> 
+  <div class="block">Attribute that reads a string from the request data. </div> 
   <div class="admonition note examples">
     <p class="first admonition-title">Example</p>
     <p class="last">
@@ -1190,7 +1243,9 @@ templates:
    
   <dl>
     <dt><code>default</code> </dt>
-    <dd><div class="block"><p>A default value for this attribute. Example:</p><div class="highlight"><pre>     attributes:<br>       title: !string<br>         default: The title</pre></div></div></dd>
+    <dd><div class="block">A default value for this attribute. Example:
+
+ <div class="highlight"><pre>     attributes:<br>       title: !string<br>         default: The title</pre></div></div></dd>
   </dl>
   
   <dl>
@@ -1200,8 +1255,7 @@ templates:
       </div>
 <div class="section" id="!stringArray">
   <h1>!stringArray<a class="headerlink" href="#!stringArray" title="Permalink to this headline">¶</a></h1>
-  <div class="block"><p>An attribute that can contain an array of strings.</p>
- </div> 
+  <div class="block">An attribute that can contain an array of strings. </div> 
   <div class="admonition note examples">
     <p class="first admonition-title">Example</p>
     <p class="last">
@@ -1218,7 +1272,9 @@ templates:
    
   <dl>
     <dt><code>default</code> </dt>
-    <dd><div class="block"><p>A default value for this attribute. Example:</p><div class="highlight"><pre>     attributes:<br>       title: !stringArray<br>         default: [one, two, three]</pre></div></div></dd>
+    <dd><div class="block">A default value for this attribute. Example:
+
+ <div class="highlight"><pre>     attributes:<br>       title: !stringArray<br>         default: [one, two, three]</pre></div></div></dd>
   </dl>
       </div>
 <div class="section" id="!style">
@@ -1240,7 +1296,9 @@ templates:
    
   <dl>
     <dt><code>default</code> </dt>
-    <dd><div class="block"><p>Default values for this attribute. Example:</p><div class="highlight"><pre> attributes:<br>   legend: !legend<br>     default:<br>       name: "Legend"</pre></div></div></dd>
+    <dd><div class="block">Default values for this attribute. Example:
+
+ <div class="highlight"><pre> attributes:<br>   legend: !legend<br>     default:<br>       name: "Legend"</pre></div></div></dd>
   </dl>
    
   <h3>Inputs</h3>
@@ -1252,8 +1310,7 @@ templates:
     </div>
 <div class="section" id="!table">
   <h1>!table<a class="headerlink" href="#!table" title="Permalink to this headline">¶</a></h1>
-  <div class="block"><p>The attributes for <a shape="rect" href="../processor/jasper/TableProcessor.html" title="class in org.mapfish.print.processor.jasper"><code>TableProcessor</code></a> (see
- <a shape="rect" href="processors.html#!prepareTable">!prepareTable</a> processor).</p>
+  <div class="block">The attributes for <a shape="rect" href="../processor/jasper/TableProcessor.html" title="class in org.mapfish.print.processor.jasper"><code>TableProcessor</code></a> (see <a shape="rect" href="processors.html#!prepareTable">!prepareTable</a> processor).
  </div> 
   <div class="admonition note examples">
     <p class="first admonition-title">Example</p>
@@ -1281,7 +1338,9 @@ templates:
    
   <dl>
     <dt><code>default</code> </dt>
-    <dd><div class="block"><p>Default values for this attribute. Example:</p><div class="highlight"><pre> attributes:<br>   legend: !legend<br>     default:<br>       name: "Legend"</pre></div></div></dd>
+    <dd><div class="block">Default values for this attribute. Example:
+
+ <div class="highlight"><pre> attributes:<br>   legend: !legend<br>     default:<br>       name: "Legend"</pre></div></div></dd>
   </dl>
    
   <h3>Inputs</h3>
@@ -1310,9 +1369,9 @@ templates:
                     Revision
                     <code
                       ><a
-                        href="https://github.com/mapfish/mapfish-print/commit/f233c5e5b7c35d8648b08ef55bc90f318e0f2620"
+                        href="https://github.com/mapfish/mapfish-print/commit/d099aa2a6272edc3b9ffbaf0c3abff080ba59029"
                         target="_blank"
-                        >f233c5e5</a
+                        >d099aa2a</a
                       ></code
                     >.
                   </span>
