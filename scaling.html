@@ -186,20 +186,19 @@
   <a class="headerlink" href="#scaling_kubernetes" title="Permalink to this headline">¶</a>
 </h5>
 <p>In Kubernetes, you can reuse an environment variable with:</p>
-<pre><code>
+<pre>
   env:
     - name: PROPERTY_VALUE
       value: test
     - name: CATALINA_OPTS
       value: -D&lt;property name&gt;==$(PROPERTY_VALUE)
-</code></pre>
+</pre>
 
 <p>The order is important.</p>
 
 <p>Full example where we get the database credentials from a secret:</p>
 
 <pre>
-  <code>
 env:
   - name: PGHOST
     valueFrom:
@@ -240,7 +239,6 @@ env:
       -Ddb.password=$(PGPASSWORD)
       -Ddb.name=$(PGDATABASE)
       -Ddb.schema=$(PGSCHEMA)
-</code>
 </pre>
 </div>
 
@@ -258,9 +256,9 @@ env:
                     Revision
                     <code
                       ><a
-                        href="https://github.com/mapfish/mapfish-print/commit/9227efb39e6e2e8b68a8f85848c0ff104c6fe982"
+                        href="https://github.com/mapfish/mapfish-print/commit/fa2fcbae76f4dd04764e33c95bf1c25d5cfbc231"
                         target="_blank"
-                        >9227efb3</a
+                        >fa2fcbae</a
                       ></code
                     >.
                   </span>
