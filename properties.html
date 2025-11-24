@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>MapFish Print 3 Documentation - Properties</title>
+
+    <link rel="stylesheet" href="css/sphinx_rtd_theme.css" type="text/css" />
+    <link rel="stylesheet" href="css/readthedocs-doc-embed.css" type="text/css" />
+    <link rel="stylesheet" href="css/custom.css" type="text/css" />
+  </head>
+
+  <body class="wy-body-for-nav" role="document">
+    <div class="wy-grid-for-nav">
+      <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+        <div class="wy-side-scroll">
+          <div class="wy-side-nav-search">
+            <a href="index.html" class="icon icon-home"> MapFish Print 3</a>
+          </div>
+
+          <div
+            class="wy-menu wy-menu-vertical"
+            data-spy="affix"
+            role="navigation"
+            aria-label="main navigation"
+          >
+            <ul class="current">
+              <li class="toctree-l1 ">
+                <a class="reference internal " href="index.html">Introduction</a>
+              </li>
+
+              <li class="toctree-l1 ">
+                <a class="reference internal " href="jasperreports.html"
+                  >JasperReports</a
+                >
+              </li>
+
+              <li class="toctree-l1 ">
+                <a class="reference internal " href="api.html">Web API</a>
+              </li>
+
+              <li class="toctree-l1 current">
+                <a class="reference internal current" href="properties.html">Properties</a>
+              </li>
+
+              <li class="toctree-l1 ">
+                <a class="reference internal " href="configuration.html"
+                  >Configuration</a
+                >
+                
+              </li>
+
+              <li class="toctree-l1 ">
+                <a class="reference internal " href="attributes.html">Attributes</a>
+                
+              </li>
+
+              <li class="toctree-l1 ">
+                <a class="reference internal " href="layers.html">Map Layers</a>
+                
+              </li>
+
+              <li class="toctree-l1 ">
+                <a class="reference internal " href="processors.html">Processors</a>
+                
+              </li>
+
+              <li class="toctree-l1 ">
+                <a class="reference internal " href="fileloaders.html">File-Loaders</a>
+                
+              </li>
+
+              <li class="toctree-l1 ">
+                <a class="reference internal " href="outputformats.html"
+                  >Output Formats</a
+                >
+                
+              </li>
+
+              <li class="toctree-l1 ">
+                <a class="reference internal " href="styles.html">Styles</a>
+                
+              </li>
+
+              <li class="toctree-l1 ">
+                <a class="reference internal " href="tableimages.html"
+                  >Images in tables</a
+                >
+              </li>
+
+              <li class="toctree-l1 ">
+                <a class="reference internal " href="download.html">Download</a>
+              </li>
+
+              <li class="toctree-l1 ">
+                <a class="reference internal " href="docker.html">Docker</a>
+              </li>
+
+              <li class="toctree-l1 ">
+                <a class="reference internal " href="scaling.html">Horizontal scaling</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+        <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">MapFish Print 3</a>
+        </nav>
+
+        <div class="wy-nav-content">
+          <div class="rst-content">
+            <div role="navigation" aria-label="breadcrumbs navigation">
+              <ul class="wy-breadcrumbs">
+                <li><a href="index.html">Docs</a> &raquo;</li>
+
+                <li>Properties</li>
+                <li class="wy-breadcrumbs-aside">
+                  <a href="https://github.com/mapfish/mapfish-print" class="fa fa-github">
+                    mapfish/mapfish-print</a
+                  >
+                </li>
+              </ul>
+
+              <hr />
+            </div>
+            <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+              <div itemprop="articleBody">
+                <h1>Properties</h1>
+                <div class="section"><p>List the Java properties that can be set to configure Mapfish Print 3.</p>
+<p>
+  The properties can be set using the <code>-D</code> option when starting the Java Virtual Machine. For
+  example: by setting the <code>JAVA_OPTS</code> environment variable.
+</p>
+<ul>
+  <li>
+    <code>db.*</code> see the <a href="scaling.html#database_configuration">Database Configuration</a> section
+    for details.
+  </li>
+
+  <li>
+    <code>mapfish.file.encoding</code>: the default character encoding used, the default is <code>UTF-8</code>
+  </li>
+  <li>
+    <code>mapfish.maxContentLength</code>: the maximum size in bytes of HTTP request body specifications. The
+    default is <code>10485760</code> (10 MB).
+  </li>
+  <li>
+    <code>mapfish.image.plugins</code>: set to <code>true</code> to enable scanning for image plugins at
+    startup (see
+    <a
+      href="https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/javax/imageio/ImageIO.html#scanForPlugins()"
+      >scanForPlugins</a
+    >), used to enable WebP image format support. Default is <code>false</code>.
+  </li>
+</ul>
+</div>
+
+
+              </div>
+            </div>
+            <footer>
+              <hr />
+
+              <div role="contentinfo">
+                <p>
+                  <a href="https://www.camptocamp.com/geospatial_solutions" target="_blank" rel="noopener"
+                    >Camptocamp</a
+                  >
+                  <br />
+                  <span class="commit">
+                    Revision
+                    <code
+                      ><a
+                        href="https://github.com/mapfish/mapfish-print/commit/28677ed7db9a6f532c3962ea444d95041c7f2ea1"
+                        target="_blank"
+                        >28677ed7</a
+                      ></code
+                    >.
+                  </span>
+                </p>
+              </div>
+              Theme based on a
+              <a href="https://github.com/readthedocs/sphinx_rtd_theme">template</a>
+              provided by <a href="https://readthedocs.org">Read the Docs</a>.
+            </footer>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.5.2/jquery-migrate.min.js"
+      integrity="sha512-BzvgYEoHXuphX+g7B/laemJGYFdrq4fTKEo+B3PurSxstMZtwu28FHkPKXu6dSBCzbUWqz/rMv755nUwhjQypw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.7/underscore-min.js"
+      integrity="sha512-dvWGkLATSdw5qWb2qozZBRKJ80Omy2YN/aF3wTUVC5+D1eqbA+TjWpPpoj8vorK5xGLMa2ZqIeWCpDZP/+pQGQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      type="text/javascript"
+      src="js/theme.js"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script type="text/javascript">
+      jQuery(function () {
+        SphinxRtdTheme.StickyNav.enable();
+      });
+    </script>
+  </body>
+</html>
